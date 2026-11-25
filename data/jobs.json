@@ -1,0 +1,699 @@
+{
+ "amazon:amazon:10602226": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "amazon:amazon:10602226",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "IN, TN, Chennai +1",
+  "posted_at": "2026-11-11",
+  "remote": false,
+  "score": 64,
+  "skills": [
+   "data"
+  ],
+  "status": "open",
+  "title": "Data Engineer, MIDAS, Digital Acceleration",
+  "url": "https://www.amazon.jobs/en/jobs/10602226/data-engineer-midas-digital-acceleration",
+  "years": 1
+ },
+ "amazon:amazon:10602774": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "amazon:amazon:10602774",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-11-11",
+  "remote": false,
+  "score": 64,
+  "skills": [
+   "data"
+  ],
+  "status": "open",
+  "title": "Data Engineer I, Business Data Technologies",
+  "url": "https://www.amazon.jobs/en/jobs/10602774/data-engineer-i-business-data-technologies",
+  "years": 1
+ },
+ "amazon:amazon:10605737": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "amazon:amazon:10605737",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-11-17",
+  "remote": false,
+  "score": 50,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Software Dev Engineer I, L4",
+  "url": "https://www.amazon.jobs/en/jobs/10605737/software-dev-engineer-i-l4",
+  "years": 1
+ },
+ "amazon:amazon:10609447": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "amazon:amazon:10609447",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-11-25",
+  "remote": false,
+  "score": 76,
+  "skills": [
+   "data"
+  ],
+  "status": "open",
+  "title": "Data Engineer, FinOps FP&A",
+  "url": "https://www.amazon.jobs/en/jobs/10609447/data-engineer-finops-fp-a",
+  "years": 1
+ },
+ "ashby:sophos:6b42a0ac-2500-4559-a813-2bfa43eb2ea6": {
+  "closed_at": null,
+  "company": "Sophos",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "ashby:sophos:6b42a0ac-2500-4559-a813-2bfa43eb2ea6",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "India",
+  "posted_at": "2026-11-23",
+  "remote": true,
+  "score": 89,
+  "skills": [
+   "backend",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Software Engineer 1 (Java Developer)",
+  "url": "https://jobs.ashbyhq.com/sophos/6b42a0ac-2500-4559-a813-2bfa43eb2ea6",
+  "years": 1
+ },
+ "eightfold:citi:859038610849": {
+  "closed_at": null,
+  "company": "Citi",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:citi:859038610849",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "PUNE, Mahārāshtra, India +1",
+  "posted_at": "2026-11-19",
+  "remote": false,
+  "score": 88,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "data",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Engineer",
+  "url": "https://citi.eightfold.ai/careers/job/859038610849",
+  "years": 1
+ },
+ "eightfold:citi:859038902222": {
+  "closed_at": null,
+  "company": "Citi",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:citi:859038902222",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Chennai, Tamil Nādu, India",
+  "posted_at": "2026-11-16",
+  "remote": false,
+  "score": 80,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud",
+   "frontend",
+   "fullstack"
+  ],
+  "status": "open",
+  "title": "Junior Full Stack Engineer with AI",
+  "url": "https://citi.eightfold.ai/careers/job/859038902222",
+  "years": 1
+ },
+ "eightfold:eaton:687239986063": {
+  "closed_at": null,
+  "company": "Eaton",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:eaton:687239986063",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Hadapsar, Pune, Maharashtra, IND, 411013",
+  "posted_at": "2026-11-25",
+  "remote": false,
+  "score": 78,
+  "skills": [
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Associate Engineer - Structures",
+  "url": "https://eaton.eightfold.ai/careers/job/687239986063",
+  "years": 0
+ },
+ "eightfold:paypal:274922911270": {
+  "closed_at": null,
+  "company": "PayPal",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:paypal:274922911270",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Bangalore, Karnataka, India",
+  "posted_at": "2026-11-19",
+  "remote": false,
+  "score": 64,
+  "skills": [
+   "backend",
+   "mobile"
+  ],
+  "status": "open",
+  "title": "Software Engineer, Android",
+  "url": "https://paypal.eightfold.ai/careers/job/274922911270",
+  "years": 1
+ },
+ "eightfold:paypal:274922961581": {
+  "closed_at": null,
+  "company": "PayPal",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:paypal:274922961581",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Bangalore, Karnataka, India",
+  "posted_at": "2026-11-25",
+  "remote": false,
+  "score": 86,
+  "skills": [
+   "backend",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Software Engineer - Node.js/Java",
+  "url": "https://paypal.eightfold.ai/careers/job/274922961581",
+  "years": 1
+ },
+ "eightfold:paypal:274923374983": {
+  "closed_at": null,
+  "company": "PayPal",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:paypal:274923374983",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Bangalore, Karnataka, India",
+  "posted_at": "2026-11-23",
+  "remote": false,
+  "score": 66,
+  "skills": [
+   "devops_cloud",
+   "mobile",
+   "qa"
+  ],
+  "status": "open",
+  "title": "Software Development Engineer in Test",
+  "url": "https://paypal.eightfold.ai/careers/job/274923374983",
+  "years": 1
+ },
+ "eightfold:paypal:274923420765": {
+  "closed_at": null,
+  "company": "PayPal",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:paypal:274923420765",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Bangalore, Karnataka, India +1",
+  "posted_at": "2026-11-25",
+  "remote": false,
+  "score": 70,
+  "skills": [
+   "backend",
+   "frontend"
+  ],
+  "status": "open",
+  "title": "Software Engineer, Web",
+  "url": "https://paypal.eightfold.ai/careers/job/274923420765",
+  "years": 1
+ },
+ "eightfold:paypal:274923516746": {
+  "closed_at": null,
+  "company": "PayPal",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:paypal:274923516746",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Bangalore, Karnataka, India +1",
+  "posted_at": "2026-11-20",
+  "remote": false,
+  "score": 80,
+  "skills": [
+   "ai_ml",
+   "data",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Machine Learning Engineer, Fraud (Crypto & Debit Card)",
+  "url": "https://paypal.eightfold.ai/careers/job/274923516746",
+  "years": 1
+ },
+ "eightfold:qualcomm:446719784235": {
+  "closed_at": null,
+  "company": "Qualcomm",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:qualcomm:446719784235",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Hyderabad, Telangāna, India +1",
+  "posted_at": "2026-11-11",
+  "remote": false,
+  "score": 50,
+  "skills": [
+   "mobile"
+  ],
+  "status": "open",
+  "title": "2027 Campus Hire_Associate Engineer_SW",
+  "url": "https://careers.qualcomm.com/careers/job/446719784235",
+  "years": null
+ },
+ "eightfold:qualcomm:446720543961": {
+  "closed_at": null,
+  "company": "Qualcomm",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:qualcomm:446720543961",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Bangalore, India",
+  "posted_at": "2026-11-18",
+  "remote": false,
+  "score": 56,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Engineer",
+  "url": "https://careers.qualcomm.com/careers/job/446720543961",
+  "years": 1
+ },
+ "eightfold:qualcomm:446720710671": {
+  "closed_at": null,
+  "company": "Qualcomm",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:qualcomm:446720710671",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Hyderabad, Telangāna, India",
+  "posted_at": "2026-11-25",
+  "remote": false,
+  "score": 70,
+  "skills": [
+   "backend"
+  ],
+  "status": "open",
+  "title": "Engineer-PPAT",
+  "url": "https://careers.qualcomm.com/careers/job/446720710671",
+  "years": 1
+ },
+ "eightfold:qualcomm:446720779608": {
+  "closed_at": null,
+  "company": "Qualcomm",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:qualcomm:446720779608",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Hyderabad, Telangāna, India",
+  "posted_at": "2026-11-18",
+  "remote": false,
+  "score": 64,
+  "skills": [
+   "backend"
+  ],
+  "status": "open",
+  "title": "Engineer",
+  "url": "https://careers.qualcomm.com/careers/job/446720779608",
+  "years": 1
+ },
+ "eightfold:qualcomm:446720848928": {
+  "closed_at": null,
+  "company": "Qualcomm",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:qualcomm:446720848928",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Hyderabad, Telangāna, India",
+  "posted_at": "2026-11-16",
+  "remote": false,
+  "score": 58,
+  "skills": [
+   "backend"
+  ],
+  "status": "open",
+  "title": "Engineer- Camera",
+  "url": "https://careers.qualcomm.com/careers/job/446720848928",
+  "years": 1
+ },
+ "eightfold:qualcomm:446721051003": {
+  "closed_at": null,
+  "company": "Qualcomm",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:qualcomm:446721051003",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Hyderabad, Telangāna, India",
+  "posted_at": "2026-11-20",
+  "remote": false,
+  "score": 64,
+  "skills": [
+   "backend"
+  ],
+  "status": "open",
+  "title": "Engineer - Audio DSP",
+  "url": "https://careers.qualcomm.com/careers/job/446721051003",
+  "years": 1
+ },
+ "eightfold:qualcomm:446721275984": {
+  "closed_at": null,
+  "company": "Qualcomm",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:qualcomm:446721275984",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Hyderabad, Telangāna, India",
+  "posted_at": "2026-11-16",
+  "remote": false,
+  "score": 50,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Engineer- Modem Development",
+  "url": "https://careers.qualcomm.com/careers/job/446721275984",
+  "years": 1
+ },
+ "eightfold:qualcomm:446721997186": {
+  "closed_at": null,
+  "company": "Qualcomm",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:qualcomm:446721997186",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Bangalore, India",
+  "posted_at": "2026-11-12",
+  "remote": false,
+  "score": 50,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Associate Engineer",
+  "url": "https://careers.qualcomm.com/careers/job/446721997186",
+  "years": null
+ },
+ "eightfold:qualcomm:446722024119": {
+  "closed_at": null,
+  "company": "Qualcomm",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:qualcomm:446722024119",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Bangalore, India",
+  "posted_at": "2026-11-24",
+  "remote": false,
+  "score": 62,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "CPU - Engineer",
+  "url": "https://careers.qualcomm.com/careers/job/446722024119",
+  "years": 1
+ },
+ "eightfold:qualcomm:446722067227": {
+  "closed_at": null,
+  "company": "Qualcomm",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:qualcomm:446722067227",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Bangalore, India",
+  "posted_at": "2026-11-16",
+  "remote": false,
+  "score": 56,
+  "skills": [
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Video Codec Architecture and Modeling Engineer",
+  "url": "https://careers.qualcomm.com/careers/job/446722067227",
+  "years": 1
+ },
+ "eightfold:qualcomm:446722208738": {
+  "closed_at": null,
+  "company": "Qualcomm",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:qualcomm:446722208738",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Hyderabad, Telangāna, India",
+  "posted_at": "2026-11-20",
+  "remote": false,
+  "score": 70,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "qa"
+  ],
+  "status": "open",
+  "title": "SDET - Software Development Engineer in Test",
+  "url": "https://careers.qualcomm.com/careers/job/446722208738",
+  "years": 1
+ },
+ "eightfold:qualcomm:446722234783": {
+  "closed_at": null,
+  "company": "Qualcomm",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:qualcomm:446722234783",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Bangalore, India",
+  "posted_at": "2026-11-24",
+  "remote": false,
+  "score": 62,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "CPU Software Engineer",
+  "url": "https://careers.qualcomm.com/careers/job/446722234783",
+  "years": 1
+ },
+ "eightfold:qualcomm:446722280220": {
+  "closed_at": null,
+  "company": "Qualcomm",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "eightfold:qualcomm:446722280220",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Bangalore, India",
+  "posted_at": "2026-11-23",
+  "remote": false,
+  "score": 62,
+  "skills": [
+   "mobile"
+  ],
+  "status": "open",
+  "title": "Multimedia System Performance Engineer for Automotive System Performance Team",
+  "url": "https://careers.qualcomm.com/careers/job/446722280220",
+  "years": 1
+ },
+ "google:google:111448128854336198": {
+  "closed_at": null,
+  "company": "Google",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "google:google:111448128854336198",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Pune, Maharashtra, India +2",
+  "posted_at": "2026-11-24",
+  "remote": false,
+  "score": 94,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "data",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Engineer",
+  "url": "https://www.google.com/about/careers/applications/jobs/results/111448128854336198-data-engineer",
+  "years": null
+ },
+ "google:google:123778327126123206": {
+  "closed_at": null,
+  "company": "Google",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "google:google:123778327126123206",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Pune, Maharashtra, India",
+  "posted_at": "2026-11-24",
+  "remote": false,
+  "score": 92,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud",
+   "mobile",
+   "security"
+  ],
+  "status": "open",
+  "title": "Software Engineer II, AI Security",
+  "url": "https://www.google.com/about/careers/applications/jobs/results/123778327126123206-software-engineer-ii-ai-security",
+  "years": 1
+ },
+ "google:google:83624643516080838": {
+  "closed_at": null,
+  "company": "Google",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "google:google:83624643516080838",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Hyderabad, Telangana, India",
+  "posted_at": "2026-11-23",
+  "remote": false,
+  "score": 86,
+  "skills": [
+   "backend",
+   "devops_cloud",
+   "mobile"
+  ],
+  "status": "open",
+  "title": "Software Engineer II, Google Cloud",
+  "url": "https://www.google.com/about/careers/applications/jobs/results/83624643516080838-software-engineer-ii-google-cloud",
+  "years": 1
+ },
+ "google:google:96475915810153158": {
+  "closed_at": null,
+  "company": "Google",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "google:google:96475915810153158",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Bengaluru, Karnataka, India",
+  "posted_at": "2026-11-18",
+  "remote": false,
+  "score": 88,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "data",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Engineer",
+  "url": "https://www.google.com/about/careers/applications/jobs/results/96475915810153158-data-engineer",
+  "years": 1
+ },
+ "kula:slice:69195": {
+  "closed_at": null,
+  "company": "Slice",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "kula:slice:69195",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Bengaluru, Karnataka, India",
+  "posted_at": "2026-11-17",
+  "remote": false,
+  "score": 54,
+  "skills": [
+   "devops_cloud",
+   "security"
+  ],
+  "status": "open",
+  "title": "Engineer 1 - Information Security",
+  "url": "https://careers.kula.ai/slice/69195",
+  "years": 1
+ },
+ "lever:hevo-data:4eccaf98-ba19-42ea-b040-e0976d4dadfe": {
+  "closed_at": null,
+  "company": "Hevo Data",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "lever:hevo-data:4eccaf98-ba19-42ea-b040-e0976d4dadfe",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Bangalore, India",
+  "posted_at": "2026-11-18",
+  "remote": false,
+  "score": 66,
+  "skills": [
+   "backend",
+   "data"
+  ],
+  "status": "open",
+  "title": "Associate SDE",
+  "url": "https://jobs.lever.co/hevodata/4eccaf98-ba19-42ea-b040-e0976d4dadfe",
+  "years": null
+ },
+ "microsoft:microsoft:1970393557022190": {
+  "closed_at": null,
+  "company": "Microsoft",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "microsoft:microsoft:1970393557022190",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "India, Multiple Locations, Multiple Locations",
+  "posted_at": "2026-11-23",
+  "remote": false,
+  "score": 70,
+  "skills": [
+   "backend"
+  ],
+  "status": "open",
+  "title": "Software Engineer Apprenticeship",
+  "url": "https://apply.careers.microsoft.com/careers/job/1970393557022190",
+  "years": null
+ },
+ "oracle_hcm:american-express:26016183": {
+  "closed_at": null,
+  "company": "American Express",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "oracle_hcm:american-express:26016183",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Gurugram, HR, India",
+  "posted_at": "2026-11-24",
+  "remote": false,
+  "score": 86,
+  "skills": [
+   "backend",
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Analyst - Data Science",
+  "url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26016183",
+  "years": 0
+ },
+ "oracle_hcm:honeywell:162410": {
+  "closed_at": null,
+  "company": "Honeywell",
+  "first_seen": "2026-11-25T08:59:04+00:00",
+  "id": "oracle_hcm:honeywell:162410",
+  "last_seen": "2026-11-25T08:59:04+00:00",
+  "level": "entry",
+  "location": "Madurai, Tamil Nadu, India",
+  "posted_at": "2026-11-17",
+  "remote": false,
+  "score": 58,
+  "skills": [
+   "backend"
+  ],
+  "status": "open",
+  "title": "Software Engr I - C++",
+  "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/162410",
+  "years": 1
+ }
+}
