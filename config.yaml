@@ -105,7 +105,7 @@ exclude_titles:
 freshness:
   # Drop jobs posted more than this many days ago (they're usually filled already).
   # Jobs whose board gives no posting date are kept.
-  max_posted_age_days: 14
+  max_posted_age_days: 90
 
 # Skill buckets. A job is tagged with every bucket whose keywords appear in
 # its title/description. `priority` buckets get ranked first.

@@ -67,6 +67,19 @@ DESC_ENTRY = re.compile(
 ATS_SENIOR_LEVELS = {"mid_senior_level", "director", "executive", "senior"}
 ATS_ENTRY_LEVELS = {"entry_level", "internship", "associate"}
 
+# Experience written into the title: "(1 to 3)", "(3-5 years)", "(5-7 years,Firmware)", "2+ yrs"
+TITLE_YEARS = [
+    re.compile(r"\(\s*(\d{1,2})\s*(?:-|–|to)\s*\d{1,2}\s*(?:years?|yrs?)?\s*[,)]", re.I),
+    re.compile(r"\b(\d{1,2})\s*(?:-|–|to)\s*\d{1,2}\s*(?:years?|yrs?)\b", re.I),
+    re.compile(r"\b(\d{1,2})\s*\+\s*(?:years?|yrs?)\b", re.I),
+]
+
+
+def title_years(title: str) -> int | None:
+    found = [int(m.group(1)) for rx in TITLE_YEARS for m in rx.finditer(title)]
+    return min(found) if found else None
+
+
 INTERN = re.compile(r"\bintern(ship)?s?\b|co-?op\b", re.I)
 
 # "3+ years of experience", "2-4 years of relevant experience", "minimum 5 years"
@@ -191,7 +204,13 @@ def classify(job: RawJob, cfg: dict, today: date | None = None, check_level: boo
     m = SENIOR_WORDS.search(title_for_level) or (None if company_says_entry else SENIOR_GRADE.search(title_for_level))
     if m:
         return Verdict(False, f"senior title ({m.group(0)})")
-    if (job.level_hint or "").lower() in ATS_SENIOR_LEVELS:
+    t_years = title_years(title)
+    if t_years is not None and t_years > cfg["level"]["max_years"]:
+        return Verdict(False, f"title asks {t_years}+ years")
+    title_says_entry = bool(ENTRY.search(title_for_level)) or (t_years is not None and t_years <= 1)
+    # Job-board level tags are sometimes wrong (PhonePe tags "Platform Engineer 1" as
+    # executive), so a clear entry-level title wins over the tag.
+    if (job.level_hint or "").lower() in ATS_SENIOR_LEVELS and not title_says_entry:
         return Verdict(False, f"senior level per job board ({job.level_hint})")
 
     # Old postings are usually filled already. Undated jobs are kept: first_seen covers them.
@@ -212,13 +231,14 @@ def classify(job: RawJob, cfg: dict, today: date | None = None, check_level: boo
     if not check_level:
         return Verdict(True, "pre-check passed", location=loc, remote=remote)
 
-    years = min_years(job.description) if job.description else None
+    # years stated in the title beat the description (which often lists "nice to have" years)
+    years = t_years if t_years is not None else (min_years(job.description) if job.description else None)
     if years is not None and years > lvl_cfg["max_years"]:
         return Verdict(False, f"asks {years}+ years experience")
 
     if is_intern:
         level = "intern"
-    elif (ENTRY.search(title_for_level) or (years is not None and years <= 1)
+    elif (title_says_entry or (years is not None and years <= 1)
           or DESC_ENTRY.search(job.description or "")
           or (job.level_hint or "").lower() in ATS_ENTRY_LEVELS):
         level = "entry"
