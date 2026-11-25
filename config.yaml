@@ -1,0 +1,62 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Job Radar — what counts as "a job for me"
+# ─────────────────────────────────────────────────────────────────────────────
+
+location:
+  # A job matches if any of its locations contains one of these (case-insensitive)
+  include:
+    - india
+    - bengaluru
+    - bangalore
+    - hyderabad
+    - pune
+    - mumbai
+    - gurugram
+    - gurgaon
+    - noida
+    - delhi
+    - chennai
+    - kolkata
+    - ahmedabad
+    - jaipur
+    - kochi
+    - guwahati
+    - "in, "          # Amazon style: "IN, KA, Bengaluru"
+  # Also match fully-remote roles that aren't locked to another country
+  allow_global_remote: true
+
+level:
+  # Max years of experience a posting may ask for and still count
+  max_years: 2
+  # "entry"  = only roles with an explicit fresher / new-grad / SDE-1 / intern signal
+  # "open"   = entry roles + tech roles with no seniority signal (wider net, more noise)
+  mode: open
+  # Most internships require you to still be enrolled; flip on if you want them
+  include_internships: false
+
+# Skill buckets. A job is tagged with every bucket whose keywords appear in
+# its title/description. `priority` buckets get ranked first.
+skills:
+  backend:      [backend, back-end, api, fastapi, django, flask, python, golang, " go ", java, spring, node, microservice, postgres, redis, kafka]
+  ai_ml:        [machine learning, " ml ", ml engineer, deep learning, llm, genai, generative ai, nlp, computer vision, pytorch, tensorflow, rag, " ai ", ai engineer, applied scientist, data scientist]
+  data:         [data engineer, etl, spark, airflow, snowflake, bigquery, data platform, analytics engineer, sql]
+  devops_cloud: [devops, sre, site reliability, kubernetes, docker, terraform, aws, gcp, azure, cloud, infrastructure, platform engineer, ci/cd]
+  frontend:     [frontend, front-end, react, angular, vue, typescript, ui engineer]
+  fullstack:    [full stack, full-stack, fullstack]
+  mobile:       [android, ios, kotlin, swift, flutter, react native, mobile]
+  security:     [security, appsec, devsecops, soc analyst, pentest]
+  qa:           [qa, quality assurance, sdet, test engineer, automation test]
+  sde:          [software engineer, software development engineer, sde, developer, member of technical staff, programmer]
+
+priority: [backend, ai_ml, devops_cloud, data]
+
+notify:
+  # Only alert on roles in these buckets (empty list = alert on everything that matched)
+  skills: []
+  # Send a message even when nothing new turned up (handy to know it's alive)
+  send_when_empty: false
+  # Cap per message so one huge first run doesn't flood you
+  max_items: 40
+
+# Drop closed jobs from the dashboard after this many days
+keep_closed_days: 21

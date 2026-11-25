@@ -1,0 +1,57 @@
+name: Job Radar
+
+on:
+  schedule:
+    # 07:05 and 15:05 IST (01:35 / 09:35 UTC). Off the hour so GitHub doesn't delay it.
+    - cron: "35 1,9 * * *"
+  workflow_dispatch: {}        # "Run workflow" button for manual runs
+
+permissions:
+  contents: write              # commit data/ and docs/ back to the repo
+
+concurrency:
+  group: job-radar
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Scan career boards
+        id: scan
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
+          SMTP_HOST:          ${{ secrets.SMTP_HOST }}
+          SMTP_PORT:          ${{ secrets.SMTP_PORT }}
+          SMTP_USER:          ${{ secrets.SMTP_USER }}
+          SMTP_PASS:          ${{ secrets.SMTP_PASS }}
+          EMAIL_TO:           ${{ secrets.EMAIL_TO }}
+          DASHBOARD_URL:      https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+        run: python -m radar run
+
+      - name: Save results
+        if: always()
+        run: |
+          git config user.name  "job-radar-bot"
+          git config user.email "job-radar-bot@users.noreply.github.com"
+          git add data docs
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "radar: $(date -u +'%Y-%m-%d %H:%M') scan"
+            git push
+          fi
+
+# Note: GitHub pauses scheduled workflows after 60 days without repo activity.
+# Every run commits data/runs.json, so the repo stays active on its own.

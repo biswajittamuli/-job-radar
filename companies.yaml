@@ -1,0 +1,84 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Job Radar — companies to track
+#
+# Each entry reads a company's job board straight from its ATS (applicant
+# tracking system) API, so there's no HTML scraping and no AI browsing.
+#
+#   ats: greenhouse | lever | ashby | smartrecruiters | workday | amazon
+#   slug: the board id (for greenhouse/lever/ashby/smartrecruiters)
+#
+# Don't know a company's ATS?  Run:
+#   python -m radar detect https://company.com/careers
+# and it prints the exact block to paste here.
+#
+# `verified:` = date the board was confirmed live. Unverified boards are
+# health-checked on every run and show up under "Broken boards" on the
+# dashboard if the slug is wrong, so you can fix or delete them.
+# ─────────────────────────────────────────────────────────────────────────────
+
+companies:
+  # ── Indian product / fintech ──────────────────────────────────────────────
+  - { name: Groww,       ats: greenhouse, slug: groww,       verified: 2026-11-25 }
+  - { name: CRED,        ats: lever,      slug: cred,        verified: 2026-11-25 }
+  - { name: Meesho,      ats: lever,      slug: meesho,      verified: 2026-11-25 }
+  - { name: Paytm,       ats: lever,      slug: paytm,       verified: 2026-11-25 }
+  - { name: Zeta,        ats: lever,      slug: zeta,        verified: 2026-11-25 }
+
+  # ── AI-first (India presence) ─────────────────────────────────────────────
+  - { name: Sarvam AI,   ats: ashby,      slug: sarvam,      verified: 2026-11-25 }
+  - { name: Composio,    ats: ashby,      slug: composio,    verified: 2026-11-25 }
+
+  # ── Global product cos with India engineering centres ─────────────────────
+  - { name: Databricks,  ats: greenhouse, slug: databricks,  verified: 2026-11-25 }
+  - { name: Rubrik,      ats: greenhouse, slug: rubrik,      verified: 2026-11-25 }
+  - { name: MongoDB,     ats: greenhouse, slug: mongodb,     verified: 2026-11-25 }
+  - { name: Cloudflare,  ats: greenhouse, slug: cloudflare,  verified: 2026-11-25 }
+  - { name: Druva,       ats: greenhouse, slug: druva,       verified: 2026-11-25 }
+
+  - name: Amazon
+    ats: amazon
+    verified: 2026-11-25
+    queries:            # each query is searched in India, results de-duplicated
+      - software development engineer
+      - machine learning
+      - data engineer
+      - support engineer
+      - cloud
+
+  # ── Unverified: likely correct, health-checked each run ───────────────────
+  - { name: Stripe,      ats: greenhouse, slug: stripe }
+  - { name: GitLab,      ats: greenhouse, slug: gitlab }
+  - { name: Elastic,     ats: greenhouse, slug: elastic }
+  - { name: Coinbase,    ats: greenhouse, slug: coinbase }
+  - { name: Twilio,      ats: greenhouse, slug: twilio }
+  - { name: Okta,        ats: greenhouse, slug: okta }
+  - { name: Datadog,     ats: greenhouse, slug: datadog }
+  - { name: Anthropic,   ats: greenhouse, slug: anthropic }
+  - { name: HackerRank,  ats: greenhouse, slug: hackerrank }
+  - { name: Palantir,    ats: lever,      slug: palantir }
+  - { name: Spotify,     ats: lever,      slug: spotify }
+  - { name: OpenAI,      ats: ashby,      slug: openai }
+  - { name: Cohere,      ats: ashby,      slug: cohere }
+  - { name: Notion,      ats: ashby,      slug: notion }
+  - { name: Deel,        ats: ashby,      slug: deel }
+  - { name: Visa,        ats: smartrecruiters, slug: Visa }
+  - { name: ServiceNow,  ats: smartrecruiters, slug: ServiceNow }
+
+  - name: NVIDIA
+    ats: workday
+    host: nvidia.wd5.myworkdayjobs.com
+    tenant: nvidia
+    site: NVIDIAExternalCareerSite
+    search: India
+  - name: Salesforce
+    ats: workday
+    host: salesforce.wd12.myworkdayjobs.com
+    tenant: salesforce
+    site: External_Career_Site
+    search: India
+  - name: Adobe
+    ats: workday
+    host: adobe.wd5.myworkdayjobs.com
+    tenant: adobe
+    site: external_experienced
+    search: India

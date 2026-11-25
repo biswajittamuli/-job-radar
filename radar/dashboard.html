@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Job Radar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0f17; --panel:#111726; --panel2:#151c2e; --line:#222b40; --text:#e6eaf2; --muted:#8b95ab;
+    --accent:#5eead4; --accent2:#818cf8; --entry:#34d399; --open:#60a5fa; --intern:#c084fc;
+    --warn:#fbbf24; --bad:#f87171; --radius:12px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1200px 600px at 80% -10%,#16213d 0%,transparent 60%),var(--bg);
+       color:var(--text);font:14px/1.5 Inter,system-ui,sans-serif;min-height:100vh}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 20px 60px}
+  header{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+  h1{margin:0;font-size:26px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px}
+  .pulse{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 rgba(94,234,212,.6);animation:p 2.2s infinite}
+  @keyframes p{70%{box-shadow:0 0 0 12px rgba(94,234,212,0)}100%{box-shadow:0 0 0 0 rgba(94,234,212,0)}}
+  .sub{color:var(--muted);font-size:13px}
+  .mono{font-family:"JetBrains Mono",monospace}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:18px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+  .stat b{display:block;font-size:24px;font-weight:700;letter-spacing:-.02em}
+  .stat span{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+  .stat.warn b{color:var(--warn)} .stat.good b{color:var(--accent)}
+  .spark{height:26px;margin-top:6px;display:flex;align-items:flex-end;gap:2px}
+  .spark i{flex:1;background:var(--accent2);opacity:.7;border-radius:2px 2px 0 0;min-height:2px}
+  .controls{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px;display:flex;flex-direction:column;gap:12px;margin-bottom:16px;position:sticky;top:8px;z-index:5;backdrop-filter:blur(8px)}
+  .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .row label{color:var(--muted);font-size:12px;min-width:52px}
+  input[type=search],select{background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:8px 11px;font:inherit}
+  input[type=search]{flex:1;min-width:220px}
+  .chip{border:1px solid var(--line);background:var(--panel2);color:var(--muted);border-radius:999px;padding:4px 11px;font-size:12.5px;cursor:pointer;user-select:none;transition:.15s}
+  .chip:hover{color:var(--text)}
+  .chip.on{color:#0b0f17;background:var(--accent);border-color:var(--accent);font-weight:600}
+  .chip .n{opacity:.6;margin-left:4px;font-size:11px}
+  .list{display:flex;flex-direction:column;gap:8px}
+  .job{display:grid;grid-template-columns:1fr auto;gap:6px 16px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:13px 16px;transition:border-color .15s}
+  .job:hover{border-color:#34405e}
+  .job.closed{opacity:.45}
+  .job.applied{border-left:3px solid var(--entry)}
+  .t{font-weight:600;font-size:15px;color:var(--text);text-decoration:none}
+  .t:hover{color:var(--accent)}
+  .co{color:var(--accent2);font-weight:600}
+  .meta{color:var(--muted);font-size:12.5px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .tags{display:flex;gap:5px;flex-wrap:wrap}
+  .tag{font-size:11px;padding:1px 8px;border-radius:6px;background:#1c2540;color:#a5b4fc}
+  .lvl{font-size:11px;font-weight:600;padding:2px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em}
+  .lvl.entry{background:rgba(52,211,153,.14);color:var(--entry)}
+  .lvl.open{background:rgba(96,165,250,.14);color:var(--open)}
+  .lvl.intern{background:rgba(192,132,252,.14);color:var(--intern)}
+  .new{background:var(--warn);color:#111;font-size:10.5px;font-weight:700;padding:1px 7px;border-radius:5px}
+  .side{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+  .acts{display:flex;gap:6px}
+  .acts button{background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:7px;padding:3px 9px;font-size:12px;cursor:pointer}
+  .acts button:hover{color:var(--text);border-color:#3b4766}
+  .acts button.on{color:var(--entry);border-color:var(--entry)}
+  .score{font-size:11px;color:var(--muted)}
+  .empty{padding:40px;text-align:center;color:var(--muted);background:var(--panel);border:1px dashed var(--line);border-radius:var(--radius)}
+  details{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px 16px}
+  summary{cursor:pointer;font-weight:600}
+  table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
+  th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line)}
+  th{color:var(--muted);font-weight:500;font-size:12px}
+  .st-ok{color:var(--entry)} .st-empty{color:var(--warn)} .st-error,.st-not_found{color:var(--bad)}
+  .more{margin:14px auto 0;display:block;background:var(--panel2);border:1px solid var(--line);color:var(--text);padding:9px 18px;border-radius:9px;cursor:pointer}
+  @media (max-width:640px){.controls{position:static}.job{grid-template-columns:1fr}.side{align-items:flex-start;flex-direction:row;flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1><span class="pulse"></span>Job Radar</h1>
+      <div class="sub">Fresher-friendly CSE roles in India and remote, pulled straight from company career boards</div>
+    </div>
+    <div class="sub mono" id="updated"></div>
+  </header>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="controls">
+    <div class="row">
+      <input type="search" id="q" placeholder="Search title, company, location…  (try: python, ml, pune)">
+      <select id="sort">
+        <option value="score">Best match</option>
+        <option value="new">Newest first</option>
+        <option value="company">Company A–Z</option>
+      </select>
+    </div>
+    <div class="row"><label>Level</label><div class="row" id="levels"></div></div>
+    <div class="row"><label>Skills</label><div class="row" id="skills"></div></div>
+    <div class="row"><label>Seen</label><div class="row" id="ages"></div>
+      <span style="flex:1"></span>
+      <span class="chip" id="t-remote">Remote only</span>
+      <span class="chip" id="t-applied">Hide applied</span>
+      <span class="chip" id="t-hidden">Show hidden</span>
+      <span class="chip" id="t-closed">Show closed</span>
+    </div>
+    <div class="row"><label>Company</label><select id="company"><option value="">All companies</option></select></div>
+  </div>
+
+  <div class="sub" id="count" style="margin:0 2px 8px"></div>
+  <div class="list" id="list"></div>
+  <button class="more" id="more" hidden>Show more</button>
+
+  <details id="healthbox">
+    <summary id="healthsum">Board health</summary>
+    <table><thead><tr><th>Company</th><th>ATS</th><th>Status</th><th>Postings</th><th>Matches</th><th>Last OK</th><th>Note</th></tr></thead>
+      <tbody id="health"></tbody></table>
+  </details>
+</div>
+
+<script id="radar-data" type="application/json">__RADAR_DATA__</script>
+<script>
+(() => {
+  const D = JSON.parse(document.getElementById('radar-data').textContent);
+  const $ = id => document.getElementById(id);
+  const now = Date.now(), DAY = 864e5;
+  const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const ago = iso => { if(!iso) return ''; const d=(now-Date.parse(iso))/DAY;
+    return d<1/24?'just now':d<1?Math.round(d*24)+'h ago':d<30?Math.round(d)+'d ago':new Date(iso).toLocaleDateString(); };
+  const isNew = j => now - Date.parse(j.first_seen) < DAY;
+
+  // per-browser marks (applied / hidden); storage can be unavailable, so degrade to memory
+  let marks = {};
+  try { marks = JSON.parse(localStorage.getItem('radar-marks') || '{}'); } catch(e) {}
+  const saveMarks = () => { try { localStorage.setItem('radar-marks', JSON.stringify(marks)); } catch(e) {} };
+
+  const S = { q:'', levels:new Set(), skills:new Set(), age:'all', remote:false, hideApplied:false,
+              showHidden:false, showClosed:false, company:'', sort:'score', limit:60 };
+
+  const jobs = D.jobs || [];
+  const open = jobs.filter(j => j.status === 'open');
+
+  // ── header + stats
+  $('updated').textContent = D.generated_at ? 'Updated ' + ago(D.generated_at) : 'No runs yet';
+  const health = Object.entries(D.health || {});
+  const failing = health.filter(([,h]) => h.status === 'error' || h.status === 'not_found');
+  const runs = D.runs || [];
+  const maxNew = Math.max(1, ...runs.map(r => r.new));
+  $('stats').innerHTML = `
+    <div class="stat good"><b>${open.length}</b><span>Open matches</span></div>
+    <div class="stat"><b>${open.filter(isNew).length}</b><span>New in 24h</span></div>
+    <div class="stat"><b>${open.filter(j => now-Date.parse(j.first_seen) < 7*DAY).length}</b><span>New this week</span></div>
+    <div class="stat ${failing.length?'warn':''}"><b>${health.length - failing.length}/${health.length}</b><span>Boards healthy</span></div>
+    <div class="stat"><b>${runs.length ? runs.at(-1).scanned : 0}</b><span>Postings scanned</span>
+      <div class="spark" title="New matches per run">${runs.map(r=>`<i style="height:${Math.max(6,r.new/maxNew*100)}%" title="${esc(r.at.slice(0,16))}: ${r.new} new"></i>`).join('')}</div></div>`;
+
+  // ── chips
+  const count = key => { const m = {}; open.forEach(j => [].concat(j[key]).forEach(v => m[v]=(m[v]||0)+1)); return m; };
+  const LEVEL_LABEL = {entry:'Fresher / new grad', open:'No level stated', intern:'Intern'};
+  const SKILL_LABEL = {backend:'Backend', ai_ml:'AI / ML', data:'Data', devops_cloud:'DevOps / Cloud', frontend:'Frontend',
+                       fullstack:'Full stack', mobile:'Mobile', security:'Security', qa:'QA / SDET', sde:'General SDE'};
+  function chips(el, counts, labels, set, fixed) {
+    const ent = Object.entries(counts).sort(fixed ? (a,b)=>fixed.indexOf(a[0])-fixed.indexOf(b[0]) : (a,b)=>b[1]-a[1]);
+    el.innerHTML = ent.map(([k,n]) =>
+      `<span class="chip" data-k="${esc(k)}">${esc(labels[k]||k)}<span class="n">${n}</span></span>`).join('');
+    el.onclick = e => { const c = e.target.closest('.chip'); if(!c) return; const k=c.dataset.k;
+      set.has(k)?set.delete(k):set.add(k); c.classList.toggle('on'); S.limit=60; draw(); };
+  }
+  chips($('levels'), count('level'), LEVEL_LABEL, S.levels, ['entry','open','intern']);
+  chips($('skills'), count('skills'), SKILL_LABEL, S.skills);
+  $('ages').innerHTML = [['24h','24h'],['7d','7 days'],['30d','30 days'],['all','All']].map(([k,l]) =>
+      `<span class="chip ${k==='all'?'on':''}" data-k="${k}">${l}</span>`).join('');
+  $('ages').onclick = e => { const c=e.target.closest('.chip'); if(!c) return;
+    $('ages').querySelectorAll('.chip').forEach(x=>x.classList.remove('on')); c.classList.add('on'); S.age=c.dataset.k; draw(); };
+  [...new Set(jobs.map(j=>j.company))].sort().forEach(c => $('company').insertAdjacentHTML('beforeend', `<option>${esc(c)}</option>`));
+  const toggle = (id, key) => $(id).onclick = () => { S[key]=!S[key]; $(id).classList.toggle('on', S[key]); draw(); };
+  toggle('t-remote','remote'); toggle('t-applied','hideApplied'); toggle('t-hidden','showHidden'); toggle('t-closed','showClosed');
+  $('q').oninput = e => { S.q = e.target.value.toLowerCase().trim(); S.limit=60; draw(); };
+  $('sort').onchange = e => { S.sort = e.target.value; draw(); };
+  $('company').onchange = e => { S.company = e.target.value; draw(); };
+  $('more').onclick = () => { S.limit += 60; draw(); };
+
+  const AGE = {'24h':DAY, '7d':7*DAY, '30d':30*DAY};
+  function filtered() {
+    const terms = S.q.split(/\s+/).filter(Boolean);
+    let r = jobs.filter(j => {
+      if (!S.showClosed && j.status !== 'open') return false;
+      const m = marks[j.id];
+      if (m === 'hidden' && !S.showHidden) return false;
+      if (m === 'applied' && S.hideApplied) return false;
+      if (S.levels.size && !S.levels.has(j.level)) return false;
+      if (S.skills.size && !j.skills.some(s => S.skills.has(s))) return false;
+      if (S.remote && !j.remote) return false;
+      if (S.company && j.company !== S.company) return false;
+      if (AGE[S.age] && now - Date.parse(j.first_seen) > AGE[S.age]) return false;
+      if (terms.length) { const hay = (j.title+' '+j.company+' '+j.location+' '+j.skills.join(' ')).toLowerCase();
+        if (!terms.every(t => hay.includes(t))) return false; }
+      return true;
+    });
+    const by = { score:(a,b)=>b.score-a.score, new:(a,b)=>Date.parse(b.first_seen)-Date.parse(a.first_seen),
+                 company:(a,b)=>a.company.localeCompare(b.company)||b.score-a.score };
+    return r.sort(by[S.sort]);
+  }
+
+  function draw() {
+    const r = filtered();
+    $('count').textContent = `${r.length} role${r.length===1?'':'s'}`;
+    $('list').innerHTML = r.length ? r.slice(0, S.limit).map(j => {
+      const m = marks[j.id];
+      return `<div class="job ${j.status==='closed'?'closed':''} ${m==='applied'?'applied':''}">
+        <div>
+          <div class="meta" style="margin-bottom:3px"><span class="co">${esc(j.company)}</span>
+            <span class="lvl ${j.level}">${esc(LEVEL_LABEL[j.level]||j.level)}</span>
+            ${isNew(j)&&j.status==='open'?'<span class="new">NEW</span>':''}
+            ${j.status==='closed'?'<span>closed '+ago(j.closed_at)+'</span>':''}</div>
+          <a class="t" href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a>
+          <div class="meta" style="margin-top:4px"><span>📍 ${esc(j.location)}</span>
+            ${j.years!=null?`<span>${j.years}+ yrs asked</span>`:''}
+            <span class="tags">${j.skills.map(s=>`<span class="tag">${esc(SKILL_LABEL[s]||s)}</span>`).join('')}</span></div>
+        </div>
+        <div class="side">
+          <span class="sub">seen ${ago(j.first_seen)}${j.posted_at?` · posted ${esc(j.posted_at)}`:''}</span>
+          <div class="acts">
+            <button data-id="${esc(j.id)}" data-m="applied" class="${m==='applied'?'on':''}">${m==='applied'?'✓ Applied':'Applied'}</button>
+            <button data-id="${esc(j.id)}" data-m="hidden">${m==='hidden'?'Unhide':'Hide'}</button>
+          </div>
+          <span class="score mono">match ${j.score}</span>
+        </div></div>`; }).join('')
+      : `<div class="empty">${jobs.length ? 'Nothing matches these filters.' : 'No data yet. The first scheduled run will fill this in.'}</div>`;
+    $('more').hidden = r.length <= S.limit;
+  }
+  $('list').onclick = e => { const b = e.target.closest('button[data-id]'); if(!b) return;
+    const {id, m} = b.dataset; marks[id] = marks[id] === m ? undefined : m; if(!marks[id]) delete marks[id]; saveMarks(); draw(); };
+
+  // ── health table
+  const order = {not_found:0, error:1, empty:2, ok:3};
+  $('healthsum').textContent = `Board health: ${health.length - failing.length} OK` + (failing.length ? ` · ${failing.length} failing` : '');
+  if (failing.length) $('healthbox').open = true;
+  $('health').innerHTML = health.sort((a,b)=>(order[a[1].status]??9)-(order[b[1].status]??9)||a[0].localeCompare(b[0]))
+    .map(([n,h]) => `<tr><td>${esc(n)}</td><td class="mono">${esc(h.ats)}</td>
+      <td class="st-${esc(h.status)}">${esc({ok:'OK',empty:'Empty',error:'Error',not_found:'Wrong slug / moved'}[h.status]||h.status)}</td>
+      <td>${h.fetched??''}</td><td>${h.matched??''}</td><td>${h.last_ok?ago(h.last_ok):'never'}</td>
+      <td class="sub">${esc(h.error||'')}</td></tr>`).join('');
+
+  draw();
+})();
+</script>
+</body>
+</html>
