@@ -4,7 +4,7 @@
 # Each entry reads a company's job board straight from its ATS (applicant
 # tracking system) API, so there's no HTML scraping and no AI browsing.
 #
-#   ats: greenhouse | lever | ashby | smartrecruiters | workday | amazon
+#   ats: greenhouse | lever | ashby | smartrecruiters | workday | amazon | microsoft | google | oracle_hcm
 #   slug: the board id (for greenhouse/lever/ashby/smartrecruiters)
 #
 # Don't know a company's ATS?  Run:
@@ -35,14 +35,20 @@ companies:
   - { name: Cloudflare,  ats: greenhouse, slug: cloudflare,  verified: 2026-11-25 }
   - { name: Druva,       ats: greenhouse, slug: druva,       verified: 2026-11-25 }
 
+  # ── Big tech with their own careers sites (custom adapters) ─────────────────
+  - { name: Microsoft, ats: microsoft, location: India, verified: 2026-11-25 }
+  - { name: Google,    ats: google,    location: India, level: EARLY, verified: 2026-11-25 }
+  - { name: JPMorgan Chase, ats: oracle_hcm, host: jpmc.fa.oraclecloud.com, site: CX_1001, location_id: 300000000289360, verified: 2026-11-25 }
   - name: Amazon
     ats: amazon
     verified: 2026-11-25
     queries:            # each query is searched in India, results de-duplicated
       - software development engineer
+      - software engineer
+      - new grad
       - machine learning
       - data engineer
-      - support engineer
+      - frontend
       - cloud
 
   # ── Unverified: likely correct, health-checked each run ───────────────────

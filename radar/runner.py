@@ -104,8 +104,13 @@ def run(*, root: Path = ROOT, http=None, only: str | None = None, do_notify: boo
                     print(f"  ✗ {name:<14} {kind}: {str(err)[:90]}")
                 continue
 
-            matched = []
+            matched, same = [], set()
             for r, v, jid in enrich_and_classify(c, raw, cfg, store, http, ts, verbose):
+                # big companies often post one role several times (one per team/requisition)
+                key = (r.title.strip().lower(), v.location.lower())
+                if key in same:
+                    continue
+                same.add(key)
                 matched.append(Job(
                     id=jid, company=name,
                     title=r.title, url=r.url, location=v.location, level=v.level,

@@ -27,16 +27,31 @@ NON_TECH = re.compile(
     re.I)
 
 # ── seniority ────────────────────────────────────────────────────────────────
-SENIOR = re.compile(
+SENIOR_WORDS = re.compile(
     r"\b(senior|sr\.?|staff|principal|lead|leader|manager|director|head|vp|"
     r"vice president|architect|distinguished|fellow|chief|expert)\b|"
-    r"\b(engineer|developer|sde|scientist|analyst)\s*[-,]?\s*(ii|iii|iv|v|2|3|4|5)\b|"
-    r"\bsde[- ]?(ii|iii|2|3)\b|\bl[5-9]\b|\bmts[- ]?(2|3|4)\b|"
     r"\b[slp]mts\b", re.I)   # Salesforce Senior/Lead/Principal Member of Technical Staff
+# Numeric grades. Skipped when the company itself labels the job entry level: Google's
+# entry SWE title is "Software Engineer II".
+SENIOR_GRADE = re.compile(
+    r"\b(engineer|developer|sde|scientist|analyst)\s*[-,]?\s*(ii|iii|iv|v|2|3|4|5)\b|"
+    r"\bsde[- ]?(ii|iii|2|3)\b|\bl[5-9]\b|\bmts[- ]?(2|3|4)\b", re.I)
+
+
+class _Senior:
+    """Both checks, for callers that just want "is this title senior?"."""
+    @staticmethod
+    def search(text):
+        return SENIOR_WORDS.search(text) or SENIOR_GRADE.search(text)
+
+
+SENIOR = _Senior()
 
 ENTRY = re.compile(
     r"new[- ]?grad|graduate|fresher|freshers|entry[- ]level|early[- ]career|campus|"
-    r"university|\bjunior\b|\bjr\.?\b|trainee|apprentice|\bassociate\b|"
+    r"university|\bjunior\b|\bjr\.?\b|trainee|apprentice|"
+    # "Associate" only right before a dev role: at banks "Associate" alone is a mid-level grade
+    r"\bassociate\s+(software|sde|engineer|developer|data|ml|ai|cloud|qa|test|devops|front|back|full)|"
     r"\b(engineer|developer|sde|scientist|analyst)\s*[-,]?\s*(i|1)\b|\bsde[- ]?(i|1)\b|"
     r"\b202[5-7]\b|\bmts[- ]?1\b|0\s*[-–to]+\s*[12]\s*(years|yrs)", re.I)
 
@@ -172,8 +187,10 @@ def classify(job: RawJob, cfg: dict, today: date | None = None, check_level: boo
 
     # "Member of Technical Staff" is an IC title at AI labs, not "staff" seniority
     title_for_level = re.sub(r"member of technical staff", "mts", title, flags=re.I)
-    if SENIOR.search(title_for_level):
-        return Verdict(False, f"senior title ({SENIOR.search(title_for_level).group(0)})")
+    company_says_entry = (job.level_hint or "").lower() in ATS_ENTRY_LEVELS
+    m = SENIOR_WORDS.search(title_for_level) or (None if company_says_entry else SENIOR_GRADE.search(title_for_level))
+    if m:
+        return Verdict(False, f"senior title ({m.group(0)})")
     if (job.level_hint or "").lower() in ATS_SENIOR_LEVELS:
         return Verdict(False, f"senior level per job board ({job.level_hint})")
 

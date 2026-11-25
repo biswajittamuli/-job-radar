@@ -60,9 +60,14 @@ public JSON API that the page itself calls. Job Radar reads those APIs directly:
 `companies.yaml` has about 100 boards: Indian startups and product companies (Swiggy,
 Paytm, Meesho, Freshworks, Zeta, Groww, InMobi, Tekion …), and global companies and
 GCCs with India engineering teams (Stripe, Okta, Zscaler, PayPal, Salesforce, Amazon …).
-Every entry was checked against the live job board. Companies that run their own careers
-site (Google, Microsoft, Flipkart, Razorpay, PhonePe, Atlassian, Uber, most banks and
-service companies) need a custom adapter; see below.
+Microsoft, Google (its early-career listings) and JPMorgan Chase have their own adapters
+(`microsoft`, `google`, `oracle_hcm`). Every entry was checked against the live job board.
+Companies that run other careers sites (Flipkart, Razorpay, PhonePe, Atlassian, Uber,
+most service companies) still need a custom adapter; see below.
+
+Only software-development roles are kept: titles with words like *support*, *operations*,
+*data centre*, *sales*, *customer* or *scientist* are skipped (`exclude_titles` in
+`config.yaml`). If a company posts the same role twice, it's shown once.
 
 Workday boards are read one at a time, slowly, because Workday rate-limits GitHub's
 servers. A rate-limited board shows "Rate limited, retrying" under Board health and is
