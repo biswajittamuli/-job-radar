@@ -27,6 +27,7 @@ def careers_link(c: dict) -> str:
         "oracle_hcm": f"https://{host}/hcmUI/CandidateExperience/en/sites/{c.get('site', '')}",
         "eightfold": f"https://{host}/careers",
         "successfactors": f"https://{host}/",
+        "webpage": c.get("url", ""),
     }.get(a, "")
 
 

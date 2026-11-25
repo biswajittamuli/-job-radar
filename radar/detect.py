@@ -103,15 +103,32 @@ def add_company(url: str, name: str, companies_file, http, today: str) -> tuple[
     except Exception as e:  # noqa: BLE001
         return None, [f"could not load {url}: {e}"]
     if not candidates:
+        # no job feed found: try reading the page itself with the headless browser
+        entry = {"name": name, "ats": "webpage", "url": url, "location": "India"}
+        try:
+            jobs = ADAPTERS["webpage"].fetch(entry, http)
+        except Exception as e:  # noqa: BLE001
+            jobs, why = [], str(e)
+        else:
+            why = "the page lists no job links the reader can recognise"
+        finally:
+            getattr(ADAPTERS["webpage"], "close", lambda: None)()
+        if jobs:
+            from datetime import date as _date
+            entry["verified"] = _date.fromisoformat(today)
+            line = "  - " + yaml.safe_dump(entry, default_flow_style=True, sort_keys=False, width=1000).strip()
+            with open(companies_file, "a") as f:
+                f.write(("" if open(companies_file).read().endswith("\n") else "\n") + line + "\n")
+            return entry, [f"  no job feed, but the careers page itself lists {len(jobs)} jobs "
+                           f"(e.g. {jobs[0].title!r}); it will be read with a headless browser. Added:\n{line}"]
         try:
             page = http.get_text(url)
         except Exception:  # noqa: BLE001
             page = ""
         known = [n for n, rx in UNSUPPORTED if re.search(rx, page, re.I)]
         if known:
-            return None, [f"that page uses {known[0]}, which Job Radar can't read (no public job feed, "
-                          f"a bot check, or not supported yet)"]
-        return None, ["no supported careers system found on that page (it may be a custom site)"]
+            return None, [f"that page uses {known[0]}, which Job Radar can't read ({why})"]
+        return None, [f"couldn't find jobs on that page: {why}"]
     for block in candidates:
         entry = {"name": name, **block}
         try:

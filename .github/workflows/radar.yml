@@ -17,7 +17,7 @@ concurrency:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -31,6 +31,10 @@ jobs:
           cache: pip
 
       - run: pip install -r requirements.txt
+
+      # Headless Chromium for careers pages that have no job feed (ats: webpage)
+      - name: Install browser
+        run: python -m playwright install --with-deps chromium
 
       - name: Scan career boards
         id: scan

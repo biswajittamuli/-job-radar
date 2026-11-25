@@ -47,7 +47,7 @@ def enrich_and_classify(c: dict, raw: list, cfg: dict, store, http, ts: str, ver
                 r.posted_at = cached.get("posted_at") or r.posted_at
                 r.locations = cached.get("locations") or r.locations
                 cached["seen"] = ts
-            elif fetched < MAX_DESCRIBE_PER_BOARD:
+            elif fetched < getattr(adapter, "MAX_DESCRIBE", MAX_DESCRIBE_PER_BOARD):
                 fetched += 1
                 try:
                     describe(c, r, http)
@@ -146,11 +146,22 @@ def run(*, root: Path = ROOT, http=None, only: str | None = None, do_notify: boo
         if verbose:
             print(f"  ✓ {name:<14} {len(raw):>4} jobs → {len(matched):>3} match, {len(new):>3} new")
 
-    boards = [c for c in companies if not is_aggregator(c)]
+    def uses_browser(c):
+        return getattr(ADAPTERS[c["ats"]], "BROWSER", False)
+
+    boards = [c for c in companies if not is_aggregator(c) and not uses_browser(c)]
+    pages = [c for c in companies if uses_browser(c)]
     aggregators = [c for c in companies if is_aggregator(c)]
     with ThreadPoolExecutor(max_workers=workers) as pool:
         for fut in as_completed([pool.submit(fetch_one, c, http) for c in boards]):
             handle(*fut.result())
+    # careers pages read with a headless browser: one at a time, sharing one browser
+    try:
+        for c in pages:
+            handle(*fetch_one(c, http))
+    finally:
+        for mod in {ADAPTERS[c["ats"]] for c in pages}:
+            getattr(mod, "close", lambda: None)()
     # after every company board, so their jobs can be recognised and skipped
     for c in aggregators:
         handle(*fetch_one(c, http))
