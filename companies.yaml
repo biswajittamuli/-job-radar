@@ -245,6 +245,57 @@ companies:
     site: external_experienced
     search: India
 
+  # ── More Indian startups and GCCs found by the Nov 2026 probe (each checked: India jobs listed) ──
+  - { name: NielsenIQ, ats: smartrecruiters, slug: NielsenIQ, verified: 2026-11-25 }
+  - { name: HighRadius, ats: greenhouse, slug: highradius, verified: 2026-11-25 }
+  - { name: Snitch, ats: keka, host: snitch.keka.com, verified: 2026-11-25 }
+  - { name: CynLr, ats: ashby, slug: cynlr, verified: 2026-11-25 }
+  - { name: GoKwik, ats: keka, host: gokwik.keka.com, verified: 2026-11-25 }
+  - { name: Lyzr, ats: ashby, slug: lyzr, verified: 2026-11-25 }
+  - { name: Ninjacart, ats: freshteam, slug: ninjacart, verified: 2026-11-25 }
+  - { name: STAGE, ats: greenhouse, slug: stage, verified: 2026-11-25 }
+  - { name: Haptik, ats: freshteam, slug: haptik, verified: 2026-11-25 }
+  - { name: Paxcom, ats: keka, host: paxcom.keka.com, verified: 2026-11-25 }
+  - { name: SaaS Labs, ats: kula, slug: saas-labs, verified: 2026-11-25 }
+  - { name: Skydo, ats: keka, host: skydo.keka.com, verified: 2026-11-25 }
+  - { name: 100ms, ats: lever, slug: 100ms, verified: 2026-11-25 }
+  - { name: dunnhumby, ats: greenhouse, slug: dunnhumby, verified: 2026-11-25 }
+  - { name: Skit.ai, ats: keka, host: skit.keka.com, verified: 2026-11-25 }
+  - { name: Binance, ats: greenhouse, slug: binance, verified: 2026-11-25 }
+  - { name: ClickPost, ats: keka, host: clickpost.keka.com, verified: 2026-11-25 }
+  - { name: Mintifi, ats: keka, host: mintifi.keka.com, verified: 2026-11-25 }
+  - { name: Equal Experts, ats: greenhouse, slug: equalexperts, verified: 2026-11-25 }
+  - { name: Everstage, ats: freshteam, slug: everstage, verified: 2026-11-25 }
+  - { name: SigNoz, ats: ashby, slug: signoz, verified: 2026-11-25 }
+  - { name: BharatPe, ats: freshteam, slug: bharatpe, verified: 2026-11-25 }
+  - { name: LetsTransport, ats: freshteam, slug: letstransport, verified: 2026-11-25 }
+  - { name: Zetwerk, ats: freshteam, slug: zetwerk, verified: 2026-11-25 }
+  - { name: CityMall, ats: freshteam, slug: citymall, verified: 2026-11-25 }
+  - { name: Unicommerce, ats: keka, host: unicommerce.keka.com, verified: 2026-11-25 }
+  - { name: Genpact, ats: smartrecruiters, slug: genpactindia, verified: 2026-11-25 }
+  - { name: Housing.com, ats: freshteam, slug: housing, verified: 2026-11-25 }
+  - { name: Turtlemint, ats: smartrecruiters, slug: Turtlemint, verified: 2026-11-25 }
+  - { name: ValueLabs, ats: smartrecruiters, slug: ValueLabs, verified: 2026-11-25 }
+  - { name: Velocity, ats: freshteam, slug: velocity, verified: 2026-11-25 }
+
+  # ── Indian startups found from their own careers pages (Nov 2026) ──
+  # Fi, Nanonets and Open had no openings when added; they appear when they hire.
+  # Postman, Fractal, Quantiphi: Workday site names taken from their careers pages.
+  - { name: Vyapar, ats: keka, host: vyaparapp.keka.com, verified: 2026-11-25 }
+  - { name: WebEngage, ats: keka, host: webklipper.keka.com, verified: 2026-11-25 }
+  - { name: Wingify (VWO), ats: keka, host: wingify.keka.com, verified: 2026-11-25 }
+  - { name: Scrut, ats: keka, host: scrut.keka.com, verified: 2026-11-25 }
+  - { name: Open Financial, ats: keka, host: openfinancial.keka.com, verified: 2026-11-25 }
+  - { name: Ati Motors, ats: keka, host: atirobotics.keka.com, verified: 2026-11-25 }
+  - { name: Icertis, ats: oracle_hcm, host: iaaviz.fa.ocs.oraclecloud.com, site: CX_1, location_id: 300000000427974, verified: 2026-11-25 }
+  - { name: Quizizz (Wayground), ats: lever, slug: Wayground, verified: 2026-11-25 }
+  - { name: Fi Money, ats: lever, slug: epifi, verified: 2026-11-25 }
+  - { name: Nanonets, ats: ashby, slug: nanonets, verified: 2026-11-25 }
+  - { name: Uniphore, ats: workday, host: uniphore.wd503.myworkdayjobs.com, tenant: uniphore, site: Uniphore, search: India, verified: 2026-11-25 }
+  - { name: Postman, ats: workday, host: postman.wd108.myworkdayjobs.com, tenant: postman, site: careers, search: India }
+  - { name: Fractal, ats: workday, host: fractal.wd1.myworkdayjobs.com, tenant: fractal, site: Careers, search: India }
+  - { name: Quantiphi, ats: workday, host: quantiphi.wd1.myworkdayjobs.com, tenant: quantiphi, site: Careers_at_Quantiphi, search: India }
+
   # ── Job-search aggregator: jobs from any company (needs the JOOBLE_KEY secret) ──
   # Runs after every company board above; a job already found on a company's own board
   # is skipped. Skipped entirely when the secret isn't set.

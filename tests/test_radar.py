@@ -479,7 +479,8 @@ def test_strict_accepts_fresher_signals(title, desc):
 ])
 def test_strict_rejects(title, desc, why):
     v = classify(J(title, desc=desc), CFG)
-    assert not v.ok and why in v.reason, v.reason
+    # a title with no software role word is now rejected earlier, as "not a tech role"
+    assert not v.ok and (why in v.reason or "not a tech role" in v.reason), v.reason
 
 
 def test_desc_entry_signal_is_narrow():
@@ -911,3 +912,157 @@ def test_runner_skips_disabled_source_quietly(repo, monkeypatch):
 
 def test_workflow_passes_jooble_secret():
     assert "JOOBLE_KEY:         ${{ secrets.JOOBLE_KEY }}" in (ROOT / ".github/workflows/radar.yml").read_text()
+
+
+# ── Freshteam, detection of every platform, and `radar add` ─────────────────
+from radar import detect as detect_mod
+from radar.sources import freshteam
+
+
+def test_freshteam_parse_joins_branch_location():
+    data = {"branches": [{"id": 9, "city": "Chennai", "state": "Tamil Nadu", "country_code": "IN", "location": "Chennai, Tamil Nadu"}],
+            "jobs": [{"id": "1", "title": "Backend Developer (SDE 1)", "branch_id": "9", "created_at": ago(3) + "T11:44:56Z",
+                      "description": "<p>0-1 years</p>", "remote": "False", "url": "https://acme.com/careers?jobId=x"},
+                     {"id": "2", "title": "Gone", "branch_id": "9", "deleted": True}]}
+    jobs = freshteam.parse(data, {"slug": "acme"})
+    assert [j.title for j in jobs] == ["Backend Developer (SDE 1)"]
+    assert jobs[0].locations == ["Chennai, Tamil Nadu, India"] and jobs[0].posted_at == ago(3)
+    assert classify(jobs[0], CFG).level == "entry"
+
+
+@pytest.mark.parametrize("text,expected", [
+    ('<a href="https://jupiter.keka.com/careers">', {"ats": "keka", "host": "jupiter.keka.com"}),
+    ('<a href="https://careers.kula.ai/cashfree">', {"ats": "kula", "slug": "cashfree"}),
+    ('<script src="https://qualcomm.eightfold.ai/x.js">', {"ats": "eightfold", "host": "qualcomm.eightfold.ai", "domain": "qualcomm.com"}),
+    ('fetch("https://ibqbjb.fa.ocs.oraclecloud.com/hcm") /sites/CX_1/jobs', {"ats": "oracle_hcm", "host": "ibqbjb.fa.ocs.oraclecloud.com", "site": "CX_1"}),
+    ('<a href="https://ninjacart.freshteam.com/jobs">', {"ats": "freshteam", "slug": "ninjacart"}),
+    ('job-boards.greenhouse.io/razorpaysoftwareprivatelimited', {"ats": "greenhouse", "slug": "razorpaysoftwareprivatelimited"}),
+])
+def test_detect_every_platform(text, expected):
+    assert expected in detect_mod.detect_in(text)
+
+
+def test_detect_successfactors_by_page_markers():
+    hits = detect_mod.detect_in('<script src="https://hcm55.sapsf.eu/rmk-jobs-search/x.js">', "https://careers.wipro.com/search/")
+    assert {"ats": "successfactors", "host": "careers.wipro.com"}.items() <= hits[0].items()
+
+
+def test_add_company_appends_first_working_board(tmp_path):
+    f = tmp_path / "companies.yaml"
+    f.write_text("companies:\n  - { name: Old, ats: kula, slug: cashfree }\n")
+
+    class H:
+        def get_text(self, url):
+            return {"https://new.example/careers": '<a href="https://careers.kula.ai/newco">jobs</a>',
+                    "https://darwin.example/careers": '<script src="https://x.darwinbox.in/a.js">'}.get(url, "")
+
+    import radar.sources.kula as kmod
+    orig = kmod.fetch
+    kmod.fetch = lambda c, h: [RawJob("1", "SDE 1", "u", ["Bengaluru, India"])]
+    try:
+        e, log = detect_mod.add_company("https://new.example/careers", "NewCo", f, H(), "2026-11-25")
+        assert e and e["slug"] == "newco"
+        saved = yaml.safe_load(f.read_text())["companies"]
+        assert saved[-1] == {"name": "NewCo", "ats": "kula", "slug": "newco", "verified": date(2026, 11, 25)}
+        # same name again, or a board already tracked, is refused
+        assert detect_mod.add_company("https://new.example/careers", "NewCo", f, H(), "2026-11-25")[0] is None
+        e2, log2 = detect_mod.add_company("https://new.example/careers", "Other", f, H(), "2026-11-25")
+        assert e2 is None and "already tracked as NewCo" in log2[0]
+        # an unsupported careers system is named
+        e3, log3 = detect_mod.add_company("https://darwin.example/careers", "Darwin", f, H(), "2026-11-25")
+        assert e3 is None and "Darwinbox" in log3[0]
+    finally:
+        kmod.fetch = orig
+
+
+def test_keka_standard_page_without_custom_portal():
+    class H:
+        def get_text(self, url):
+            return "<html><base href='/careers/'></html>"
+
+        def get_json(self, url, **kw):
+            assert url == "https://wingify.keka.com/careers/api/jobs/default/active"
+            return [{"id": 1, "title": "Software Engineer - Fresher", "experience": "0-1 Years", "jobLocations": []}]
+    assert len(keka.fetch({"host": "wingify.keka.com"}, H())) == 1
+
+
+# ── fresher-hiring evidence and the Indian startups directory ───────────────
+from radar.classify import fresher_role_kind
+from radar.render import careers_link, startup_directory
+
+
+@pytest.mark.parametrize("title,loc,desc,kind", [
+    ("SDE I", "Bengaluru, India", "", "entry"),
+    ("Fullstack Engineer, Product Team (New Grad)", "Bengaluru", "", "entry"),
+    ("Associate Software Engineer", "Pune", "", "entry"),
+    ("Software Engineer (0-1 years)", "Hyderabad", "", "entry"),
+    ("Software Engineering Intern", "Bengaluru", "", "intern"),
+    ("SDE II", "Bengaluru", "", None),
+    ("Senior Backend Engineer", "Bengaluru", "", None),
+    ("SDE I", "San Francisco, CA", "", None),
+    ("Technical Support Engineer I", "Bengaluru", "", None),
+    ("Software Engineer", "Bengaluru", "3+ years of experience", None),
+    ("Software Engineer", "Bengaluru", "", None),            # no level stated: not evidence
+])
+def test_fresher_role_kind(title, loc, desc, kind):
+    assert fresher_role_kind(J(title, loc, desc), CFG) == kind
+
+
+def test_fresher_evidence_ignores_posting_age():
+    old = RawJob("1", "SDE I", "u", ["Bengaluru, India"], posted_at="2025-01-01")
+    assert not classify(old, CFG).ok and fresher_role_kind(old, CFG) == "entry"
+
+
+def test_runner_records_fresher_history(repo):
+    board = {"jobs": [
+        {"id": 1, "title": "SDE I", "absolute_url": "https://x/1", "location": {"name": "Bengaluru, India"}, "first_published": "2025-01-01"},
+        {"id": 2, "title": "Software Engineering Intern", "absolute_url": "https://x/2", "location": {"name": "Pune, India"}, "first_published": ago(1)},
+        {"id": 3, "title": "Senior Engineer", "absolute_url": "https://x/3", "location": {"name": "Pune, India"}, "first_published": ago(1)}]}
+    run(root=repo, http=FakeHttp({"boards/acme": board}), do_notify=False, verbose=False)
+    rec = json.loads((repo / "data/companies.json").read_text())["Acme"]
+    assert rec["open_entry"] == 1 and rec["open_intern"] == 1 and len(rec["seen"]) == 2
+    # next run lists nothing: still remembered as evidence, but nothing open now
+    run(root=repo, http=FakeHttp({"boards/acme": {"jobs": []}}), do_notify=False, verbose=False)
+    rec = json.loads((repo / "data/companies.json").read_text())["Acme"]
+    assert rec["open_entry"] == 0 and len(rec["seen"]) == 2 and rec["first_fresher_seen"]
+
+
+def test_startup_directory(repo):
+    (repo / "startups.yaml").write_text(yaml.safe_dump({"tracked": ["Acme"], "manual": [
+        {"name": "Darwin Co", "careers": "https://darwin.example/careers", "system": "Darwinbox"}]}))
+    board = {"jobs": [{"id": 1, "title": "SDE I", "absolute_url": "https://x/1", "location": {"name": "Bengaluru, India"},
+                       "first_published": ago(1), "content": "0-1 years"}]}
+    run(root=repo, http=FakeHttp({"boards/acme": board}), do_notify=False, verbose=False)
+    from radar.store import Store
+    d = {x["name"]: x for x in startup_directory(repo, Store(repo / "data"))}
+    assert d["Acme"]["tracked"] and d["Acme"]["open_entry"] == 1 and d["Acme"]["fresher_seen"] == 1
+    assert d["Acme"]["careers"] == "https://job-boards.greenhouse.io/acme" and d["Acme"]["examples"][0]["title"] == "SDE I"
+    assert d["Darwin Co"] == {"name": "Darwin Co", "tracked": False, "system": "Darwinbox", "careers": "https://darwin.example/careers"}
+    html = (repo / "docs/index.html").read_text()
+    assert "Darwin Co" in html and 'id="startupbox"' in html
+
+
+def test_careers_links():
+    assert careers_link({"ats": "keka", "host": "jupiter.keka.com"}) == "https://jupiter.keka.com/careers/"
+    assert careers_link({"ats": "lever", "slug": "cred"}) == "https://jobs.lever.co/cred"
+
+
+def test_startups_yaml_names_are_tracked_companies():
+    s = yaml.safe_load((ROOT / "startups.yaml").read_text())
+    names = {c["name"] for c in yaml.safe_load((ROOT / "companies.yaml").read_text())["companies"]}
+    assert set(s["tracked"]) <= names
+    assert len(s["tracked"]) > 90 and len(s["manual"]) > 150
+    assert not {m["name"] for m in s["manual"]} & set(s["tracked"])
+
+
+@pytest.mark.parametrize("title", ["Test Jerin", "AI Writer - Guru", "Benefit Verification Specialist - AI Agents",
+                                   "Intern - AI Search & SEO", "Growth Analyst – AI & Automation"])
+def test_titles_without_a_dev_role_are_not_tech(title):
+    assert "not a tech role" in classify(J(title, desc="freshers welcome"), OPEN).reason
+    assert fresher_role_kind(J(title, desc="freshers welcome"), CFG) is None
+
+
+@pytest.mark.parametrize("title", ["Machine Learning/ AI Intern", "SRE-1", "Software Development Engineer 1", "QA Engineer I",
+                                   "Data Analyst - Fresher", "SDET - Software Development Engineer in Test"])
+def test_dev_role_titles_still_count(title):
+    assert fresher_role_kind(J(title, desc="0-1 years"), CFG) in ("entry", "intern")

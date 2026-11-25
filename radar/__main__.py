@@ -4,6 +4,7 @@ python -m radar run --only cred     just one company (substring match)
 python -m radar run --no-notify     don't send Telegram/email
 python -m radar check               health-check every board without saving jobs
 python -m radar detect <url> ...    find a company's ATS from its careers page
+python -m radar add <url> --name "Company"   detect, test-fetch and add it to companies.yaml
 python -m radar explain "<title>" [--loc ..] [--desc ..] [--posted YYYY-MM-DD]   why would this job pass/fail?
 python -m radar test-notify         send a Telegram test message; exits 1 with Telegram's error
 """
@@ -16,7 +17,7 @@ import yaml
 
 from . import notify
 from .classify import classify
-from .detect import detect
+from .detect import add_company, detect
 from .http import Http
 from .models import RawJob
 from .runner import ROOT, fetch_one, load_yaml, run
@@ -32,6 +33,9 @@ def main(argv=None):
     sub.add_parser("check")
     d = sub.add_parser("detect")
     d.add_argument("urls", nargs="+")
+    ad = sub.add_parser("add")
+    ad.add_argument("url")
+    ad.add_argument("--name", required=True)
     e = sub.add_parser("explain")
     e.add_argument("title")
     e.add_argument("--loc", default="Bengaluru, India")
@@ -74,6 +78,12 @@ def main(argv=None):
                 print(yaml.safe_dump([{"name": "CHANGE_ME", **h}], sort_keys=False).strip())
             print()
         return 0
+
+    if a.cmd == "add":
+        from datetime import date
+        entry, log = add_company(a.url, a.name, ROOT / "companies.yaml", Http(retries=1), date.today().isoformat())
+        print("\n".join(log))
+        return 0 if entry else 1
 
     if a.cmd == "explain":
         cfg = load_yaml(ROOT / "config.yaml")

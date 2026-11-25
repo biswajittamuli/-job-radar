@@ -67,6 +67,15 @@
   th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line)}
   th{color:var(--muted);font-weight:500;font-size:12px}
   .st-ok{color:var(--entry)} .st-empty,.st-rate_limited{color:var(--warn)} .st-error,.st-not_found{color:var(--bad)}
+  .dir .row{margin:10px 0}
+  .dir td .ex{color:var(--muted);font-size:12px;display:block;max-width:420px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .dir td .ex a{color:var(--muted)}
+  .pill{font-size:11px;font-weight:600;padding:2px 8px;border-radius:6px;white-space:nowrap}
+  .pill.now{background:rgba(52,211,153,.14);color:var(--entry)}
+  .pill.past{background:rgba(96,165,250,.14);color:var(--open)}
+  .pill.none{background:#1c2540;color:var(--muted)}
+  .pill.manual{background:rgba(251,191,36,.12);color:var(--warn)}
+  .dir a.go{color:var(--accent);text-decoration:none;font-weight:600;white-space:nowrap}
   .more{margin:14px auto 0;display:block;background:var(--panel2);border:1px solid var(--line);color:var(--text);padding:9px 18px;border-radius:9px;cursor:pointer}
   @media (max-width:640px){.controls{position:static}.job{grid-template-columns:1fr}.side{align-items:flex-start;flex-direction:row;flex-wrap:wrap}}
 </style>
@@ -108,6 +117,24 @@
   <div class="sub" id="count" style="margin:0 2px 8px"></div>
   <div class="list" id="list"></div>
   <button class="more" id="more" hidden>Show more</button>
+
+  <details id="startupbox" class="dir" open>
+    <summary id="startupsum">Indian startups</summary>
+    <p class="sub" style="margin:8px 0 0">Every Indian startup Job Radar knows about. <b>Tracked</b> ones are read
+      automatically: "fresher roles seen" counts SDE-1 / new-grad / 0-1 yr / trainee and internship roles they have
+      listed in India since tracking began, which shows who hires CSE graduates. The rest use careers sites that can't be
+      read automatically: open their link to check.</p>
+    <div class="row">
+      <input type="search" id="sq" placeholder="Search startups…">
+      <span class="chip on" data-f="all">All</span>
+      <span class="chip" data-f="now">Hiring freshers now</span>
+      <span class="chip" data-f="past">Has listed fresher roles</span>
+      <span class="chip" data-f="tracked">Tracked automatically</span>
+      <span class="chip" data-f="manual">Check manually</span>
+    </div>
+    <table><thead><tr><th>Startup</th><th>Fresher roles</th><th>Recent fresher / intern roles</th><th>Careers</th></tr></thead>
+      <tbody id="startups"></tbody></table>
+  </details>
 
   <details id="healthbox">
     <summary id="healthsum">Board health</summary>
@@ -239,6 +266,45 @@
   }
   $('list').onclick = e => { const b = e.target.closest('button[data-id]'); if(!b) return;
     const {id, m} = b.dataset; marks[id] = marks[id] === m ? undefined : m; if(!marks[id]) delete marks[id]; saveMarks(); draw(); };
+
+  // ── Indian startups directory
+  const SU = D.startups || [];
+  let sf = 'all', sq = '';
+  const suRank = x => x.tracked ? ((x.open_entry + x.open_intern) > 0 ? 0 : (x.fresher_seen + x.intern_seen) > 0 ? 1 : 2) : 3;
+  function drawStartups() {
+    const rows = SU.filter(x => {
+      if (sq && !x.name.toLowerCase().includes(sq)) return false;
+      if (sf === 'now') return x.tracked && (x.open_entry + x.open_intern) > 0;
+      if (sf === 'past') return x.tracked && (x.fresher_seen + x.intern_seen) > 0;
+      if (sf === 'tracked') return x.tracked;
+      if (sf === 'manual') return !x.tracked;
+      return true;
+    }).sort((a, b) => suRank(a) - suRank(b) || (b.fresher_seen + b.intern_seen) - (a.fresher_seen + a.intern_seen) || a.name.localeCompare(b.name));
+    $('startups').innerHTML = rows.map(x => {
+      let status, ex = '';
+      if (!x.tracked) status = `<span class="pill manual">Check manually · ${esc(x.system)}</span>`;
+      else if (x.open_entry + x.open_intern) status = `<span class="pill now">${[x.open_entry ? `${x.open_entry} fresher` : '', x.open_intern ? `${x.open_intern} intern` : ''].filter(Boolean).join(' + ')} open now</span>`;
+      else if (x.fresher_seen + x.intern_seen) status = `<span class="pill past">${x.fresher_seen} fresher · ${x.intern_seen} intern seen</span>`;
+      else status = `<span class="pill none">none listed yet</span>`;
+      if (x.tracked) ex = (x.examples || []).map(e => `<span class="ex">${e.kind === 'intern' ? 'Intern · ' : ''}<a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)}</a> <span class="mono">${e.last_seen ? ago(e.last_seen) : ''}</span></span>`).join('')
+        + (x.matches ? `<span class="ex">${x.matches} role${x.matches > 1 ? 's' : ''} in your list above</span>` : '');
+      const link = x.system === 'careers page not found'
+        ? `https://www.google.com/search?q=${encodeURIComponent(x.name + ' careers India software engineer')}`
+        : x.careers;
+      return `<tr><td><b>${esc(x.name)}</b>${x.tracked ? `<div class="sub mono">${esc(x.system)}</div>` : ''}</td>
+        <td>${status}</td><td>${ex || '<span class="sub">—</span>'}</td>
+        <td><a class="go" href="${esc(link)}" target="_blank" rel="noopener">${x.system === 'careers page not found' ? 'Search ↗' : 'Open ↗'}</a></td></tr>`;
+    }).join('') || '<tr><td colspan="4" class="sub">No startups match.</td></tr>';
+    const now = SU.filter(x => x.tracked && (x.open_entry + x.open_intern) > 0).length;
+    const past = SU.filter(x => x.tracked && (x.fresher_seen + x.intern_seen) > 0).length;
+    $('startupsum').textContent = `Indian startups: ${SU.length} · ${now} hiring freshers now · ${past} have listed fresher roles · ${SU.filter(x => !x.tracked).length} to check manually`;
+  }
+  if (SU.length) {
+    document.querySelectorAll('#startupbox .chip').forEach(c => c.onclick = () => {
+      document.querySelectorAll('#startupbox .chip').forEach(x => x.classList.remove('on')); c.classList.add('on'); sf = c.dataset.f; drawStartups(); });
+    $('sq').oninput = e => { sq = e.target.value.toLowerCase().trim(); drawStartups(); };
+    drawStartups();
+  } else { $('startupbox').hidden = true; }
 
   // ── health table
   const order = {not_found:0, error:1, rate_limited:2, empty:3, ok:4};
