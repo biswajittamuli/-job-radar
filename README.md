@@ -84,6 +84,21 @@ Workday boards are read one at a time, slowly, because Workday rate-limits GitHu
 servers. A rate-limited board shows "Rate limited, retrying" under Board health and is
 not reported as broken. Other boards alert you only after failing 3 runs in a row.
 
+## Jobs from any company (Jooble)
+
+Besides the company boards, Job Radar can search **Jooble**, a job-search engine that
+collects postings from many sites, so smaller companies not in `companies.yaml` show up too.
+
+1. Get a free API key at <https://jooble.org/api/about>.
+2. Add it as a repository secret named `JOOBLE_KEY` (Settings → Secrets and variables →
+   Actions → New repository secret). Paste only the key, no spaces or newline.
+3. Run the workflow. The log shows a line like `✓ Jooble  240 jobs → 12 match`.
+
+Jobs found this way are marked "via Jooble" on the dashboard. Jooble runs after every
+company board, and a job already found on a company's own board isn't repeated. Edit its
+`queries:` in `companies.yaml` to change what it searches for. Without the secret, it is
+skipped. LinkedIn, Naukri and Indeed aren't searched: their terms forbid scraping.
+
 ## Adding companies
 
 ```bash

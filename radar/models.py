@@ -15,6 +15,7 @@ class RawJob:
     remote: bool | None = None
     team: str = ""
     level_hint: str = ""                # the ATS's own experience level, if it states one
+    company: str = ""                   # the employer, for aggregators that list many companies
 
 
 @dataclass
@@ -35,6 +36,7 @@ class Job:
     closed_at: str | None = None
     years: int | None = None    # min years of experience asked, if stated
     remote: bool = False
+    source: str = ""            # where it was found, when not the company's own board (e.g. Jooble)
 
     def to_dict(self) -> dict:
         return asdict(self)

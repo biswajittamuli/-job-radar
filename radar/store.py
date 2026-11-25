@@ -56,9 +56,10 @@ class Store:
                 d["last_seen"] = ts
                 d["status"], d["closed_at"] = "open", None
                 self.jobs[j.id] = d
-        # anything of this company we had open but didn't see now has closed
+        # anything from this board we had open but didn't see now has closed
+        # (aggregator jobs carry the aggregator's name in "source")
         for jid, d in self.jobs.items():
-            if d["company"] == company and d["status"] == "open" and jid not in seen_ids:
+            if (d.get("source") or d["company"]) == company and d["status"] == "open" and jid not in seen_ids:
                 d["status"], d["closed_at"] = "closed", ts
         return new
 
