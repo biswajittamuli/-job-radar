@@ -51,9 +51,14 @@ def build_text(new_jobs, broken, dashboard_url, max_items):
     return "\n".join(lines)
 
 
-def build_html(new_jobs, broken, dashboard_url, max_items):
+def build_html(new_jobs, broken, dashboard_url, max_items, stats=""):
     e = html.escape
-    parts = [f"<b>🛰 Job Radar — {len(new_jobs)} new</b>"]
+    if not new_jobs:
+        parts = ["<b>🛰 Job Radar — no new fresher jobs this run</b>"]
+        if stats:
+            parts.append(f"<i>{e(stats)}</i>")
+    else:
+        parts = [f"<b>🛰 Job Radar — {len(new_jobs)} new</b>"]
     for j, head, sub in _lines(new_jobs, max_items):
         parts.append(f'{LEVEL_ICON.get(j.level, "•")} <b>{e(j.company)}</b> — '
                      f'<a href="{e(j.url)}">{e(j.title)}</a>\n<i>{e(sub)}</i>')
@@ -131,11 +136,11 @@ def _chunks(body: str, limit: int = 3900) -> list[str]:
     return chunks
 
 
-def telegram(new_jobs, broken, dashboard_url, max_items) -> bool:
+def telegram(new_jobs, broken, dashboard_url, max_items, stats="") -> bool:
     token, chat = telegram_creds()
     if not (token and chat):
         return False
-    for c in _chunks(build_html(new_jobs, broken, dashboard_url, max_items)):
+    for c in _chunks(build_html(new_jobs, broken, dashboard_url, max_items, stats)):
         telegram_send(token, chat, c)
     return True
 
@@ -151,13 +156,13 @@ def send_test_message() -> str:
     return f"sent to chat {c.get('id', chat)} ({c.get('title') or c.get('username') or c.get('first_name') or 'unknown'})"
 
 
-def email(new_jobs, broken, dashboard_url, max_items) -> bool:
+def email(new_jobs, broken, dashboard_url, max_items, stats="") -> bool:
     host, to = (os.getenv("SMTP_HOST") or "").strip(), (os.getenv("EMAIL_TO") or "").strip()
     if not (host and to):
         return False
-    body = build_html(new_jobs, broken, dashboard_url, max_items).replace("\n", "<br>")
+    body = build_html(new_jobs, broken, dashboard_url, max_items, stats).replace("\n", "<br>")
     msg = MIMEText(body, "html")
-    msg["Subject"] = f"Job Radar: {len(new_jobs)} new role(s)"
+    msg["Subject"] = f"Job Radar: {len(new_jobs)} new role(s)" if new_jobs else "Job Radar: no new jobs this run"
     msg["From"] = os.getenv("SMTP_USER", to)
     msg["To"] = to
     with smtplib.SMTP(host, int(os.getenv("SMTP_PORT", "587")), timeout=30) as s:
@@ -197,7 +202,7 @@ def send_all(new_jobs, broken, dashboard_url, cfg, stats):
     sent = []
     for name, fn in (("telegram", telegram), ("email", email)):
         try:
-            if fn(new_jobs, broken, dashboard_url, ncfg.get("max_items", 40)):
+            if fn(new_jobs, broken, dashboard_url, ncfg.get("max_items", 40), stats):
                 sent.append(name)
         except Exception as ex:  # an alert failing must never kill the run
             msg = str(ex) if isinstance(ex, TelegramError) else f"{type(ex).__name__}: {ex}"

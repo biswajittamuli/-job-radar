@@ -1066,3 +1066,25 @@ def test_titles_without_a_dev_role_are_not_tech(title):
                                    "Data Analyst - Fresher", "SDET - Software Development Engineer in Test"])
 def test_dev_role_titles_still_count(title):
     assert fresher_role_kind(J(title, desc="0-1 years"), CFG) in ("entry", "intern")
+
+
+# ── "no new jobs" message ────────────────────────────────────────────────────
+def test_empty_run_sends_a_no_new_jobs_message(tg):
+    sent, _ = tg
+    assert CFG["notify"]["send_when_empty"] is True
+    out = notify.send_all([], [], "https://dash", CFG, "200 boards · 21000 postings scanned · 100 open matches · 0 new")
+    assert out == ["telegram"]
+    text = sent[0][1]["text"]
+    assert "no new fresher jobs this run" in text and "100 open matches" in text and "https://dash" in text
+
+
+def test_empty_run_is_silent_when_disabled(tg):
+    sent, _ = tg
+    cfg = {**CFG, "notify": {**CFG["notify"], "send_when_empty": False}}
+    assert notify.send_all([], [], "", cfg, "stats") == [] and sent == []
+
+
+def test_run_with_new_jobs_unchanged(tg):
+    sent, _ = tg
+    notify.send_all([_job("Fresh Role", None, 1)], [], "", CFG, "stats")
+    assert "1 new" in sent[0][1]["text"] and "Fresh Role" in sent[0][1]["text"]
