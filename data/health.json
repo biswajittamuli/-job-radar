@@ -1,22 +1,22 @@
 {
  "Adobe": {
   "ats": "workday",
-  "error": "HTTP 429 at https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/jobs",
-  "failures": 1,
+  "error": "",
+  "failures": 0,
   "fetched": 40,
-  "last_ok": "2026-11-25T06:47:16+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 3,
-  "status": "error"
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 0,
+  "status": "ok"
  },
  "Amazon": {
   "ats": "amazon",
   "error": "",
   "failures": 0,
-  "fetched": 757,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 81,
+  "fetched": 755,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 25,
   "status": "ok"
  },
  "Anthropic": {
@@ -24,9 +24,9 @@
   "error": "",
   "failures": 0,
   "fetched": 636,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 1,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 0,
   "status": "ok"
  },
  "CRED": {
@@ -34,9 +34,9 @@
   "error": "",
   "failures": 0,
   "fetched": 11,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 1,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 0,
   "status": "ok"
  },
  "Cloudflare": {
@@ -44,9 +44,9 @@
   "error": "",
   "failures": 0,
   "fetched": 513,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 29,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 6,
   "status": "ok"
  },
  "Cohere": {
@@ -54,8 +54,8 @@
   "error": "",
   "failures": 0,
   "fetched": 123,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
   "matched": 0,
   "status": "ok"
  },
@@ -64,9 +64,9 @@
   "error": "",
   "failures": 0,
   "fetched": 247,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 1,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 0,
   "status": "ok"
  },
  "Composio": {
@@ -74,9 +74,9 @@
   "error": "",
   "failures": 0,
   "fetched": 30,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 1,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 0,
   "status": "ok"
  },
  "Databricks": {
@@ -84,8 +84,8 @@
   "error": "",
   "failures": 0,
   "fetched": 889,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
   "matched": 0,
   "status": "ok"
  },
@@ -94,9 +94,9 @@
   "error": "",
   "failures": 0,
   "fetched": 388,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 1,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 0,
   "status": "ok"
  },
  "Deel": {
@@ -104,8 +104,8 @@
   "error": "",
   "failures": 0,
   "fetched": 0,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
   "matched": 0,
   "status": "empty"
  },
@@ -114,8 +114,8 @@
   "error": "",
   "failures": 0,
   "fetched": 25,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
   "matched": 0,
   "status": "ok"
  },
@@ -124,9 +124,9 @@
   "error": "",
   "failures": 0,
   "fetched": 390,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 1,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 0,
   "status": "ok"
  },
  "GitLab": {
@@ -134,9 +134,9 @@
   "error": "",
   "failures": 0,
   "fetched": 249,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 5,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 1,
   "status": "ok"
  },
  "Groww": {
@@ -144,8 +144,8 @@
   "error": "",
   "failures": 0,
   "fetched": 8,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
   "matched": 0,
   "status": "ok"
  },
@@ -154,9 +154,9 @@
   "error": "",
   "failures": 0,
   "fetched": 31,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 2,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 0,
   "status": "ok"
  },
  "Meesho": {
@@ -164,8 +164,8 @@
   "error": "",
   "failures": 0,
   "fetched": 48,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
   "matched": 0,
   "status": "ok"
  },
@@ -174,17 +174,17 @@
   "error": "",
   "failures": 0,
   "fetched": 419,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
   "matched": 0,
   "status": "ok"
  },
  "NVIDIA": {
   "ats": "workday",
   "error": "HTTP 429 at https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs",
-  "failures": 4,
+  "failures": 5,
   "fetched": 0,
-  "last_run": "2026-11-25T06:55:59+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
   "matched": 0,
   "status": "error"
  },
@@ -193,8 +193,8 @@
   "error": "",
   "failures": 0,
   "fetched": 173,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
   "matched": 0,
   "status": "ok"
  },
@@ -202,9 +202,9 @@
   "ats": "greenhouse",
   "error": "",
   "failures": 0,
-  "fetched": 372,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
+  "fetched": 371,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
   "matched": 0,
   "status": "ok"
  },
@@ -213,9 +213,9 @@
   "error": "",
   "failures": 0,
   "fetched": 877,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 3,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 1,
   "status": "ok"
  },
  "Palantir": {
@@ -223,8 +223,8 @@
   "error": "",
   "failures": 0,
   "fetched": 305,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
   "matched": 0,
   "status": "ok"
  },
@@ -232,9 +232,9 @@
   "ats": "lever",
   "error": "",
   "failures": 0,
-  "fetched": 189,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
+  "fetched": 190,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
   "matched": 0,
   "status": "ok"
  },
@@ -243,9 +243,9 @@
   "error": "",
   "failures": 0,
   "fetched": 226,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 3,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 2,
   "status": "ok"
  },
  "Salesforce": {
@@ -253,9 +253,9 @@
   "error": "",
   "failures": 0,
   "fetched": 40,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 6,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 2,
   "status": "ok"
  },
  "Sarvam AI": {
@@ -263,9 +263,9 @@
   "error": "",
   "failures": 0,
   "fetched": 39,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 11,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 0,
   "status": "ok"
  },
  "ServiceNow": {
@@ -273,9 +273,9 @@
   "error": "",
   "failures": 0,
   "fetched": 81,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 3,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 2,
   "status": "ok"
  },
  "Spotify": {
@@ -283,8 +283,8 @@
   "error": "",
   "failures": 0,
   "fetched": 92,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
   "matched": 0,
   "status": "ok"
  },
@@ -293,9 +293,9 @@
   "error": "",
   "failures": 0,
   "fetched": 771,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 5,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 0,
   "status": "ok"
  },
  "Twilio": {
@@ -303,17 +303,17 @@
   "error": "",
   "failures": 0,
   "fetched": 115,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
-  "matched": 2,
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
+  "matched": 0,
   "status": "ok"
  },
  "Visa": {
   "ats": "smartrecruiters",
   "error": "SmartRecruiters company 'Visa' returned no postings",
-  "failures": 4,
+  "failures": 5,
   "fetched": 0,
-  "last_run": "2026-11-25T06:55:59+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
   "matched": 0,
   "status": "not_found"
  },
@@ -322,8 +322,8 @@
   "error": "",
   "failures": 0,
   "fetched": 33,
-  "last_ok": "2026-11-25T06:55:59+00:00",
-  "last_run": "2026-11-25T06:55:59+00:00",
+  "last_ok": "2026-11-25T07:15:00+00:00",
+  "last_run": "2026-11-25T07:15:00+00:00",
   "matched": 1,
   "status": "ok"
  }

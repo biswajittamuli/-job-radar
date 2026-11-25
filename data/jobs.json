@@ -1,6 +1,6 @@
 {
  "amazon:amazon:10401953": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10401953",
@@ -13,13 +13,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Application Engineer, AWS Quick",
   "url": "https://www.amazon.jobs/en/jobs/10401953/application-engineer-aws-quick",
   "years": 2
  },
  "amazon:amazon:10408712": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10408712",
@@ -32,13 +32,13 @@
   "skills": [
    "data"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Business Intelligence Engineer, Amazon Last Mile",
   "url": "https://www.amazon.jobs/en/jobs/10408712/business-intelligence-engineer-amazon-last-mile",
   "years": 2
  },
  "amazon:amazon:10417469": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10417469",
@@ -51,13 +51,13 @@
   "skills": [
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "SoC  Validation Engineer, Amazon Devices",
   "url": "https://www.amazon.jobs/en/jobs/10417469/soc-validation-engineer-amazon-devices",
   "years": null
  },
  "amazon:amazon:10426735": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10426735",
@@ -70,13 +70,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Network Engineer, Capacity Restoration Team",
   "url": "https://www.amazon.jobs/en/jobs/10426735/network-engineer-capacity-restoration-team",
   "years": 1
  },
  "amazon:amazon:10429234": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10429234",
@@ -89,13 +89,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "IT Support Engineer I, Ops Tech Solutions Delivery",
   "url": "https://www.amazon.jobs/en/jobs/10429234/it-support-engineer-i-ops-tech-solutions-delivery",
   "years": 1
  },
  "amazon:amazon:10429586": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10429586",
@@ -108,13 +108,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "DCEO Engineer, DCEO",
   "url": "https://www.amazon.jobs/en/jobs/10429586/dceo-engineer-dceo",
   "years": 2
  },
  "amazon:amazon:10432009": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10432009",
@@ -128,13 +128,13 @@
    "backend",
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Applied Scientist, Alexa Edge AI",
   "url": "https://www.amazon.jobs/en/jobs/10432009/applied-scientist-alexa-edge-ai",
   "years": 1
  },
  "amazon:amazon:10432823": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10432823",
@@ -147,13 +147,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Development Engineer I, FinOps FP&A",
   "url": "https://www.amazon.jobs/en/jobs/10432823/software-development-engineer-i-finops-fp-a",
   "years": 1
  },
  "amazon:amazon:10447609": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10447609",
@@ -166,13 +166,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "IT Support Engineer I",
   "url": "https://www.amazon.jobs/en/jobs/10447609/it-support-engineer-i",
   "years": 2
  },
  "amazon:amazon:10454930": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10454930",
@@ -185,13 +185,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "IT Support Engineer I",
   "url": "https://www.amazon.jobs/en/jobs/10454930/it-support-engineer-i",
   "years": 1
  },
  "amazon:amazon:10458636": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10458636",
@@ -205,13 +205,13 @@
    "backend",
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Applied Scientist, International Machine Learning",
   "url": "https://www.amazon.jobs/en/jobs/10458636/applied-scientist-international-machine-learning",
   "years": null
  },
  "amazon:amazon:10472531": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10472531",
@@ -224,13 +224,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "IT Support Engineer I, Ops Tech Solutions Delivery",
   "url": "https://www.amazon.jobs/en/jobs/10472531/it-support-engineer-i-ops-tech-solutions-delivery",
   "years": 1
  },
  "amazon:amazon:10482407": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10482407",
@@ -243,13 +243,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "IT Support Engineer I",
   "url": "https://www.amazon.jobs/en/jobs/10482407/it-support-engineer-i",
   "years": 1
  },
  "amazon:amazon:10498164": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10498164",
@@ -262,13 +262,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Centre Linux & HW Engineer, India, Data Center Operations",
   "url": "https://www.amazon.jobs/en/jobs/10498164/data-centre-linux-hw-engineer-india-data-center-operations",
   "years": 1
  },
  "amazon:amazon:10499453": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10499453",
@@ -281,13 +281,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Centre Linux & HW Engineer, Data Center Operations",
   "url": "https://www.amazon.jobs/en/jobs/10499453/data-centre-linux-hw-engineer-data-center-operations",
   "years": 2
  },
  "amazon:amazon:10503821": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10503821",
@@ -300,13 +300,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Optical Network Development Engineer , Capacity Restoration Team",
   "url": "https://www.amazon.jobs/en/jobs/10503821/optical-network-development-engineer-capacity-restoration-team",
   "years": 1
  },
  "amazon:amazon:10513323": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10513323",
@@ -319,13 +319,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Centre Linux & HW Engineer, Data Center Operations",
   "url": "https://www.amazon.jobs/en/jobs/10513323/data-centre-linux-hw-engineer-data-center-operations",
   "years": 2
  },
  "amazon:amazon:10513325": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10513325",
@@ -338,13 +338,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Centre Linux & HW Engineer, Data Center Operations",
   "url": "https://www.amazon.jobs/en/jobs/10513325/data-centre-linux-hw-engineer-data-center-operations",
   "years": 2
  },
  "amazon:amazon:10517829": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10517829",
@@ -357,13 +357,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Centre Linux & HW Engineer, Data Center Operations",
   "url": "https://www.amazon.jobs/en/jobs/10517829/data-centre-linux-hw-engineer-data-center-operations",
   "years": 2
  },
  "amazon:amazon:10522139": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10522139",
@@ -377,13 +377,13 @@
    "backend",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "System Development Engineer I, Amazon",
   "url": "https://www.amazon.jobs/en/jobs/10522139/system-development-engineer-i-amazon",
   "years": null
  },
  "amazon:amazon:10532199": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10532199",
@@ -396,13 +396,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Wireless Network Development Engineer, Corporate Network Engineering",
   "url": "https://www.amazon.jobs/en/jobs/10532199/wireless-network-development-engineer-corporate-network-engineering",
   "years": 2
  },
  "amazon:amazon:10536801": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10536801",
@@ -415,13 +415,13 @@
   "skills": [
    "data"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Engineer, Flex Analytics",
   "url": "https://www.amazon.jobs/en/jobs/10536801/data-engineer-flex-analytics",
   "years": 1
  },
  "amazon:amazon:10537392": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10537392",
@@ -435,13 +435,13 @@
    "backend",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Playback Ops Sys Dev Engineer, Playback Operations Systems Group",
   "url": "https://www.amazon.jobs/en/jobs/10537392/playback-ops-sys-dev-engineer-playback-operations-systems-group",
   "years": null
  },
  "amazon:amazon:10539787": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10539787",
@@ -454,13 +454,13 @@
   "skills": [
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Applied Scientist, Traffic Quality",
   "url": "https://www.amazon.jobs/en/jobs/10539787/applied-scientist-traffic-quality",
   "years": 2
  },
  "amazon:amazon:10551531": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10551531",
@@ -474,13 +474,13 @@
    "ai_ml",
    "data"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Engineer I, DSP Analytics",
   "url": "https://www.amazon.jobs/en/jobs/10551531/data-engineer-i-dsp-analytics",
   "years": 1
  },
  "amazon:amazon:10551574": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10551574",
@@ -493,13 +493,13 @@
   "skills": [
    "data"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Business Intelligence Engineer, eCS Data Engineering and Analytics",
   "url": "https://www.amazon.jobs/en/jobs/10551574/business-intelligence-engineer-ecs-data-engineering-and-analytics",
   "years": null
  },
  "amazon:amazon:10554991": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10554991",
@@ -512,13 +512,13 @@
   "skills": [
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Scientist, SCOT (Supply Chain Optimization Technologies) RoW Tech",
   "url": "https://www.amazon.jobs/en/jobs/10554991/data-scientist-scot-supply-chain-optimization-technologies-row-tech",
   "years": 2
  },
  "amazon:amazon:10555817": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10555817",
@@ -532,13 +532,13 @@
    "backend",
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Applied Scientist, International Machine Learning",
   "url": "https://www.amazon.jobs/en/jobs/10555817/applied-scientist-international-machine-learning",
   "years": null
  },
  "amazon:amazon:10558338": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10558338",
@@ -551,13 +551,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "WiFi Software Development Engineer, eero",
   "url": "https://www.amazon.jobs/en/jobs/10558338/wifi-software-development-engineer-eero",
   "years": null
  },
  "amazon:amazon:10558339": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10558339",
@@ -570,13 +570,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "WiFi Software Development Engineer, eero",
   "url": "https://www.amazon.jobs/en/jobs/10558339/wifi-software-development-engineer-eero",
   "years": null
  },
  "amazon:amazon:10561005": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10561005",
@@ -589,13 +589,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Development Engineer, Time & Pay Innovation",
   "url": "https://www.amazon.jobs/en/jobs/10561005/software-development-engineer-time-pay-innovation",
   "years": 1
  },
  "amazon:amazon:10561007": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10561007",
@@ -608,13 +608,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Development Engineer, Time & Pay Innovation",
   "url": "https://www.amazon.jobs/en/jobs/10561007/software-development-engineer-time-pay-innovation",
   "years": 1
  },
  "amazon:amazon:10568705": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10568705",
@@ -627,13 +627,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Centre Engineering Operations Engineer, Data Centre Engineering Operations (Level 4)",
   "url": "https://www.amazon.jobs/en/jobs/10568705/data-centre-engineering-operations-engineer-data-centre-engineering-operations-level-4",
   "years": 2
  },
  "amazon:amazon:10568706": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10568706",
@@ -646,13 +646,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Centre Engineering Operations, Data Centre Engineering Operations",
   "url": "https://www.amazon.jobs/en/jobs/10568706/data-centre-engineering-operations-data-centre-engineering-operations",
   "years": 2
  },
  "amazon:amazon:10569363": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10569363",
@@ -665,13 +665,13 @@
   "skills": [
    "data"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Business Intelligence Engineer, eCS Data Engineering and Analytics",
   "url": "https://www.amazon.jobs/en/jobs/10569363/business-intelligence-engineer-ecs-data-engineering-and-analytics",
   "years": null
  },
  "amazon:amazon:10575107": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10575107",
@@ -685,13 +685,13 @@
    "backend",
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Applied Scientist, Alexa Edge AI",
   "url": "https://www.amazon.jobs/en/jobs/10575107/applied-scientist-alexa-edge-ai",
   "years": 1
  },
  "amazon:amazon:10576573": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10576573",
@@ -705,13 +705,13 @@
    "backend",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "System Development Engineer I, Amazon",
   "url": "https://www.amazon.jobs/en/jobs/10576573/system-development-engineer-i-amazon",
   "years": 1
  },
  "amazon:amazon:10580008": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10580008",
@@ -724,13 +724,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Development Engineer I",
   "url": "https://www.amazon.jobs/en/jobs/10580008/software-development-engineer-i",
   "years": 1
  },
  "amazon:amazon:10580010": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10580010",
@@ -743,13 +743,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Development Engineer I FTC",
   "url": "https://www.amazon.jobs/en/jobs/10580010/software-development-engineer-i-ftc",
   "years": 1
  },
  "amazon:amazon:10580013": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10580013",
@@ -762,13 +762,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Development Engineer I",
   "url": "https://www.amazon.jobs/en/jobs/10580013/software-development-engineer-i",
   "years": 1
  },
  "amazon:amazon:10582732": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10582732",
@@ -781,13 +781,13 @@
   "skills": [
    "data"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Engineer I",
   "url": "https://www.amazon.jobs/en/jobs/10582732/data-engineer-i",
   "years": 1
  },
  "amazon:amazon:10583222": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10583222",
@@ -800,13 +800,13 @@
   "skills": [
    "backend"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Business Intelligence Engineer, Amazon Shipping",
   "url": "https://www.amazon.jobs/en/jobs/10583222/business-intelligence-engineer-amazon-shipping",
   "years": null
  },
  "amazon:amazon:10584062": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10584062",
@@ -820,13 +820,13 @@
    "backend",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "System Development Engineer , WWRR Tech - PLS",
   "url": "https://www.amazon.jobs/en/jobs/10584062/system-development-engineer-wwrr-tech-pls",
   "years": 2
  },
  "amazon:amazon:10585900": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10585900",
@@ -839,13 +839,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Project Design Mechanical Engineer, Fleet Remediation Engineering",
   "url": "https://www.amazon.jobs/en/jobs/10585900/project-design-mechanical-engineer-fleet-remediation-engineering",
   "years": null
  },
  "amazon:amazon:10590955": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10590955",
@@ -858,13 +858,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Centre Linux & HW Engineer, Data Center Operations",
   "url": "https://www.amazon.jobs/en/jobs/10590955/data-centre-linux-hw-engineer-data-center-operations",
   "years": 2
  },
  "amazon:amazon:10591981": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10591981",
@@ -877,13 +877,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Center Engineering Operations Engineer, HYD-Infinity - DCEO",
   "url": "https://www.amazon.jobs/en/jobs/10591981/data-center-engineering-operations-engineer-hyd-infinity-dceo",
   "years": 2
  },
  "amazon:amazon:10594150": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10594150",
@@ -896,13 +896,13 @@
   "skills": [
    "backend"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Development Engineer, Amazon International Seller Services",
   "url": "https://www.amazon.jobs/en/jobs/10594150/software-development-engineer-amazon-international-seller-services",
   "years": 1
  },
  "amazon:amazon:10594997": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10594997",
@@ -915,13 +915,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Support Engineer, SCOT WW Long Term Planning and Forecasting",
   "url": "https://www.amazon.jobs/en/jobs/10594997/support-engineer-scot-ww-long-term-planning-and-forecasting",
   "years": 2
  },
  "amazon:amazon:10595857": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10595857",
@@ -935,13 +935,13 @@
    "backend",
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Applied Scientist I, International Seller Services",
   "url": "https://www.amazon.jobs/en/jobs/10595857/applied-scientist-i-international-seller-services",
   "years": 1
  },
  "amazon:amazon:10595957": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10595957",
@@ -954,7 +954,7 @@
   "skills": [
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Scientist, Traffic Quality",
   "url": "https://www.amazon.jobs/en/jobs/10595957/data-scientist-traffic-quality",
   "years": 1
@@ -964,7 +964,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10596351",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "entry",
   "location": "IN, KA, Bengaluru +1",
   "posted_at": "2026-11-11",
@@ -980,7 +980,7 @@
   "years": null
  },
  "amazon:amazon:10597397": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10597397",
@@ -993,13 +993,13 @@
   "skills": [
    "data"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Engineer I, SPIV Data Engineering",
   "url": "https://www.amazon.jobs/en/jobs/10597397/data-engineer-i-spiv-data-engineering",
   "years": 1
  },
  "amazon:amazon:10601582": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10601582",
@@ -1013,7 +1013,7 @@
    "ai_ml",
    "data"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Engineer I, DSP Analytics",
   "url": "https://www.amazon.jobs/en/jobs/10601582/data-engineer-i-dsp-analytics",
   "years": 2
@@ -1023,7 +1023,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10602084",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "IN, MH, Mumbai +1",
   "posted_at": "2026-11-11",
@@ -1042,7 +1042,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10602100",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "IN, TN, Chennai +1",
   "posted_at": "2026-11-17",
@@ -1064,7 +1064,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10602226",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "entry",
   "location": "IN, TN, Chennai +1",
   "posted_at": "2026-11-11",
@@ -1083,7 +1083,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10602774",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "entry",
   "location": "IN, TS, Hyderabad +1",
   "posted_at": "2026-11-11",
@@ -1102,7 +1102,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10605445",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "IN, KA, Bengaluru +1",
   "posted_at": "2026-11-15",
@@ -1121,7 +1121,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10605640",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "IN, TS, Hyderabad +1",
   "posted_at": "2026-11-16",
@@ -1140,7 +1140,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10605641",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "IN, TS, Hyderabad +1",
   "posted_at": "2026-11-16",
@@ -1159,7 +1159,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10605742",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "IN, MH, Mumbai +1",
   "posted_at": "2026-11-16",
@@ -1178,7 +1178,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10606600",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "entry",
   "location": "IN, TS, Hyderabad +1",
   "posted_at": "2026-11-25",
@@ -1198,7 +1198,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10606736",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "IN, TS, Hyderabad +1",
   "posted_at": "2026-11-16",
@@ -1217,7 +1217,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10606843",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "IN, KA, Bengaluru +1",
   "posted_at": "2026-11-17",
@@ -1236,7 +1236,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10606844",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "entry",
   "location": "IN, KA, Bengaluru +1",
   "posted_at": "2026-11-17",
@@ -1255,7 +1255,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10606846",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "IN, KA, Bengaluru +1",
   "posted_at": "2026-11-17",
@@ -1274,7 +1274,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10607815",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "entry",
   "location": "IN, MH, Mumbai +1",
   "posted_at": "2026-11-18",
@@ -1293,7 +1293,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10609133",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "IN, MH, Mumbai +1",
   "posted_at": "2026-11-19",
@@ -1312,7 +1312,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10609147",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "IN, KA, Bengaluru +1",
   "posted_at": "2026-11-19",
@@ -1331,7 +1331,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10611161",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "IN, TS, Hyderabad +1",
   "posted_at": "2026-11-23",
@@ -1350,7 +1350,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10611253",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "entry",
   "location": "IN, TS, Hyderabad - Virtual +1",
   "posted_at": "2026-11-23",
@@ -1369,7 +1369,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10611291",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "entry",
   "location": "IN, TS, Hyderabad - Virtual +1",
   "posted_at": "2026-11-23",
@@ -1388,7 +1388,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10611590",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "IN, KA, Bengaluru +1",
   "posted_at": "2026-11-24",
@@ -1408,7 +1408,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10612363",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "IN, MH, Mumbai +1",
   "posted_at": "2026-11-24",
@@ -1427,7 +1427,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10613728",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "entry",
   "location": "IN, KA, Bengaluru +1",
   "posted_at": "2026-11-25",
@@ -1447,7 +1447,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10613732",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "IN, MH, Mumbai +1",
   "posted_at": "2026-11-25",
@@ -1466,7 +1466,7 @@
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:10613733",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "IN, MH, Mumbai +1",
   "posted_at": "2026-11-25",
@@ -1481,7 +1481,7 @@
   "years": 2
  },
  "amazon:amazon:3153804": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:3153804",
@@ -1494,13 +1494,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Centre Linux & HW Engineer, India, Data Center Operations",
   "url": "https://www.amazon.jobs/en/jobs/3153804/data-centre-linux-hw-engineer-india-data-center-operations",
   "years": 1
  },
  "amazon:amazon:3153859": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:3153859",
@@ -1513,13 +1513,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Centre Linux & HW Engineer, Data Center Operations",
   "url": "https://www.amazon.jobs/en/jobs/3153859/data-centre-linux-hw-engineer-data-center-operations",
   "years": 1
  },
  "amazon:amazon:3203393": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:3203393",
@@ -1533,13 +1533,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Development Engineer - Test II, Alexa Endpoint Experiences",
   "url": "https://www.amazon.jobs/en/jobs/3203393/software-development-engineer-test-ii-alexa-endpoint-experiences",
   "years": 1
  },
  "amazon:amazon:3205651": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Amazon",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "amazon:amazon:3205651",
@@ -1553,13 +1553,13 @@
    "backend",
    "security"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Security Engineer, Stores Application Security",
   "url": "https://www.amazon.jobs/en/jobs/3205651/security-engineer-stores-application-security",
   "years": 1
  },
  "ashby:composio:74cf1b48-86e9-4454-8c4e-cb2038ed0049": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Composio",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "ashby:composio:74cf1b48-86e9-4454-8c4e-cb2038ed0049",
@@ -1572,7 +1572,7 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Member of Technical Staff - Enterprise Platform",
   "url": "https://jobs.ashbyhq.com/composio/74cf1b48-86e9-4454-8c4e-cb2038ed0049",
   "years": null
@@ -1582,7 +1582,7 @@
   "company": "OpenAI",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "ashby:openai:980bc2ea-2c35-4546-bb48-5496a4e6847f",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "Berlin, Germany +4",
   "posted_at": "2026-11-16",
@@ -1597,7 +1597,7 @@
   "years": null
  },
  "ashby:openai:a0ccedf1-2bb7-4f10-8be8-db50f9ae02c3": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "OpenAI",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "ashby:openai:a0ccedf1-2bb7-4f10-8be8-db50f9ae02c3",
@@ -1611,13 +1611,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Engineer, Privacy Engineering (Lawful Access)",
   "url": "https://jobs.ashbyhq.com/openai/a0ccedf1-2bb7-4f10-8be8-db50f9ae02c3",
   "years": null
  },
  "ashby:openai:c139b85e-bd3a-4242-be0c-9b8b01ec3c9b": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "OpenAI",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "ashby:openai:c139b85e-bd3a-4242-be0c-9b8b01ec3c9b",
@@ -1630,13 +1630,13 @@
   "skills": [
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Dedicated Support Engineer - Dublin",
   "url": "https://jobs.ashbyhq.com/openai/c139b85e-bd3a-4242-be0c-9b8b01ec3c9b",
   "years": null
  },
  "ashby:sarvam-ai:0371342b-5cb8-487b-9310-4d0eb5b37f47": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Sarvam AI",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "ashby:sarvam-ai:0371342b-5cb8-487b-9310-4d0eb5b37f47",
@@ -1651,13 +1651,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Engineer - Model API Platform",
   "url": "https://jobs.ashbyhq.com/sarvam/0371342b-5cb8-487b-9310-4d0eb5b37f47",
   "years": null
  },
  "ashby:sarvam-ai:10a352d0-a65b-4599-8998-e09deef34349": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Sarvam AI",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "ashby:sarvam-ai:10a352d0-a65b-4599-8998-e09deef34349",
@@ -1671,13 +1671,13 @@
    "backend",
    "frontend"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Frontend Engineer, Chanakya",
   "url": "https://jobs.ashbyhq.com/sarvam/10a352d0-a65b-4599-8998-e09deef34349",
   "years": null
  },
  "ashby:sarvam-ai:72783205-b637-4431-9a0e-676a8223b063": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Sarvam AI",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "ashby:sarvam-ai:72783205-b637-4431-9a0e-676a8223b063",
@@ -1690,13 +1690,13 @@
   "skills": [
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Performance Engineer, Kernels",
   "url": "https://jobs.ashbyhq.com/sarvam/72783205-b637-4431-9a0e-676a8223b063",
   "years": null
  },
  "ashby:sarvam-ai:7c42207a-bb56-413c-839f-9ad692df840e": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Sarvam AI",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "ashby:sarvam-ai:7c42207a-bb56-413c-839f-9ad692df840e",
@@ -1710,13 +1710,13 @@
    "backend",
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Data Scientist - Evaluations, Chanakya",
   "url": "https://jobs.ashbyhq.com/sarvam/7c42207a-bb56-413c-839f-9ad692df840e",
   "years": 2
  },
  "ashby:sarvam-ai:7d2faba2-21a1-4a8a-aff5-f708a6959195": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Sarvam AI",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "ashby:sarvam-ai:7d2faba2-21a1-4a8a-aff5-f708a6959195",
@@ -1729,13 +1729,13 @@
   "skills": [
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Performance Engineer, Inference",
   "url": "https://jobs.ashbyhq.com/sarvam/7d2faba2-21a1-4a8a-aff5-f708a6959195",
   "years": null
  },
  "ashby:sarvam-ai:87d5a5af-ea7d-4b94-a0fa-81dc64e54907": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Sarvam AI",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "ashby:sarvam-ai:87d5a5af-ea7d-4b94-a0fa-81dc64e54907",
@@ -1750,13 +1750,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Strategic Deployment Engineer, Chanakya",
   "url": "https://jobs.ashbyhq.com/sarvam/87d5a5af-ea7d-4b94-a0fa-81dc64e54907",
   "years": null
  },
  "ashby:sarvam-ai:b2201b5e-1e96-497a-962c-bca1768f75fd": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Sarvam AI",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "ashby:sarvam-ai:b2201b5e-1e96-497a-962c-bca1768f75fd",
@@ -1772,13 +1772,13 @@
    "data",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Embedded Infrastructure Engineer, Chanakya",
   "url": "https://jobs.ashbyhq.com/sarvam/b2201b5e-1e96-497a-962c-bca1768f75fd",
   "years": null
  },
  "ashby:sarvam-ai:dc047f4f-97be-4bb3-a9f1-cebbfc4de3e6": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Sarvam AI",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "ashby:sarvam-ai:dc047f4f-97be-4bb3-a9f1-cebbfc4de3e6",
@@ -1792,13 +1792,13 @@
    "backend",
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Embedded Data Scientist, Chanakya",
   "url": "https://jobs.ashbyhq.com/sarvam/dc047f4f-97be-4bb3-a9f1-cebbfc4de3e6",
   "years": null
  },
  "ashby:sarvam-ai:e1dd678f-6e25-48b4-82d8-a1a7d10a78d6": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Sarvam AI",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "ashby:sarvam-ai:e1dd678f-6e25-48b4-82d8-a1a7d10a78d6",
@@ -1813,13 +1813,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Infrastructure SRE - HPC",
   "url": "https://jobs.ashbyhq.com/sarvam/e1dd678f-6e25-48b4-82d8-a1a7d10a78d6",
   "years": null
  },
  "ashby:sarvam-ai:e7f783e8-6378-4158-97d5-48a397a91698": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Sarvam AI",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "ashby:sarvam-ai:e7f783e8-6378-4158-97d5-48a397a91698",
@@ -1834,13 +1834,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "ML Ops Engineer, Chanakya",
   "url": "https://jobs.ashbyhq.com/sarvam/e7f783e8-6378-4158-97d5-48a397a91698",
   "years": null
  },
  "ashby:sarvam-ai:fcb15601-6440-41f7-aa79-b9992057a4b2": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Sarvam AI",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "ashby:sarvam-ai:fcb15601-6440-41f7-aa79-b9992057a4b2",
@@ -1855,13 +1855,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Platform Engineer - AI Infrastructure",
   "url": "https://jobs.ashbyhq.com/sarvam/fcb15601-6440-41f7-aa79-b9992057a4b2",
   "years": null
  },
  "greenhouse:anthropic:5439524008": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Anthropic",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:anthropic:5439524008",
@@ -1876,13 +1876,13 @@
    "devops_cloud",
    "mobile"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "IT Support Engineer",
   "url": "https://job-boards.greenhouse.io/anthropic/jobs/5439524008",
   "years": null
  },
  "greenhouse:cloudflare:7377424": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:7377424",
@@ -1897,13 +1897,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Engineer, Workers Deploy & Config",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/7377424?gh_jid=7377424",
   "years": null
  },
  "greenhouse:cloudflare:7446310": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:7446310",
@@ -1918,13 +1918,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Engineer, Network Performance & Reliability (Argo)",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/7446310?gh_jid=7446310",
   "years": null
  },
  "greenhouse:cloudflare:7462801": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:7462801",
@@ -1940,13 +1940,13 @@
    "data",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Distributed Systems Engineer - Data Platform (Delivery, Database, Retrieval)",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/7462801?gh_jid=7462801",
   "years": null
  },
  "greenhouse:cloudflare:8022909": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8022909",
@@ -1963,13 +1963,13 @@
    "devops_cloud",
    "frontend"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Systems Engineer (Data Intelligence & Analytics Team)",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8022909?gh_jid=8022909",
   "years": null
  },
  "greenhouse:cloudflare:8037628": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8037628",
@@ -1985,13 +1985,13 @@
    "devops_cloud",
    "security"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Response Engineer (Application & Network Security)",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8037628?gh_jid=8037628",
   "years": 2
  },
  "greenhouse:cloudflare:8043974": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8043974",
@@ -2006,13 +2006,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Member of Technical Staff - Workers AI Applied Research",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8043974?gh_jid=8043974",
   "years": null
  },
  "greenhouse:cloudflare:8050813": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8050813",
@@ -2029,13 +2029,13 @@
    "devops_cloud",
    "frontend"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Systems Engineer, Data Intelligence & Analytics Team",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8050813?gh_jid=8050813",
   "years": null
  },
  "greenhouse:cloudflare:8088751": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8088751",
@@ -2050,13 +2050,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Engineer, Cloudflare Network Interconnect",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8088751?gh_jid=8088751",
   "years": null
  },
  "greenhouse:cloudflare:8157997": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8157997",
@@ -2071,13 +2071,13 @@
    "devops_cloud",
    "security"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "IAM Security Engineer",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8157997?gh_jid=8157997",
   "years": null
  },
  "greenhouse:cloudflare:8158016": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8158016",
@@ -2092,13 +2092,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Systems Engineer - Database Platform",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8158016?gh_jid=8158016",
   "years": null
  },
  "greenhouse:cloudflare:8168623": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8168623",
@@ -2112,13 +2112,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Engineer - Platforms & Productivity",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8168623?gh_jid=8168623",
   "years": null
  },
  "greenhouse:cloudflare:8175620": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8175620",
@@ -2134,13 +2134,13 @@
    "devops_cloud",
    "frontend"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Systems Engineer, Growth Engineering",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8175620?gh_jid=8175620",
   "years": null
  },
  "greenhouse:cloudflare:8212060": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8212060",
@@ -2155,13 +2155,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Engineer",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8212060?gh_jid=8212060",
   "years": null
  },
  "greenhouse:cloudflare:8214470": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8214470",
@@ -2175,13 +2175,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Performance Engineer, Kernel and Memory",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8214470?gh_jid=8214470",
   "years": null
  },
  "greenhouse:cloudflare:8223480": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8223480",
@@ -2195,13 +2195,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Hardware Systems Engineer",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8223480?gh_jid=8223480",
   "years": null
  },
  "greenhouse:cloudflare:8248635": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8248635",
@@ -2216,13 +2216,13 @@
    "ai_ml",
    "mobile"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Engineer, Mobile SDK",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8248635?gh_jid=8248635",
   "years": null
  },
  "greenhouse:cloudflare:8267826": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8267826",
@@ -2236,13 +2236,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Rack Integration Operations Engineer",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8267826?gh_jid=8267826",
   "years": null
  },
  "greenhouse:cloudflare:8275392": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8275392",
@@ -2256,13 +2256,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Systems Engineer, DNS",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8275392?gh_jid=8275392",
   "years": null
  },
  "greenhouse:cloudflare:8276155": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8276155",
@@ -2276,13 +2276,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Systems Engineer, Browser Isolation",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8276155?gh_jid=8276155",
   "years": null
  },
  "greenhouse:cloudflare:8306486": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8306486",
@@ -2297,13 +2297,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Hardware Systems Engineer, Hardware Tools / Firmware",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8306486?gh_jid=8306486",
   "years": null
  },
  "greenhouse:cloudflare:8325821": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8325821",
@@ -2318,13 +2318,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Hardware Systems Engineer",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8325821?gh_jid=8325821",
   "years": null
  },
  "greenhouse:cloudflare:8325834": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8325834",
@@ -2339,13 +2339,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Hardware Systems Engineer, AI Hardware",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8325834?gh_jid=8325834",
   "years": null
  },
  "greenhouse:cloudflare:8329370": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8329370",
@@ -2359,7 +2359,7 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Customer Engineer, Enterprise - Austin/Dallas,TX or Raleigh, NC",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8329370?gh_jid=8329370",
   "years": null
@@ -2369,7 +2369,7 @@
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8370313",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "Austin, TX, United States +2",
   "posted_at": "2026-11-18",
@@ -2389,7 +2389,7 @@
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8386246",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "Austin, TX, United States +2",
   "posted_at": "2026-11-18",
@@ -2410,7 +2410,7 @@
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8398779",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "Austin, TX, United States +4",
   "posted_at": "2026-11-19",
@@ -2430,7 +2430,7 @@
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8401112",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "Austin, TX, United States +2",
   "posted_at": "2026-11-20",
@@ -2450,7 +2450,7 @@
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8401119",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "Austin, TX, United States +2",
   "posted_at": "2026-11-20",
@@ -2469,7 +2469,7 @@
   "company": "Cloudflare",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:cloudflare:8401122",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "Austin, TX, United States +2",
   "posted_at": "2026-11-20",
@@ -2485,7 +2485,7 @@
   "years": null
  },
  "greenhouse:coinbase:7985187": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Coinbase",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:coinbase:7985187",
@@ -2498,13 +2498,13 @@
   "skills": [
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Machine Learning Engineer",
   "url": "https://www.coinbase.com/careers/positions/7985187?gh_jid=7985187",
   "years": 2
  },
  "greenhouse:datadog:8161455": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Datadog",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:datadog:8161455",
@@ -2519,13 +2519,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Developer Advocate - Service Management EMEA",
   "url": "https://careers.datadoghq.com/detail/8161455/?gh_jid=8161455",
   "years": 2
  },
  "greenhouse:elastic:8314336": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Elastic",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:elastic:8314336",
@@ -2538,13 +2538,13 @@
   "skills": [
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "AI Tool Admin",
   "url": "https://jobs.elastic.co/jobs?gh_jid=8314336&gh_jid=8314336",
   "years": null
  },
  "greenhouse:gitlab:8775507002": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "GitLab",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:gitlab:8775507002",
@@ -2560,13 +2560,13 @@
    "devops_cloud",
    "security"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Intermediate Backend Engineer, India",
   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8775507002",
   "years": null
  },
  "greenhouse:gitlab:8861748002": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "GitLab",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:gitlab:8861748002",
@@ -2582,13 +2582,13 @@
    "devops_cloud",
    "security"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "People Systems Engineer",
   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8861748002",
   "years": null
  },
  "greenhouse:gitlab:8890971002": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "GitLab",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:gitlab:8890971002",
@@ -2604,13 +2604,13 @@
    "devops_cloud",
    "security"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Intermediate Backend Engineer , Security Factory",
   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8890971002",
   "years": null
  },
  "greenhouse:gitlab:8916232002": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "GitLab",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:gitlab:8916232002",
@@ -2625,7 +2625,7 @@
    "devops_cloud",
    "security"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Engineer, Delivery : Release",
   "url": "https://job-boards.greenhouse.io/gitlab/jobs/8916232002",
   "years": null
@@ -2635,7 +2635,7 @@
   "company": "GitLab",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:gitlab:8940982002",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "Bangalore, India +1",
   "posted_at": "2026-11-23",
@@ -2652,7 +2652,7 @@
   "years": null
  },
  "greenhouse:hackerrank:7461142": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "HackerRank",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:hackerrank:7461142",
@@ -2665,13 +2665,13 @@
   "skills": [
    "backend"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Forward Deployed Engineer",
   "url": "https://job-boards.greenhouse.io/hackerrank/jobs/7461142",
   "years": null
  },
  "greenhouse:hackerrank:8273522": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "HackerRank",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:hackerrank:8273522",
@@ -2684,13 +2684,13 @@
   "skills": [
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Deep Learning Research Engineer",
   "url": "https://job-boards.greenhouse.io/hackerrank/jobs/8273522",
   "years": 2
  },
  "greenhouse:rubrik:7956918": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Rubrik",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:rubrik:7956918",
@@ -2703,7 +2703,7 @@
   "skills": [
    "backend"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Engineer - IAM",
   "url": "https://www.rubrik.com/company/careers/departments/job.7956918?gh_jid=7956918",
   "years": null
@@ -2713,7 +2713,7 @@
   "company": "Rubrik",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:rubrik:8327940",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "Bangalore  +1",
   "posted_at": "2026-11-11",
@@ -2733,7 +2733,7 @@
   "company": "Rubrik",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:rubrik:8349847",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "bangalore +1",
   "posted_at": "2026-11-16",
@@ -2748,7 +2748,7 @@
   "years": null
  },
  "greenhouse:stripe:6717520": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Stripe",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:stripe:6717520",
@@ -2761,13 +2761,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Engineer, Payments and Risk",
   "url": "https://stripe.com/jobs/search?gh_jid=6717520",
   "years": 2
  },
  "greenhouse:stripe:8076626": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Stripe",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:stripe:8076626",
@@ -2780,13 +2780,13 @@
   "skills": [
    "backend"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Engineer, Stripe Tax",
   "url": "https://stripe.com/jobs/search?gh_jid=8076626",
   "years": 2
  },
  "greenhouse:stripe:8130876": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Stripe",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:stripe:8130876",
@@ -2800,13 +2800,13 @@
    "backend",
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Engineer, New Grad",
   "url": "https://stripe.com/jobs/search?gh_jid=8130876",
   "years": null
  },
  "greenhouse:stripe:8130881": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Stripe",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:stripe:8130881",
@@ -2820,13 +2820,13 @@
    "backend",
    "ai_ml"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Engineer, New Grad",
   "url": "https://stripe.com/jobs/search?gh_jid=8130881",
   "years": null
  },
  "greenhouse:stripe:8257892": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Stripe",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:stripe:8257892",
@@ -2842,13 +2842,13 @@
    "devops_cloud",
    "security"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Security Engineer, New Grad",
   "url": "https://stripe.com/jobs/search?gh_jid=8257892",
   "years": null
  },
  "greenhouse:twilio:8065032": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Twilio",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:twilio:8065032",
@@ -2863,13 +2863,13 @@
    "ai_ml",
    "devops_cloud"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Engineer (L3)",
   "url": "https://job-boards.greenhouse.io/twilio/jobs/8065032",
   "years": 2
  },
  "greenhouse:twilio:8213730": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Twilio",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "greenhouse:twilio:8213730",
@@ -2882,13 +2882,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Personalized Support Engineer",
   "url": "https://job-boards.greenhouse.io/twilio/jobs/8213730",
   "years": 2
  },
  "lever:cred:913a6616-78c9-4ca3-8c92-67ddea8a80df": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "CRED",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "lever:cred:913a6616-78c9-4ca3-8c92-67ddea8a80df",
@@ -2901,7 +2901,7 @@
   "skills": [
    "data"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "fraud analytics engineer",
   "url": "https://jobs.lever.co/cred/913a6616-78c9-4ca3-8c92-67ddea8a80df",
   "years": 1
@@ -2911,7 +2911,7 @@
   "company": "Zeta",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "lever:zeta:d7608271-a46f-4783-b5a9-05737398d320",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "entry",
   "location": "Hyderabad",
   "posted_at": "2026-11-19",
@@ -2927,7 +2927,7 @@
   "years": 1
  },
  "smartrecruiters:servicenow:744000143028899": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "ServiceNow",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "smartrecruiters:servicenow:744000143028899",
@@ -2940,7 +2940,7 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Mgr, Software Engrg Mgmt",
   "url": "https://jobs.smartrecruiters.com/ServiceNow/744000143028899",
   "years": null
@@ -2950,7 +2950,7 @@
   "company": "ServiceNow",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "smartrecruiters:servicenow:744000162831529",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "Bangalore, , India",
   "posted_at": "2026-11-20",
@@ -2969,7 +2969,7 @@
   "company": "ServiceNow",
   "first_seen": "2026-11-25T06:37:59+00:00",
   "id": "smartrecruiters:servicenow:744000163146999",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "Hyderabad, , India",
   "posted_at": "2026-11-23",
@@ -2984,7 +2984,7 @@
   "years": null
  },
  "workday:adobe:/job/Bangalore/AI-Studio---Creative-Designer--GenStudio---Firefly-_R169477": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Adobe",
   "first_seen": "2026-11-25T06:47:16+00:00",
   "id": "workday:adobe:/job/Bangalore/AI-Studio---Creative-Designer--GenStudio---Firefly-_R169477",
@@ -2997,13 +2997,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Creative Technologist-AI Studio",
   "url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/Bangalore/AI-Studio---Creative-Designer--GenStudio---Firefly-_R169477",
   "years": null
  },
  "workday:adobe:/job/Noida/Applied-Scientist-4_R171067": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Adobe",
   "first_seen": "2026-11-25T06:47:16+00:00",
   "id": "workday:adobe:/job/Noida/Applied-Scientist-4_R171067",
@@ -3016,13 +3016,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Research Scientist (Applied) - IV",
   "url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/Noida/Applied-Scientist-4_R171067",
   "years": null
  },
  "workday:adobe:/job/Noida/Mgr--Software-Development_R172270": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Adobe",
   "first_seen": "2026-11-25T06:47:16+00:00",
   "id": "workday:adobe:/job/Noida/Mgr--Software-Development_R172270",
@@ -3035,13 +3035,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Mgr, Software Development",
   "url": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced/job/Noida/Mgr--Software-Development_R172270",
   "years": null
  },
  "workday:salesforce:/job/India---Bangalore/Principal-Member-of-Technical-Staff--PMTS----Core-Metadata-Platform--Informatica-CDGC-_JR339999": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Salesforce",
   "first_seen": "2026-11-25T06:55:59+00:00",
   "id": "workday:salesforce:/job/India---Bangalore/Principal-Member-of-Technical-Staff--PMTS----Core-Metadata-Platform--Informatica-CDGC-_JR339999",
@@ -3054,13 +3054,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "PMTS, Software Engineering",
   "url": "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/India---Bangalore/Principal-Member-of-Technical-Staff--PMTS----Core-Metadata-Platform--Informatica-CDGC-_JR339999",
   "years": null
  },
  "workday:salesforce:/job/India---Bangalore/Software-Engineering-LMTS--Database-Engineering-_JR368679-1": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Salesforce",
   "first_seen": "2026-11-25T06:55:59+00:00",
   "id": "workday:salesforce:/job/India---Bangalore/Software-Engineering-LMTS--Database-Engineering-_JR368679-1",
@@ -3073,13 +3073,13 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Software Engineering LMTS (Database Engineering)",
   "url": "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/India---Bangalore/Software-Engineering-LMTS--Database-Engineering-_JR368679-1",
   "years": null
  },
  "workday:salesforce:/job/India---Hyderabad/Assurance-Engineering-Platform-Developer-SMTS---LMTS_JR366292": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Salesforce",
   "first_seen": "2026-11-25T06:55:59+00:00",
   "id": "workday:salesforce:/job/India---Hyderabad/Assurance-Engineering-Platform-Developer-SMTS---LMTS_JR366292",
@@ -3092,7 +3092,7 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Assurance Engineering Platform Developer  LMTS",
   "url": "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/India---Hyderabad/Assurance-Engineering-Platform-Developer-SMTS---LMTS_JR366292",
   "years": null
@@ -3102,12 +3102,12 @@
   "company": "Salesforce",
   "first_seen": "2026-11-25T06:55:59+00:00",
   "id": "workday:salesforce:/job/India---Hyderabad/Software-Engineering-MTS---Production-Support---AI-Automation_JR365887",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "India - Hyderabad",
-  "posted_at": null,
+  "posted_at": "2026-11-25",
   "remote": false,
-  "score": 38,
+  "score": 50,
   "skills": [
    "ai_ml"
   ],
@@ -3117,7 +3117,7 @@
   "years": null
  },
  "workday:salesforce:/job/India---Hyderabad/Systems-Engineer----Workday-Platform_JR364391": {
-  "closed_at": null,
+  "closed_at": "2026-11-25T07:15:00+00:00",
   "company": "Salesforce",
   "first_seen": "2026-11-25T06:55:59+00:00",
   "id": "workday:salesforce:/job/India---Hyderabad/Systems-Engineer----Workday-Platform_JR364391",
@@ -3130,7 +3130,7 @@
   "skills": [
    "sde"
   ],
-  "status": "open",
+  "status": "closed",
   "title": "Systems Engineer -  Workday Platform",
   "url": "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/India---Hyderabad/Systems-Engineer----Workday-Platform_JR364391",
   "years": null
@@ -3140,12 +3140,12 @@
   "company": "Salesforce",
   "first_seen": "2026-11-25T06:55:59+00:00",
   "id": "workday:salesforce:/job/Texas---Dallas/Systems-Engineer_JR359344",
-  "last_seen": "2026-11-25T06:55:59+00:00",
+  "last_seen": "2026-11-25T07:15:00+00:00",
   "level": "open",
   "location": "Multiple locations (India)",
-  "posted_at": null,
+  "posted_at": "2026-11-25",
   "remote": false,
-  "score": 20,
+  "score": 32,
   "skills": [
    "sde"
   ],
