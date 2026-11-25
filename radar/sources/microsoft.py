@@ -1,11 +1,13 @@
-"""Microsoft careers (apply.careers.microsoft.com, an Eightfold "pcsx" API).
-The same API shape is used by other Eightfold customers: set `host` and `domain`."""
-from datetime import datetime, timezone
+"""Eightfold careers API ("pcsx"). Defaults are Microsoft's (apply.careers.microsoft.com);
+other Eightfold customers use ats: eightfold with their own `host` and `domain`, e.g.
+  { name: Qualcomm, ats: eightfold, host: careers.qualcomm.com, domain: qualcomm.com }"""
+from datetime import date, datetime, timedelta, timezone
 
 from ..models import RawJob
 from ..text import strip_html
 
-MAX_PAGES = 40     # 10 jobs per page
+MAX_PAGES = 60     # 10 jobs per page
+STOP_AFTER_DAYS = 45   # results are newest first: stop paging once postings are older than this
 
 
 def _base(c):
@@ -22,6 +24,9 @@ def fetch(company, http):
         jobs.extend(page)
         start += len(data.get("positions") or [])
         if not page or start >= data.get("count", 0):
+            break
+        cutoff = (date.today() - timedelta(days=STOP_AFTER_DAYS)).isoformat()
+        if all(j.posted_at and j.posted_at < cutoff for j in page):
             break
     return jobs
 

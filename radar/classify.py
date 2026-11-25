@@ -28,7 +28,7 @@ NON_TECH = re.compile(
 
 # ── seniority ────────────────────────────────────────────────────────────────
 SENIOR_WORDS = re.compile(
-    r"\b(senior|sr\.?|staff|principal|lead|leader|manager|director|head|vp|"
+    r"\b(senior\w*|sr\.?|staff|principal|lead|leader|manager|director|head|vp|"
     r"vice president|architect|distinguished|fellow|chief|expert)\b|"
     r"\b[slp]mts\b", re.I)   # Salesforce Senior/Lead/Principal Member of Technical Staff
 # Numeric grades. Skipped when the company itself labels the job entry level: Google's

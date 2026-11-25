@@ -4,7 +4,8 @@
 # Each entry reads a company's job board straight from its ATS (applicant
 # tracking system) API, so there's no HTML scraping and no AI browsing.
 #
-#   ats: greenhouse | lever | ashby | smartrecruiters | workday | amazon | microsoft | google | oracle_hcm
+#   ats: greenhouse | lever | ashby | smartrecruiters | workday | amazon | microsoft | eightfold |
+#        google | oracle_hcm | keka | kula | uber | atlassian | successfactors | capgemini
 #   slug: the board id (for greenhouse/lever/ashby/smartrecruiters)
 #
 # Don't know a company's ATS?  Run:
@@ -39,6 +40,78 @@ companies:
   - { name: Microsoft, ats: microsoft, location: India, verified: 2026-11-25 }
   - { name: Google,    ats: google,    location: India, level: EARLY, verified: 2026-11-25 }
   - { name: JPMorgan Chase, ats: oracle_hcm, host: jpmc.fa.oraclecloud.com, site: CX_1001, location_id: 300000000289360, verified: 2026-11-25 }
+  # Oracle Recruiting Cloud (site number and India location id read from each careers site)
+  - { name: Oracle,            ats: oracle_hcm, host: eeho.fa.us2.oraclecloud.com,   site: CX_45001, location_id: 300000000106947, verified: 2026-11-25 }
+  - { name: Texas Instruments, ats: oracle_hcm, host: edbz.fa.us2.oraclecloud.com,   site: CX,       location_id: 300000000361484, verified: 2026-11-25 }
+  - { name: American Express,  ats: oracle_hcm, host: egug.fa.us2.oraclecloud.com,   site: CX_1,     location_id: 300000000228786, verified: 2026-11-25 }
+  - { name: Honeywell,         ats: oracle_hcm, host: ibqbjb.fa.ocs.oraclecloud.com, site: CX_1,     location_id: 300000000469485, verified: 2026-11-25 }
+  - { name: Razorpay,          ats: greenhouse, slug: razorpaysoftwareprivatelimited, verified: 2026-11-25 }
+  # ── Indian startups on Keka and Kula careers pages ──
+  - { name: Jupiter, ats: keka, host: jupiter.keka.com, verified: 2026-11-25 }
+  - { name: Eka Care, ats: keka, host: ekacare.keka.com, verified: 2026-11-25 }
+  - { name: Eloelo, ats: keka, host: eloelo.keka.com, verified: 2026-11-25 }
+  - { name: Kuku FM, ats: keka, host: kukufm.keka.com, verified: 2026-11-25 }
+  - { name: LambdaTest, ats: keka, host: lambdatest.keka.com, verified: 2026-11-25 }
+  - { name: Niyo, ats: keka, host: niyo.keka.com, verified: 2026-11-25 }
+  - { name: Signzy, ats: keka, host: signzy.keka.com, verified: 2026-11-25 }
+  - { name: Teachmint, ats: keka, host: teachmint.keka.com, verified: 2026-11-25 }
+  - { name: Zluri, ats: keka, host: zluri.keka.com, verified: 2026-11-25 }
+  - { name: Inc42, ats: keka, host: inc42.keka.com, verified: 2026-11-25 }
+  - { name: Cashfree, ats: kula, slug: cashfree, verified: 2026-11-25 }
+  - { name: MoEngage, ats: kula, slug: moengage, verified: 2026-11-25 }
+  - { name: CleverTap, ats: kula, slug: clevertap, verified: 2026-11-25 }
+  - { name: Acko, ats: kula, slug: acko, verified: 2026-11-25 }
+  - { name: Slice, ats: kula, slug: slice, verified: 2026-11-25 }
+  - { name: Rocketlane, ats: kula, slug: rocketlane, verified: 2026-11-25 }
+  - { name: Plum, ats: kula, slug: plumhq, verified: 2026-11-25 }
+  - { name: Neysa, ats: kula, slug: neysa, verified: 2026-11-25 }
+  - { name: Digantara, ats: kula, slug: digantara, verified: 2026-11-25 }
+
+  # ── Own careers sites: Uber, Atlassian, Capgemini, Wipro ──
+  - { name: Uber,      ats: uber,      verified: 2026-11-25 }
+  - { name: Atlassian, ats: atlassian, verified: 2026-11-25 }
+  - { name: Capgemini, ats: capgemini, country_code: in-en, verified: 2026-11-25 }
+  - name: Wipro
+    ats: successfactors
+    host: careers.wipro.com
+    location: India
+    verified: 2026-11-25
+    queries: [fresher, graduate, trainee, software engineer, developer, data engineer]
+
+  # ── GCCs on Eightfold (NVIDIA and PayPal moved here from Workday, which rate-limits) ──
+  - { name: Qualcomm, ats: eightfold, host: careers.qualcomm.com, domain: qualcomm.com, verified: 2026-11-25 }
+  - { name: NVIDIA, ats: eightfold, host: nvidia.eightfold.ai, domain: nvidia.com, verified: 2026-11-25 }
+  - { name: PayPal, ats: eightfold, host: paypal.eightfold.ai, domain: paypal.com, verified: 2026-11-25 }
+  - { name: Citi, ats: eightfold, host: citi.eightfold.ai, domain: citi.com, verified: 2026-11-25 }
+  - { name: Micron, ats: eightfold, host: micron.eightfold.ai, domain: micron.com, verified: 2026-11-25 }
+  - { name: Vodafone, ats: eightfold, host: vodafone.eightfold.ai, domain: vodafone.com, verified: 2026-11-25 }
+  - { name: Applied Materials, ats: eightfold, host: appliedmaterials.eightfold.ai, domain: appliedmaterials.com, verified: 2026-11-25 }
+  - { name: Infineon, ats: eightfold, host: infineon.eightfold.ai, domain: infineon.com, verified: 2026-11-25 }
+  - { name: Eaton, ats: eightfold, host: eaton.eightfold.ai, domain: eaton.com, verified: 2026-11-25 }
+  - { name: HP, ats: eightfold, host: hp.eightfold.ai, domain: hp.com, verified: 2026-11-25 }
+  - { name: Morgan Stanley, ats: eightfold, host: morganstanley.eightfold.ai, domain: morganstanley.com, verified: 2026-11-25 }
+  - { name: Ericsson, ats: eightfold, host: ericsson.eightfold.ai, domain: ericsson.com, verified: 2026-11-25 }
+  - { name: Lam Research, ats: eightfold, host: lamresearch.eightfold.ai, domain: lamresearch.com, verified: 2026-11-25 }
+  - { name: Autodesk, ats: eightfold, host: autodesk.eightfold.ai, domain: autodesk.com, verified: 2026-11-25 }
+  - { name: AstraZeneca, ats: eightfold, host: astrazeneca.eightfold.ai, domain: astrazeneca.com, verified: 2026-11-25 }
+  - { name: Amdocs, ats: eightfold, host: amdocs.eightfold.ai, domain: amdocs.com, verified: 2026-11-25 }
+  - { name: Qlik, ats: eightfold, host: qlik.eightfold.ai, domain: qlik.com, verified: 2026-11-25 }
+
+  # ── More boards found by probing ──
+  - { name: PhonePe, ats: smartrecruiters, slug: PHONEPELIMITED, verified: 2026-11-25 }
+  - { name: Experian, ats: smartrecruiters, slug: Experian, verified: 2026-11-25 }
+  - { name: Continental, ats: smartrecruiters, slug: Continental, verified: 2026-11-25 }
+  - { name: Sutherland, ats: smartrecruiters, slug: Sutherland, verified: 2026-11-25 }
+  - { name: Lokal, ats: smartrecruiters, slug: Lokal, verified: 2026-11-25 }
+  - { name: Deliveroo, ats: greenhouse, slug: deliveroo, verified: 2026-11-25 }
+  - { name: SolarWinds, ats: greenhouse, slug: solarwinds, verified: 2026-11-25 }
+  - { name: Zinnov, ats: greenhouse, slug: zinnov, verified: 2026-11-25 }
+  - { name: JFrog, ats: greenhouse, slug: jfrog, verified: 2026-11-25 }
+  - { name: New Relic, ats: greenhouse, slug: newrelic, verified: 2026-11-25 }
+  - { name: Coursera, ats: greenhouse, slug: coursera, verified: 2026-11-25 }
+  - { name: Extreme Networks, ats: lever, slug: extremenetworks, verified: 2026-11-25 }
+  - { name: Sophos, ats: ashby, slug: sophos, verified: 2026-11-25 }
+
   - name: Amazon
     ats: amazon
     verified: 2026-11-25
@@ -140,11 +213,16 @@ companies:
   - { name: Zscaler, ats: greenhouse, slug: zscaler, verified: 2026-11-25 }
 
   # ── GCCs on Workday (one board at a time, so these add a few minutes per run) ──
-  - { name: PayPal,      ats: workday, host: paypal.wd1.myworkdayjobs.com,      tenant: paypal,      site: jobs,               search: India, verified: 2026-11-25 }
   - { name: Mastercard,  ats: workday, host: mastercard.wd1.myworkdayjobs.com,  tenant: mastercard,  site: CorporateCareers,   search: India, verified: 2026-11-25 }
   - { name: CrowdStrike, ats: workday, host: crowdstrike.wd5.myworkdayjobs.com, tenant: crowdstrike, site: crowdstrikecareers, search: India, verified: 2026-11-25 }
   - { name: Workday,     ats: workday, host: workday.wd5.myworkdayjobs.com,     tenant: workday,     site: Workday,            search: India, verified: 2026-11-25 }
   - { name: Target,      ats: workday, host: target.wd5.myworkdayjobs.com,      tenant: target,      site: targetcareers,      search: India, verified: 2026-11-25 }
+  # Workday site names taken from each company's own careers page (Workday was rate-limiting
+  # a live check, so these show "Rate limited, retrying" on some runs)
+  - { name: Accenture,    ats: workday, host: accenture.wd103.myworkdayjobs.com, tenant: accenture,    site: AccentureCareers,              search: India }
+  - { name: Barclays,     ats: workday, host: barclays.wd3.myworkdayjobs.com,    tenant: barclays,     site: External_Career_Site_Barclays, search: India }
+  - { name: BrowserStack, ats: workday, host: browserstack.wd3.myworkdayjobs.com, tenant: browserstack, site: External,                     search: India }
+  - { name: Sprinklr,     ats: workday, host: sprinklr.wd1.myworkdayjobs.com,    tenant: sprinklr,     site: careers,                       search: India }
   # Likely right but not verified (Workday was rate-limiting the check). Uncomment to try;
   # a wrong one shows up as "Wrong slug / moved" under Board health.
   # - { name: Walmart,   ats: workday, host: walmart.wd5.myworkdayjobs.com,   tenant: walmart,   site: WalmartExternal,     search: India }
@@ -154,12 +232,6 @@ companies:
   # - { name: Broadcom,  ats: workday, host: broadcom.wd1.myworkdayjobs.com,  tenant: broadcom,  site: External_Career,     search: India }
   # - { name: HP,        ats: workday, host: hp.wd5.myworkdayjobs.com,        tenant: hp,        site: ExternalCareerSite,  search: India }
 
-  - name: NVIDIA
-    ats: workday
-    host: nvidia.wd5.myworkdayjobs.com
-    tenant: nvidia
-    site: NVIDIAExternalCareerSite
-    search: India
   - name: Salesforce
     ats: workday
     host: salesforce.wd12.myworkdayjobs.com

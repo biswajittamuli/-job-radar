@@ -57,13 +57,24 @@ public JSON API that the page itself calls. Job Radar reads those APIs directly:
 
 ## Which companies are tracked
 
-`companies.yaml` has about 100 boards: Indian startups and product companies (Swiggy,
-Paytm, Meesho, Freshworks, Zeta, Groww, InMobi, Tekion …), and global companies and
-GCCs with India engineering teams (Stripe, Okta, Zscaler, PayPal, Salesforce, Amazon …).
-Microsoft, Google (its early-career listings) and JPMorgan Chase have their own adapters
-(`microsoft`, `google`, `oracle_hcm`). Every entry was checked against the live job board.
-Companies that run other careers sites (Flipkart, Razorpay, PhonePe, Atlassian, Uber,
-most service companies) still need a custom adapter; see below.
+`companies.yaml` has about 165 companies, each checked against its live careers site:
+
+- **Indian startups and product companies**: Swiggy, PhonePe, Razorpay, Paytm, Meesho,
+  CRED, Groww, Zeta, Freshworks, Cashfree, MoEngage, CleverTap, Slice, Acko, Jupiter,
+  LambdaTest, Teachmint, Tekion, InMobi, Hevo …
+- **Big tech and GCCs**: Microsoft, Google, Amazon, Uber, Atlassian, Qualcomm, NVIDIA,
+  Micron, Citi, JPMorgan Chase, Morgan Stanley, American Express, PayPal, Oracle,
+  Texas Instruments, Honeywell, Salesforce, Adobe …
+- **Service companies**: Accenture, Wipro, Capgemini.
+
+Supported careers systems (`ats:` in `companies.yaml`): greenhouse, lever, ashby,
+smartrecruiters, workday, eightfold, oracle_hcm, keka, kula, successfactors, plus
+company-specific adapters for amazon, microsoft, google, uber, atlassian and capgemini.
+
+Not covered, because they have no public job API a script can read: Flipkart (TurboHire),
+Walmart, TCS, Infosys, Cognizant, Tech Mahindra, HCLTech, and startups on Darwinbox
+(Unacademy, PW, Spinny, PharmEasy), which sits behind a bot check. Most service companies
+hire freshers through campus and national tests (TCS NQT, InfyTQ) rather than job posts.
 
 Only software-development roles are kept: titles with words like *support*, *operations*,
 *data centre*, *sales*, *customer* or *scientist* are skipped (`exclude_titles` in

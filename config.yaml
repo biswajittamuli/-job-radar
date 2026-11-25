@@ -81,6 +81,26 @@ exclude_titles:
   - customer
   - escalation
   - demo engineer
+  - solution engineer   # customer-facing / pre-sales
+  - solutions engineer
+  # non-software engineering (you're CSE; delete these lines to see hardware/VLSI roles)
+  - mechanical
+  - manufacturing
+  - industriali         # industrialization / industrialisation
+  - safety
+  - electrical
+  - electronics
+  - hardware
+  - design verification
+  - dv                  # "NOC DV Engineer"
+  - pmic
+  - physical design
+  - asic
+  - rtl
+  - vlsi
+  - analog
+  - layout
+  - process engineer
 
 freshness:
   # Drop jobs posted more than this many days ago (they're usually filled already).
