@@ -1,5 +1,6 @@
 from ..http import BoardNotFound
 from ..models import RawJob
+from ..text import strip_html
 
 API = "https://api.smartrecruiters.com/v1/companies/{slug}/postings"
 PAGE = 100
@@ -38,5 +39,15 @@ def parse(data, company):
             posted_at=(j.get("releasedDate") or "")[:10] or None,
             remote=loc.get("remote"),
             team=(j.get("department") or {}).get("label", ""),
+            level_hint=(j.get("experienceLevel") or {}).get("id", ""),
         ))
     return out
+
+
+def describe(company, job, http):
+    """The list API has no description; fetch it for jobs that passed the pre-check."""
+    data = http.get_json(API.format(slug=company["slug"]) + f"/{job.source_id}")
+    sections = ((data or {}).get("jobAd") or {}).get("sections") or {}
+    job.description = " ".join(strip_html((sections.get(k) or {}).get("text"))
+                               for k in ("jobDescription", "qualifications", "additionalInformation"))
+    return job

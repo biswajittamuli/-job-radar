@@ -22,7 +22,9 @@ TODAY = date.today()
 
 def ago(days):
     return (TODAY - timedelta(days=days)).isoformat()
-CFG = yaml.safe_load((ROOT / "config.yaml").read_text())
+CFG = yaml.safe_load((ROOT / "config.yaml").read_text())          # strict fresher (the real config)
+# The same config in "open" mode, for tests about location/skills/title rules rather than level
+OPEN = {**CFG, "level": {**CFG["level"], "mode": "open", "max_years": 2}}
 
 
 def J(title, loc="Bengaluru, India", desc="", remote=None):
@@ -41,7 +43,7 @@ def J(title, loc="Bengaluru, India", desc="", remote=None):
     ("Software Development Engineer", "IN, KA, Bengaluru", "1+ years of non-internship professional software development experience", "entry"),
 ])
 def test_passes(title, loc, desc, level):
-    v = classify(J(title, loc, desc), CFG)
+    v = classify(J(title, loc, desc), OPEN)
     assert v.ok, v.reason
     assert v.level == level
 
@@ -61,7 +63,7 @@ def test_passes(title, loc, desc, level):
     ("Software Engineering Intern", "Bengaluru", "", "internship"),
 ])
 def test_rejects(title, loc, desc, why):
-    v = classify(J(title, loc, desc), CFG)
+    v = classify(J(title, loc, desc), OPEN)
     assert not v.ok
     assert why in v.reason
 
@@ -71,20 +73,22 @@ def test_min_years():
     assert min_years("experience of 2-4 years in backend") == 2
     assert min_years("minimum 1 year") == 1
     assert min_years("We have been around for 20 years. Join us!") is None
+    assert min_years("3+ yrs of programming exp in at least one language") == 3
+    assert min_years("PayPal has been revolutionizing commerce for more than 25 years. Creating experiences") is None
 
 
 def test_skills_tagging():
-    v = classify(J("Backend Engineer", desc="Work with FastAPI, Postgres and Redis on Kubernetes and Docker"), CFG)
+    v = classify(J("Backend Engineer", desc="Work with FastAPI, Postgres and Redis on Kubernetes and Docker"), OPEN)
     assert "backend" in v.skills and "devops_cloud" in v.skills
-    v = classify(J("AI Engineer - LLM applications"), CFG)
+    v = classify(J("AI Engineer - LLM applications"), OPEN)
     assert v.skills[0] == "ai_ml" or "ai_ml" in v.skills
 
 
 def test_global_remote_but_not_country_locked():
-    assert classify(J("Software Engineer", "Remote"), CFG).ok
-    assert classify(J("Software Engineer", "Remote (APAC)"), CFG).ok
-    assert not classify(J("Software Engineer", "Remote, Canada"), CFG).ok
-    assert classify(J("Software Engineer", "Remote - India"), CFG).ok
+    assert classify(J("Software Engineer", "Remote"), OPEN).ok
+    assert classify(J("Software Engineer", "Remote (APAC)"), OPEN).ok
+    assert not classify(J("Software Engineer", "Remote, Canada"), OPEN).ok
+    assert classify(J("Software Engineer", "Remote - India"), OPEN).ok
 
 
 # ── adapters ────────────────────────────────────────────────────────────────
@@ -144,7 +148,8 @@ class FakeHttp:
     def __init__(self, boards):
         self.boards = boards
 
-    def get_json(self, url, **params):
+    def get_json(self, url, headers=None, **params):
+        self.calls = getattr(self, "calls", []) + [url]
         for key, payload in self.boards.items():
             if key in url:
                 if isinstance(payload, Exception):
@@ -152,14 +157,16 @@ class FakeHttp:
                 return payload
         raise BoardNotFound(url)
 
-    def post_json(self, url, body):
+    def post_json(self, url, body, headers=None):
         return self.get_json(url)
+
+    def get_text(self, url):
+        return ""
 
 
 @pytest.fixture
 def repo(tmp_path):
-    for f in ("config.yaml",):
-        shutil.copy(ROOT / f, tmp_path / f)
+    (tmp_path / "config.yaml").write_text(yaml.safe_dump(OPEN))
     (tmp_path / "companies.yaml").write_text(yaml.safe_dump({"companies": [
         {"name": "Acme", "ats": "greenhouse", "slug": "acme"},
         {"name": "Cred", "ats": "lever", "slug": "cred"},
@@ -201,13 +208,13 @@ def test_end_to_end(repo):
     "Software Engineering SMTS", "Senior Member of Technical Staff",
 ])
 def test_salesforce_mts_levels_are_senior(title):
-    v = classify(J(title), CFG)
+    v = classify(J(title), OPEN)
     assert not v.ok and "senior" in v.reason
 
 
 def test_plain_mts_still_passes():
-    assert classify(J("MTS, Software Engineering"), CFG).ok
-    assert classify(J("Member of Technical Staff"), CFG).ok
+    assert classify(J("MTS, Software Engineering"), OPEN).ok
+    assert classify(J("Member of Technical Staff"), OPEN).ok
 
 
 # ── freshness ───────────────────────────────────────────────────────────────
@@ -258,7 +265,7 @@ def test_workday_30_plus_is_filtered_out():
         {"title": "Software Engineer", "externalPath": "/a", "locationsText": "India, Bengaluru", "postedOn": "Posted 30+ Days Ago"},
         {"title": "Software Engineer", "externalPath": "/b", "locationsText": "India, Bengaluru", "postedOn": "Posted 2 Days Ago"}]}
     jobs = workday.parse(data, {"host": "h", "site": "s"}, today=today)
-    assert [classify(j, CFG, today=today).ok for j in jobs] == [False, True]
+    assert [classify(j, OPEN, today=today).ok for j in jobs] == [False, True]
 
 
 def test_workday_fetch_paginates(monkeypatch):
@@ -269,7 +276,11 @@ def test_workday_fetch_paginates(monkeypatch):
     calls = []
 
     class H:
-        def post_json(self, url, body):
+        def get_text(self, url):
+            raise RuntimeError("429")   # warm-up failing must not stop the fetch
+
+        def post_json(self, url, body, headers=None):
+            assert headers["Origin"] == "https://h" and url.endswith("/wday/cxs/t/s/jobs")
             calls.append(body["offset"])
             return pages[len(calls) - 1]
     jobs = workday.fetch({"host": "h", "tenant": "t", "site": "s"}, H())
@@ -419,3 +430,165 @@ def test_dashboard_defaults_to_newest_posted(repo):
     run(root=repo, http=FakeHttp({"boards/acme": GH}), do_notify=False, verbose=False)
     html = (repo / "docs/index.html").read_text()
     assert "sort:'posted'" in html and "posted ${d} days ago" in html
+
+
+# ── strict fresher mode (the real config) ───────────────────────────────────
+def test_config_is_strict_fresher():
+    assert CFG["level"]["mode"] == "entry" and CFG["level"]["max_years"] == 1
+
+
+@pytest.mark.parametrize("title,desc", [
+    ("Software Engineer", "We're hiring freshers from the 2026 batch."),
+    ("Backend Developer", "0-1 years of experience with Python"),
+    ("Software Engineer", "Open to recent graduates with strong DSA."),
+    ("SDE-1", ""),
+    ("Graduate Engineer Trainee", ""),
+    ("Software Engineer", "Experience: 1+ years of professional experience"),
+])
+def test_strict_accepts_fresher_signals(title, desc):
+    v = classify(J(title, desc=desc), CFG)
+    assert v.ok and v.level == "entry", v.reason
+
+
+@pytest.mark.parametrize("title,desc,why", [
+    ("Software Engineer", "", "no fresher signal"),                       # nothing says fresher
+    ("Software Engineer", "Build scalable APIs with Go.", "no fresher signal"),
+    ("Backend Engineer", "2+ years of experience building APIs", "asks 2+"),
+    ("Software Engineering MTS", "Join as an early-career engineer. 3+ yrs of programming exp in Java", "asks 3+"),
+    ("Software Engineering LMTS (Database Engineering)",
+     "8+ years of experience in database engineering, including 3+ years operating databases on AWS", "senior"),
+    ("Software Engineer", "8+ years of experience in database engineering, including 3+ years on AWS", "asks 8+"),
+    ("Research Scientist - Nemotron India", "", "excluded title"),
+    ("Data Scientist", "freshers welcome", "excluded title"),
+    ("Applied Scientist I", "new grad", "excluded title"),
+])
+def test_strict_rejects(title, desc, why):
+    v = classify(J(title, desc=desc), CFG)
+    assert not v.ok and why in v.reason, v.reason
+
+
+def test_desc_entry_signal_is_narrow():
+    # "university"/"graduate degree" appear in senior postings too; they must not count
+    v = classify(J("Software Engineer", desc="Bachelor's degree from a university; graduate degree preferred."), CFG)
+    assert not v.ok
+
+
+def test_ats_level_hint():
+    sr = RawJob("1", "Software Engineer", "u", ["Bengaluru, India"], level_hint="entry_level")
+    assert classify(sr, CFG).level == "entry"
+    sr.level_hint = "mid_senior_level"
+    assert "senior level per job board" in classify(sr, CFG).reason
+
+
+# ── location matching ───────────────────────────────────────────────────────
+@pytest.mark.parametrize("loc", ["Austin, TX, United States", "Indianapolis, IN, United States", "Berlin, Germany",
+                                 "Dublin, Ireland", "Wisconsin, USA", "Remote - US"])
+def test_location_rejects_lookalikes(loc):
+    assert not classify(J("Software Engineer I", loc), CFG).ok
+
+
+@pytest.mark.parametrize("loc", ["IN, KA, Bengaluru", "IN-Hyderabad", "India - Bengaluru", "Gurugram, Haryana, India",
+                                 "Thiruvananthapuram", "Remote - India"])
+def test_location_accepts_india(loc):
+    assert classify(J("Software Engineer I", loc), CFG).ok
+
+
+# ── description enrichment ──────────────────────────────────────────────────
+WD_DETAIL = {"jobPostingInfo": {"jobDescription": "<p>We hire <b>freshers</b>. 0-1 years of experience.</p>",
+                                "startDate": "2026-11-21", "location": "India, Bengaluru",
+                                "additionalLocations": ["India, Hyderabad"]}}
+
+
+def test_workday_apply_detail():
+    j = RawJob("/job/x", "Software Engineer", "u", ["2 Locations"])
+    workday.apply_detail(j, WD_DETAIL)
+    assert "freshers" in j.description and j.posted_at == "2026-11-21"
+    assert j.locations == ["India, Bengaluru", "India, Hyderabad"]
+
+
+def test_smartrecruiters_describe_and_level():
+    s = smartrecruiters.parse({"content": [{"id": "9", "name": "Software Engineer", "releasedDate": ago(1),
+                                            "experienceLevel": {"id": "entry_level"},
+                                            "location": {"city": "Pune", "country": "in"}}]}, {"slug": "X"})
+    assert s[0].level_hint == "entry_level"
+
+    class H:
+        def get_json(self, url, **kw):
+            assert url.endswith("/companies/X/postings/9")
+            return {"jobAd": {"sections": {"jobDescription": {"text": "<p>Build things</p>"},
+                                           "qualifications": {"text": "<li>0-1 years</li>"}}}}
+    smartrecruiters.describe({"slug": "X"}, s[0], H())
+    assert "Build things" in s[0].description and "0-1 years" in s[0].description
+
+
+def test_runner_fetches_descriptions_only_for_precheck_survivors_and_caches(tmp_path, monkeypatch):
+    from radar import runner
+    from radar.store import Store
+    monkeypatch.setattr(workday, "PAGE_DELAY", 0)
+    raw = [RawJob("/job/a", "Software Engineer", "u", ["India, Bengaluru"], posted_at=ago(1)),
+           RawJob("/job/b", "Senior Software Engineer", "u", ["India, Bengaluru"], posted_at=ago(1)),   # senior: no fetch
+           RawJob("/job/c", "Software Engineer", "u", ["Austin, TX"], posted_at=ago(1)),                # location: no fetch
+           RawJob("/job/d", "Software Engineer", "u", ["India, Pune"], posted_at=ago(1))]
+    fetched = []
+
+    class H:
+        def get_json(self, url, headers=None, **kw):
+            fetched.append(url.rsplit("/", 1)[-1])
+            if url.endswith("/a"):
+                return WD_DETAIL
+            return {"jobPostingInfo": {"jobDescription": "5+ years of experience required"}}
+    c = {"name": "Co", "ats": "workday", "host": "h", "tenant": "t", "site": "s"}
+    store = Store(tmp_path)
+    out = runner.enrich_and_classify(c, raw, CFG, store, H(), "2026-11-25T00:00:00+00:00")
+    assert fetched == ["a", "d"]
+    assert [r.source_id for r, v, jid in out] == ["/job/a"]
+    assert set(store.details) == {"workday:co:/job/a", "workday:co:/job/d"}
+
+    # second run: served from the cache, nothing fetched again
+    fetched.clear()
+    raw2 = [RawJob("/job/a", "Software Engineer", "u", ["India, Bengaluru"], posted_at=ago(1))]
+    out2 = runner.enrich_and_classify(c, raw2, CFG, store, H(), "2026-11-25T06:00:00+00:00")
+    assert fetched == [] and len(out2) == 1
+
+
+def test_runner_keeps_going_when_a_description_fails(tmp_path):
+    from radar import runner
+    from radar.store import Store
+
+    class H:
+        def get_json(self, url, headers=None, **kw):
+            raise RuntimeError("HTTP 429")
+    c = {"name": "Co", "ats": "smartrecruiters", "slug": "Co"}
+    raw = [RawJob("1", "SDE-1", "u", ["Bengaluru, India"], posted_at=ago(1))]
+    out = runner.enrich_and_classify(c, raw, CFG, Store(tmp_path), H(), "2026-11-25T00:00:00+00:00")
+    assert len(out) == 1   # the title alone says fresher, so it still counts
+
+
+# ── failing-board alerts ────────────────────────────────────────────────────
+def test_broken_board_alerts_only_after_repeated_failures_and_never_for_rate_limits(repo):
+    from radar.http import RateLimited
+    (repo / "companies.yaml").write_text(yaml.safe_dump({"companies": [
+        {"name": "Acme", "ats": "greenhouse", "slug": "acme"},
+        {"name": "Busy", "ats": "greenhouse", "slug": "busy"}]}))
+    boards = {"boards/acme": RuntimeError("boom"), "boards/busy": RateLimited("HTTP 429")}
+    alerts = []
+    import radar.runner as rr
+    orig = rr.notify.send_all
+    rr.notify.send_all = lambda new, broken, *a, **k: alerts.append(list(broken)) or []
+    try:
+        for _ in range(4):
+            run(root=repo, http=FakeHttp(boards), do_notify=True, verbose=False)
+    finally:
+        rr.notify.send_all = orig
+    assert alerts == [[], [], ["Acme"], []]
+    health = json.loads((repo / "data/health.json").read_text())
+    assert health["Busy"]["status"] == "rate_limited" and health["Acme"]["status"] == "error"
+
+
+# ── workflow ────────────────────────────────────────────────────────────────
+def test_workflow_runs_four_times_a_day_and_survives_overlapping_runs():
+    wf = yaml.safe_load((ROOT / ".github/workflows/radar.yml").read_text())
+    cron = wf[True]["schedule"][0]["cron"] if True in wf else wf["on"]["schedule"][0]["cron"]
+    assert len(cron.split()[1].split(",")) == 4
+    save = next(s for s in wf["jobs"]["scan"]["steps"] if s.get("name") == "Save results")["run"]
+    assert "pull --rebase" in save

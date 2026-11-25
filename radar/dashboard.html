@@ -66,7 +66,7 @@
   table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
   th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line)}
   th{color:var(--muted);font-weight:500;font-size:12px}
-  .st-ok{color:var(--entry)} .st-empty{color:var(--warn)} .st-error,.st-not_found{color:var(--bad)}
+  .st-ok{color:var(--entry)} .st-empty,.st-rate_limited{color:var(--warn)} .st-error,.st-not_found{color:var(--bad)}
   .more{margin:14px auto 0;display:block;background:var(--panel2);border:1px solid var(--line);color:var(--text);padding:9px 18px;border-radius:9px;cursor:pointer}
   @media (max-width:640px){.controls{position:static}.job{grid-template-columns:1fr}.side{align-items:flex-start;flex-direction:row;flex-wrap:wrap}}
 </style>
@@ -238,12 +238,12 @@
     const {id, m} = b.dataset; marks[id] = marks[id] === m ? undefined : m; if(!marks[id]) delete marks[id]; saveMarks(); draw(); };
 
   // ── health table
-  const order = {not_found:0, error:1, empty:2, ok:3};
+  const order = {not_found:0, error:1, rate_limited:2, empty:3, ok:4};
   $('healthsum').textContent = `Board health: ${health.length - failing.length} OK` + (failing.length ? ` · ${failing.length} failing` : '');
   if (failing.length) $('healthbox').open = true;
   $('health').innerHTML = health.sort((a,b)=>(order[a[1].status]??9)-(order[b[1].status]??9)||a[0].localeCompare(b[0]))
     .map(([n,h]) => `<tr><td>${esc(n)}</td><td class="mono">${esc(h.ats)}</td>
-      <td class="st-${esc(h.status)}">${esc({ok:'OK',empty:'Empty',error:'Error',not_found:'Wrong slug / moved'}[h.status]||h.status)}</td>
+      <td class="st-${esc(h.status)}">${esc({ok:'OK',empty:'Empty',error:'Error',not_found:'Wrong slug / moved',rate_limited:'Rate limited, retrying'}[h.status]||h.status)}</td>
       <td>${h.fetched??''}</td><td>${h.matched??''}</td><td>${h.last_ok?ago(h.last_ok):'never'}</td>
       <td class="sub">${esc(h.error||'')}</td></tr>`).join('');
 

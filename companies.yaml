@@ -61,8 +61,92 @@ companies:
   - { name: Cohere,      ats: ashby,      slug: cohere }
   - { name: Notion,      ats: ashby,      slug: notion }
   - { name: Deel,        ats: ashby,      slug: deel }
-  - { name: Visa,        ats: smartrecruiters, slug: Visa }
   - { name: ServiceNow,  ats: smartrecruiters, slug: ServiceNow }
+
+  # ── Indian startups and product companies (added 2026-11-25, all verified) ──
+  - { name: Atlan, ats: ashby, slug: atlan, verified: 2026-11-25 }
+  - { name: Bureau, ats: ashby, slug: bureau, verified: 2026-11-25 }
+  - { name: Cars24, ats: smartrecruiters, slug: Cars24, verified: 2026-11-25 }
+  - { name: DevRev, ats: greenhouse, slug: devrev, verified: 2026-11-25 }
+  - { name: Ema, ats: ashby, slug: ema, verified: 2026-11-25 }
+  - { name: FamPay, ats: lever, slug: fampay, verified: 2026-11-25 }
+  - { name: Freshworks, ats: smartrecruiters, slug: Freshworks, verified: 2026-11-25 }
+  - { name: Glance, ats: greenhouse, slug: glance, verified: 2026-11-25 }
+  - { name: Hevo Data, ats: lever, slug: hevodata, verified: 2026-11-25 }
+  - { name: InMobi, ats: greenhouse, slug: inmobi, verified: 2026-11-25 }
+  - { name: Lendingkart, ats: smartrecruiters, slug: Lendingkart, verified: 2026-11-25 }
+  - { name: LogiNext, ats: smartrecruiters, slug: LogiNext, verified: 2026-11-25 }
+  - { name: Loop Health, ats: smartrecruiters, slug: LoopHealth, verified: 2026-11-25 }
+  - { name: Mindtickle, ats: lever, slug: mindtickle, verified: 2026-11-25 }
+  - { name: Newton School, ats: smartrecruiters, slug: NewtonSchool, verified: 2026-11-25 }
+  - { name: Nobroker, ats: smartrecruiters, slug: Nobroker, verified: 2026-11-25 }
+  - { name: Observe.AI, ats: greenhouse, slug: observeai, verified: 2026-11-25 }
+  - { name: Pocket FM, ats: lever, slug: pocketfm, verified: 2026-11-25 }
+  - { name: Scaler, ats: smartrecruiters, slug: interviewbit, verified: 2026-11-25 }
+  - { name: Shipsy, ats: smartrecruiters, slug: Shipsy, verified: 2026-11-25 }
+  - { name: Sigmoid, ats: greenhouse, slug: sigmoid, verified: 2026-11-25 }
+  - { name: SpotDraft, ats: ashby, slug: spotdraft, verified: 2026-11-25 }
+  - { name: Swiggy, ats: smartrecruiters, slug: Swiggy, verified: 2026-11-25 }
+  - { name: Tekion, ats: ashby, slug: tekion, verified: 2026-11-25 }
+  - { name: Turing, ats: greenhouse, slug: turing, verified: 2026-11-25 }
+  - { name: Unacademy, ats: smartrecruiters, slug: Unacademy, verified: 2026-11-25 }
+  - { name: Upstox, ats: smartrecruiters, slug: Upstox, verified: 2026-11-25 }
+  - { name: Vernacular.ai, ats: smartrecruiters, slug: Vernacularai, verified: 2026-11-25 }
+  - { name: Whatfix, ats: smartrecruiters, slug: Whatfix, verified: 2026-11-25 }
+  - { name: Zinnia, ats: greenhouse, slug: zinnia, verified: 2026-11-25 }
+  - { name: ixigo, ats: smartrecruiters, slug: ixigo, verified: 2026-11-25 }
+
+  # ── Global companies with India engineering / GCCs (verified) ──
+  - { name: Adyen, ats: greenhouse, slug: adyen, verified: 2026-11-25 }
+  - { name: Agoda, ats: greenhouse, slug: agoda, verified: 2026-11-25 }
+  - { name: Airbnb, ats: greenhouse, slug: airbnb, verified: 2026-11-25 }
+  - { name: Brex, ats: greenhouse, slug: brex, verified: 2026-11-25 }
+  - { name: Celigo, ats: greenhouse, slug: celigo, verified: 2026-11-25 }
+  - { name: ClickUp, ats: ashby, slug: clickup, verified: 2026-11-25 }
+  - { name: Commvault, ats: greenhouse, slug: commvault, verified: 2026-11-25 }
+  - { name: Couchbase, ats: greenhouse, slug: couchbaseinc, verified: 2026-11-25 }
+  - { name: Coupa, ats: lever, slug: coupa, verified: 2026-11-25 }
+  - { name: DoorDash, ats: greenhouse, slug: doordashindia, verified: 2026-11-25 }
+  - { name: Elsevier, ats: greenhouse, slug: elsevier, verified: 2026-11-25 }
+  - { name: Endava, ats: smartrecruiters, slug: Endava, verified: 2026-11-25 }
+  - { name: Figma, ats: greenhouse, slug: figma, verified: 2026-11-25 }
+  - { name: Fivetran, ats: greenhouse, slug: fivetran, verified: 2026-11-25 }
+  - { name: Grab, ats: smartrecruiters, slug: Grab, verified: 2026-11-25 }
+  - { name: Harness, ats: greenhouse, slug: harnessinc, verified: 2026-11-25 }
+  - { name: Mixpanel, ats: greenhouse, slug: mixpanel, verified: 2026-11-25 }
+  - { name: Nasdaq, ats: greenhouse, slug: nasdaq, verified: 2026-11-25 }
+  - { name: Netlify, ats: greenhouse, slug: netlify, verified: 2026-11-25 }
+  - { name: Netskope, ats: greenhouse, slug: netskope, verified: 2026-11-25 }
+  - { name: Outreach, ats: lever, slug: outreach, verified: 2026-11-25 }
+  - { name: PostHog, ats: ashby, slug: posthog, verified: 2026-11-25 }
+  - { name: Pure Storage, ats: greenhouse, slug: purestorage, verified: 2026-11-25 }
+  - { name: Salesloft, ats: greenhouse, slug: salesloft, verified: 2026-11-25 }
+  - { name: Smartsheet, ats: greenhouse, slug: smartsheet, verified: 2026-11-25 }
+  - { name: Snowflake, ats: ashby, slug: snowflake, verified: 2026-11-25 }
+  - { name: Supabase, ats: ashby, slug: supabase, verified: 2026-11-25 }
+  - { name: Tide, ats: greenhouse, slug: tide, verified: 2026-11-25 }
+  - { name: Toast, ats: greenhouse, slug: toast, verified: 2026-11-25 }
+  - { name: Veeva, ats: lever, slug: veeva, verified: 2026-11-25 }
+  - { name: Western Digital, ats: smartrecruiters, slug: WesternDigital, verified: 2026-11-25 }
+  - { name: Wise, ats: smartrecruiters, slug: Wise, verified: 2026-11-25 }
+  - { name: Wiz, ats: greenhouse, slug: wizinc, verified: 2026-11-25 }
+  - { name: Yugabyte, ats: greenhouse, slug: yugabyte, verified: 2026-11-25 }
+  - { name: Zscaler, ats: greenhouse, slug: zscaler, verified: 2026-11-25 }
+
+  # ── GCCs on Workday (one board at a time, so these add a few minutes per run) ──
+  - { name: PayPal,      ats: workday, host: paypal.wd1.myworkdayjobs.com,      tenant: paypal,      site: jobs,               search: India, verified: 2026-11-25 }
+  - { name: Mastercard,  ats: workday, host: mastercard.wd1.myworkdayjobs.com,  tenant: mastercard,  site: CorporateCareers,   search: India, verified: 2026-11-25 }
+  - { name: CrowdStrike, ats: workday, host: crowdstrike.wd5.myworkdayjobs.com, tenant: crowdstrike, site: crowdstrikecareers, search: India, verified: 2026-11-25 }
+  - { name: Workday,     ats: workday, host: workday.wd5.myworkdayjobs.com,     tenant: workday,     site: Workday,            search: India, verified: 2026-11-25 }
+  - { name: Target,      ats: workday, host: target.wd5.myworkdayjobs.com,      tenant: target,      site: targetcareers,      search: India, verified: 2026-11-25 }
+  # Likely right but not verified (Workday was rate-limiting the check). Uncomment to try;
+  # a wrong one shows up as "Wrong slug / moved" under Board health.
+  # - { name: Walmart,   ats: workday, host: walmart.wd5.myworkdayjobs.com,   tenant: walmart,   site: WalmartExternal,     search: India }
+  # - { name: Intel,     ats: workday, host: intel.wd1.myworkdayjobs.com,     tenant: intel,     site: External,            search: India }
+  # - { name: Autodesk,  ats: workday, host: autodesk.wd1.myworkdayjobs.com,  tenant: autodesk,  site: Ext,                 search: India }
+  # - { name: NetApp,    ats: workday, host: netapp.wd1.myworkdayjobs.com,    tenant: netapp,    site: NetAppCareers,       search: India }
+  # - { name: Broadcom,  ats: workday, host: broadcom.wd1.myworkdayjobs.com,  tenant: broadcom,  site: External_Career,     search: India }
+  # - { name: HP,        ats: workday, host: hp.wd5.myworkdayjobs.com,        tenant: hp,        site: ExternalCareerSite,  search: India }
 
   - name: NVIDIA
     ats: workday

@@ -21,18 +21,42 @@ location:
     - jaipur
     - kochi
     - guwahati
-    - "in, "          # Amazon style: "IN, KA, Bengaluru"
+    - thiruvananthapuram
+    - trivandrum
+    - coimbatore
+    - chandigarh
+    - mohali
+    - indore
+    - bhubaneswar
+    - nagpur
+    - mysore
+    - mysuru
+    - mangalore
+    - visakhapatnam
+    - vadodara
+    - lucknow
+    - bhopal
+    - surat
+    - gandhinagar
+    - navi mumbai
+    - thane
+  # Whole words only ("india" no longer matches "Indianapolis"). Amazon's "IN, KA, Bengaluru"
+  # style is recognised in code.
   # Also match fully-remote roles that aren't locked to another country
   allow_global_remote: true
 
 level:
-  # Max years of experience a posting may ask for and still count
-  max_years: 2
-  # "entry"  = only roles with an explicit fresher / new-grad / SDE-1 / intern signal
+  # Max years of experience a posting may ask for and still count (read from the description)
+  max_years: 1
+  # "entry"  = strict fresher: needs a fresher signal in the title (new grad, SDE-1, Associate,
+  #            Trainee, 2026 batch …) or the description (freshers, 0-1 years, entry level …)
   # "open"   = entry roles + tech roles with no seniority signal (wider net, more noise)
-  mode: open
+  mode: entry
   # Most internships require you to still be enrolled; flip on if you want them
   include_internships: false
+
+# Titles containing any of these words are skipped (whole-word prefix, case-insensitive)
+exclude_titles: [scientist, researcher, research scientist, phd, postdoc, professor]
 
 freshness:
   # Drop jobs posted more than this many days ago (they're usually filled already).
