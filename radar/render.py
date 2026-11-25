@@ -7,7 +7,7 @@ from pathlib import Path
 
 import yaml
 
-from .models import newest_first
+from .models import best_first
 
 TEMPLATE = Path(__file__).with_name("dashboard.html")
 
@@ -62,7 +62,7 @@ def startup_directory(root: Path, store) -> list[dict]:
 
 def build(root: Path, store) -> Path:
     jobs = sorted(store.jobs.values(),
-                  key=lambda j: (j["status"] != "open", *newest_first(j.get("posted_at"), j["score"])))
+                  key=lambda j: (j["status"] != "open", *best_first(j.get("fit", 0), j.get("posted_at"), j["score"])))
     payload = {
         "generated_at": store.runs[-1]["at"] if store.runs else None,
         "jobs": jobs,

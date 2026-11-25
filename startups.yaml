@@ -8,7 +8,9 @@
 #          If one moves to a supported system, `python -m radar add <url> --name X` tracks it.
 tracked:
 - 100ms
+- AbhiBus
 - Acko
+- Aspora
 - Ati Motors
 - Atlan
 - BharatPe
@@ -28,6 +30,7 @@ tracked:
 - Eka Care
 - Eloelo
 - Everstage
+- Falcon
 - FamPay
 - Fi Money
 - Fractal
@@ -43,6 +46,7 @@ tracked:
 - Icertis
 - Inc42
 - InMobi
+- Interview Kickstart
 - ixigo
 - Jupiter
 - Kuku FM
@@ -64,6 +68,7 @@ tracked:
 - Niyo
 - Nobroker
 - Observe.AI
+- Onsitego
 - Open Financial
 - Paxcom
 - Paytm
@@ -94,11 +99,14 @@ tracked:
 - Swiggy
 - Teachmint
 - Tekion
+- Truemeds
 - Turtlemint
 - Unacademy
 - Unicommerce
 - Uniphore
 - Upstox
+- UrbanPiper
+- Vegrow
 - Velocity
 - Vernacular.ai
 - Vyapar
@@ -109,6 +117,7 @@ tracked:
 - Zetwerk
 - Zinnov
 - Zluri
+- Zolve
 manual:
 - name: Adda247
   careers: https://adda247.com

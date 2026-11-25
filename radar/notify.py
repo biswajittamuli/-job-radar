@@ -14,7 +14,7 @@ from email.mime.text import MIMEText
 
 import requests
 
-from .models import newest_first
+from .models import best_first
 
 LEVEL_ICON = {"entry": "🟢", "open": "🔵", "intern": "🟣"}
 
@@ -31,10 +31,13 @@ def posted_label(posted_at, today=None) -> str:
 
 def _lines(jobs, max_items):
     out = []
-    # newest posting first, whatever order the caller passed
-    for j in sorted(jobs, key=lambda j: newest_first(j.posted_at, j.score))[:max_items]:
-        sub = " · ".join(x for x in (j.location, ", ".join(j.skills), posted_label(j.posted_at)) if x)
-        out.append((j, f"{LEVEL_ICON.get(j.level, '•')} {j.company} — {j.title}", sub))
+    # best fit for you first, then newest, whatever order the caller passed
+    for j in sorted(jobs, key=lambda j: best_first(getattr(j, "fit", 0), j.posted_at, j.score))[:max_items]:
+        why = getattr(j, "why", None) or []
+        sub = " · ".join(x for x in (j.location, ", ".join(why) if why else ", ".join(j.skills),
+                                     posted_label(j.posted_at)) if x)
+        star = "⭐ " if getattr(j, "fit", 0) >= 70 else ""
+        out.append((j, f"{star}{LEVEL_ICON.get(j.level, '•')} {j.company} — {j.title}", sub))
     return out
 
 
@@ -60,7 +63,7 @@ def build_html(new_jobs, broken, dashboard_url, max_items, stats=""):
     else:
         parts = [f"<b>🛰 Job Radar — {len(new_jobs)} new</b>"]
     for j, head, sub in _lines(new_jobs, max_items):
-        parts.append(f'{LEVEL_ICON.get(j.level, "•")} <b>{e(j.company)}</b> — '
+        parts.append(f'{"⭐ " if getattr(j, "fit", 0) >= 70 else ""}{LEVEL_ICON.get(j.level, "•")} <b>{e(j.company)}</b> — '
                      f'<a href="{e(j.url)}">{e(j.title)}</a>\n<i>{e(sub)}</i>')
     if len(new_jobs) > max_items:
         parts.append(f"…and {len(new_jobs) - max_items} more on the dashboard")

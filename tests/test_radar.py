@@ -437,10 +437,10 @@ def test_end_to_end_drops_stale_jobs(repo):
     assert r["new"] == []
 
 
-def test_dashboard_defaults_to_newest_posted(repo):
+def test_dashboard_defaults_to_best_for_you(repo):
     run(root=repo, http=FakeHttp({"boards/acme": GH}), do_notify=False, verbose=False)
     html = (repo / "docs/index.html").read_text()
-    assert "sort:'posted'" in html and "posted ${d} days ago" in html
+    assert "sort:'fit'" in html and "posted ${d} days ago" in html and "fits you" in html
 
 
 # ── strict fresher mode (the real config) ───────────────────────────────────
@@ -1088,3 +1088,72 @@ def test_run_with_new_jobs_unchanged(tg):
     sent, _ = tg
     notify.send_all([_job("Fresh Role", None, 1)], [], "", CFG, "stats")
     assert "1 new" in sent[0][1]["text"] and "Fresh Role" in sent[0][1]["text"]
+
+
+# ── "Best for you" ──────────────────────────────────────────────────────────
+from radar.classify import batch_years
+
+
+def test_profile_in_config():
+    p = CFG["profile"]
+    assert p["grad_year"] == 2026 and "backend" in p["roles"] and "fullstack" in p["roles"] and "java" in p["skills"]
+
+
+@pytest.mark.parametrize("text,years", [("Open to 2026 graduates", {2026}), ("2025 batch only", {2025}), ("class of 2026", {2026}),
+                                        ("graduating in 2027", {2027}), ("2025/2026 pass-outs", {2026}), ("founded in 2015", set())])
+def test_batch_years(text, years):
+    assert batch_years(text) == years
+
+
+def test_other_batch_only_roles_are_skipped():
+    assert "for the 2025 batch" in classify(J("Graduate Engineer Trainee", desc="Only 2025 batch graduates"), CFG).reason
+    assert classify(J("Graduate Engineer Trainee", desc="2025 and 2026 batch graduates"), CFG).ok
+
+
+def test_fit_prefers_your_skills_and_batch():
+    today = date(2026, 11, 25)
+    backend = classify(RawJob("1", "Backend Developer (SDE 1)", "u", ["Bengaluru, India"], posted_at="2026-11-24",
+                              description="Freshers, 2026 batch. Java, Spring Boot, PostgreSQL, Kafka, REST APIs"), CFG, today=today)
+    android = classify(RawJob("2", "Android Developer - Fresher", "u", ["Bengaluru, India"], posted_at="2026-11-24",
+                              description="0-1 years. Kotlin, Android SDK"), CFG, today=today)
+    assert backend.ok and android.ok and backend.fit > android.fit and backend.fit >= 70
+    assert "2026 batch" in backend.why and "backend role" in backend.why and "java" in backend.why
+    assert android.why == [] or "java" not in android.why
+
+
+def test_alerts_list_best_fit_first_with_star():
+    hi = _job("Backend SDE 1", None, 1); hi.fit, hi.why = 85, ["backend", "java"]
+    lo = _job("Android Dev", None, 99); lo.fit = 30
+    text = notify.build_html([lo, hi], [], "", 40)
+    assert text.index("Backend SDE 1") < text.index("Android Dev")
+    assert "⭐" in text.split("Android Dev")[0] and "backend, java" in text
+
+
+def test_run_stores_fit_and_why(repo):
+    board = {"jobs": [{"id": 1, "title": "Software Engineer I - Backend", "absolute_url": "https://x/1",
+                       "location": {"name": "Bengaluru, India"}, "first_published": ago(1),
+                       "content": "0-1 years. Java, Spring, SQL. 2026 graduates welcome"}]}
+    r = run(root=repo, http=FakeHttp({"boards/acme": board}), do_notify=False, verbose=False)
+    assert r["new"][0].fit >= 70 and "2026 batch" in r["new"][0].why
+    stored = json.loads((repo / "data/jobs.json").read_text())
+    assert next(iter(stored.values()))["fit"] == r["new"][0].fit
+
+
+def test_fit_skill_words_match_whole_words_only():
+    j = RawJob("1", "Software Engineer I", "u", ["Bengaluru, India"], description="0-1 years of experience. Kubernetes nodes.")
+    v = classify(j, CFG)
+    assert v.ok and "express" not in v.why and "node" not in v.why
+
+
+def test_fit_title_role_beats_description_guess():
+    today = date(2026, 11, 25)
+    fe = classify(RawJob("1", "Frontend SDE 1", "u", ["India"], posted_at="2026-11-24", description="React, JavaScript, TypeScript"), CFG, today=today)
+    hw = classify(RawJob("2", "Engineer - Audio DSP", "u", ["Hyderabad, India"], posted_at="2026-11-24",
+                         description="0-1 years. Python, Java, backend tooling, REST API, microservice"), CFG, today=today)
+    assert fe.fit >= 70 and "frontend role" in fe.why
+    assert hw.fit <= fe.fit - 15
+
+
+def test_campus_hire_for_another_batch_is_skipped():
+    assert batch_years("2027 Campus Hire_Engineer_SW") == {2027}
+    assert "2027 batch" in classify(J("2027 Campus Hire_Engineer_SW"), CFG).reason
