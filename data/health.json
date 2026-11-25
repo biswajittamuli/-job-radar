@@ -1,0 +1,328 @@
+{
+ "Adobe": {
+  "ats": "workday",
+  "error": "HTTP 429 at https://adobe.wd5.myworkdayjobs.com/wday/cxs/adobe/external_experienced/jobs",
+  "failures": 1,
+  "fetched": 0,
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 0,
+  "status": "error"
+ },
+ "Amazon": {
+  "ats": "amazon",
+  "error": "",
+  "failures": 0,
+  "fetched": 759,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 81,
+  "status": "ok"
+ },
+ "Anthropic": {
+  "ats": "greenhouse",
+  "error": "",
+  "failures": 0,
+  "fetched": 636,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 1,
+  "status": "ok"
+ },
+ "CRED": {
+  "ats": "lever",
+  "error": "",
+  "failures": 0,
+  "fetched": 11,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 1,
+  "status": "ok"
+ },
+ "Cloudflare": {
+  "ats": "greenhouse",
+  "error": "",
+  "failures": 0,
+  "fetched": 513,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 29,
+  "status": "ok"
+ },
+ "Cohere": {
+  "ats": "ashby",
+  "error": "",
+  "failures": 0,
+  "fetched": 123,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 0,
+  "status": "ok"
+ },
+ "Coinbase": {
+  "ats": "greenhouse",
+  "error": "",
+  "failures": 0,
+  "fetched": 247,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 1,
+  "status": "ok"
+ },
+ "Composio": {
+  "ats": "ashby",
+  "error": "",
+  "failures": 0,
+  "fetched": 30,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 1,
+  "status": "ok"
+ },
+ "Databricks": {
+  "ats": "greenhouse",
+  "error": "",
+  "failures": 0,
+  "fetched": 889,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 0,
+  "status": "ok"
+ },
+ "Datadog": {
+  "ats": "greenhouse",
+  "error": "",
+  "failures": 0,
+  "fetched": 388,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 1,
+  "status": "ok"
+ },
+ "Deel": {
+  "ats": "ashby",
+  "error": "",
+  "failures": 0,
+  "fetched": 0,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 0,
+  "status": "empty"
+ },
+ "Druva": {
+  "ats": "greenhouse",
+  "error": "",
+  "failures": 0,
+  "fetched": 25,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 0,
+  "status": "ok"
+ },
+ "Elastic": {
+  "ats": "greenhouse",
+  "error": "",
+  "failures": 0,
+  "fetched": 390,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 1,
+  "status": "ok"
+ },
+ "GitLab": {
+  "ats": "greenhouse",
+  "error": "",
+  "failures": 0,
+  "fetched": 249,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 5,
+  "status": "ok"
+ },
+ "Groww": {
+  "ats": "greenhouse",
+  "error": "",
+  "failures": 0,
+  "fetched": 8,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 0,
+  "status": "ok"
+ },
+ "HackerRank": {
+  "ats": "greenhouse",
+  "error": "",
+  "failures": 0,
+  "fetched": 31,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 2,
+  "status": "ok"
+ },
+ "Meesho": {
+  "ats": "lever",
+  "error": "",
+  "failures": 0,
+  "fetched": 48,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 0,
+  "status": "ok"
+ },
+ "MongoDB": {
+  "ats": "greenhouse",
+  "error": "",
+  "failures": 0,
+  "fetched": 419,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 0,
+  "status": "ok"
+ },
+ "NVIDIA": {
+  "ats": "workday",
+  "error": "HTTP 429 at https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs",
+  "failures": 1,
+  "fetched": 0,
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 0,
+  "status": "error"
+ },
+ "Notion": {
+  "ats": "ashby",
+  "error": "",
+  "failures": 0,
+  "fetched": 173,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 0,
+  "status": "ok"
+ },
+ "Okta": {
+  "ats": "greenhouse",
+  "error": "",
+  "failures": 0,
+  "fetched": 372,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 0,
+  "status": "ok"
+ },
+ "OpenAI": {
+  "ats": "ashby",
+  "error": "",
+  "failures": 0,
+  "fetched": 877,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 3,
+  "status": "ok"
+ },
+ "Palantir": {
+  "ats": "lever",
+  "error": "",
+  "failures": 0,
+  "fetched": 305,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 0,
+  "status": "ok"
+ },
+ "Paytm": {
+  "ats": "lever",
+  "error": "",
+  "failures": 0,
+  "fetched": 189,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 0,
+  "status": "ok"
+ },
+ "Rubrik": {
+  "ats": "greenhouse",
+  "error": "",
+  "failures": 0,
+  "fetched": 226,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 3,
+  "status": "ok"
+ },
+ "Salesforce": {
+  "ats": "workday",
+  "error": "HTTP 429 at https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce/External_Career_Site/jobs",
+  "failures": 1,
+  "fetched": 0,
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 0,
+  "status": "error"
+ },
+ "Sarvam AI": {
+  "ats": "ashby",
+  "error": "",
+  "failures": 0,
+  "fetched": 39,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 11,
+  "status": "ok"
+ },
+ "ServiceNow": {
+  "ats": "smartrecruiters",
+  "error": "",
+  "failures": 0,
+  "fetched": 81,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 3,
+  "status": "ok"
+ },
+ "Spotify": {
+  "ats": "lever",
+  "error": "",
+  "failures": 0,
+  "fetched": 92,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 0,
+  "status": "ok"
+ },
+ "Stripe": {
+  "ats": "greenhouse",
+  "error": "",
+  "failures": 0,
+  "fetched": 771,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 5,
+  "status": "ok"
+ },
+ "Twilio": {
+  "ats": "greenhouse",
+  "error": "",
+  "failures": 0,
+  "fetched": 115,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 2,
+  "status": "ok"
+ },
+ "Visa": {
+  "ats": "smartrecruiters",
+  "error": "SmartRecruiters company 'Visa' returned no postings",
+  "failures": 1,
+  "fetched": 0,
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 0,
+  "status": "not_found"
+ },
+ "Zeta": {
+  "ats": "lever",
+  "error": "",
+  "failures": 0,
+  "fetched": 33,
+  "last_ok": "2026-11-25T06:37:59+00:00",
+  "last_run": "2026-11-25T06:37:59+00:00",
+  "matched": 1,
+  "status": "ok"
+ }
+}

@@ -1,0 +1,2986 @@
+{
+ "amazon:amazon:10401953": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10401953",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TN, Chennai +1",
+  "posted_at": "2026-04-23",
+  "remote": false,
+  "score": 26,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Application Engineer, AWS Quick",
+  "url": "https://www.amazon.jobs/en/jobs/10401953/application-engineer-aws-quick",
+  "years": 2
+ },
+ "amazon:amazon:10408712": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10408712",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-05-01",
+  "remote": false,
+  "score": 12,
+  "skills": [
+   "data"
+  ],
+  "status": "open",
+  "title": "Business Intelligence Engineer, Amazon Last Mile",
+  "url": "https://www.amazon.jobs/en/jobs/10408712/business-intelligence-engineer-amazon-last-mile",
+  "years": 2
+ },
+ "amazon:amazon:10417469": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10417469",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-05-12",
+  "remote": false,
+  "score": 16,
+  "skills": [
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "SoC  Validation Engineer, Amazon Devices",
+  "url": "https://www.amazon.jobs/en/jobs/10417469/soc-validation-engineer-amazon-devices",
+  "years": null
+ },
+ "amazon:amazon:10426735": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10426735",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-05-21",
+  "remote": false,
+  "score": 44,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Network Engineer, Capacity Restoration Team",
+  "url": "https://www.amazon.jobs/en/jobs/10426735/network-engineer-capacity-restoration-team",
+  "years": 1
+ },
+ "amazon:amazon:10429234": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10429234",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, MH, Mumbai - Virtual +1",
+  "posted_at": "2026-05-25",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "IT Support Engineer I, Ops Tech Solutions Delivery",
+  "url": "https://www.amazon.jobs/en/jobs/10429234/it-support-engineer-i-ops-tech-solutions-delivery",
+  "years": 1
+ },
+ "amazon:amazon:10429586": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10429586",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, MH, Mumbai +1",
+  "posted_at": "2026-05-26",
+  "remote": false,
+  "score": 14,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "DCEO Engineer, DCEO",
+  "url": "https://www.amazon.jobs/en/jobs/10429586/dceo-engineer-dceo",
+  "years": 2
+ },
+ "amazon:amazon:10432009": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10432009",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-05-27",
+  "remote": false,
+  "score": 66,
+  "skills": [
+   "backend",
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Applied Scientist, Alexa Edge AI",
+  "url": "https://www.amazon.jobs/en/jobs/10432009/applied-scientist-alexa-edge-ai",
+  "years": 1
+ },
+ "amazon:amazon:10432823": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10432823",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-05-28",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Software Development Engineer I, FinOps FP&A",
+  "url": "https://www.amazon.jobs/en/jobs/10432823/software-development-engineer-i-finops-fp-a",
+  "years": 1
+ },
+ "amazon:amazon:10447609": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10447609",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, KA, Bangalore +1",
+  "posted_at": "2026-06-12",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "IT Support Engineer I",
+  "url": "https://www.amazon.jobs/en/jobs/10447609/it-support-engineer-i",
+  "years": 2
+ },
+ "amazon:amazon:10454930": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10454930",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, KA, Bangalore - Virtual +1",
+  "posted_at": "2026-06-22",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "IT Support Engineer I",
+  "url": "https://www.amazon.jobs/en/jobs/10454930/it-support-engineer-i",
+  "years": 1
+ },
+ "amazon:amazon:10458636": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10458636",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-06-25",
+  "remote": false,
+  "score": 36,
+  "skills": [
+   "backend",
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Applied Scientist, International Machine Learning",
+  "url": "https://www.amazon.jobs/en/jobs/10458636/applied-scientist-international-machine-learning",
+  "years": null
+ },
+ "amazon:amazon:10472531": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10472531",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, HR, Gurgaon - Virtual +1",
+  "posted_at": "2026-07-13",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "IT Support Engineer I, Ops Tech Solutions Delivery",
+  "url": "https://www.amazon.jobs/en/jobs/10472531/it-support-engineer-i-ops-tech-solutions-delivery",
+  "years": 1
+ },
+ "amazon:amazon:10482407": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10482407",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, KA, Bangalore - Virtual +1",
+  "posted_at": "2026-07-23",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "IT Support Engineer I",
+  "url": "https://www.amazon.jobs/en/jobs/10482407/it-support-engineer-i",
+  "years": 1
+ },
+ "amazon:amazon:10498164": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10498164",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-08-11",
+  "remote": false,
+  "score": 44,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Centre Linux & HW Engineer, India, Data Center Operations",
+  "url": "https://www.amazon.jobs/en/jobs/10498164/data-centre-linux-hw-engineer-india-data-center-operations",
+  "years": 1
+ },
+ "amazon:amazon:10499453": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10499453",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-08-12",
+  "remote": false,
+  "score": 14,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Centre Linux & HW Engineer, Data Center Operations",
+  "url": "https://www.amazon.jobs/en/jobs/10499453/data-centre-linux-hw-engineer-data-center-operations",
+  "years": 2
+ },
+ "amazon:amazon:10503821": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10503821",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-08-17",
+  "remote": false,
+  "score": 44,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Optical Network Development Engineer , Capacity Restoration Team",
+  "url": "https://www.amazon.jobs/en/jobs/10503821/optical-network-development-engineer-capacity-restoration-team",
+  "years": 1
+ },
+ "amazon:amazon:10513323": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10513323",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-08-25",
+  "remote": false,
+  "score": 14,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Centre Linux & HW Engineer, Data Center Operations",
+  "url": "https://www.amazon.jobs/en/jobs/10513323/data-centre-linux-hw-engineer-data-center-operations",
+  "years": 2
+ },
+ "amazon:amazon:10513325": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10513325",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-08-25",
+  "remote": false,
+  "score": 14,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Centre Linux & HW Engineer, Data Center Operations",
+  "url": "https://www.amazon.jobs/en/jobs/10513325/data-centre-linux-hw-engineer-data-center-operations",
+  "years": 2
+ },
+ "amazon:amazon:10517829": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10517829",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-08-28",
+  "remote": false,
+  "score": 14,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Centre Linux & HW Engineer, Data Center Operations",
+  "url": "https://www.amazon.jobs/en/jobs/10517829/data-centre-linux-hw-engineer-data-center-operations",
+  "years": 2
+ },
+ "amazon:amazon:10522139": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10522139",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TN, Chennai +1",
+  "posted_at": "2026-08-31",
+  "remote": false,
+  "score": 52,
+  "skills": [
+   "backend",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "System Development Engineer I, Amazon",
+  "url": "https://www.amazon.jobs/en/jobs/10522139/system-development-engineer-i-amazon",
+  "years": null
+ },
+ "amazon:amazon:10532199": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10532199",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-09-08",
+  "remote": false,
+  "score": 10,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Wireless Network Development Engineer, Corporate Network Engineering",
+  "url": "https://www.amazon.jobs/en/jobs/10532199/wireless-network-development-engineer-corporate-network-engineering",
+  "years": 2
+ },
+ "amazon:amazon:10536801": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10536801",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-09-10",
+  "remote": false,
+  "score": 54,
+  "skills": [
+   "data"
+  ],
+  "status": "open",
+  "title": "Data Engineer, Flex Analytics",
+  "url": "https://www.amazon.jobs/en/jobs/10536801/data-engineer-flex-analytics",
+  "years": 1
+ },
+ "amazon:amazon:10537392": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10537392",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-09-11",
+  "remote": false,
+  "score": 22,
+  "skills": [
+   "backend",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Playback Ops Sys Dev Engineer, Playback Operations Systems Group",
+  "url": "https://www.amazon.jobs/en/jobs/10537392/playback-ops-sys-dev-engineer-playback-operations-systems-group",
+  "years": null
+ },
+ "amazon:amazon:10539787": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10539787",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-09-14",
+  "remote": false,
+  "score": 28,
+  "skills": [
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Applied Scientist, Traffic Quality",
+  "url": "https://www.amazon.jobs/en/jobs/10539787/applied-scientist-traffic-quality",
+  "years": 2
+ },
+ "amazon:amazon:10551531": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10551531",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-09-17",
+  "remote": false,
+  "score": 60,
+  "skills": [
+   "ai_ml",
+   "data"
+  ],
+  "status": "open",
+  "title": "Data Engineer I, DSP Analytics",
+  "url": "https://www.amazon.jobs/en/jobs/10551531/data-engineer-i-dsp-analytics",
+  "years": 1
+ },
+ "amazon:amazon:10551574": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10551574",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-09-17",
+  "remote": false,
+  "score": 24,
+  "skills": [
+   "data"
+  ],
+  "status": "open",
+  "title": "Business Intelligence Engineer, eCS Data Engineering and Analytics",
+  "url": "https://www.amazon.jobs/en/jobs/10551574/business-intelligence-engineer-ecs-data-engineering-and-analytics",
+  "years": null
+ },
+ "amazon:amazon:10554991": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10554991",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-09-21",
+  "remote": false,
+  "score": 28,
+  "skills": [
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Data Scientist, SCOT (Supply Chain Optimization Technologies) RoW Tech",
+  "url": "https://www.amazon.jobs/en/jobs/10554991/data-scientist-scot-supply-chain-optimization-technologies-row-tech",
+  "years": 2
+ },
+ "amazon:amazon:10555817": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10555817",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, HR, Gurugram +1",
+  "posted_at": "2026-09-22",
+  "remote": false,
+  "score": 36,
+  "skills": [
+   "backend",
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Applied Scientist, International Machine Learning",
+  "url": "https://www.amazon.jobs/en/jobs/10555817/applied-scientist-international-machine-learning",
+  "years": null
+ },
+ "amazon:amazon:10558338": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10558338",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TN, Chennai +1",
+  "posted_at": "2026-09-23",
+  "remote": false,
+  "score": 10,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "WiFi Software Development Engineer, eero",
+  "url": "https://www.amazon.jobs/en/jobs/10558338/wifi-software-development-engineer-eero",
+  "years": null
+ },
+ "amazon:amazon:10558339": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10558339",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TN, Chennai +1",
+  "posted_at": "2026-09-23",
+  "remote": false,
+  "score": 10,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "WiFi Software Development Engineer, eero",
+  "url": "https://www.amazon.jobs/en/jobs/10558339/wifi-software-development-engineer-eero",
+  "years": null
+ },
+ "amazon:amazon:10561005": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10561005",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-09-26",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Software Development Engineer, Time & Pay Innovation",
+  "url": "https://www.amazon.jobs/en/jobs/10561005/software-development-engineer-time-pay-innovation",
+  "years": 1
+ },
+ "amazon:amazon:10561007": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10561007",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-09-26",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Software Development Engineer, Time & Pay Innovation",
+  "url": "https://www.amazon.jobs/en/jobs/10561007/software-development-engineer-time-pay-innovation",
+  "years": 1
+ },
+ "amazon:amazon:10568705": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10568705",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, MH, Mumbai +1",
+  "posted_at": "2026-10-05",
+  "remote": false,
+  "score": 14,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Centre Engineering Operations Engineer, Data Centre Engineering Operations (Level 4)",
+  "url": "https://www.amazon.jobs/en/jobs/10568705/data-centre-engineering-operations-engineer-data-centre-engineering-operations-level-4",
+  "years": 2
+ },
+ "amazon:amazon:10568706": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10568706",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, MH, Mumbai +1",
+  "posted_at": "2026-10-05",
+  "remote": false,
+  "score": 14,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Centre Engineering Operations, Data Centre Engineering Operations",
+  "url": "https://www.amazon.jobs/en/jobs/10568706/data-centre-engineering-operations-data-centre-engineering-operations",
+  "years": 2
+ },
+ "amazon:amazon:10569363": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10569363",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-10-05",
+  "remote": false,
+  "score": 24,
+  "skills": [
+   "data"
+  ],
+  "status": "open",
+  "title": "Business Intelligence Engineer, eCS Data Engineering and Analytics",
+  "url": "https://www.amazon.jobs/en/jobs/10569363/business-intelligence-engineer-ecs-data-engineering-and-analytics",
+  "years": null
+ },
+ "amazon:amazon:10575107": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10575107",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-10-09",
+  "remote": false,
+  "score": 66,
+  "skills": [
+   "backend",
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Applied Scientist, Alexa Edge AI",
+  "url": "https://www.amazon.jobs/en/jobs/10575107/applied-scientist-alexa-edge-ai",
+  "years": 1
+ },
+ "amazon:amazon:10576573": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10576573",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TN, Chennai +1",
+  "posted_at": "2026-10-13",
+  "remote": false,
+  "score": 52,
+  "skills": [
+   "backend",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "System Development Engineer I, Amazon",
+  "url": "https://www.amazon.jobs/en/jobs/10576573/system-development-engineer-i-amazon",
+  "years": 1
+ },
+ "amazon:amazon:10580008": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10580008",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-10-15",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Software Development Engineer I",
+  "url": "https://www.amazon.jobs/en/jobs/10580008/software-development-engineer-i",
+  "years": 1
+ },
+ "amazon:amazon:10580010": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10580010",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-10-15",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Software Development Engineer I FTC",
+  "url": "https://www.amazon.jobs/en/jobs/10580010/software-development-engineer-i-ftc",
+  "years": 1
+ },
+ "amazon:amazon:10580013": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10580013",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-10-15",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Software Development Engineer I",
+  "url": "https://www.amazon.jobs/en/jobs/10580013/software-development-engineer-i",
+  "years": 1
+ },
+ "amazon:amazon:10582732": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10582732",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-10-19",
+  "remote": false,
+  "score": 54,
+  "skills": [
+   "data"
+  ],
+  "status": "open",
+  "title": "Data Engineer I",
+  "url": "https://www.amazon.jobs/en/jobs/10582732/data-engineer-i",
+  "years": 1
+ },
+ "amazon:amazon:10583222": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10583222",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-10-19",
+  "remote": false,
+  "score": 18,
+  "skills": [
+   "backend"
+  ],
+  "status": "open",
+  "title": "Business Intelligence Engineer, Amazon Shipping",
+  "url": "https://www.amazon.jobs/en/jobs/10583222/business-intelligence-engineer-amazon-shipping",
+  "years": null
+ },
+ "amazon:amazon:10584062": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10584062",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-10-20",
+  "remote": false,
+  "score": 22,
+  "skills": [
+   "backend",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "System Development Engineer , WWRR Tech - PLS",
+  "url": "https://www.amazon.jobs/en/jobs/10584062/system-development-engineer-wwrr-tech-pls",
+  "years": 2
+ },
+ "amazon:amazon:10585900": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10585900",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-10-22",
+  "remote": false,
+  "score": 14,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Project Design Mechanical Engineer, Fleet Remediation Engineering",
+  "url": "https://www.amazon.jobs/en/jobs/10585900/project-design-mechanical-engineer-fleet-remediation-engineering",
+  "years": null
+ },
+ "amazon:amazon:10590955": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10590955",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-10-28",
+  "remote": false,
+  "score": 24,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Centre Linux & HW Engineer, Data Center Operations",
+  "url": "https://www.amazon.jobs/en/jobs/10590955/data-centre-linux-hw-engineer-data-center-operations",
+  "years": 2
+ },
+ "amazon:amazon:10591981": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10591981",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-10-29",
+  "remote": false,
+  "score": 24,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Center Engineering Operations Engineer, HYD-Infinity - DCEO",
+  "url": "https://www.amazon.jobs/en/jobs/10591981/data-center-engineering-operations-engineer-hyd-infinity-dceo",
+  "years": 2
+ },
+ "amazon:amazon:10594150": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10594150",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-11-04",
+  "remote": false,
+  "score": 58,
+  "skills": [
+   "backend"
+  ],
+  "status": "open",
+  "title": "Software Development Engineer, Amazon International Seller Services",
+  "url": "https://www.amazon.jobs/en/jobs/10594150/software-development-engineer-amazon-international-seller-services",
+  "years": 1
+ },
+ "amazon:amazon:10594997": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10594997",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-11-03",
+  "remote": false,
+  "score": 20,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Support Engineer, SCOT WW Long Term Planning and Forecasting",
+  "url": "https://www.amazon.jobs/en/jobs/10594997/support-engineer-scot-ww-long-term-planning-and-forecasting",
+  "years": 2
+ },
+ "amazon:amazon:10595857": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10595857",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-11-03",
+  "remote": false,
+  "score": 76,
+  "skills": [
+   "backend",
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Applied Scientist I, International Seller Services",
+  "url": "https://www.amazon.jobs/en/jobs/10595857/applied-scientist-i-international-seller-services",
+  "years": 1
+ },
+ "amazon:amazon:10595957": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10595957",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-11-05",
+  "remote": false,
+  "score": 68,
+  "skills": [
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Data Scientist, Traffic Quality",
+  "url": "https://www.amazon.jobs/en/jobs/10595957/data-scientist-traffic-quality",
+  "years": 1
+ },
+ "amazon:amazon:10596351": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10596351",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-11-11",
+  "remote": false,
+  "score": 76,
+  "skills": [
+   "backend",
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Applied Scientist I, Buyer Risk Prevention (BRP)",
+  "url": "https://www.amazon.jobs/en/jobs/10596351/applied-scientist-i-buyer-risk-prevention-brp",
+  "years": null
+ },
+ "amazon:amazon:10597397": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10597397",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-11-05",
+  "remote": false,
+  "score": 64,
+  "skills": [
+   "data"
+  ],
+  "status": "open",
+  "title": "Data Engineer I, SPIV Data Engineering",
+  "url": "https://www.amazon.jobs/en/jobs/10597397/data-engineer-i-spiv-data-engineering",
+  "years": 1
+ },
+ "amazon:amazon:10601582": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10601582",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-11-10",
+  "remote": false,
+  "score": 70,
+  "skills": [
+   "ai_ml",
+   "data"
+  ],
+  "status": "open",
+  "title": "Data Engineer I, DSP Analytics",
+  "url": "https://www.amazon.jobs/en/jobs/10601582/data-engineer-i-dsp-analytics",
+  "years": 2
+ },
+ "amazon:amazon:10602084": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10602084",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, MH, Mumbai +1",
+  "posted_at": "2026-11-11",
+  "remote": false,
+  "score": 24,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Center Engineering Operations Engineer",
+  "url": "https://www.amazon.jobs/en/jobs/10602084/data-center-engineering-operations-engineer",
+  "years": 2
+ },
+ "amazon:amazon:10602100": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10602100",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TN, Chennai +1",
+  "posted_at": "2026-11-17",
+  "remote": false,
+  "score": 52,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "data",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Software Development Engineer - Agentic Data Infrastructure, Partner Data And Analytics",
+  "url": "https://www.amazon.jobs/en/jobs/10602100/software-development-engineer-agentic-data-infrastructure-partner-data-and-analytics",
+  "years": null
+ },
+ "amazon:amazon:10602226": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10602226",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TN, Chennai +1",
+  "posted_at": "2026-11-11",
+  "remote": false,
+  "score": 64,
+  "skills": [
+   "data"
+  ],
+  "status": "open",
+  "title": "Data Engineer, MIDAS, Digital Acceleration",
+  "url": "https://www.amazon.jobs/en/jobs/10602226/data-engineer-midas-digital-acceleration",
+  "years": 1
+ },
+ "amazon:amazon:10602774": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10602774",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-11-11",
+  "remote": false,
+  "score": 64,
+  "skills": [
+   "data"
+  ],
+  "status": "open",
+  "title": "Data Engineer I, Business Data Technologies",
+  "url": "https://www.amazon.jobs/en/jobs/10602774/data-engineer-i-business-data-technologies",
+  "years": 1
+ },
+ "amazon:amazon:10605445": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10605445",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-11-15",
+  "remote": false,
+  "score": 22,
+  "skills": [
+   "data"
+  ],
+  "status": "open",
+  "title": "Business Intelligence Engineer, WHS Data",
+  "url": "https://www.amazon.jobs/en/jobs/10605445/business-intelligence-engineer-whs-data",
+  "years": null
+ },
+ "amazon:amazon:10605640": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10605640",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-11-16",
+  "remote": false,
+  "score": 24,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Controls Engineer, Controls Deployment and Service",
+  "url": "https://www.amazon.jobs/en/jobs/10605640/controls-engineer-controls-deployment-and-service",
+  "years": 2
+ },
+ "amazon:amazon:10605641": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10605641",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-11-16",
+  "remote": false,
+  "score": 24,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Controls Engineer, Controls Deployment and Service",
+  "url": "https://www.amazon.jobs/en/jobs/10605641/controls-engineer-controls-deployment-and-service",
+  "years": 2
+ },
+ "amazon:amazon:10605742": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10605742",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, MH, Mumbai +1",
+  "posted_at": "2026-11-16",
+  "remote": false,
+  "score": 24,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Centre Engineering Operations, Data Centre Engineering Operations",
+  "url": "https://www.amazon.jobs/en/jobs/10605742/data-centre-engineering-operations-data-centre-engineering-operations",
+  "years": 2
+ },
+ "amazon:amazon:10606600": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10606600",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-11-25",
+  "remote": false,
+  "score": 88,
+  "skills": [
+   "backend",
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Applied Scientist I, Worldwide Returns & Recommerce - Science",
+  "url": "https://www.amazon.jobs/en/jobs/10606600/applied-scientist-i-worldwide-returns-recommerce-science",
+  "years": null
+ },
+ "amazon:amazon:10606736": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10606736",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-11-16",
+  "remote": false,
+  "score": 24,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Construction Cost Engineer, Cost Control",
+  "url": "https://www.amazon.jobs/en/jobs/10606736/construction-cost-engineer-cost-control",
+  "years": 2
+ },
+ "amazon:amazon:10606843": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10606843",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-11-17",
+  "remote": false,
+  "score": 20,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Support Engineer , Amazon Pharmacy Operations",
+  "url": "https://www.amazon.jobs/en/jobs/10606843/support-engineer-amazon-pharmacy-operations",
+  "years": 2
+ },
+ "amazon:amazon:10606844": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10606844",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-11-17",
+  "remote": false,
+  "score": 58,
+  "skills": [
+   "backend"
+  ],
+  "status": "open",
+  "title": "Support Engineer  , Amazon Pharmacy Operations",
+  "url": "https://www.amazon.jobs/en/jobs/10606844/support-engineer-amazon-pharmacy-operations",
+  "years": 1
+ },
+ "amazon:amazon:10606846": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10606846",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-11-17",
+  "remote": false,
+  "score": 20,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Support Engineer, Amazon Pharmacy Operations",
+  "url": "https://www.amazon.jobs/en/jobs/10606846/support-engineer-amazon-pharmacy-operations",
+  "years": 2
+ },
+ "amazon:amazon:10607815": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10607815",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, MH, Mumbai +1",
+  "posted_at": "2026-11-18",
+  "remote": false,
+  "score": 60,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Centre Linux & HW Engineer, India",
+  "url": "https://www.amazon.jobs/en/jobs/10607815/data-centre-linux-hw-engineer-india",
+  "years": 1
+ },
+ "amazon:amazon:10609133": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10609133",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, MH, Mumbai +1",
+  "posted_at": "2026-11-19",
+  "remote": false,
+  "score": 26,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Electrical BIM Designer, DC Design Engineering",
+  "url": "https://www.amazon.jobs/en/jobs/10609133/electrical-bim-designer-dc-design-engineering",
+  "years": null
+ },
+ "amazon:amazon:10609147": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10609147",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-11-19",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "data"
+  ],
+  "status": "open",
+  "title": "Data Engineer, IN Data Engineering & Analytics",
+  "url": "https://www.amazon.jobs/en/jobs/10609147/data-engineer-in-data-engineering-analytics",
+  "years": 2
+ },
+ "amazon:amazon:10611161": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10611161",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-11-23",
+  "remote": false,
+  "score": 32,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Software Development Engineer , Shiptech - Transportation Technology & Services",
+  "url": "https://www.amazon.jobs/en/jobs/10611161/software-development-engineer-shiptech-transportation-technology-services",
+  "years": null
+ },
+ "amazon:amazon:10611253": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10611253",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad - Virtual +1",
+  "posted_at": "2026-11-23",
+  "remote": false,
+  "score": 80,
+  "skills": [
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Associate, ML Data Operations, GO-AI Operations",
+  "url": "https://www.amazon.jobs/en/jobs/10611253/associate-ml-data-operations-go-ai-operations",
+  "years": null
+ },
+ "amazon:amazon:10611291": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10611291",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad - Virtual +1",
+  "posted_at": "2026-11-23",
+  "remote": false,
+  "score": 80,
+  "skills": [
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Associate, ML Data Operations, GO-AI Operations",
+  "url": "https://www.amazon.jobs/en/jobs/10611291/associate-ml-data-operations-go-ai-operations",
+  "years": null
+ },
+ "amazon:amazon:10611590": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10611590",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-11-24",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "backend",
+   "security"
+  ],
+  "status": "open",
+  "title": "Security Engineer, PaySec, StoreSec",
+  "url": "https://www.amazon.jobs/en/jobs/10611590/security-engineer-paysec-storesec",
+  "years": 2
+ },
+ "amazon:amazon:10612363": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10612363",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, MH, Mumbai +1",
+  "posted_at": "2026-11-24",
+  "remote": false,
+  "score": 36,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Center Engineering Operations Engineer, DCEO, BOM",
+  "url": "https://www.amazon.jobs/en/jobs/10612363/data-center-engineering-operations-engineer-dceo-bom",
+  "years": 2
+ },
+ "amazon:amazon:10613728": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10613728",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-11-25",
+  "remote": false,
+  "score": 86,
+  "skills": [
+   "backend",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Support Engineer - Intelligent Document Processing, CORS - Rapid Solutions",
+  "url": "https://www.amazon.jobs/en/jobs/10613728/support-engineer-intelligent-document-processing-cors-rapid-solutions",
+  "years": 1
+ },
+ "amazon:amazon:10613732": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10613732",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, MH, Mumbai +1",
+  "posted_at": "2026-11-25",
+  "remote": false,
+  "score": 36,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Center Engineering Operations Engineer, DCEO, BOM",
+  "url": "https://www.amazon.jobs/en/jobs/10613732/data-center-engineering-operations-engineer-dceo-bom",
+  "years": 2
+ },
+ "amazon:amazon:10613733": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:10613733",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "IN, MH, Mumbai +1",
+  "posted_at": "2026-11-25",
+  "remote": false,
+  "score": 36,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Center Engineering Operations Engineer, DCEO, BOM",
+  "url": "https://www.amazon.jobs/en/jobs/10613733/data-center-engineering-operations-engineer-dceo-bom",
+  "years": 2
+ },
+ "amazon:amazon:3153804": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:3153804",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-01-06",
+  "remote": false,
+  "score": 44,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Centre Linux & HW Engineer, India, Data Center Operations",
+  "url": "https://www.amazon.jobs/en/jobs/3153804/data-centre-linux-hw-engineer-india-data-center-operations",
+  "years": 1
+ },
+ "amazon:amazon:3153859": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:3153859",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, TS, Hyderabad +1",
+  "posted_at": "2026-01-06",
+  "remote": false,
+  "score": 44,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Data Centre Linux & HW Engineer, Data Center Operations",
+  "url": "https://www.amazon.jobs/en/jobs/3153859/data-centre-linux-hw-engineer-data-center-operations",
+  "years": 1
+ },
+ "amazon:amazon:3203393": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:3203393",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, MH, Pune +1",
+  "posted_at": "2026-03-12",
+  "remote": false,
+  "score": 50,
+  "skills": [
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Software Development Engineer - Test II, Alexa Endpoint Experiences",
+  "url": "https://www.amazon.jobs/en/jobs/3203393/software-development-engineer-test-ii-alexa-endpoint-experiences",
+  "years": 1
+ },
+ "amazon:amazon:3205651": {
+  "closed_at": null,
+  "company": "Amazon",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "amazon:amazon:3205651",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "IN, KA, Bengaluru +1",
+  "posted_at": "2026-03-16",
+  "remote": false,
+  "score": 48,
+  "skills": [
+   "backend",
+   "security"
+  ],
+  "status": "open",
+  "title": "Security Engineer, Stores Application Security",
+  "url": "https://www.amazon.jobs/en/jobs/3205651/security-engineer-stores-application-security",
+  "years": 1
+ },
+ "ashby:composio:74cf1b48-86e9-4454-8c4e-cb2038ed0049": {
+  "closed_at": null,
+  "company": "Composio",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "ashby:composio:74cf1b48-86e9-4454-8c4e-cb2038ed0049",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bangalore",
+  "posted_at": "2026-05-08",
+  "remote": false,
+  "score": 14,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Member of Technical Staff - Enterprise Platform",
+  "url": "https://jobs.ashbyhq.com/composio/74cf1b48-86e9-4454-8c4e-cb2038ed0049",
+  "years": null
+ },
+ "ashby:openai:980bc2ea-2c35-4546-bb48-5496a4e6847f": {
+  "closed_at": null,
+  "company": "OpenAI",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "ashby:openai:980bc2ea-2c35-4546-bb48-5496a4e6847f",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Berlin, Germany +4",
+  "posted_at": "2026-11-16",
+  "remote": false,
+  "score": 38,
+  "skills": [
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Applied AI Engineer - Startups",
+  "url": "https://jobs.ashbyhq.com/openai/980bc2ea-2c35-4546-bb48-5496a4e6847f",
+  "years": null
+ },
+ "ashby:openai:a0ccedf1-2bb7-4f10-8be8-db50f9ae02c3": {
+  "closed_at": null,
+  "company": "OpenAI",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "ashby:openai:a0ccedf1-2bb7-4f10-8be8-db50f9ae02c3",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Dublin, Ireland +2",
+  "posted_at": "2026-10-21",
+  "remote": true,
+  "score": 23,
+  "skills": [
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Software Engineer, Privacy Engineering (Lawful Access)",
+  "url": "https://jobs.ashbyhq.com/openai/a0ccedf1-2bb7-4f10-8be8-db50f9ae02c3",
+  "years": null
+ },
+ "ashby:openai:c139b85e-bd3a-4242-be0c-9b8b01ec3c9b": {
+  "closed_at": null,
+  "company": "OpenAI",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "ashby:openai:c139b85e-bd3a-4242-be0c-9b8b01ec3c9b",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Dublin, Ireland",
+  "posted_at": "2026-09-25",
+  "remote": false,
+  "score": 14,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Dedicated Support Engineer - Dublin",
+  "url": "https://jobs.ashbyhq.com/openai/c139b85e-bd3a-4242-be0c-9b8b01ec3c9b",
+  "years": null
+ },
+ "ashby:sarvam-ai:0371342b-5cb8-487b-9310-4d0eb5b37f47": {
+  "closed_at": null,
+  "company": "Sarvam AI",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "ashby:sarvam-ai:0371342b-5cb8-487b-9310-4d0eb5b37f47",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bengaluru",
+  "posted_at": "2026-10-13",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Software Engineer - Model API Platform",
+  "url": "https://jobs.ashbyhq.com/sarvam/0371342b-5cb8-487b-9310-4d0eb5b37f47",
+  "years": null
+ },
+ "ashby:sarvam-ai:10a352d0-a65b-4599-8998-e09deef34349": {
+  "closed_at": null,
+  "company": "Sarvam AI",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "ashby:sarvam-ai:10a352d0-a65b-4599-8998-e09deef34349",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bengaluru",
+  "posted_at": "2026-04-17",
+  "remote": false,
+  "score": 18,
+  "skills": [
+   "backend",
+   "frontend"
+  ],
+  "status": "open",
+  "title": "Frontend Engineer, Chanakya",
+  "url": "https://jobs.ashbyhq.com/sarvam/10a352d0-a65b-4599-8998-e09deef34349",
+  "years": null
+ },
+ "ashby:sarvam-ai:72783205-b637-4431-9a0e-676a8223b063": {
+  "closed_at": null,
+  "company": "Sarvam AI",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "ashby:sarvam-ai:72783205-b637-4431-9a0e-676a8223b063",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bengaluru +1",
+  "posted_at": "2026-08-10",
+  "remote": false,
+  "score": 16,
+  "skills": [
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Performance Engineer, Kernels",
+  "url": "https://jobs.ashbyhq.com/sarvam/72783205-b637-4431-9a0e-676a8223b063",
+  "years": null
+ },
+ "ashby:sarvam-ai:7c42207a-bb56-413c-839f-9ad692df840e": {
+  "closed_at": null,
+  "company": "Sarvam AI",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "ashby:sarvam-ai:7c42207a-bb56-413c-839f-9ad692df840e",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bengaluru",
+  "posted_at": "2026-04-17",
+  "remote": false,
+  "score": 36,
+  "skills": [
+   "backend",
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Data Scientist - Evaluations, Chanakya",
+  "url": "https://jobs.ashbyhq.com/sarvam/7c42207a-bb56-413c-839f-9ad692df840e",
+  "years": 2
+ },
+ "ashby:sarvam-ai:7d2faba2-21a1-4a8a-aff5-f708a6959195": {
+  "closed_at": null,
+  "company": "Sarvam AI",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "ashby:sarvam-ai:7d2faba2-21a1-4a8a-aff5-f708a6959195",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bengaluru +1",
+  "posted_at": "2026-08-10",
+  "remote": false,
+  "score": 16,
+  "skills": [
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Performance Engineer, Inference",
+  "url": "https://jobs.ashbyhq.com/sarvam/7d2faba2-21a1-4a8a-aff5-f708a6959195",
+  "years": null
+ },
+ "ashby:sarvam-ai:87d5a5af-ea7d-4b94-a0fa-81dc64e54907": {
+  "closed_at": null,
+  "company": "Sarvam AI",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "ashby:sarvam-ai:87d5a5af-ea7d-4b94-a0fa-81dc64e54907",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Delhi",
+  "posted_at": "2026-04-17",
+  "remote": false,
+  "score": 28,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Strategic Deployment Engineer, Chanakya",
+  "url": "https://jobs.ashbyhq.com/sarvam/87d5a5af-ea7d-4b94-a0fa-81dc64e54907",
+  "years": null
+ },
+ "ashby:sarvam-ai:b2201b5e-1e96-497a-962c-bca1768f75fd": {
+  "closed_at": null,
+  "company": "Sarvam AI",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "ashby:sarvam-ai:b2201b5e-1e96-497a-962c-bca1768f75fd",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Delhi",
+  "posted_at": "2026-04-17",
+  "remote": false,
+  "score": 42,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "data",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Embedded Infrastructure Engineer, Chanakya",
+  "url": "https://jobs.ashbyhq.com/sarvam/b2201b5e-1e96-497a-962c-bca1768f75fd",
+  "years": null
+ },
+ "ashby:sarvam-ai:dc047f4f-97be-4bb3-a9f1-cebbfc4de3e6": {
+  "closed_at": null,
+  "company": "Sarvam AI",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "ashby:sarvam-ai:dc047f4f-97be-4bb3-a9f1-cebbfc4de3e6",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Delhi",
+  "posted_at": "2026-04-17",
+  "remote": false,
+  "score": 36,
+  "skills": [
+   "backend",
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Embedded Data Scientist, Chanakya",
+  "url": "https://jobs.ashbyhq.com/sarvam/dc047f4f-97be-4bb3-a9f1-cebbfc4de3e6",
+  "years": null
+ },
+ "ashby:sarvam-ai:e1dd678f-6e25-48b4-82d8-a1a7d10a78d6": {
+  "closed_at": null,
+  "company": "Sarvam AI",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "ashby:sarvam-ai:e1dd678f-6e25-48b4-82d8-a1a7d10a78d6",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bengaluru +1",
+  "posted_at": "2026-06-26",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Infrastructure SRE - HPC",
+  "url": "https://jobs.ashbyhq.com/sarvam/e1dd678f-6e25-48b4-82d8-a1a7d10a78d6",
+  "years": null
+ },
+ "ashby:sarvam-ai:e7f783e8-6378-4158-97d5-48a397a91698": {
+  "closed_at": null,
+  "company": "Sarvam AI",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "ashby:sarvam-ai:e7f783e8-6378-4158-97d5-48a397a91698",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Delhi",
+  "posted_at": "2026-04-17",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "ML Ops Engineer, Chanakya",
+  "url": "https://jobs.ashbyhq.com/sarvam/e7f783e8-6378-4158-97d5-48a397a91698",
+  "years": null
+ },
+ "ashby:sarvam-ai:fcb15601-6440-41f7-aa79-b9992057a4b2": {
+  "closed_at": null,
+  "company": "Sarvam AI",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "ashby:sarvam-ai:fcb15601-6440-41f7-aa79-b9992057a4b2",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bengaluru +1",
+  "posted_at": "2026-06-29",
+  "remote": false,
+  "score": 52,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Platform Engineer - AI Infrastructure",
+  "url": "https://jobs.ashbyhq.com/sarvam/fcb15601-6440-41f7-aa79-b9992057a4b2",
+  "years": null
+ },
+ "greenhouse:anthropic:5439524008": {
+  "closed_at": null,
+  "company": "Anthropic",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:anthropic:5439524008",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Dublin, IE",
+  "posted_at": "2026-10-07",
+  "remote": false,
+  "score": 20,
+  "skills": [
+   "ai_ml",
+   "devops_cloud",
+   "mobile"
+  ],
+  "status": "open",
+  "title": "IT Support Engineer",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5439524008",
+  "years": null
+ },
+ "greenhouse:cloudflare:7377424": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:7377424",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +3",
+  "posted_at": "2025-11-05",
+  "remote": false,
+  "score": 28,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Software Engineer, Workers Deploy & Config",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/7377424?gh_jid=7377424",
+  "years": null
+ },
+ "greenhouse:cloudflare:7446310": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:7446310",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +1",
+  "posted_at": "2026-01-15",
+  "remote": false,
+  "score": 28,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Software Engineer, Network Performance & Reliability (Argo)",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/7446310?gh_jid=7446310",
+  "years": null
+ },
+ "greenhouse:cloudflare:7462801": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:7462801",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +7",
+  "posted_at": "2026-01-22",
+  "remote": false,
+  "score": 42,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "data",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Distributed Systems Engineer - Data Platform (Delivery, Database, Retrieval)",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/7462801?gh_jid=7462801",
+  "years": null
+ },
+ "greenhouse:cloudflare:8022909": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8022909",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Remote India +1",
+  "posted_at": "2026-07-07",
+  "remote": true,
+  "score": 33,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "data",
+   "devops_cloud",
+   "frontend"
+  ],
+  "status": "open",
+  "title": "Systems Engineer (Data Intelligence & Analytics Team)",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8022909?gh_jid=8022909",
+  "years": null
+ },
+ "greenhouse:cloudflare:8037628": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8037628",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Remote India +1",
+  "posted_at": "2026-06-30",
+  "remote": true,
+  "score": 31,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud",
+   "security"
+  ],
+  "status": "open",
+  "title": "Response Engineer (Application & Network Security)",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8037628?gh_jid=8037628",
+  "years": 2
+ },
+ "greenhouse:cloudflare:8043974": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8043974",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +4",
+  "posted_at": "2026-07-09",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Member of Technical Staff - Workers AI Applied Research",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8043974?gh_jid=8043974",
+  "years": null
+ },
+ "greenhouse:cloudflare:8050813": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8050813",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +1",
+  "posted_at": "2026-07-09",
+  "remote": false,
+  "score": 30,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "data",
+   "devops_cloud",
+   "frontend"
+  ],
+  "status": "open",
+  "title": "Systems Engineer, Data Intelligence & Analytics Team",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8050813?gh_jid=8050813",
+  "years": null
+ },
+ "greenhouse:cloudflare:8088751": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8088751",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +3",
+  "posted_at": "2026-07-29",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Software Engineer, Cloudflare Network Interconnect",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8088751?gh_jid=8088751",
+  "years": null
+ },
+ "greenhouse:cloudflare:8157997": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8157997",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +1",
+  "posted_at": "2026-09-11",
+  "remote": false,
+  "score": 20,
+  "skills": [
+   "ai_ml",
+   "devops_cloud",
+   "security"
+  ],
+  "status": "open",
+  "title": "IAM Security Engineer",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8157997?gh_jid=8157997",
+  "years": null
+ },
+ "greenhouse:cloudflare:8158016": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8158016",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +4",
+  "posted_at": "2026-09-04",
+  "remote": false,
+  "score": 28,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Systems Engineer - Database Platform",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8158016?gh_jid=8158016",
+  "years": null
+ },
+ "greenhouse:cloudflare:8168623": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8168623",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Remote India +1",
+  "posted_at": "2026-09-01",
+  "remote": true,
+  "score": 23,
+  "skills": [
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Software Engineer - Platforms & Productivity",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8168623?gh_jid=8168623",
+  "years": null
+ },
+ "greenhouse:cloudflare:8175620": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8175620",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +3",
+  "posted_at": "2026-09-03",
+  "remote": false,
+  "score": 28,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud",
+   "frontend"
+  ],
+  "status": "open",
+  "title": "Systems Engineer, Growth Engineering",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8175620?gh_jid=8175620",
+  "years": null
+ },
+ "greenhouse:cloudflare:8212060": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8212060",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Remote India +1",
+  "posted_at": "2026-09-18",
+  "remote": true,
+  "score": 31,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Software Engineer",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8212060?gh_jid=8212060",
+  "years": null
+ },
+ "greenhouse:cloudflare:8214470": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8214470",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +3",
+  "posted_at": "2026-10-05",
+  "remote": false,
+  "score": 20,
+  "skills": [
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Performance Engineer, Kernel and Memory",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8214470?gh_jid=8214470",
+  "years": null
+ },
+ "greenhouse:cloudflare:8223480": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8223480",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Remote India +1",
+  "posted_at": "2026-09-25",
+  "remote": true,
+  "score": 23,
+  "skills": [
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Hardware Systems Engineer",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8223480?gh_jid=8223480",
+  "years": null
+ },
+ "greenhouse:cloudflare:8248635": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8248635",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +1",
+  "posted_at": "2026-10-02",
+  "remote": false,
+  "score": 24,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "mobile"
+  ],
+  "status": "open",
+  "title": "Software Engineer, Mobile SDK",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8248635?gh_jid=8248635",
+  "years": null
+ },
+ "greenhouse:cloudflare:8267826": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8267826",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +4",
+  "posted_at": "2026-10-09",
+  "remote": false,
+  "score": 20,
+  "skills": [
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Rack Integration Operations Engineer",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8267826?gh_jid=8267826",
+  "years": null
+ },
+ "greenhouse:cloudflare:8275392": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8275392",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +1",
+  "posted_at": "2026-10-13",
+  "remote": false,
+  "score": 20,
+  "skills": [
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Systems Engineer, DNS",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8275392?gh_jid=8275392",
+  "years": null
+ },
+ "greenhouse:cloudflare:8276155": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8276155",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +8",
+  "posted_at": "2026-10-13",
+  "remote": false,
+  "score": 20,
+  "skills": [
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Systems Engineer, Browser Isolation",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8276155?gh_jid=8276155",
+  "years": null
+ },
+ "greenhouse:cloudflare:8306486": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8306486",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +2",
+  "posted_at": "2026-11-04",
+  "remote": false,
+  "score": 38,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Hardware Systems Engineer, Hardware Tools / Firmware",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8306486?gh_jid=8306486",
+  "years": null
+ },
+ "greenhouse:cloudflare:8325821": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8325821",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +1",
+  "posted_at": "2026-10-28",
+  "remote": false,
+  "score": 38,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Hardware Systems Engineer",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8325821?gh_jid=8325821",
+  "years": null
+ },
+ "greenhouse:cloudflare:8325834": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8325834",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +2",
+  "posted_at": "2026-11-04",
+  "remote": false,
+  "score": 50,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Hardware Systems Engineer, AI Hardware",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8325834?gh_jid=8325834",
+  "years": null
+ },
+ "greenhouse:cloudflare:8329370": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8329370",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +3",
+  "posted_at": "2026-10-30",
+  "remote": false,
+  "score": 30,
+  "skills": [
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Customer Engineer, Enterprise - Austin/Dallas,TX or Raleigh, NC",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8329370?gh_jid=8329370",
+  "years": null
+ },
+ "greenhouse:cloudflare:8370313": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8370313",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +2",
+  "posted_at": "2026-11-18",
+  "remote": false,
+  "score": 36,
+  "skills": [
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Hardware Systems Engineer, Tooling",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8370313?gh_jid=8370313",
+  "years": null
+ },
+ "greenhouse:cloudflare:8386246": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8386246",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +2",
+  "posted_at": "2026-11-18",
+  "remote": false,
+  "score": 44,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Systems Engineer, Data Loss Prevention",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8386246?gh_jid=8386246",
+  "years": null
+ },
+ "greenhouse:cloudflare:8398779": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8398779",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +4",
+  "posted_at": "2026-11-19",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "backend",
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Software Engineer, Data Primitives",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8398779?gh_jid=8398779",
+  "years": 2
+ },
+ "greenhouse:cloudflare:8401112": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8401112",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +2",
+  "posted_at": "2026-11-20",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "backend",
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Distributed Systems Engineer - Network Services",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8401112?gh_jid=8401112",
+  "years": null
+ },
+ "greenhouse:cloudflare:8401119": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8401119",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +2",
+  "posted_at": "2026-11-20",
+  "remote": false,
+  "score": 32,
+  "skills": [
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Systems Engineer - Network Data Plane Software",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8401119?gh_jid=8401119",
+  "years": null
+ },
+ "greenhouse:cloudflare:8401122": {
+  "closed_at": null,
+  "company": "Cloudflare",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:cloudflare:8401122",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Austin, TX, United States +2",
+  "posted_at": "2026-11-20",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "backend",
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Systems Engineer - Network Software Performance",
+  "url": "https://boards.greenhouse.io/cloudflare/jobs/8401122?gh_jid=8401122",
+  "years": null
+ },
+ "greenhouse:coinbase:7985187": {
+  "closed_at": null,
+  "company": "Coinbase",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:coinbase:7985187",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Remote - India +1",
+  "posted_at": "2026-06-22",
+  "remote": true,
+  "score": 31,
+  "skills": [
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Machine Learning Engineer",
+  "url": "https://www.coinbase.com/careers/positions/7985187?gh_jid=7985187",
+  "years": 2
+ },
+ "greenhouse:datadog:8161455": {
+  "closed_at": null,
+  "company": "Datadog",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:datadog:8161455",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "France, Remote; Spain, Remote; The Netherlands, Remote +1",
+  "posted_at": "2026-09-14",
+  "remote": true,
+  "score": 31,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Developer Advocate - Service Management EMEA",
+  "url": "https://careers.datadoghq.com/detail/8161455/?gh_jid=8161455",
+  "years": 2
+ },
+ "greenhouse:elastic:8314336": {
+  "closed_at": null,
+  "company": "Elastic",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:elastic:8314336",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bangalore, India +1",
+  "posted_at": "2026-10-27",
+  "remote": false,
+  "score": 38,
+  "skills": [
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "AI Tool Admin",
+  "url": "https://jobs.elastic.co/jobs?gh_jid=8314336&gh_jid=8314336",
+  "years": null
+ },
+ "greenhouse:gitlab:8775507002": {
+  "closed_at": null,
+  "company": "GitLab",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:gitlab:8775507002",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bangalore, India",
+  "posted_at": "2026-09-02",
+  "remote": false,
+  "score": 40,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud",
+   "security"
+  ],
+  "status": "open",
+  "title": "Intermediate Backend Engineer, India",
+  "url": "https://job-boards.greenhouse.io/gitlab/jobs/8775507002",
+  "years": null
+ },
+ "greenhouse:gitlab:8861748002": {
+  "closed_at": null,
+  "company": "GitLab",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:gitlab:8861748002",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bangalore, India; Remote, Poland +1",
+  "posted_at": "2026-10-09",
+  "remote": true,
+  "score": 31,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud",
+   "security"
+  ],
+  "status": "open",
+  "title": "People Systems Engineer",
+  "url": "https://job-boards.greenhouse.io/gitlab/jobs/8861748002",
+  "years": null
+ },
+ "greenhouse:gitlab:8890971002": {
+  "closed_at": null,
+  "company": "GitLab",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:gitlab:8890971002",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bangalore, India +1",
+  "posted_at": "2026-11-04",
+  "remote": false,
+  "score": 50,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud",
+   "security"
+  ],
+  "status": "open",
+  "title": "Intermediate Backend Engineer , Security Factory",
+  "url": "https://job-boards.greenhouse.io/gitlab/jobs/8890971002",
+  "years": null
+ },
+ "greenhouse:gitlab:8916232002": {
+  "closed_at": null,
+  "company": "GitLab",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:gitlab:8916232002",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bangalore, India +1",
+  "posted_at": "2026-10-28",
+  "remote": false,
+  "score": 32,
+  "skills": [
+   "backend",
+   "devops_cloud",
+   "security"
+  ],
+  "status": "open",
+  "title": "Software Engineer, Delivery : Release",
+  "url": "https://job-boards.greenhouse.io/gitlab/jobs/8916232002",
+  "years": null
+ },
+ "greenhouse:gitlab:8940982002": {
+  "closed_at": null,
+  "company": "GitLab",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:gitlab:8940982002",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bangalore, India +1",
+  "posted_at": "2026-11-23",
+  "remote": false,
+  "score": 58,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "security"
+  ],
+  "status": "open",
+  "title": "Applied AI Engineer, Enterprise AI",
+  "url": "https://job-boards.greenhouse.io/gitlab/jobs/8940982002",
+  "years": null
+ },
+ "greenhouse:hackerrank:7461142": {
+  "closed_at": null,
+  "company": "HackerRank",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:hackerrank:7461142",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Hybrid in Bengaluru, India +1",
+  "posted_at": "2025-12-18",
+  "remote": false,
+  "score": 18,
+  "skills": [
+   "backend"
+  ],
+  "status": "open",
+  "title": "Forward Deployed Engineer",
+  "url": "https://job-boards.greenhouse.io/hackerrank/jobs/7461142",
+  "years": null
+ },
+ "greenhouse:hackerrank:8273522": {
+  "closed_at": null,
+  "company": "HackerRank",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:hackerrank:8273522",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Hybrid in Bangalore, India +1",
+  "posted_at": "2026-10-14",
+  "remote": false,
+  "score": 28,
+  "skills": [
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Deep Learning Research Engineer",
+  "url": "https://job-boards.greenhouse.io/hackerrank/jobs/8273522",
+  "years": 2
+ },
+ "greenhouse:rubrik:7956918": {
+  "closed_at": null,
+  "company": "Rubrik",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:rubrik:7956918",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Pune +1",
+  "posted_at": "2026-08-31",
+  "remote": false,
+  "score": 18,
+  "skills": [
+   "backend"
+  ],
+  "status": "open",
+  "title": "Software Engineer - IAM",
+  "url": "https://www.rubrik.com/company/careers/departments/job.7956918?gh_jid=7956918",
+  "years": null
+ },
+ "greenhouse:rubrik:8327940": {
+  "closed_at": null,
+  "company": "Rubrik",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:rubrik:8327940",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bangalore  +1",
+  "posted_at": "2026-11-11",
+  "remote": false,
+  "score": 44,
+  "skills": [
+   "backend",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Software Engineer - Cloud Native Protection",
+  "url": "https://www.rubrik.com/company/careers/departments/job.8327940?gh_jid=8327940",
+  "years": 2
+ },
+ "greenhouse:rubrik:8349847": {
+  "closed_at": null,
+  "company": "Rubrik",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:rubrik:8349847",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "bangalore +1",
+  "posted_at": "2026-11-16",
+  "remote": false,
+  "score": 28,
+  "skills": [
+   "backend"
+  ],
+  "status": "open",
+  "title": "Software Engineer",
+  "url": "https://www.rubrik.com/company/careers/departments/job.8349847?gh_jid=8349847",
+  "years": null
+ },
+ "greenhouse:stripe:6717520": {
+  "closed_at": null,
+  "company": "Stripe",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:stripe:6717520",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Dublin, Ireland +1",
+  "posted_at": "2025-04-24",
+  "remote": false,
+  "score": 10,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Software Engineer, Payments and Risk",
+  "url": "https://stripe.com/jobs/search?gh_jid=6717520",
+  "years": 2
+ },
+ "greenhouse:stripe:8076626": {
+  "closed_at": null,
+  "company": "Stripe",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:stripe:8076626",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Dublin, Ireland +1",
+  "posted_at": "2026-07-23",
+  "remote": false,
+  "score": 18,
+  "skills": [
+   "backend"
+  ],
+  "status": "open",
+  "title": "Software Engineer, Stripe Tax",
+  "url": "https://stripe.com/jobs/search?gh_jid=8076626",
+  "years": 2
+ },
+ "greenhouse:stripe:8130876": {
+  "closed_at": null,
+  "company": "Stripe",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:stripe:8130876",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "Bangalore +1",
+  "posted_at": "2026-10-28",
+  "remote": false,
+  "score": 64,
+  "skills": [
+   "backend",
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Software Engineer, New Grad",
+  "url": "https://stripe.com/jobs/search?gh_jid=8130876",
+  "years": null
+ },
+ "greenhouse:stripe:8130881": {
+  "closed_at": null,
+  "company": "Stripe",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:stripe:8130881",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "Dublin, Dublin, Ireland +1",
+  "posted_at": "2026-08-31",
+  "remote": false,
+  "score": 54,
+  "skills": [
+   "backend",
+   "ai_ml"
+  ],
+  "status": "open",
+  "title": "Software Engineer, New Grad",
+  "url": "https://stripe.com/jobs/search?gh_jid=8130881",
+  "years": null
+ },
+ "greenhouse:stripe:8257892": {
+  "closed_at": null,
+  "company": "Stripe",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:stripe:8257892",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "Dublin, Dublin, Ireland +1",
+  "posted_at": "2026-10-07",
+  "remote": false,
+  "score": 58,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud",
+   "security"
+  ],
+  "status": "open",
+  "title": "Security Engineer, New Grad",
+  "url": "https://stripe.com/jobs/search?gh_jid=8257892",
+  "years": null
+ },
+ "greenhouse:twilio:8065032": {
+  "closed_at": null,
+  "company": "Twilio",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:twilio:8065032",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Remote - India",
+  "posted_at": "2026-07-16",
+  "remote": true,
+  "score": 31,
+  "skills": [
+   "backend",
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Software Engineer (L3)",
+  "url": "https://job-boards.greenhouse.io/twilio/jobs/8065032",
+  "years": 2
+ },
+ "greenhouse:twilio:8213730": {
+  "closed_at": null,
+  "company": "Twilio",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "greenhouse:twilio:8213730",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Remote - India",
+  "posted_at": "2026-09-23",
+  "remote": true,
+  "score": 13,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Personalized Support Engineer",
+  "url": "https://job-boards.greenhouse.io/twilio/jobs/8213730",
+  "years": 2
+ },
+ "lever:cred:913a6616-78c9-4ca3-8c92-67ddea8a80df": {
+  "closed_at": null,
+  "company": "CRED",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "lever:cred:913a6616-78c9-4ca3-8c92-67ddea8a80df",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "bengaluru",
+  "posted_at": "2026-11-05",
+  "remote": false,
+  "score": 64,
+  "skills": [
+   "data"
+  ],
+  "status": "open",
+  "title": "fraud analytics engineer",
+  "url": "https://jobs.lever.co/cred/913a6616-78c9-4ca3-8c92-67ddea8a80df",
+  "years": 1
+ },
+ "lever:zeta:d7608271-a46f-4783-b5a9-05737398d320": {
+  "closed_at": null,
+  "company": "Zeta",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "lever:zeta:d7608271-a46f-4783-b5a9-05737398d320",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "entry",
+  "location": "Hyderabad",
+  "posted_at": "2026-11-19",
+  "remote": false,
+  "score": 66,
+  "skills": [
+   "ai_ml",
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Technical Support Engineer I",
+  "url": "https://jobs.lever.co/zeta/d7608271-a46f-4783-b5a9-05737398d320",
+  "years": 1
+ },
+ "smartrecruiters:servicenow:744000143028899": {
+  "closed_at": null,
+  "company": "ServiceNow",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "smartrecruiters:servicenow:744000143028899",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bangalore, Karnataka, India",
+  "posted_at": "2026-08-12",
+  "remote": false,
+  "score": 10,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Mgr, Software Engrg Mgmt",
+  "url": "https://jobs.smartrecruiters.com/ServiceNow/744000143028899",
+  "years": null
+ },
+ "smartrecruiters:servicenow:744000162831529": {
+  "closed_at": null,
+  "company": "ServiceNow",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "smartrecruiters:servicenow:744000162831529",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Bangalore, , India",
+  "posted_at": "2026-11-20",
+  "remote": false,
+  "score": 26,
+  "skills": [
+   "sde"
+  ],
+  "status": "open",
+  "title": "Technical Support Engineer - Moveworks",
+  "url": "https://jobs.smartrecruiters.com/ServiceNow/744000162831529",
+  "years": null
+ },
+ "smartrecruiters:servicenow:744000163146999": {
+  "closed_at": null,
+  "company": "ServiceNow",
+  "first_seen": "2026-11-25T06:37:59+00:00",
+  "id": "smartrecruiters:servicenow:744000163146999",
+  "last_seen": "2026-11-25T06:37:59+00:00",
+  "level": "open",
+  "location": "Hyderabad, , India",
+  "posted_at": "2026-11-23",
+  "remote": false,
+  "score": 48,
+  "skills": [
+   "devops_cloud"
+  ],
+  "status": "open",
+  "title": "Software Engineer (Go & Kubernetes)",
+  "url": "https://jobs.smartrecruiters.com/ServiceNow/744000163146999",
+  "years": null
+ }
+}
