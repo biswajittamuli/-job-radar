@@ -42,6 +42,9 @@ public JSON API that the page itself calls. Job Radar reads those APIs directly:
      `https://api.telegram.org/bot<TOKEN>/getUpdates` and copy `chat.id`.
    - In the repo, go to Settings → Secrets and variables → Actions and add the secrets
      `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID`.
+   - Check it: Actions → *Test Telegram* → **Run workflow** (or `python -m radar test-notify`
+     locally). It sends a test message, or fails with Telegram's exact error. Paste secrets
+     without a trailing newline; Job Radar strips one now, but it used to cause a 404.
 5. **First run.** Go to Actions → *Job Radar* → **Run workflow**. Once it finishes, open the
    dashboard. After that it runs by itself at **07:05 and 15:05 IST**.
 
@@ -75,6 +78,8 @@ Network → Fetch/XHR, and you'll usually find a JSON endpoint to copy.
   stated level and no senior signal. That's more noise, but it catches startups that
   don't label levels.
 - `level.max_years: 2` drops a job if its description asks for more than 2 years.
+- `freshness.max_posted_age_days: 14` drops jobs posted more than 14 days ago. Jobs whose
+  board gives no posting date are kept. Workday's "Posted 30+ Days Ago" counts as 30.
 - `notify.skills: [backend, ai_ml]` limits alerts to those buckets. The dashboard
   still shows everything.
 - `skills:` holds the keyword buckets. Edit them freely.

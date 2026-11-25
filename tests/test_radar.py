@@ -2,11 +2,13 @@
 end-to-end run against fake boards. `pytest -q` from the repo root."""
 import json
 import shutil
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 import pytest
 import yaml
 
+from radar import notify
 from radar.classify import classify, min_years
 from radar.detect import detect_in
 from radar.http import BoardNotFound
@@ -15,6 +17,11 @@ from radar.runner import run
 from radar.sources import amazon, ashby, greenhouse, lever, smartrecruiters, workday
 
 ROOT = Path(__file__).resolve().parent.parent
+TODAY = date.today()
+
+
+def ago(days):
+    return (TODAY - timedelta(days=days)).isoformat()
 CFG = yaml.safe_load((ROOT / "config.yaml").read_text())
 
 
@@ -82,20 +89,20 @@ def test_global_remote_but_not_country_locked():
 
 # ── adapters ────────────────────────────────────────────────────────────────
 GH = {"jobs": [{"id": 11, "title": "Software Engineer I", "absolute_url": "https://x/11",
-                "location": {"name": "Bengaluru, India"}, "updated_at": "2026-11-20T10:00:00-05:00",
+                "location": {"name": "Bengaluru, India"}, "updated_at": ago(5) + "T10:00:00-05:00",
                 "content": "&lt;p&gt;0-1 years of experience with Python&lt;/p&gt;",
                 "departments": [{"name": "Engineering"}], "offices": []},
                {"id": 12, "title": "Senior Software Engineer", "absolute_url": "https://x/12",
-                "location": {"name": "Bengaluru, India"}, "updated_at": "2026-11-20", "content": ""}],
+                "location": {"name": "Bengaluru, India"}, "updated_at": ago(5), "content": ""}],
       "meta": {"total": 2}}
 LEVER = [{"id": "ab-1", "text": "Backend Developer (Python)", "hostedUrl": "https://jobs.lever.co/cred/ab-1",
-          "categories": {"location": "Bengaluru", "team": "Engineering"}, "createdAt": 1764000000000,
+          "categories": {"location": "Bengaluru", "team": "Engineering"}, "createdAt": int(datetime.combine(TODAY - timedelta(days=3), datetime.min.time(), timezone.utc).timestamp() * 1000),
           "descriptionPlain": "Build APIs with FastAPI.", "lists": [{"text": "Requirements",
           "content": "<li>1+ years of experience</li>"}], "workplaceType": "onsite"},
          {"id": "ab-2", "text": "Area Collections Manager", "hostedUrl": "u",
           "categories": {"location": "Chennai, Tamil Nadu"}}]
 ASHBY = {"jobs": [{"id": "z1", "title": "AI Engineer", "location": "Bengaluru", "jobUrl": "https://jobs.ashbyhq.com/s/z1",
-                   "publishedAt": "2026-11-19T00:00:00Z", "descriptionPlain": "LLM, RAG, PyTorch", "isRemote": False,
+                   "publishedAt": ago(6) + "T00:00:00Z", "descriptionPlain": "LLM, RAG, PyTorch", "isRemote": False,
                    "secondaryLocations": [{"location": "Delhi"}], "isListed": True},
                   {"id": "z2", "title": "Hidden", "location": "Delhi", "isListed": False}]}
 SR = {"totalFound": 1, "content": [{"id": "744", "name": "Associate Software Engineer", "releasedDate": "2026-11-18T00:00:00Z",
@@ -110,15 +117,16 @@ AMZ = {"hits": 1, "jobs": [{"id_icims": "10581201", "title": "Software Developme
 
 def test_parsers():
     g = greenhouse.parse(GH, {})
-    assert g[0].title == "Software Engineer I" and "0-1 years" in g[0].description and g[0].posted_at == "2026-11-20"
+    assert g[0].title == "Software Engineer I" and "0-1 years" in g[0].description and g[0].posted_at == ago(5)
     l = lever.parse(LEVER, {})
-    assert l[0].locations == ["Bengaluru"] and "1+ years" in l[0].description and l[0].posted_at.startswith("2025")
+    assert l[0].locations == ["Bengaluru"] and "1+ years" in l[0].description and l[0].posted_at == ago(3)
     a = ashby.parse(ASHBY, {})
     assert len(a) == 1 and a[0].locations == ["Bengaluru", "Delhi"]
     s = smartrecruiters.parse(SR, {"slug": "Visa"})
     assert s[0].locations == ["Bangalore, in, India"] and s[0].url.endswith("/Visa/744")
     w = workday.parse(WD, {"host": "nvidia.wd5.myworkdayjobs.com", "site": "Ext", "search": "India"})
     assert w[1].locations == ["Multiple locations (India)"] and w[0].url.startswith("https://nvidia.wd5")
+    assert w[0].posted_at == TODAY.isoformat() and w[1].posted_at is None
     z = amazon.parse(AMZ, {})
     assert z[0].posted_at == "2026-10-16" and z[0].url.startswith("https://www.amazon.jobs/en/jobs/")
 
@@ -185,3 +193,229 @@ def test_end_to_end(repo):
 
     html = (repo / "docs/index.html").read_text()
     assert "__RADAR_DATA__" not in html and "Backend Developer (Python)" in html
+
+
+# ── senior titles ───────────────────────────────────────────────────────────
+@pytest.mark.parametrize("title", [
+    "SMTS, Software Engineering", "LMTS - Software Engineer", "PMTS Software Engineer",
+    "Software Engineering SMTS", "Senior Member of Technical Staff",
+])
+def test_salesforce_mts_levels_are_senior(title):
+    v = classify(J(title), CFG)
+    assert not v.ok and "senior" in v.reason
+
+
+def test_plain_mts_still_passes():
+    assert classify(J("MTS, Software Engineering"), CFG).ok
+    assert classify(J("Member of Technical Staff"), CFG).ok
+
+
+# ── freshness ───────────────────────────────────────────────────────────────
+def Jd(posted_at, title="Software Engineer I"):
+    return RawJob("1", title, "u", ["Bengaluru, India"], posted_at=posted_at)
+
+
+def test_freshness_config_present():
+    assert CFG["freshness"]["max_posted_age_days"] == 14
+
+
+@pytest.mark.parametrize("age,ok", [(0, True), (13, True), (14, True), (15, False), (60, False)])
+def test_freshness_cutoff(age, ok):
+    today = date(2026, 11, 25)
+    v = classify(Jd((today - timedelta(days=age)).isoformat()), CFG, today=today)
+    assert v.ok is ok, v.reason
+    if not ok:
+        assert "posted" in v.reason and "older than 14" in v.reason
+
+
+def test_freshness_keeps_undated_and_unparseable():
+    assert classify(Jd(None), CFG).ok
+    assert classify(Jd("not a date"), CFG).ok
+
+
+def test_freshness_disabled_when_unset():
+    cfg = {**CFG, "freshness": {}}
+    assert classify(Jd("2020-01-01"), cfg).ok
+
+
+@pytest.mark.parametrize("text,days", [
+    ("Posted Today", 0), ("Posted Yesterday", 1), ("Posted 5 Days Ago", 5),
+    ("Posted 30+ Days Ago", 30), ("posted 1 day ago", 1),
+])
+def test_workday_posted_on(text, days):
+    today = date(2026, 11, 25)
+    assert workday.posted_on_to_date(text, today) == (today - timedelta(days=days)).isoformat()
+
+
+@pytest.mark.parametrize("text", [None, "", "Recently", "Posted sometime"])
+def test_workday_posted_on_unknown(text):
+    assert workday.posted_on_to_date(text) is None
+
+
+def test_workday_30_plus_is_filtered_out():
+    today = date(2026, 11, 25)
+    data = {"total": 2, "jobPostings": [
+        {"title": "Software Engineer", "externalPath": "/a", "locationsText": "India, Bengaluru", "postedOn": "Posted 30+ Days Ago"},
+        {"title": "Software Engineer", "externalPath": "/b", "locationsText": "India, Bengaluru", "postedOn": "Posted 2 Days Ago"}]}
+    jobs = workday.parse(data, {"host": "h", "site": "s"}, today=today)
+    assert [classify(j, CFG, today=today).ok for j in jobs] == [False, True]
+
+
+def test_workday_fetch_paginates(monkeypatch):
+    monkeypatch.setattr(workday, "PAGE_DELAY", 0)
+    pages = [{"total": 21, "jobPostings": [{"title": f"SWE {i}", "externalPath": f"/{i}", "postedOn": "Posted Today"}
+                                           for i in range(20)]},
+             {"total": 21, "jobPostings": [{"title": "SWE 20", "externalPath": "/20", "postedOn": "Posted Today"}]}]
+    calls = []
+
+    class H:
+        def post_json(self, url, body):
+            calls.append(body["offset"])
+            return pages[len(calls) - 1]
+    jobs = workday.fetch({"host": "h", "tenant": "t", "site": "s"}, H())
+    assert len(jobs) == 21 and calls == [0, 20]
+
+
+# ── http backoff ────────────────────────────────────────────────────────────
+class _Resp:
+    def __init__(self, status, headers=None):
+        self.status_code, self.headers = status, headers or {}
+
+
+def test_backoff_honours_retry_after():
+    from radar.http import Http
+    assert Http._backoff(_Resp(429, {"Retry-After": "7"}), 0) == 7
+    assert Http._backoff(_Resp(429, {"Retry-After": "999"}), 0) == 60
+    assert Http._backoff(_Resp(429), 1) > Http._backoff(_Resp(503), 1)
+
+
+# ── sorting newest first ────────────────────────────────────────────────────
+def _job(title, posted, score):
+    from radar.models import Job
+    return Job(id=title, company="C", title=title, url="u", location="Bengaluru", level="open",
+               skills=["sde"], score=score, posted_at=posted, first_seen="2026-11-25T00:00:00+00:00",
+               last_seen="2026-11-25T00:00:00+00:00")
+
+
+def test_newest_first_ordering():
+    from radar.models import newest_first
+    jobs = [_job("old", "2026-11-10", 99), _job("undated", None, 100), _job("new", "2026-11-24", 1),
+            _job("mid", "2026-11-20", 50), _job("new-better", "2026-11-24", 5)]
+    order = [j.title for j in sorted(jobs, key=lambda j: newest_first(j.posted_at, j.score))]
+    assert order == ["new-better", "new", "mid", "old", "undated"]
+
+
+def test_alert_lists_newest_first_with_age():
+    today = date.today()
+    jobs = [_job("Older Role", (today - timedelta(days=9)).isoformat(), 90),
+            _job("Fresh Role", today.isoformat(), 10)]
+    text = notify.build_html(jobs, [], "", 40)
+    assert text.index("Fresh Role") < text.index("Older Role")
+    assert "posted today" in text and "posted 9 days ago" in text
+
+
+def test_posted_label():
+    t = date(2026, 11, 25)
+    assert notify.posted_label("2026-11-25", t) == "posted today"
+    assert notify.posted_label("2026-11-24", t) == "posted yesterday"
+    assert notify.posted_label("2026-11-20", t) == "posted 5 days ago"
+    assert notify.posted_label(None, t) == ""
+
+
+# ── telegram ────────────────────────────────────────────────────────────────
+class _TgResp:
+    def __init__(self, status, payload):
+        self.status_code, self._p, self.text, self.reason = status, payload, json.dumps(payload), "x"
+
+    def json(self):
+        return self._p
+
+
+@pytest.fixture
+def tg(monkeypatch):
+    sent = []
+    state = {"resp": _TgResp(200, {"ok": True, "result": {"chat": {"id": 42, "first_name": "Me"}}})}
+
+    def post(url, timeout, json):
+        sent.append((url, json))
+        return state["resp"]
+    monkeypatch.setattr(notify.requests, "post", post)
+    monkeypatch.setenv("TELEGRAM_BOT_TOKEN", "123:abc")
+    monkeypatch.setenv("TELEGRAM_CHAT_ID", "42")
+    return sent, state
+
+
+def test_telegram_strips_newline_from_secrets(tg, monkeypatch, capsys):
+    sent, _ = tg
+    # the actual production bug: the secret was saved with a trailing newline → ".../bot123:abc%0A/sendMessage" → 404
+    monkeypatch.setenv("TELEGRAM_BOT_TOKEN", "123:abc\n")
+    monkeypatch.setenv("TELEGRAM_CHAT_ID", " 42\n")
+    assert notify.telegram([_job("Role", None, 1)], [], "", 40)
+    url, body = sent[0]
+    assert url == "https://api.telegram.org/bot123:abc/sendMessage" and body["chat_id"] == "42"
+    assert "whitespace" in capsys.readouterr().out
+
+
+def test_send_test_message_ok(tg):
+    sent, _ = tg
+    assert "42" in notify.send_test_message()
+    assert "test message" in sent[0][1]["text"]
+
+
+def test_telegram_error_is_telegrams_text(tg):
+    _, state = tg
+    state["resp"] = _TgResp(400, {"ok": False, "error_code": 400, "description": "Bad Request: chat not found"})
+    with pytest.raises(notify.TelegramError) as e:
+        notify.send_test_message()
+    assert "Bad Request: chat not found" in str(e.value) and "123:abc" not in str(e.value)
+
+
+def test_send_all_prints_annotation_on_failure(tg, capsys):
+    _, state = tg
+    state["resp"] = _TgResp(401, {"ok": False, "error_code": 401, "description": "Unauthorized"})
+    sent = notify.send_all([_job("Role", None, 1)], [], "", {"notify": {}}, "stats")
+    out = capsys.readouterr().out
+    assert sent == []
+    assert "::warning title=Alert failed::telegram: Telegram API 401: Unauthorized" in out
+
+
+def test_send_all_logs_missing_secrets(monkeypatch, capsys):
+    monkeypatch.delenv("TELEGRAM_BOT_TOKEN", raising=False)
+    monkeypatch.delenv("TELEGRAM_CHAT_ID", raising=False)
+    monkeypatch.delenv("SMTP_HOST", raising=False)
+    monkeypatch.delenv("GITHUB_STEP_SUMMARY", raising=False)
+    notify.send_all([], [], "", {"notify": {}}, "stats")
+    out = capsys.readouterr().out
+    assert "telegram disabled: secret(s) not set: TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID" in out
+    monkeypatch.setenv("TELEGRAM_BOT_TOKEN", "x")
+    notify.send_all([], [], "", {"notify": {}}, "stats")
+    assert "::warning title=Alert failed::telegram: TELEGRAM_CHAT_ID is not set" in capsys.readouterr().out
+
+
+def test_warn_escapes_newlines(capsys):
+    notify.warn("Alert failed", "a\nb%c")
+    assert capsys.readouterr().out.strip() == "::warning title=Alert failed::a%0Ab%25c"
+
+
+def test_cli_test_notify_exit_codes(tg, monkeypatch, capsys):
+    from radar.__main__ import main
+    _, state = tg
+    assert main(["test-notify"]) == 0
+    state["resp"] = _TgResp(404, {"ok": False, "error_code": 404, "description": "Not Found"})
+    assert main(["test-notify"]) == 1
+    assert "Telegram API 404: Not Found" in capsys.readouterr().out
+    monkeypatch.delenv("TELEGRAM_CHAT_ID")
+    assert main(["test-notify"]) == 1
+
+
+def test_end_to_end_drops_stale_jobs(repo):
+    stale = {"jobs": [{"id": 99, "title": "Software Engineer I", "absolute_url": "https://x/99",
+                       "location": {"name": "Bengaluru, India"}, "first_published": ago(40), "content": ""}]}
+    r = run(root=repo, http=FakeHttp({"boards/acme": stale}), do_notify=False, verbose=False)
+    assert r["new"] == []
+
+
+def test_dashboard_defaults_to_newest_posted(repo):
+    run(root=repo, http=FakeHttp({"boards/acme": GH}), do_notify=False, verbose=False)
+    html = (repo / "docs/index.html").read_text()
+    assert "sort:'posted'" in html and "posted ${d} days ago" in html

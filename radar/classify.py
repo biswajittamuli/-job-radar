@@ -31,7 +31,8 @@ SENIOR = re.compile(
     r"\b(senior|sr\.?|staff|principal|lead|leader|manager|director|head|vp|"
     r"vice president|architect|distinguished|fellow|chief|expert)\b|"
     r"\b(engineer|developer|sde|scientist|analyst)\s*[-,]?\s*(ii|iii|iv|v|2|3|4|5)\b|"
-    r"\bsde[- ]?(ii|iii|2|3)\b|\bl[5-9]\b|\bmts[- ]?(2|3|4)\b", re.I)
+    r"\bsde[- ]?(ii|iii|2|3)\b|\bl[5-9]\b|\bmts[- ]?(2|3|4)\b|"
+    r"\b[slp]mts\b", re.I)   # Salesforce Senior/Lead/Principal Member of Technical Staff
 
 ENTRY = re.compile(
     r"new[- ]?grad|graduate|fresher|freshers|entry[- ]level|early[- ]career|campus|"
@@ -120,7 +121,18 @@ def tag_skills(title: str, desc: str, cfg: dict) -> list[str]:
     return tags or ["sde"]
 
 
+def posted_age_days(posted_at: str | None, today: date) -> int | None:
+    """Days since posting, or None when the ATS gave no (parseable) date."""
+    if not posted_at:
+        return None
+    try:
+        return (today - date.fromisoformat(posted_at[:10])).days
+    except ValueError:
+        return None
+
+
 def classify(job: RawJob, cfg: dict, today: date | None = None) -> Verdict:
+    today = today or date.today()
     title = job.title
     if not TECH.search(title) or NON_TECH.search(title):
         return Verdict(False, "not a tech role")
@@ -129,6 +141,12 @@ def classify(job: RawJob, cfg: dict, today: date | None = None) -> Verdict:
     title_for_level = re.sub(r"member of technical staff", "mts", title, flags=re.I)
     if SENIOR.search(title_for_level):
         return Verdict(False, f"senior title ({SENIOR.search(title_for_level).group(0)})")
+
+    # Old postings are usually filled already. Undated jobs are kept: first_seen covers them.
+    max_age = (cfg.get("freshness") or {}).get("max_posted_age_days")
+    age = posted_age_days(job.posted_at, today)
+    if max_age is not None and age is not None and age > max_age:
+        return Verdict(False, f"posted {age} days ago (older than {max_age})")
 
     loc, remote = match_location(job, cfg)
     if not loc:
@@ -153,7 +171,7 @@ def classify(job: RawJob, cfg: dict, today: date | None = None) -> Verdict:
         return Verdict(False, "no fresher signal (mode=entry)")
 
     skills = tag_skills(title, job.description, cfg)
-    score = _score(level, skills, title, years, remote, job.posted_at, cfg, today or date.today())
+    score = _score(level, skills, title, years, remote, job.posted_at, cfg, today)
     return Verdict(True, "match", level, skills, years, loc, remote, score)
 
 
@@ -169,10 +187,7 @@ def _score(level, skills, title, years, remote, posted_at, cfg, today) -> int:
         s += 10
     if remote:
         s += 3
-    if posted_at:
-        try:
-            age = (today - date.fromisoformat(posted_at[:10])).days
-            s += 12 if age <= 3 else 6 if age <= 7 else 0 if age <= 30 else -10
-        except ValueError:
-            pass
+    age = posted_age_days(posted_at, today)
+    if age is not None:
+        s += 12 if age <= 3 else 6 if age <= 7 else 0 if age <= 30 else -10
     return s

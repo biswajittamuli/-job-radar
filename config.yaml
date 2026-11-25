@@ -34,6 +34,11 @@ level:
   # Most internships require you to still be enrolled; flip on if you want them
   include_internships: false
 
+freshness:
+  # Drop jobs posted more than this many days ago (they're usually filled already).
+  # Jobs whose board gives no posting date are kept.
+  max_posted_age_days: 14
+
 # Skill buckets. A job is tagged with every bucket whose keywords appear in
 # its title/description. `priority` buckets get ranked first.
 skills:

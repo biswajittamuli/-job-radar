@@ -10,7 +10,7 @@ import yaml
 from . import notify, render
 from .classify import classify
 from .http import BoardNotFound, Http
-from .models import Job
+from .models import Job, newest_first
 from .sources import ADAPTERS
 from .store import Store, now_iso
 
@@ -81,7 +81,7 @@ def run(*, root: Path = ROOT, http=None, only: str | None = None, do_notify: boo
                 print(f"  ✓ {name:<14} {len(raw):>4} jobs → {len(matched):>3} match, {len(new):>3} new")
 
     store.prune(cfg.get("keep_closed_days", 21))
-    all_new.sort(key=lambda j: -j.score)
+    all_new.sort(key=lambda j: newest_first(j.posted_at, j.score))
     open_count = sum(1 for j in store.jobs.values() if j["status"] == "open")
     failing = sorted(n for n, h in store.health.items() if h.get("status") in ("error", "not_found"))
     stats = (f"{len(companies)} boards · {fetched_total} postings scanned · "
