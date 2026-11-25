@@ -23,6 +23,8 @@ class Store:
         self.runs: list[dict] = self._load("runs.json", [])
         # full descriptions fetched for boards whose list API omits them (Workday, SmartRecruiters)
         self.details: dict[str, dict] = self._load("details.json", {})
+        # per company: fresher / intern roles seen over time (evidence it hires CSE graduates)
+        self.companies: dict[str, dict] = self._load("companies.json", {})
 
     def _load(self, name, default):
         p = self.dir / name
@@ -35,7 +37,8 @@ class Store:
 
     def save(self):
         for name, obj in (("jobs.json", self.jobs), ("health.json", self.health),
-                          ("runs.json", self.runs[-90:]), ("details.json", self.details)):
+                          ("runs.json", self.runs[-90:]), ("details.json", self.details),
+                          ("companies.json", self.companies)):
             (self.dir / name).write_text(json.dumps(obj, indent=1, sort_keys=True, ensure_ascii=False))
 
     # ── jobs ─────────────────────────────────────────────────────────────────
@@ -69,6 +72,22 @@ class Store:
             k: v for k, v in self.jobs.items()
             if v["status"] == "open" or datetime.fromisoformat(v["closed_at"]) > cutoff
         }
+
+    def record_freshers(self, company: str, ats: str, roles: list[tuple[str, str, str, str | None]], ts: str):
+        """roles: (job id, title, url, kind) for fresher/intern roles listed right now."""
+        c = self.companies.setdefault(company, {"ats": ats, "seen": {}})
+        c["ats"] = ats
+        c["open_entry"] = sum(1 for r in roles if r[3] == "entry")
+        c["open_intern"] = sum(1 for r in roles if r[3] == "intern")
+        for jid, title, url, kind in roles:
+            e = c["seen"].setdefault(jid, {"title": title, "kind": kind, "first_seen": ts})
+            e.update(title=title, url=url, last_seen=ts)
+        if len(c["seen"]) > 200:   # keep the most recent 200
+            c["seen"] = dict(sorted(c["seen"].items(), key=lambda kv: kv[1]["last_seen"])[-200:])
+        if roles:
+            c["last_fresher_seen"] = ts
+            c.setdefault("first_fresher_seen", ts)
+        c["last_checked"] = ts
 
     def prune_details(self, days: int):
         cutoff = datetime.now(timezone.utc) - timedelta(days=days)

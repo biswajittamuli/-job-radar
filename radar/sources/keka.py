@@ -16,10 +16,11 @@ def fetch(company, http):
     guid = company.get("portal_id")
     if not guid:
         m = _PORTAL.search(http.get_text(f"https://{host}/careers/"))
-        if not m:
-            raise ValueError(f"no Keka careers portal found at {host}")
-        guid = m.group(1)
-    return parse(http.get_json(f"https://{host}/careers/api/embedjobs/default/active/{guid}"), company)
+        guid = m.group(1) if m else None
+    if guid:     # a company-designed careers portal
+        return parse(http.get_json(f"https://{host}/careers/api/embedjobs/default/active/{guid}"), company)
+    # Keka's standard careers page
+    return parse(http.get_json(f"https://{host}/careers/api/jobs/default/active"), company)
 
 
 def parse(data, company):

@@ -278,6 +278,24 @@ companies:
   - { name: ValueLabs, ats: smartrecruiters, slug: ValueLabs, verified: 2026-11-25 }
   - { name: Velocity, ats: freshteam, slug: velocity, verified: 2026-11-25 }
 
+  # ── Indian startups found from their own careers pages (Nov 2026) ──
+  # Fi, Nanonets and Open had no openings when added; they appear when they hire.
+  # Postman, Fractal, Quantiphi: Workday site names taken from their careers pages.
+  - { name: Vyapar, ats: keka, host: vyaparapp.keka.com, verified: 2026-11-25 }
+  - { name: WebEngage, ats: keka, host: webklipper.keka.com, verified: 2026-11-25 }
+  - { name: Wingify (VWO), ats: keka, host: wingify.keka.com, verified: 2026-11-25 }
+  - { name: Scrut, ats: keka, host: scrut.keka.com, verified: 2026-11-25 }
+  - { name: Open Financial, ats: keka, host: openfinancial.keka.com, verified: 2026-11-25 }
+  - { name: Ati Motors, ats: keka, host: atirobotics.keka.com, verified: 2026-11-25 }
+  - { name: Icertis, ats: oracle_hcm, host: iaaviz.fa.ocs.oraclecloud.com, site: CX_1, location_id: 300000000427974, verified: 2026-11-25 }
+  - { name: Quizizz (Wayground), ats: lever, slug: Wayground, verified: 2026-11-25 }
+  - { name: Fi Money, ats: lever, slug: epifi, verified: 2026-11-25 }
+  - { name: Nanonets, ats: ashby, slug: nanonets, verified: 2026-11-25 }
+  - { name: Uniphore, ats: workday, host: uniphore.wd503.myworkdayjobs.com, tenant: uniphore, site: Uniphore, search: India, verified: 2026-11-25 }
+  - { name: Postman, ats: workday, host: postman.wd108.myworkdayjobs.com, tenant: postman, site: careers, search: India }
+  - { name: Fractal, ats: workday, host: fractal.wd1.myworkdayjobs.com, tenant: fractal, site: Careers, search: India }
+  - { name: Quantiphi, ats: workday, host: quantiphi.wd1.myworkdayjobs.com, tenant: quantiphi, site: Careers_at_Quantiphi, search: India }
+
   # ── Job-search aggregator: jobs from any company (needs the JOOBLE_KEY secret) ──
   # Runs after every company board above; a job already found on a company's own board
   # is skipped. Skipped entirely when the secret isn't set.

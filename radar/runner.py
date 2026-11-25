@@ -8,7 +8,7 @@ from pathlib import Path
 import yaml
 
 from . import notify, render
-from .classify import classify
+from .classify import classify, fresher_role_kind
 from .http import BoardNotFound, Http, RateLimited, SourceDisabled
 from .models import Job, newest_first
 from .sources import ADAPTERS
@@ -133,6 +133,13 @@ def run(*, root: Path = ROOT, http=None, only: str | None = None, do_notify: boo
                 first_seen=ts, last_seen=ts, years=v.years, remote=v.remote,
                 source=name if agg else ""))
         new = store.sync_company(name, matched, ts)
+        if not agg:   # after classification, so descriptions fetched above are used
+            roles = []
+            for r in raw:
+                kind = fresher_role_kind(r, cfg)
+                if kind:
+                    roles.append((f"{c['ats']}:{company_key(c)}:{r.source_id}", r.title, r.url, kind))
+            store.record_freshers(name, c["ats"], roles, ts)
         all_new.extend(new)
         fetched_total += len(raw)
         store.record_health(name, c["ats"], ts, ok=True, fetched=len(raw), matched=len(matched))

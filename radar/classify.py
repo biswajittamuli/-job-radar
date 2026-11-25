@@ -18,6 +18,14 @@ TECH = re.compile(
     r"site reliability|cloud|security analyst|security engineer|\bqa\b|"
     r"quality assurance|\btest(ing)?\b|applied scientist|research scientist", re.I)
 
+# A software-development role word must appear in the title. TECH alone also matches words
+# like "AI" or "test", which let through "AI Writer", "Benefit Verification Specialist - AI"
+# and a placeholder posting called "Test Jerin".
+DEV_ROLE = re.compile(
+    r"engineer|engineering|developer|\bdev\b|\bsde\b|\bsdet\b|\bmts\b|technical staff|programmer|software|"
+    r"full[- ]?stack|back[- ]?end|front[- ]?end|devops|\bsre\b|site reliability|machine learning|\bml\b|"
+    r"data scien|data analyst|\bqa\b|quality assurance|test automation|automation test|\bai\b.*\b(engineer|developer|intern)", re.I)
+
 NON_TECH = re.compile(
     r"\bsales\b|account executive|account manager|marketing|recruit|talent|\bhr\b|hrbp|"
     r"people partner|legal|counsel|finance|accountant|accounting|collections?|procurement|"
@@ -191,7 +199,7 @@ def classify(job: RawJob, cfg: dict, today: date | None = None, check_level: boo
     description: it applies every title/location/date rule but skips the experience checks."""
     today = today or date.today()
     title = job.title
-    if not TECH.search(title) or NON_TECH.search(title):
+    if not TECH.search(title) or NON_TECH.search(title) or not DEV_ROLE.search(title):
         return Verdict(False, "not a tech role")
 
     for word in cfg.get("exclude_titles") or []:
@@ -269,3 +277,34 @@ def _score(level, skills, title, years, remote, posted_at, cfg, today) -> int:
     if age is not None:
         s += 12 if age <= 3 else 6 if age <= 7 else 0 if age <= 30 else -10
     return s
+
+
+def fresher_role_kind(job: RawJob, cfg: dict) -> str | None:
+    """Evidence that a company hires CSE graduates: is this an India/remote software role
+    that is explicitly entry level ("entry") or an internship ("intern")? Ignores the
+    posting-age limit, so roles still listed from months ago count too. Cheap: uses the
+    title, location, the board's level tag, and the description only if we already have it."""
+    title = job.title
+    if not TECH.search(title) or NON_TECH.search(title) or not DEV_ROLE.search(title):
+        return None
+    for word in cfg.get("exclude_titles") or []:
+        if re.search(rf"\b{re.escape(word)}", title, re.I):
+            return None
+    tl = re.sub(r"member of technical staff", "mts", title, flags=re.I)
+    hint_entry = (job.level_hint or "").lower() in ATS_ENTRY_LEVELS
+    if SENIOR_WORDS.search(tl) or (not hint_entry and SENIOR_GRADE.search(tl)):
+        return None
+    if not match_location(job, cfg)[0]:
+        return None
+    if INTERN.search(title):
+        return "intern"
+    t_years = title_years(title)
+    if t_years is not None and t_years > cfg["level"]["max_years"]:
+        return None
+    d_years = min_years(job.description) if job.description else None
+    if t_years is None and d_years is not None and d_years > cfg["level"]["max_years"]:
+        return None
+    if (ENTRY.search(tl) or (t_years is not None and t_years <= 1) or (d_years is not None and d_years <= 1)
+            or hint_entry or DESC_ENTRY.search(job.description or "")):
+        return "entry"
+    return None

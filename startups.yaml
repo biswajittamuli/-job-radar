@@ -1,0 +1,730 @@
+# Indian startups shown in the dashboard's "Indian startups" directory.
+#
+# tracked: companies in companies.yaml that are Indian startups. Their jobs are read
+#          automatically; the directory shows their open fresher roles and every fresher /
+#          intern role the radar has ever seen them list (data/companies.json).
+# manual:  startups whose careers site Job Radar can't read (Darwinbox, Zoho Recruit,
+#          TurboHire, their own page…). The dashboard links to them so you can check by hand.
+#          If one moves to a supported system, `python -m radar add <url> --name X` tracks it.
+tracked:
+- 100ms
+- Acko
+- Ati Motors
+- Atlan
+- BharatPe
+- BrowserStack
+- Bureau
+- Cars24
+- Cashfree
+- CityMall
+- CleverTap
+- ClickPost
+- Composio
+- CRED
+- CynLr
+- DevRev
+- Digantara
+- Druva
+- Eka Care
+- Eloelo
+- Everstage
+- FamPay
+- Fi Money
+- Fractal
+- Freshworks
+- Glance
+- GoKwik
+- Groww
+- HackerRank
+- Haptik
+- Hevo Data
+- HighRadius
+- Housing.com
+- Icertis
+- Inc42
+- InMobi
+- ixigo
+- Jupiter
+- Kuku FM
+- LambdaTest
+- Lendingkart
+- LetsTransport
+- LogiNext
+- Lokal
+- Loop Health
+- Lyzr
+- Meesho
+- Mindtickle
+- Mintifi
+- MoEngage
+- Nanonets
+- Newton School
+- Neysa
+- Ninjacart
+- Niyo
+- Nobroker
+- Observe.AI
+- Open Financial
+- Paxcom
+- Paytm
+- PhonePe
+- Plum
+- Pocket FM
+- Postman
+- Quantiphi
+- Quizizz (Wayground)
+- Razorpay
+- Rocketlane
+- Rubrik
+- SaaS Labs
+- Sarvam AI
+- Scaler
+- Scrut
+- Shipsy
+- Sigmoid
+- SigNoz
+- Signzy
+- Skit.ai
+- Skydo
+- Slice
+- Snitch
+- SpotDraft
+- Sprinklr
+- STAGE
+- Swiggy
+- Teachmint
+- Tekion
+- Turtlemint
+- Unacademy
+- Unicommerce
+- Uniphore
+- Upstox
+- Velocity
+- Vernacular.ai
+- Vyapar
+- WebEngage
+- Whatfix
+- Wingify (VWO)
+- Zeta
+- Zetwerk
+- Zinnov
+- Zluri
+manual:
+- name: Adda247
+  careers: https://adda247.com
+  system: careers page not found
+- name: Addverb
+  careers: https://careers.addverb.com/
+  system: own careers page
+- name: Agnikul
+  careers: https://agnikul.in/careers/
+  system: own careers page
+- name: Amagi
+  careers: https://www.amagi.com/careers
+  system: own careers page
+- name: Apna
+  careers: https://careers.apna.co
+  system: Workable
+- name: Appsmith
+  careers: https://www.appsmith.com/careers
+  system: own careers page
+- name: Ather Energy
+  careers: https://careers.atherenergy.com/
+  system: own careers page
+- name: BigBasket
+  careers: https://careers.bigbasket.com/
+  system: Darwinbox
+- name: BlackBuck
+  careers: https://blackbuck.com
+  system: careers page not found
+- name: Blinkit
+  careers: https://blinkit.com
+  system: careers page not found
+- name: Bounce
+  careers: https://bounce.bike
+  system: careers page not found
+- name: Briskpe
+  careers: https://briskpe.com
+  system: careers page not found
+- name: BYJU'S
+  careers: https://byjus.com/careers-at-byjus/
+  system: own careers page
+- name: Capillary
+  careers: https://capillarytech.com
+  system: careers page not found
+- name: CaratLane
+  careers: https://caratlane.com
+  system: careers page not found
+- name: CarDekho
+  careers: https://careers.cardekho.com/
+  system: Darwinbox
+- name: Cashify
+  careers: https://cashify.in
+  system: careers page not found
+- name: Chargebee
+  careers: https://www.chargebee.com/company/careers/
+  system: own careers page
+- name: Classplus
+  careers: https://classplus.co
+  system: careers page not found
+- name: Cleartrip
+  careers: https://careers.cleartrip.com/
+  system: TurboHire
+- name: Coding Ninjas
+  careers: https://www.codingninjas.com/careers
+  system: Darwinbox
+- name: CoinDCX
+  careers: https://coindcx.com
+  system: careers page not found
+- name: CoinSwitch
+  careers: https://coinswitch.co
+  system: careers page not found
+- name: Credgenics
+  careers: https://credgenics.com
+  system: careers page not found
+- name: Cuemath
+  careers: https://cuemath.com
+  system: careers page not found
+- name: Cult.fit
+  careers: https://careers.cult.fit/cult/
+  system: own careers page
+- name: Cutshort
+  careers: https://cutshort.io/jobs
+  system: own careers page
+- name: Dailyhunt
+  careers: https://dailyhunt.in
+  system: careers page not found
+- name: Darwinbox
+  careers: https://darwinbox.com/en-us/careers
+  system: Darwinbox
+- name: DealShare
+  careers: https://dealshare.in
+  system: careers page not found
+- name: Decentro
+  careers: https://decentro.tech/careers
+  system: own careers page
+- name: DeHaat
+  careers: https://agrevolution.in/careers
+  system: own careers page
+- name: Delhivery
+  careers: https://www.delhivery.com:443/careers
+  system: Darwinbox
+- name: Delta Exchange
+  careers: https://careers.delta.exchange/
+  system: own careers page
+- name: Dezerv
+  careers: https://www.dezerv.in/careers/
+  system: own careers page
+- name: Dhan
+  careers: https://dhan.co
+  system: careers page not found
+- name: Digit Insurance
+  careers: https://godigit.com
+  system: careers page not found
+- name: Ditto Insurance
+  careers: https://careers.joinditto.in/
+  system: own careers page
+- name: Dream11
+  careers: https://www.dreamsports.group/lifeatdreamsports
+  system: own careers page
+- name: Dukaan
+  careers: https://mydukaan.io/jobs
+  system: own careers page
+- name: Dunzo
+  careers: https://dunzo.com
+  system: careers page not found
+- name: Dyte
+  careers: https://dyte.io
+  system: careers page not found
+- name: E2E Networks
+  careers: https://www.e2enetworks.com/careers
+  system: own careers page
+- name: Easebuzz
+  careers: https://easebuzz.in//careers/
+  system: own careers page
+- name: ElasticRun
+  careers: https://elastic.run/careers
+  system: own careers page
+- name: EnKash
+  careers: https://www.enkash.com/careers
+  system: own careers page
+- name: Eruditus
+  careers: https://eruditus.com
+  system: careers page not found
+- name: Even Healthcare
+  careers: https://careers.even.in/
+  system: own careers page
+- name: Exly
+  careers: https://exlyapp.com
+  system: careers page not found
+- name: Exotel
+  careers: https://exotel.com/about-us/careers/
+  system: own careers page
+- name: FarEye
+  careers: https://fareye.com/about/careers
+  system: own careers page
+- name: Fibe
+  careers: https://www.fibe.in/careers/
+  system: own careers page
+- name: Flipkart
+  careers: https://www.flipkartcareers.com/index
+  system: TurboHire
+- name: Fyers
+  careers: https://recruit.fyers.in/jobs/Careers
+  system: Zoho Recruit
+- name: Fyle
+  careers: https://www.fylehq.com:443/company/team/join
+  system: own careers page
+- name: Games24x7
+  careers: https://games24x7.com
+  system: careers page not found
+- name: Gameskraft
+  careers: https://gameskraft.com
+  system: careers page not found
+- name: GeeksforGeeks
+  careers: https://geeksforgeeks.zohorecruit.in/careers
+  system: Zoho Recruit
+- name: GetVantage
+  careers: https://getvantage.co/jobs
+  system: own careers page
+- name: Giottus
+  careers: https://giottus.com
+  system: careers page not found
+- name: Gnani.ai
+  careers: https://www.gnani.ai/careers
+  system: own careers page
+- name: Graphy
+  careers: https://graphy.com
+  system: careers page not found
+- name: GreyOrange
+  careers: https://www.greyorange.com/company/careers/
+  system: own careers page
+- name: Grip Invest
+  careers: https://gripinvest.in
+  system: careers page not found
+- name: Gumlet
+  careers: https://www.gumlet.com/careers/
+  system: own careers page
+- name: Gupshup
+  careers: https://www.gupshup.ai:443/careers
+  system: own careers page
+- name: HackerEarth
+  careers: https://www.hackerearth.com:443/careers
+  system: own careers page
+- name: Happay
+  careers: https://happay.com/careers/
+  system: own careers page
+- name: Hasura
+  careers: https://promptql.io/careers
+  system: own careers page
+- name: HealthifyMe
+  careers: https://www.healthifyme.com:443/careers/
+  system: Darwinbox
+- name: HyperVerge
+  careers: https://hyperverge.co/careers/
+  system: own careers page
+- name: IDfy
+  careers: https://www.idfy.com:443/careers/
+  system: TurboHire
+- name: ImageKit
+  careers: https://imagekit.io
+  system: careers page not found
+- name: InCred
+  careers: https://incred.com/careers
+  system: own careers page
+- name: Increff
+  careers: https://www.increff.com/careers
+  system: Zoho Recruit
+- name: INDmoney
+  careers: https://www.indmoney.com:443/careers
+  system: own careers page
+- name: Info Edge
+  careers: https://infoedge.in
+  system: careers page not found
+- name: Infra.Market
+  careers: https://infra.market/careers/
+  system: own careers page
+- name: Innovaccer
+  careers: https://innovaccer.com/careers
+  system: own careers page
+- name: Inshorts
+  careers: https://inshorts.zohorecruit.com/careers
+  system: Zoho Recruit
+- name: Instahyre
+  careers: https://www.instahyre.com/search-jobs/
+  system: own careers page
+- name: Instamojo
+  careers: https://recruiterflow.com/instamojo/jobs
+  system: own careers page
+- name: InsuranceDekho
+  careers: https://insurancedekho.com
+  system: careers page not found
+- name: Internshala
+  careers: https://internshala.com/careers/
+  system: own careers page
+- name: Jar
+  careers: https://www.myjar.app/careers
+  system: own careers page
+- name: Jiraaf
+  careers: https://jiraaf.com
+  system: careers page not found
+- name: Jumbotail
+  careers: https://jumbotail.com/careers/
+  system: own careers page
+- name: Junio
+  careers: https://junio.in
+  system: careers page not found
+- name: Juspay
+  careers: https://juspay.io/careers
+  system: own careers page
+- name: Kaleyra
+  careers: https://jobs.tatacommunications.com/home
+  system: own careers page
+- name: Kapture CX
+  careers: https://kapturecx.com
+  system: careers page not found
+- name: Karbon Card
+  careers: https://karboncard.com
+  system: careers page not found
+- name: Khatabook
+  careers: https://khatabook.com/hiring/
+  system: TurboHire
+- name: Kissht
+  careers: https://kissht.com
+  system: careers page not found
+- name: Klub
+  careers: https://klub.ai/careers
+  system: own careers page
+- name: Knowlarity
+  careers: https://www.knowlarity.com/careers
+  system: own careers page
+- name: KreditBee
+  careers: https://www.kreditbee.in/careers
+  system: Darwinbox
+- name: Kuvera
+  careers: https://kuvera.in/careers
+  system: own careers page
+- name: Last9
+  careers: https://last9.io
+  system: careers page not found
+- name: LatentView
+  careers: https://www.latentview.com/careers-test/
+  system: Darwinbox
+- name: LeadSquared
+  careers: https://www.leadsquared.com/careers/
+  system: Darwinbox
+- name: Leap Finance
+  careers: https://leapfinance.com/careers
+  system: own careers page
+- name: LeapScholar
+  careers: https://leapscholar.com
+  system: careers page not found
+- name: Leena AI
+  careers: https://leena.ai/careers
+  system: own careers page
+- name: Lenskart
+  careers: https://ainterviews.com/job_board/lenskart_ho/
+  system: own careers page
+- name: Livspace
+  careers: https://www.livspace.com/in/careers
+  system: own careers page
+- name: Locus
+  careers: https://locus.sh/careers/
+  system: Darwinbox
+- name: M2P Fintech
+  careers: https://careers.m2pfintech.com
+  system: own careers page
+- name: Mad Street Den
+  careers: https://madstreetden.com/careers/
+  system: Darwinbox
+- name: MakeMyTrip
+  careers: https://careers.makemytrip.com/
+  system: own careers page
+- name: Masai School
+  careers: https://masaischool.com
+  system: careers page not found
+- name: Media.net
+  careers: https://careers.media.net/
+  system: own careers page
+- name: MediBuddy
+  careers: https://www.medibuddy.in/jobs
+  system: own careers page
+- name: Mfine
+  careers: https://mfine.co
+  system: careers page not found
+- name: Middleware
+  careers: https://middleware.io/careers/
+  system: own careers page
+- name: MobiKwik
+  careers: https://www.mobikwik.com:443/careers
+  system: Darwinbox
+- name: Moglix
+  careers: https://moglix.com
+  system: careers page not found
+- name: Moneyview
+  careers: https://moneyview.in/careers
+  system: Darwinbox
+- name: MPL
+  careers: https://mpl.live
+  system: careers page not found
+- name: Mudrex
+  careers: https://mudrex.com
+  system: careers page not found
+- name: Murf
+  careers: https://murf.ai
+  system: careers page not found
+- name: Myntra
+  careers: https://careers.myntra.com/
+  system: own careers page
+- name: Navi
+  careers: https://navi.com
+  system: careers page not found
+- name: Nazara
+  careers: https://nazara.com
+  system: careers page not found
+- name: Netcore
+  careers: https://netcorecloud.com
+  system: careers page not found
+- name: Northern Arc
+  careers: https://northernarc.com
+  system: careers page not found
+- name: Nykaa
+  careers: https://careers.nykaa.com/
+  system: own careers page
+- name: OfBusiness
+  careers: https://www.ofbcareers.com/
+  system: own careers page
+- name: OkCredit
+  careers: https://okcredit.in
+  system: careers page not found
+- name: Ola
+  careers: https://olacabs.com/careers
+  system: TurboHire
+- name: Ola Electric
+  careers: https://olaelectric.com
+  system: careers page not found
+- name: OneCard
+  careers: https://getonecard.app
+  system: careers page not found
+- name: Onsurity
+  careers: https://www.onsurity.com/careers
+  system: own careers page
+- name: OYO
+  careers: https://oyorooms.com
+  system: careers page not found
+- name: Ozonetel
+  careers: https://ozonetel.com/careers/
+  system: own careers page
+- name: Park+
+  careers: https://parkplus.io/careers
+  system: own careers page
+- name: PayGlocal
+  careers: https://payglocal.in/careers
+  system: own careers page
+- name: PayU
+  careers: https://careers.payu.in/PayU/go/_/514880/
+  system: own careers page
+- name: Pepperfry
+  careers: https://pepperfry.com
+  system: careers page not found
+- name: Perfios
+  careers: https://perfios.ai/careers/
+  system: Darwinbox
+- name: PharmEasy
+  careers: https://pharmeasy.in/careers/
+  system: Darwinbox
+- name: Physics Wallah
+  careers: https://pw.live
+  system: Darwinbox
+- name: Pine Labs
+  careers: https://www.pinelabs.com/careers
+  system: own careers page
+- name: Pixxel
+  careers: https://www.pixxel.space/careers
+  system: Darwinbox
+- name: Plivo
+  careers: https://www.plivo.com/jobs/
+  system: own careers page
+- name: Policybazaar
+  careers: https://www.policybazaar.com/careers/
+  system: own careers page
+- name: Polygon
+  careers: https://polygon.technology/careers
+  system: own careers page
+- name: Porter
+  careers: https://porter.in
+  system: careers page not found
+- name: Practo
+  careers: https://practo.app.param.ai/jobs/
+  system: own careers page
+- name: Pratilipi
+  careers: https://www.pratilipi.com/careers?redirect=ecs&host=pratilipi.com
+  system: own careers page
+- name: Pristyn Care
+  careers: https://pristyncare.com
+  system: careers page not found
+- name: Qure.ai
+  careers: https://careers.qure.ai/
+  system: own careers page
+- name: Rapido
+  careers: https://rapido.bike
+  system: careers page not found
+- name: Recur Club
+  careers: https://www.recurclub.com/careers
+  system: own careers page
+- name: Reverie
+  careers: https://reverieinc.com
+  system: careers page not found
+- name: Route Mobile
+  careers: https://jobs.proximus.com/be/en/proximus-global
+  system: Phenom
+- name: Rupeek
+  careers: https://rupeek.com
+  system: careers page not found
+- name: Scripbox
+  careers: https://scripbox.com
+  system: careers page not found
+- name: Sensibull
+  careers: https://sensibull.com
+  system: careers page not found
+- name: Setu
+  careers: https://setu.co/careers
+  system: TurboHire
+- name: Shaadi.com
+  careers: https://shaadi.com
+  system: careers page not found
+- name: Shadowfax
+  careers: https://shadowfax.in/careers
+  system: own careers page
+- name: ShareChat
+  careers: https://sharechat.com/careers
+  system: own careers page
+- name: Shiprocket
+  careers: https://careers.shiprocket.in/
+  system: own careers page
+- name: Simpl
+  careers: https://getsimpl.com
+  system: careers page not found
+- name: Skyroot
+  careers: https://www.skyroot.in/careers
+  system: Zoho Recruit
+- name: smallcase
+  careers: https://app.pyjamahr.com/careers?company=smallcase&company_uuid=2615584222
+  system: own careers page
+- name: Spinny
+  careers: https://www.spinny.com/careers/
+  system: Darwinbox
+- name: Sprinto
+  careers: https://sprinto.com
+  system: careers page not found
+- name: Spyne
+  careers: https://careers.spyne.ai:443/jobs
+  system: own careers page
+- name: Stable Money
+  careers: https://stablemoney.in
+  system: careers page not found
+- name: Stanza Living
+  careers: https://www.stanzaliving.com:443/careers
+  system: own careers page
+- name: Tata 1mg
+  careers: https://www.1mg.com/jobs
+  system: Darwinbox
+- name: Testbook
+  careers: https://testbook.com/careers
+  system: own careers page
+- name: Tiger Analytics
+  careers: https://www.tigeranalytics.com/about-us/current-openings/
+  system: Workable
+- name: ToolJet
+  careers: https://wellfound.com/company/tooljet/jobs
+  system: own careers page
+- name: Toplyne
+  careers: https://toplyne.io
+  system: careers page not found
+- name: Tredence
+  careers: https://www.tredence.com/careers/greatest-of-ai
+  system: own careers page
+- name: Typeset
+  careers: https://typeset.io
+  system: careers page not found
+- name: Udaan
+  careers: https://udaan.com/jobs
+  system: own careers page
+- name: Ultrahuman
+  careers: https://ultrahuman.com
+  system: Zoho Recruit
+- name: Uni
+  careers: https://uni.club
+  system: careers page not found
+- name: Unstop
+  careers: https://unstop.com/careers
+  system: own careers page
+- name: upGrad
+  careers: https://upgrad.com
+  system: careers page not found
+- name: Urban Company
+  careers: https://careers.urbancompany.com/
+  system: own careers page
+- name: Urban Ladder
+  careers: https://www.urbanladder.com/c/careers
+  system: own careers page
+- name: Vahan
+  careers: https://www.vahan.ai:443/careers/
+  system: own careers page
+- name: Vedantu
+  careers: https://courses.vedantu.com/career-page/
+  system: own careers page
+- name: Vivriti
+  careers: https://vivriti.com
+  system: careers page not found
+- name: Vymo
+  careers: https://getvymo.com
+  system: careers page not found
+- name: Wint Wealth
+  careers: https://wintwealth.com
+  system: careers page not found
+- name: WinZO
+  careers: https://winzogames.com
+  system: careers page not found
+- name: Xflow
+  careers: https://www.xflowpay.com/careers
+  system: own careers page
+- name: Yellow.ai
+  careers: https://yellow.ai/career/
+  system: own careers page
+- name: Yotta
+  careers: https://yotta.com/careers/
+  system: Darwinbox
+- name: Yubi
+  careers: https://go-yubi.com/careers
+  system: Zoho Recruit
+- name: Yulu
+  careers: https://www.yulu.bike/careers
+  system: own careers page
+- name: Zaggle
+  careers: https://www.zaggle.in:443/careers
+  system: own careers page
+- name: Zenduty
+  careers: https://zenduty.com
+  system: careers page not found
+- name: Zepto
+  careers: https://zeptonow.com
+  system: careers page not found
+- name: Zerodha
+  careers: https://careers.zerodha.com
+  system: own careers page
+- name: Zoho
+  careers: https://www.zoho.com/careers/
+  system: Zoho Recruit
+- name: Zolo
+  careers: https://zolostays.com/careers
+  system: own careers page
+- name: Zomato
+  careers: https://www.eternal.com/careers/
+  system: own careers page
+- name: Zoomcar
+  careers: https://www.zoomcar.com/careers
+  system: own careers page
+- name: Zupee
+  careers: https://zupee.com
+  system: careers page not found

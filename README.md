@@ -84,6 +84,22 @@ Workday boards are read one at a time, slowly, because Workday rate-limits GitHu
 servers. A rate-limited board shows "Rate limited, retrying" under Board health and is
 not reported as broken. Other boards alert you only after failing 3 runs in a row.
 
+## Indian startups directory
+
+The dashboard's **Indian startups** section lists about 300 Indian product startups:
+
+- **Tracked** (about 100): their careers sites are read on every run. Besides your job
+  list, the radar records every fresher-level software role they list in India (SDE-1,
+  new grad, associate software engineer, 0-1 years, trainee) and every internship, in
+  `data/companies.json`. "Fresher roles seen" is that record, so you can see which
+  startups actually hire CSE graduates, and it grows with every run.
+- **Check manually** (about 200): startups whose careers sites can't be read
+  automatically (Darwinbox, Zoho Recruit, TurboHire, or their own page). Each has a link.
+
+Filters: *Hiring freshers now*, *Has listed fresher roles*, *Tracked automatically*,
+*Check manually*. Startups are listed in `startups.yaml`; add a tracked one with
+`python -m radar add <careers-url> --name X`, then add its name under `tracked:`.
+
 ## Jobs from any company (Jooble)
 
 Besides the company boards, Job Radar can search **Jooble**, a job-search engine that
