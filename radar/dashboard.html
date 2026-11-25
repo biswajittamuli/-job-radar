@@ -223,6 +223,7 @@
           <a class="t" href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a>
           <div class="meta" style="margin-top:4px"><span>📍 ${esc(j.location)}</span>
             ${j.years!=null?`<span>${j.years}+ yrs asked</span>`:''}
+            ${j.source?`<span title="Found through ${esc(j.source)}, not the company's own careers site">via ${esc(j.source)}</span>`:''}
             <span class="tags">${j.skills.map(s=>`<span class="tag">${esc(SKILL_LABEL[s]||s)}</span>`).join('')}</span></div>
         </div>
         <div class="side">

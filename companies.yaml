@@ -5,7 +5,7 @@
 # tracking system) API, so there's no HTML scraping and no AI browsing.
 #
 #   ats: greenhouse | lever | ashby | smartrecruiters | workday | amazon | microsoft | eightfold |
-#        google | oracle_hcm | keka | kula | uber | atlassian | successfactors | capgemini
+#        google | oracle_hcm | keka | kula | uber | atlassian | successfactors | capgemini | jooble
 #   slug: the board id (for greenhouse/lever/ashby/smartrecruiters)
 #
 # Don't know a company's ATS?  Run:
@@ -244,3 +244,25 @@ companies:
     tenant: adobe
     site: external_experienced
     search: India
+
+  # ── Job-search aggregator: jobs from any company (needs the JOOBLE_KEY secret) ──
+  # Runs after every company board above; a job already found on a company's own board
+  # is skipped. Skipped entirely when the secret isn't set.
+  - name: Jooble
+    ats: jooble
+    host: jooble.org        # if the run log shows a 403/404 for Jooble, try: in.jooble.org
+    location: India
+    pages_per_query: 2
+    queries:
+      - software engineer fresher
+      - software developer fresher
+      - backend developer fresher
+      - full stack developer fresher
+      - frontend developer fresher
+      - SDE 1
+      - associate software engineer
+      - graduate engineer trainee
+      - software engineer 0-1 years
+      - python developer fresher
+      - java developer fresher
+      - data engineer fresher

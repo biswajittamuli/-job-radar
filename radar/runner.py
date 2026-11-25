@@ -9,7 +9,7 @@ import yaml
 
 from . import notify, render
 from .classify import classify
-from .http import BoardNotFound, Http, RateLimited
+from .http import BoardNotFound, Http, RateLimited, SourceDisabled
 from .models import Job, newest_first
 from .sources import ADAPTERS
 from .store import Store, now_iso
@@ -87,41 +87,66 @@ def run(*, root: Path = ROOT, http=None, only: str | None = None, do_notify: boo
     newly_broken: list[str] = []
     fetched_total = 0
 
-    with ThreadPoolExecutor(max_workers=workers) as pool:
-        futures = [pool.submit(fetch_one, c, http) for c in companies]
-        for fut in as_completed(futures):
-            c, raw, err = fut.result()
-            name = c["name"]
-            if err is not None:
-                kind = ("not_found" if isinstance(err, BoardNotFound)
-                        else "rate_limited" if isinstance(err, RateLimited) else "error")
-                store.record_health(name, c["ats"], ts, ok=False, error=str(err), kind=kind)
-                # Alert once, and only when it's persistently broken: a single timeout or a
-                # Workday rate limit fixes itself by the next run.
-                if kind != "rate_limited" and store.health[name]["failures"] == ALERT_AFTER_FAILURES:
-                    newly_broken.append(name)
-                if verbose:
-                    print(f"  ✗ {name:<14} {kind}: {str(err)[:90]}")
-                continue
+    def is_aggregator(c):
+        return getattr(ADAPTERS[c["ats"]], "AGGREGATOR", False)
 
-            matched, same = [], set()
-            for r, v, jid in enrich_and_classify(c, raw, cfg, store, http, ts, verbose):
-                # big companies often post one role several times (one per team/requisition)
-                key = (r.title.strip().lower(), v.location.lower())
-                if key in same:
-                    continue
-                same.add(key)
-                matched.append(Job(
-                    id=jid, company=name,
-                    title=r.title, url=r.url, location=v.location, level=v.level,
-                    skills=v.skills, score=v.score, posted_at=r.posted_at,
-                    first_seen=ts, last_seen=ts, years=v.years, remote=v.remote))
-            new = store.sync_company(name, matched, ts)
-            all_new.extend(new)
-            fetched_total += len(raw)
-            store.record_health(name, c["ats"], ts, ok=True, fetched=len(raw), matched=len(matched))
+    def handle(c, raw, err):
+        nonlocal fetched_total
+        name = c["name"]
+        if isinstance(err, SourceDisabled):
             if verbose:
-                print(f"  ✓ {name:<14} {len(raw):>4} jobs → {len(matched):>3} match, {len(new):>3} new")
+                print(f"  - {name:<14} skipped: {err}")
+            return
+        if err is not None:
+            kind = ("not_found" if isinstance(err, BoardNotFound)
+                    else "rate_limited" if isinstance(err, RateLimited) else "error")
+            store.record_health(name, c["ats"], ts, ok=False, error=str(err), kind=kind)
+            # Alert once, and only when it's persistently broken: a single timeout or a
+            # Workday rate limit fixes itself by the next run.
+            if kind != "rate_limited" and store.health[name]["failures"] == ALERT_AFTER_FAILURES:
+                newly_broken.append(name)
+            if verbose:
+                print(f"  ✗ {name:<14} {kind}: {str(err)[:90]}")
+            return
+
+        agg = is_aggregator(c)
+        # an aggregator often lists jobs we already have from the company's own board
+        known = ({(d["company"].strip().lower(), d["title"].strip().lower())
+                  for d in store.jobs.values() if d["status"] == "open" and (d.get("source") or d["company"]) != name}
+                 if agg else set())
+        matched, same = [], set()
+        for r, v, jid in enrich_and_classify(c, raw, cfg, store, http, ts, verbose):
+            employer = (r.company or name) if agg else name
+            if agg and not r.company:
+                continue           # an aggregator job without an employer isn't useful
+            if (employer.lower(), r.title.strip().lower()) in known:
+                continue
+            # big companies often post one role several times (one per team/requisition)
+            key = (employer.lower(), r.title.strip().lower(), v.location.lower())
+            if key in same:
+                continue
+            same.add(key)
+            matched.append(Job(
+                id=jid, company=employer,
+                title=r.title, url=r.url, location=v.location, level=v.level,
+                skills=v.skills, score=v.score, posted_at=r.posted_at,
+                first_seen=ts, last_seen=ts, years=v.years, remote=v.remote,
+                source=name if agg else ""))
+        new = store.sync_company(name, matched, ts)
+        all_new.extend(new)
+        fetched_total += len(raw)
+        store.record_health(name, c["ats"], ts, ok=True, fetched=len(raw), matched=len(matched))
+        if verbose:
+            print(f"  ✓ {name:<14} {len(raw):>4} jobs → {len(matched):>3} match, {len(new):>3} new")
+
+    boards = [c for c in companies if not is_aggregator(c)]
+    aggregators = [c for c in companies if is_aggregator(c)]
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for fut in as_completed([pool.submit(fetch_one, c, http) for c in boards]):
+            handle(*fut.result())
+    # after every company board, so their jobs can be recognised and skipped
+    for c in aggregators:
+        handle(*fetch_one(c, http))
 
     store.prune(cfg.get("keep_closed_days", 21))
     store.prune_details(days=30)

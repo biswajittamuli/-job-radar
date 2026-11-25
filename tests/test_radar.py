@@ -606,7 +606,8 @@ def test_workflow_runs_four_times_a_day_and_survives_overlapping_runs():
     cron = wf[True]["schedule"][0]["cron"] if True in wf else wf["on"]["schedule"][0]["cron"]
     assert len(cron.split()[1].split(",")) == 4
     save = next(s for s in wf["jobs"]["scan"]["steps"] if s.get("name") == "Save results")["run"]
-    assert "pull --rebase" in save
+    # results are copied aside and re-applied on the latest commit: no rebase conflicts
+    assert "reset -q --hard" in save and "cp -r \"$out\"/data" in save and "rebase" not in save
 
 
 # ── role relevance: software development only ───────────────────────────────
@@ -840,3 +841,73 @@ def test_entry_title_beats_wrong_job_board_tag():
     j.title = "Software Engineer - React Native"
     j.level_hint = "mid_senior_level"
     assert "senior level per job board" in classify(j, CFG).reason
+
+
+# ── Jooble aggregator ────────────────────────────────────────────────────────
+from radar.http import SourceDisabled
+from radar.sources import jooble
+
+JOOBLE = {"totalCount": 2, "jobs": [
+    {"id": 111, "title": "Software Engineer - Fresher", "company": "Tiny Startup Pvt Ltd", "location": "Pune",
+     "snippet": "Freshers welcome. 0-1 years. Java, Spring Boot", "updated": ago(2) + "T00:00:00.0000000",
+     "link": "https://jooble.org/desc/111"},
+    {"id": 222, "title": "Software Engineer I", "company": "Acme", "location": "Bengaluru, India",
+     "snippet": "0-1 years", "updated": ago(1) + "T00:00:00.0000000", "link": "https://jooble.org/desc/222"}]}
+
+
+def test_jooble_parse():
+    j = jooble.parse(JOOBLE, {})[0]
+    assert j.company == "Tiny Startup Pvt Ltd" and j.locations == ["Pune, India"] and j.posted_at == ago(2)
+    assert classify(j, CFG).level == "entry"
+
+
+def test_jooble_skipped_without_key(monkeypatch):
+    monkeypatch.delenv("JOOBLE_KEY", raising=False)
+    with pytest.raises(SourceDisabled):
+        jooble.fetch({}, None)
+
+
+def test_jooble_error_never_contains_the_key(monkeypatch):
+    monkeypatch.setenv("JOOBLE_KEY", "secret-key-123")
+
+    class H:
+        def post_json(self, url, body, headers=None):
+            raise RuntimeError(f"HTTP 403 at {url}")
+    with pytest.raises(RuntimeError) as e:
+        jooble.fetch({"queries": ["x"]}, H())
+    assert "secret-key-123" not in str(e.value) and "***" in str(e.value)
+
+
+def test_jooble_runs_after_boards_and_skips_known_jobs(repo, monkeypatch):
+    monkeypatch.setenv("JOOBLE_KEY", "k")
+    (repo / "companies.yaml").write_text(yaml.safe_dump({"companies": [
+        {"name": "Jooble", "ats": "jooble", "queries": ["software engineer fresher"], "pages_per_query": 1},
+        {"name": "Acme", "ats": "greenhouse", "slug": "acme"}]}))   # aggregator listed first on purpose
+
+    class H(FakeHttp):
+        def post_json(self, url, body, headers=None):
+            assert url == "https://jooble.org/api/k"
+            return JOOBLE
+    r = run(root=repo, http=H({"boards/acme": GH}), do_notify=False, verbose=False)
+    by = {(j.company, j.title): j for j in r["new"]}
+    assert ("Acme", "Software Engineer I") in by and by[("Acme", "Software Engineer I")].source == ""   # from Acme's own board
+    assert by[("Tiny Startup Pvt Ltd", "Software Engineer - Fresher")].source == "Jooble"
+    assert len([k for k in by if k[1] == "Software Engineer I"]) == 1                                   # not repeated via Jooble
+
+    # a second run that no longer lists the startup job closes it (by source, not company)
+    monkeypatch.setattr(jooble, "parse", lambda data, c: [])
+    run(root=repo, http=H({"boards/acme": GH}), do_notify=False, verbose=False)
+    jobs = json.loads((repo / "data/jobs.json").read_text())
+    tiny = [j for j in jobs.values() if j["company"] == "Tiny Startup Pvt Ltd"]
+    assert tiny and tiny[0]["status"] == "closed"
+
+
+def test_runner_skips_disabled_source_quietly(repo, monkeypatch):
+    monkeypatch.delenv("JOOBLE_KEY", raising=False)
+    (repo / "companies.yaml").write_text(yaml.safe_dump({"companies": [{"name": "Jooble", "ats": "jooble"}]}))
+    r = run(root=repo, http=FakeHttp({}), do_notify=False, verbose=False)
+    assert r["failing"] == [] and "Jooble" not in json.loads((repo / "data/health.json").read_text())
+
+
+def test_workflow_passes_jooble_secret():
+    assert "JOOBLE_KEY:         ${{ secrets.JOOBLE_KEY }}" in (ROOT / ".github/workflows/radar.yml").read_text()

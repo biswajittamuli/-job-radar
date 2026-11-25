@@ -11,6 +11,11 @@ class BoardNotFound(Exception):
     """The board id/slug is wrong or the company moved ATS."""
 
 
+class SourceDisabled(Exception):
+    """A source that can't run in this environment (e.g. its API key secret isn't set).
+    Skipped quietly: not a broken board."""
+
+
 class RateLimited(RuntimeError):
     """The server kept answering HTTP 429. Not a broken board: it usually works next run."""
 
