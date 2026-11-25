@@ -2,7 +2,7 @@
 
 Tracks company career pages for **fresher-friendly CSE roles in India and remote**, sorts
 them by skill (Backend, AI/ML, DevOps/Cloud, Data, …), and pings you on Telegram when
-something new opens up. It runs free on GitHub Actions twice a day, and the dashboard
+something new opens up. It runs free on GitHub Actions four times a day, and the dashboard
 is hosted on GitHub Pages.
 
 ## Why this works where "AI reads the careers page" doesn't
@@ -46,13 +46,27 @@ public JSON API that the page itself calls. Job Radar reads those APIs directly:
      locally). It sends a test message, or fails with Telegram's exact error. Paste secrets
      without a trailing newline; Job Radar strips one now, but it used to cause a 404.
 5. **First run.** Go to Actions → *Job Radar* → **Run workflow**. Once it finishes, open the
-   dashboard. After that it runs by itself at **07:05 and 15:05 IST**.
+   dashboard. After that it runs by itself at **07:05, 11:05, 15:05 and 19:05 IST**
+   (change the `cron` line in `.github/workflows/radar.yml`).
 
 > The first run treats every matching job as "new", so you'll get one long message.
 > `notify.max_items` in `config.yaml` caps it at 40.
 
 **Email instead of / as well as Telegram:** add `SMTP_HOST=smtp.gmail.com`, `SMTP_PORT=587`,
 `SMTP_USER=<you>@gmail.com`, `SMTP_PASS=<Gmail app password>` and `EMAIL_TO` as secrets.
+
+## Which companies are tracked
+
+`companies.yaml` has about 100 boards: Indian startups and product companies (Swiggy,
+Paytm, Meesho, Freshworks, Zeta, Groww, InMobi, Tekion …), and global companies and
+GCCs with India engineering teams (Stripe, Okta, Zscaler, PayPal, Salesforce, Amazon …).
+Every entry was checked against the live job board. Companies that run their own careers
+site (Google, Microsoft, Flipkart, Razorpay, PhonePe, Atlassian, Uber, most banks and
+service companies) need a custom adapter; see below.
+
+Workday boards are read one at a time, slowly, because Workday rate-limits GitHub's
+servers. A rate-limited board shows "Rate limited, retrying" under Board health and is
+not reported as broken. Other boards alert you only after failing 3 runs in a row.
 
 ## Adding companies
 
@@ -73,11 +87,14 @@ Network → Fetch/XHR, and you'll usually find a JSON endpoint to copy.
 
 ## Tuning what counts as "for me" (`config.yaml`)
 
-- `level.mode: entry` shows only roles with an explicit fresher signal (new grad, SDE-1,
-  Associate, Trainee, "0–1 years"). `open` (the default) also includes tech roles with no
-  stated level and no senior signal. That's more noise, but it catches startups that
-  don't label levels.
-- `level.max_years: 2` drops a job if its description asks for more than 2 years.
+- `level.mode: entry` (the default) is **strict fresher**: a job needs a fresher signal in
+  its title (new grad, SDE-1, Associate, Trainee, "2026 batch") or its **description**
+  ("freshers", "0–1 years", "entry level", "recent graduates", "1+ years"). The full
+  description is read for every board, including Workday and SmartRecruiters, whose
+  lists don't include it (it's fetched once per job and cached in `data/details.json`).
+  `open` also lets in tech roles that state no level at all. That's more noise.
+- `level.max_years: 1` drops a job if its description asks for more than 1 year.
+- `exclude_titles: [scientist, …]` skips titles containing those words.
 - `freshness.max_posted_age_days: 14` drops jobs posted more than 14 days ago. Jobs whose
   board gives no posting date are kept. Workday's "Posted 30+ Days Ago" counts as 30.
 - `notify.skills: [backend, ai_ml]` limits alerts to those buckets. The dashboard

@@ -11,6 +11,10 @@ class BoardNotFound(Exception):
     """The board id/slug is wrong or the company moved ATS."""
 
 
+class RateLimited(RuntimeError):
+    """The server kept answering HTTP 429. Not a broken board: it usually works next run."""
+
+
 class Http:
     def __init__(self, timeout: int = 25, retries: int = 4):
         self.s = requests.Session()
@@ -26,7 +30,7 @@ class Http:
                 if r.status_code == 404:
                     raise BoardNotFound(f"404 at {url}")
                 if r.status_code in (429, 500, 502, 503, 504):
-                    last = RuntimeError(f"HTTP {r.status_code} at {url}")
+                    last = (RateLimited if r.status_code == 429 else RuntimeError)(f"HTTP {r.status_code} at {url}")
                     if attempt + 1 < self.retries:
                         time.sleep(self._backoff(r, attempt))
                     continue
@@ -48,11 +52,11 @@ class Http:
             return min(int(ra), 60)
         return (5 if r.status_code == 429 else 2) * 2 ** attempt
 
-    def get_json(self, url: str, **params):
-        return self._req("GET", url, params=params or None).json()
+    def get_json(self, url: str, headers: dict | None = None, **params):
+        return self._req("GET", url, params=params or None, headers=headers).json()
 
-    def post_json(self, url: str, body: dict):
-        return self._req("POST", url, json=body).json()
+    def post_json(self, url: str, body: dict, headers: dict | None = None):
+        return self._req("POST", url, json=body, headers=headers).json()
 
     def get_text(self, url: str) -> str:
         r = self._req("GET", url, headers={"Accept": "text/html,*/*"})

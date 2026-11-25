@@ -21,6 +21,8 @@ class Store:
         self.jobs: dict[str, dict] = self._load("jobs.json", {})
         self.health: dict[str, dict] = self._load("health.json", {})
         self.runs: list[dict] = self._load("runs.json", [])
+        # full descriptions fetched for boards whose list API omits them (Workday, SmartRecruiters)
+        self.details: dict[str, dict] = self._load("details.json", {})
 
     def _load(self, name, default):
         p = self.dir / name
@@ -33,7 +35,7 @@ class Store:
 
     def save(self):
         for name, obj in (("jobs.json", self.jobs), ("health.json", self.health),
-                          ("runs.json", self.runs[-90:])):
+                          ("runs.json", self.runs[-90:]), ("details.json", self.details)):
             (self.dir / name).write_text(json.dumps(obj, indent=1, sort_keys=True, ensure_ascii=False))
 
     # ── jobs ─────────────────────────────────────────────────────────────────
@@ -66,6 +68,11 @@ class Store:
             k: v for k, v in self.jobs.items()
             if v["status"] == "open" or datetime.fromisoformat(v["closed_at"]) > cutoff
         }
+
+    def prune_details(self, days: int):
+        cutoff = datetime.now(timezone.utc) - timedelta(days=days)
+        self.details = {k: v for k, v in self.details.items()
+                        if datetime.fromisoformat(v.get("seen", "1970-01-01T00:00:00+00:00")) > cutoff}
 
     # ── health ───────────────────────────────────────────────────────────────
     def record_health(self, company: str, ats: str, ts: str, *, ok: bool, fetched=0,

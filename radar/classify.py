@@ -40,12 +40,24 @@ ENTRY = re.compile(
     r"\b(engineer|developer|sde|scientist|analyst)\s*[-,]?\s*(i|1)\b|\bsde[- ]?(i|1)\b|"
     r"\b202[5-7]\b|\bmts[- ]?1\b|0\s*[-–to]+\s*[12]\s*(years|yrs)", re.I)
 
+# Fresher signals that only count when found in the job description (title signals are in ENTRY).
+# Kept narrow on purpose: "university" or "graduate degree" appear in almost every posting.
+DESC_ENTRY = re.compile(
+    r"\bfreshers?\b|new[- ]grad(uate)?s?\b|recent(ly)? (college |university )?graduat|entry[- ]level|"
+    r"early[- ]career|campus (hire|hiring|recruit|placement)|graduating (in|by|class)|"
+    r"\b(class|batch) of 202[4-7]\b|\b202[4-7] (batch|graduates?|pass[- ]?outs?)\b|"
+    r"\b0\s*(?:-|–|to)\s*[12]\s*(?:years|yrs)\b|no (prior )?(professional |work )?experience (is )?required", re.I)
+
+# SmartRecruiters (and some other ATSes) state the level explicitly
+ATS_SENIOR_LEVELS = {"mid_senior_level", "director", "executive", "senior"}
+ATS_ENTRY_LEVELS = {"entry_level", "internship", "associate"}
+
 INTERN = re.compile(r"\bintern(ship)?s?\b|co-?op\b", re.I)
 
 # "3+ years of experience", "2-4 years of relevant experience", "minimum 5 years"
 YEARS = [
     re.compile(r"(\d{1,2})\s*(?:\+|plus)?\s*(?:(?:-|–|to)\s*\d{1,2}\s*)?\+?\s*(?:years?|yrs?)\b"
-               r"[^.;\n]{0,80}?experience", re.I),
+               r"[^.;\n]{0,80}?\bexp(?:erience)?\b", re.I),   # "3+ yrs of programming exp" too
     re.compile(r"experience\s*(?:of|:)?\s*(?:at\s+least\s+|minimum\s+(?:of\s+)?)?"
                r"(\d{1,2})\s*(?:\+|-|–|to)?\s*\d{0,2}\s*(?:years?|yrs?)", re.I),
     re.compile(r"(?:minimum|at least)\s*(?:of\s*)?(\d{1,2})\s*\+?\s*(?:years?|yrs?)", re.I),
@@ -84,13 +96,28 @@ def _is_global_remote(loc: str) -> bool:
     return all(t.strip("()-–/") in REMOTE_OK_WORDS for t in tokens)
 
 
+# Amazon writes "IN, KA, Bengaluru"; Workday sometimes "IN-Bangalore". Case-sensitive on purpose:
+# "in, " as a plain substring also matched "Austin, TX" and "Berlin, Germany".
+_COUNTRY_CODE_IN = re.compile(r"^\s*IN\s*[,\-–]")
+_inc_cache: dict[tuple, re.Pattern] = {}
+
+
+def _include_rx(words) -> re.Pattern:
+    key = tuple(words)
+    if key not in _inc_cache:
+        # whole words only, so "india" doesn't match "Indianapolis"
+        alts = "|".join(re.escape(w.strip().lower()) for w in words if w.strip(" ,").strip())
+        _inc_cache[key] = re.compile(rf"(?<![a-z])(?:{alts})(?![a-z])", re.I)
+    return _inc_cache[key]
+
+
 def match_location(job: RawJob, cfg: dict) -> tuple[str, bool]:
     """Return (display_location, is_remote) or ("", False) if no match."""
-    inc = [k.lower() for k in cfg["location"]["include"]]
+    inc = _include_rx([k for k in cfg["location"]["include"] if k.strip(" ,").lower() != "in"])
     hits, remote_hit = [], False
     for loc in job.locations:
         l = loc.lower()
-        if any(k in l for k in inc):
+        if inc.search(l) or _COUNTRY_CODE_IN.search(loc):
             hits.append(loc)
         elif cfg["location"].get("allow_global_remote") and REMOTE.search(l) and _is_global_remote(l):
             hits.append(loc)
@@ -131,16 +158,24 @@ def posted_age_days(posted_at: str | None, today: date) -> int | None:
         return None
 
 
-def classify(job: RawJob, cfg: dict, today: date | None = None) -> Verdict:
+def classify(job: RawJob, cfg: dict, today: date | None = None, check_level: bool = True) -> Verdict:
+    """check_level=False is the cheap pre-check the runner does before fetching a job's full
+    description: it applies every title/location/date rule but skips the experience checks."""
     today = today or date.today()
     title = job.title
     if not TECH.search(title) or NON_TECH.search(title):
         return Verdict(False, "not a tech role")
 
+    for word in cfg.get("exclude_titles") or []:
+        if re.search(rf"\b{re.escape(word)}", title, re.I):
+            return Verdict(False, f"excluded title word ({word})")
+
     # "Member of Technical Staff" is an IC title at AI labs, not "staff" seniority
     title_for_level = re.sub(r"member of technical staff", "mts", title, flags=re.I)
     if SENIOR.search(title_for_level):
         return Verdict(False, f"senior title ({SENIOR.search(title_for_level).group(0)})")
+    if (job.level_hint or "").lower() in ATS_SENIOR_LEVELS:
+        return Verdict(False, f"senior level per job board ({job.level_hint})")
 
     # Old postings are usually filled already. Undated jobs are kept: first_seen covers them.
     max_age = (cfg.get("freshness") or {}).get("max_posted_age_days")
@@ -157,18 +192,24 @@ def classify(job: RawJob, cfg: dict, today: date | None = None) -> Verdict:
     if is_intern and not lvl_cfg.get("include_internships"):
         return Verdict(False, "internship (disabled in config)")
 
+    if not check_level:
+        return Verdict(True, "pre-check passed", location=loc, remote=remote)
+
     years = min_years(job.description) if job.description else None
     if years is not None and years > lvl_cfg["max_years"]:
         return Verdict(False, f"asks {years}+ years experience")
 
     if is_intern:
         level = "intern"
-    elif ENTRY.search(title_for_level) or (years is not None and years <= 1):
+    elif (ENTRY.search(title_for_level) or (years is not None and years <= 1)
+          or DESC_ENTRY.search(job.description or "")
+          or (job.level_hint or "").lower() in ATS_ENTRY_LEVELS):
         level = "entry"
     elif lvl_cfg.get("mode", "open") == "open":
         level = "open"
     else:
-        return Verdict(False, "no fresher signal (mode=entry)")
+        why = "no description available" if not job.description else "description states no fresher level or years"
+        return Verdict(False, f"no fresher signal (mode=entry; {why})")
 
     skills = tag_skills(title, job.description, cfg)
     score = _score(level, skills, title, years, remote, job.posted_at, cfg, today)

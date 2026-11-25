@@ -14,6 +14,7 @@ class RawJob:
     description: str = ""               # plain text, may be empty
     remote: bool | None = None
     team: str = ""
+    level_hint: str = ""                # the ATS's own experience level, if it states one
 
 
 @dataclass
