@@ -126,8 +126,9 @@ priority: [backend, ai_ml, devops_cloud, data]
 notify:
   # Only alert on roles in these buckets (empty list = alert on everything that matched)
   skills: []
-  # Send a message even when nothing new turned up (handy to know it's alive)
-  send_when_empty: false
+  # Send a short "no new fresher jobs" message when a run finds nothing new,
+  # so you know it ran. Set to false for alerts only when there's something new.
+  send_when_empty: true
   # Cap per message so one huge first run doesn't flood you
   max_items: 40
 
