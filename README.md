@@ -57,7 +57,7 @@ public JSON API that the page itself calls. Job Radar reads those APIs directly:
 
 ## Which companies are tracked
 
-`companies.yaml` has about 165 companies, each checked against its live careers site:
+`companies.yaml` has about 200 companies, each checked against its live careers site:
 
 - **Indian startups and product companies**: Swiggy, PhonePe, Razorpay, Paytm, Meesho,
   CRED, Groww, Zeta, Freshworks, Cashfree, MoEngage, CleverTap, Slice, Acko, Jupiter,
@@ -68,7 +68,7 @@ public JSON API that the page itself calls. Job Radar reads those APIs directly:
 - **Service companies**: Accenture, Wipro, Capgemini.
 
 Supported careers systems (`ats:` in `companies.yaml`): greenhouse, lever, ashby,
-smartrecruiters, workday, eightfold, oracle_hcm, keka, kula, successfactors, plus
+smartrecruiters, workday, eightfold, oracle_hcm, keka, kula, freshteam, successfactors, plus
 company-specific adapters for amazon, microsoft, google, uber, atlassian and capgemini.
 
 Not covered, because they have no public job API a script can read: Flipkart (TurboHire),
@@ -101,20 +101,23 @@ skipped. LinkedIn, Naukri and Indeed aren't searched: their terms forbid scrapin
 
 ## Adding companies
 
+Missing a company? Give `add` its careers page and a name:
+
 ```bash
 pip install -r requirements.txt
-python -m radar detect https://www.postman.com/company/careers/ https://razorpay.com/jobs/
-```
-`detect` finds which ATS a careers page uses and prints the block to paste into
-`companies.yaml`. Then check that it works:
-```bash
-python -m radar run --only postman --no-notify
+python -m radar add https://www.cashfree.com/careers/ --name "Cashfree"
 ```
 
-If `detect` finds nothing, the company runs its own site, as Google, Microsoft, Flipkart
-and most service companies do. Those need a custom adapter in `radar/sources/`. Use
-`amazon.py` as the example (about 50 lines): open the careers page, watch DevTools →
-Network → Fetch/XHR, and you'll usually find a JSON endpoint to copy.
+It finds which careers system the page uses (Greenhouse, Lever, Ashby, SmartRecruiters,
+Workday, Keka, Kula, Freshteam, Eightfold, Oracle Cloud or SAP SuccessFactors),
+fetches its jobs to check it works, and appends a verified entry to `companies.yaml`.
+Commit that file and the next run includes the company. If the page uses a system that
+can't be read (Darwinbox, TurboHire, Zoho Recruit, iCIMS, Phenom, Workable…), it says so.
+`python -m radar detect <url>` only prints what it finds, without adding anything.
+
+If nothing is found, the company runs its own site. That needs a custom adapter in
+`radar/sources/`. Use `amazon.py` as the example (about 50 lines): open the careers page,
+watch DevTools → Network → Fetch/XHR, and you'll usually find a JSON endpoint to copy.
 
 ## Tuning what counts as "for me" (`config.yaml`)
 

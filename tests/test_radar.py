@@ -911,3 +911,64 @@ def test_runner_skips_disabled_source_quietly(repo, monkeypatch):
 
 def test_workflow_passes_jooble_secret():
     assert "JOOBLE_KEY:         ${{ secrets.JOOBLE_KEY }}" in (ROOT / ".github/workflows/radar.yml").read_text()
+
+
+# ── Freshteam, detection of every platform, and `radar add` ─────────────────
+from radar import detect as detect_mod
+from radar.sources import freshteam
+
+
+def test_freshteam_parse_joins_branch_location():
+    data = {"branches": [{"id": 9, "city": "Chennai", "state": "Tamil Nadu", "country_code": "IN", "location": "Chennai, Tamil Nadu"}],
+            "jobs": [{"id": "1", "title": "Backend Developer (SDE 1)", "branch_id": "9", "created_at": ago(3) + "T11:44:56Z",
+                      "description": "<p>0-1 years</p>", "remote": "False", "url": "https://acme.com/careers?jobId=x"},
+                     {"id": "2", "title": "Gone", "branch_id": "9", "deleted": True}]}
+    jobs = freshteam.parse(data, {"slug": "acme"})
+    assert [j.title for j in jobs] == ["Backend Developer (SDE 1)"]
+    assert jobs[0].locations == ["Chennai, Tamil Nadu, India"] and jobs[0].posted_at == ago(3)
+    assert classify(jobs[0], CFG).level == "entry"
+
+
+@pytest.mark.parametrize("text,expected", [
+    ('<a href="https://jupiter.keka.com/careers">', {"ats": "keka", "host": "jupiter.keka.com"}),
+    ('<a href="https://careers.kula.ai/cashfree">', {"ats": "kula", "slug": "cashfree"}),
+    ('<script src="https://qualcomm.eightfold.ai/x.js">', {"ats": "eightfold", "host": "qualcomm.eightfold.ai", "domain": "qualcomm.com"}),
+    ('fetch("https://ibqbjb.fa.ocs.oraclecloud.com/hcm") /sites/CX_1/jobs', {"ats": "oracle_hcm", "host": "ibqbjb.fa.ocs.oraclecloud.com", "site": "CX_1"}),
+    ('<a href="https://ninjacart.freshteam.com/jobs">', {"ats": "freshteam", "slug": "ninjacart"}),
+    ('job-boards.greenhouse.io/razorpaysoftwareprivatelimited', {"ats": "greenhouse", "slug": "razorpaysoftwareprivatelimited"}),
+])
+def test_detect_every_platform(text, expected):
+    assert expected in detect_mod.detect_in(text)
+
+
+def test_detect_successfactors_by_page_markers():
+    hits = detect_mod.detect_in('<script src="https://hcm55.sapsf.eu/rmk-jobs-search/x.js">', "https://careers.wipro.com/search/")
+    assert {"ats": "successfactors", "host": "careers.wipro.com"}.items() <= hits[0].items()
+
+
+def test_add_company_appends_first_working_board(tmp_path):
+    f = tmp_path / "companies.yaml"
+    f.write_text("companies:\n  - { name: Old, ats: kula, slug: cashfree }\n")
+
+    class H:
+        def get_text(self, url):
+            return {"https://new.example/careers": '<a href="https://careers.kula.ai/newco">jobs</a>',
+                    "https://darwin.example/careers": '<script src="https://x.darwinbox.in/a.js">'}.get(url, "")
+
+    import radar.sources.kula as kmod
+    orig = kmod.fetch
+    kmod.fetch = lambda c, h: [RawJob("1", "SDE 1", "u", ["Bengaluru, India"])]
+    try:
+        e, log = detect_mod.add_company("https://new.example/careers", "NewCo", f, H(), "2026-11-25")
+        assert e and e["slug"] == "newco"
+        saved = yaml.safe_load(f.read_text())["companies"]
+        assert saved[-1] == {"name": "NewCo", "ats": "kula", "slug": "newco", "verified": date(2026, 11, 25)}
+        # same name again, or a board already tracked, is refused
+        assert detect_mod.add_company("https://new.example/careers", "NewCo", f, H(), "2026-11-25")[0] is None
+        e2, log2 = detect_mod.add_company("https://new.example/careers", "Other", f, H(), "2026-11-25")
+        assert e2 is None and "already tracked as NewCo" in log2[0]
+        # an unsupported careers system is named
+        e3, log3 = detect_mod.add_company("https://darwin.example/careers", "Darwin", f, H(), "2026-11-25")
+        assert e3 is None and "Darwinbox" in log3[0]
+    finally:
+        kmod.fetch = orig

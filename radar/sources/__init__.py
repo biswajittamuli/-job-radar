@@ -1,6 +1,6 @@
 """ATS adapters. Each module exposes `fetch(company: dict, http) -> list[RawJob]`
 and a pure `parse(payload, company) -> list[RawJob]` used by the tests."""
-from . import greenhouse, lever, ashby, smartrecruiters, workday, amazon, microsoft, google, oracle_hcm, keka, kula, uber, atlassian, successfactors, capgemini, jooble
+from . import greenhouse, lever, ashby, smartrecruiters, workday, amazon, microsoft, google, oracle_hcm, keka, kula, uber, atlassian, successfactors, capgemini, jooble, freshteam
 
 ADAPTERS = {
     "greenhouse": greenhouse,
@@ -19,5 +19,6 @@ ADAPTERS = {
     "atlassian": atlassian,
     "successfactors": successfactors,   # SAP SuccessFactors career sites (Wipro, HCLTech, …)
     "capgemini": capgemini,
+    "freshteam": freshteam,      # Freshteam careers widgets
     "jooble": jooble,            # job-search aggregator (needs JOOBLE_KEY)
 }
