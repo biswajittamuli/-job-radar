@@ -4,7 +4,8 @@ python -m radar run --only cred     just one company (substring match)
 python -m radar run --no-notify     don't send Telegram/email
 python -m radar check               health-check every board without saving jobs
 python -m radar detect <url> ...    find a company's ATS from its careers page
-python -m radar explain "<title>" [--loc ..] [--desc ..]   why would this job pass/fail?
+python -m radar explain "<title>" [--loc ..] [--desc ..] [--posted YYYY-MM-DD]   why would this job pass/fail?
+python -m radar test-notify         send a Telegram test message; exits 1 with Telegram's error
 """
 from __future__ import annotations
 
@@ -13,6 +14,7 @@ import sys
 
 import yaml
 
+from . import notify
 from .classify import classify
 from .detect import detect
 from .http import Http
@@ -34,6 +36,8 @@ def main(argv=None):
     e.add_argument("title")
     e.add_argument("--loc", default="Bengaluru, India")
     e.add_argument("--desc", default="")
+    e.add_argument("--posted", default=None, help="posted date, YYYY-MM-DD")
+    sub.add_parser("test-notify")
     a = p.parse_args(argv)
 
     if a.cmd == "run":
@@ -73,11 +77,20 @@ def main(argv=None):
 
     if a.cmd == "explain":
         cfg = load_yaml(ROOT / "config.yaml")
-        v = classify(RawJob("x", a.title, "", [a.loc], description=a.desc), cfg)
+        v = classify(RawJob("x", a.title, "", [a.loc], posted_at=a.posted, description=a.desc), cfg)
         print(("PASS " if v.ok else "FAIL ") + v.reason)
         if v.ok:
             print(f"  level={v.level} skills={v.skills} years={v.years} score={v.score} loc={v.location}")
         return 0
+
+    if a.cmd == "test-notify":
+        try:
+            print(f"[notify] telegram OK: {notify.send_test_message()}")
+            return 0
+        except notify.TelegramError as ex:
+            print(f"[notify] telegram failed: {ex}")
+            notify.warn("Alert failed", f"telegram: {ex}")
+            return 1
 
 
 if __name__ == "__main__":

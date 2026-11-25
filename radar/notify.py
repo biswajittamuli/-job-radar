@@ -9,18 +9,32 @@ from __future__ import annotations
 import html
 import os
 import smtplib
+from datetime import date
 from email.mime.text import MIMEText
 
 import requests
 
+from .models import newest_first
+
 LEVEL_ICON = {"entry": "🟢", "open": "🔵", "intern": "🟣"}
+
+
+def posted_label(posted_at, today=None) -> str:
+    if not posted_at:
+        return ""
+    try:
+        d = ((today or date.today()) - date.fromisoformat(posted_at[:10])).days
+    except ValueError:
+        return ""
+    return "posted today" if d <= 0 else "posted yesterday" if d == 1 else f"posted {d} days ago"
 
 
 def _lines(jobs, max_items):
     out = []
-    for j in jobs[:max_items]:
-        tags = ", ".join(j.skills)
-        out.append((j, f"{LEVEL_ICON.get(j.level, '•')} {j.company} — {j.title}", f"{j.location} · {tags}"))
+    # newest posting first, whatever order the caller passed
+    for j in sorted(jobs, key=lambda j: newest_first(j.posted_at, j.score))[:max_items]:
+        sub = " · ".join(x for x in (j.location, ", ".join(j.skills), posted_label(j.posted_at)) if x)
+        out.append((j, f"{LEVEL_ICON.get(j.level, '•')} {j.company} — {j.title}", sub))
     return out
 
 
@@ -52,28 +66,93 @@ def build_html(new_jobs, broken, dashboard_url, max_items):
     return "\n\n".join(parts)
 
 
-def telegram(new_jobs, broken, dashboard_url, max_items) -> bool:
-    token, chat = os.getenv("TELEGRAM_BOT_TOKEN"), os.getenv("TELEGRAM_CHAT_ID")
-    if not (token and chat):
-        return False
-    body = build_html(new_jobs, broken, dashboard_url, max_items)
+class TelegramError(RuntimeError):
+    """Telegram refused a request. The message is Telegram's own error text."""
+
+
+def warn(title: str, msg: str):
+    """Print a GitHub Actions warning annotation (also readable in a plain terminal)."""
+    esc = lambda x: str(x).replace("%", "%25").replace("\r", "%0D").replace("\n", "%0A")
+    print(f"::warning title={esc(title).replace(':', '%3A').replace(',', '%2C')}::{esc(msg)}", flush=True)
+
+
+def telegram_creds() -> tuple[str, str]:
+    """Read and clean the secrets. Values pasted into GitHub's secret box often end in a
+    newline; left in, it becomes '%0A' inside the API URL and Telegram answers 404."""
+    raw_token, raw_chat = os.getenv("TELEGRAM_BOT_TOKEN") or "", os.getenv("TELEGRAM_CHAT_ID") or ""
+    token, chat = raw_token.strip(), raw_chat.strip()
+    for name, raw, clean in (("TELEGRAM_BOT_TOKEN", raw_token, token), ("TELEGRAM_CHAT_ID", raw_chat, chat)):
+        if raw != clean:
+            print(f"[notify] {name} had leading/trailing whitespace or a newline; stripped it. "
+                  f"Re-save the secret without it to silence this.")
+    return token, chat
+
+
+def missing_telegram_secrets() -> list[str]:
+    return [n for n in ("TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID") if not (os.getenv(n) or "").strip()]
+
+
+def telegram_send(token: str, chat: str, text: str, parse_mode: str | None = "HTML"):
+    body = {"chat_id": chat, "text": text, "disable_web_page_preview": True}
+    if parse_mode:
+        body["parse_mode"] = parse_mode
+    try:
+        r = requests.post(f"https://api.telegram.org/bot{token}/sendMessage", timeout=20, json=body)
+    except requests.RequestException as ex:
+        # never let the URL (which contains the token) leak into logs
+        raise TelegramError(f"network error talking to Telegram: {type(ex).__name__}") from None
+    try:
+        data = r.json()
+    except ValueError:
+        data = {}
+    if r.status_code != 200 or not data.get("ok"):
+        desc = data.get("description") or r.text[:200] or r.reason
+        hint = ""
+        if r.status_code == 404:
+            hint = " (the bot token is wrong or malformed)"
+        elif r.status_code == 401:
+            hint = " (the bot token was revoked or is invalid)"
+        elif "chat not found" in str(desc).lower():
+            hint = " (check TELEGRAM_CHAT_ID, and send the bot a message first)"
+        raise TelegramError(f"Telegram API {r.status_code}: {desc}{hint}")
+    return data
+
+
+def _chunks(body: str, limit: int = 3900) -> list[str]:
     # Telegram caps messages at 4096 chars: split on item boundaries
     chunks, cur = [], ""
     for block in body.split("\n\n"):
-        if len(cur) + len(block) + 2 > 3900:
+        if cur and len(cur) + len(block) + 2 > limit:
             chunks.append(cur)
             cur = ""
         cur += block + "\n\n"
-    chunks.append(cur)
-    for c in chunks:
-        r = requests.post(f"https://api.telegram.org/bot{token}/sendMessage", timeout=20, json={
-            "chat_id": chat, "text": c, "parse_mode": "HTML", "disable_web_page_preview": True})
-        r.raise_for_status()
+    if cur.strip():
+        chunks.append(cur)
+    return chunks
+
+
+def telegram(new_jobs, broken, dashboard_url, max_items) -> bool:
+    token, chat = telegram_creds()
+    if not (token and chat):
+        return False
+    for c in _chunks(build_html(new_jobs, broken, dashboard_url, max_items)):
+        telegram_send(token, chat, c)
     return True
 
 
+def send_test_message() -> str:
+    """Send a test message. Raises TelegramError with Telegram's exact error."""
+    token, chat = telegram_creds()
+    missing = missing_telegram_secrets()
+    if missing:
+        raise TelegramError(f"secret(s) not set: {', '.join(missing)}")
+    data = telegram_send(token, chat, "🛰 Job Radar test message: Telegram alerts are working.", None)
+    c = (data.get("result") or {}).get("chat") or {}
+    return f"sent to chat {c.get('id', chat)} ({c.get('title') or c.get('username') or c.get('first_name') or 'unknown'})"
+
+
 def email(new_jobs, broken, dashboard_url, max_items) -> bool:
-    host, to = os.getenv("SMTP_HOST"), os.getenv("EMAIL_TO")
+    host, to = (os.getenv("SMTP_HOST") or "").strip(), (os.getenv("EMAIL_TO") or "").strip()
     if not (host and to):
         return False
     body = build_html(new_jobs, broken, dashboard_url, max_items).replace("\n", "<br>")
@@ -108,6 +187,11 @@ def send_all(new_jobs, broken, dashboard_url, cfg, stats):
     if wanted:
         new_jobs = [j for j in new_jobs if wanted & set(j.skills)]
     github_summary(new_jobs, broken, stats)
+    missing = missing_telegram_secrets()
+    if missing:
+        print(f"[notify] telegram disabled: secret(s) not set: {', '.join(missing)}")
+        if len(missing) == 1:   # one set, one not: almost certainly a mistake
+            warn("Alert failed", f"telegram: {missing[0]} is not set (the other Telegram secret is)")
     if not new_jobs and not ncfg.get("send_when_empty") and not broken:
         return []
     sent = []
@@ -116,5 +200,7 @@ def send_all(new_jobs, broken, dashboard_url, cfg, stats):
             if fn(new_jobs, broken, dashboard_url, ncfg.get("max_items", 40)):
                 sent.append(name)
         except Exception as ex:  # an alert failing must never kill the run
-            print(f"[notify] {name} failed: {ex}")
+            msg = str(ex) if isinstance(ex, TelegramError) else f"{type(ex).__name__}: {ex}"
+            print(f"[notify] {name} failed: {msg}")
+            warn("Alert failed", f"{name}: {msg}")
     return sent

@@ -37,3 +37,12 @@ class Job:
 
     def to_dict(self) -> dict:
         return asdict(self)
+
+
+def newest_first(posted_at: str | None, score: int) -> tuple:
+    """Sort key: newest posting date first, undated jobs after dated ones, then best score.
+    Use with sorted(..., key=...) in ascending order."""
+    d = (posted_at or "")[:10]
+    # invert the ISO date so ascending order means newest first
+    inv = tuple(-ord(ch) for ch in d)
+    return (0 if d else 1, inv, -score)

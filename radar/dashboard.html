@@ -87,8 +87,9 @@
     <div class="row">
       <input type="search" id="q" placeholder="Search title, company, location…  (try: python, ml, pune)">
       <select id="sort">
+        <option value="posted">Newest posted</option>
         <option value="score">Best match</option>
-        <option value="new">Newest first</option>
+        <option value="new">Recently seen</option>
         <option value="company">Company A–Z</option>
       </select>
     </div>
@@ -125,6 +126,11 @@
   const ago = iso => { if(!iso) return ''; const d=(now-Date.parse(iso))/DAY;
     return d<1/24?'just now':d<1?Math.round(d*24)+'h ago':d<30?Math.round(d)+'d ago':new Date(iso).toLocaleDateString(); };
   const isNew = j => now - Date.parse(j.first_seen) < DAY;
+  // posted_at is a calendar date (YYYY-MM-DD); compare calendar days in UTC
+  const postedDays = j => { if(!j.posted_at) return null; const t = Date.parse(j.posted_at.slice(0,10)+'T00:00:00Z');
+    if (isNaN(t)) return null; const today = Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), new Date().getUTCDate());
+    return Math.max(0, Math.round((today - t)/DAY)); };
+  const postedLabel = j => { const d = postedDays(j); return d==null ? '' : d===0 ? 'posted today' : d===1 ? 'posted yesterday' : `posted ${d} days ago`; };
 
   // per-browser marks (applied / hidden); storage can be unavailable, so degrade to memory
   let marks = {};
@@ -132,7 +138,7 @@
   const saveMarks = () => { try { localStorage.setItem('radar-marks', JSON.stringify(marks)); } catch(e) {} };
 
   const S = { q:'', levels:new Set(), skills:new Set(), age:'all', remote:false, hideApplied:false,
-              showHidden:false, showClosed:false, company:'', sort:'score', limit:60 };
+              showHidden:false, showClosed:false, company:'', sort:'posted', limit:60 };
 
   const jobs = D.jobs || [];
   const open = jobs.filter(j => j.status === 'open');
@@ -194,7 +200,9 @@
         if (!terms.every(t => hay.includes(t))) return false; }
       return true;
     });
-    const by = { score:(a,b)=>b.score-a.score, new:(a,b)=>Date.parse(b.first_seen)-Date.parse(a.first_seen),
+    const pk = j => j.posted_at ? j.posted_at.slice(0,10) : '';
+    const by = { posted:(a,b)=>(pk(a)?0:1)-(pk(b)?0:1) || pk(b).localeCompare(pk(a)) || b.score-a.score,
+                 score:(a,b)=>b.score-a.score, new:(a,b)=>Date.parse(b.first_seen)-Date.parse(a.first_seen),
                  company:(a,b)=>a.company.localeCompare(b.company)||b.score-a.score };
     return r.sort(by[S.sort]);
   }
@@ -216,7 +224,7 @@
             <span class="tags">${j.skills.map(s=>`<span class="tag">${esc(SKILL_LABEL[s]||s)}</span>`).join('')}</span></div>
         </div>
         <div class="side">
-          <span class="sub">seen ${ago(j.first_seen)}${j.posted_at?` · posted ${esc(j.posted_at)}`:''}</span>
+          <span class="sub">${j.posted_at?`<span title="${esc(j.posted_at.slice(0,10))}">${postedLabel(j)}</span> · `:''}seen ${ago(j.first_seen)}</span>
           <div class="acts">
             <button data-id="${esc(j.id)}" data-m="applied" class="${m==='applied'?'on':''}">${m==='applied'?'✓ Applied':'Applied'}</button>
             <button data-id="${esc(j.id)}" data-m="hidden">${m==='hidden'?'Unhide':'Hide'}</button>

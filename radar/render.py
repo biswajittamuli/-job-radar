@@ -5,11 +5,14 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from .models import newest_first
+
 TEMPLATE = Path(__file__).with_name("dashboard.html")
 
 
 def build(root: Path, store) -> Path:
-    jobs = sorted(store.jobs.values(), key=lambda j: (j["status"] != "open", -j["score"]))
+    jobs = sorted(store.jobs.values(),
+                  key=lambda j: (j["status"] != "open", *newest_first(j.get("posted_at"), j["score"])))
     payload = {
         "generated_at": store.runs[-1]["at"] if store.runs else None,
         "jobs": jobs,
