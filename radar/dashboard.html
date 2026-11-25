@@ -111,6 +111,7 @@
 
   <details id="healthbox">
     <summary id="healthsum">Board health</summary>
+    <p class="sub" style="margin:8px 0 0">Every company below is scanned each run. "Postings" is how many jobs its board listed in total; "Matches" is how many passed the strict fresher filter.</p>
     <table><thead><tr><th>Company</th><th>ATS</th><th>Status</th><th>Postings</th><th>Matches</th><th>Last OK</th><th>Note</th></tr></thead>
       <tbody id="health"></tbody></table>
   </details>
@@ -153,6 +154,7 @@
     <div class="stat good"><b>${open.length}</b><span>Open matches</span></div>
     <div class="stat"><b>${open.filter(isNew).length}</b><span>New in 24h</span></div>
     <div class="stat"><b>${open.filter(j => now-Date.parse(j.first_seen) < 7*DAY).length}</b><span>New this week</span></div>
+    <div class="stat" title="Every company in companies.yaml is scanned each run; most have no fresher opening at any given time. See Board health below."><b>${health.length}</b><span>Companies scanned</span></div>
     <div class="stat ${failing.length?'warn':''}"><b>${health.length - failing.length}/${health.length}</b><span>Boards healthy</span></div>
     <div class="stat"><b>${runs.length ? runs.at(-1).scanned : 0}</b><span>Postings scanned</span>
       <div class="spark" title="New matches per run">${runs.map(r=>`<i style="height:${Math.max(6,r.new/maxNew*100)}%" title="${esc(r.at.slice(0,16))}: ${r.new} new"></i>`).join('')}</div></div>`;

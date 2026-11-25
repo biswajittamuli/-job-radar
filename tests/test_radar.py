@@ -50,6 +50,7 @@ def test_passes(title, loc, desc, level):
 
 @pytest.mark.parametrize("title,loc,desc,why", [
     ("Senior Backend Engineer", "Bengaluru", "", "senior"),
+    ("Backend Engineer Seniore", "Bengaluru", "", "senior"),
     ("Software Dev Engineer III, AWS", "IN, KA, Bengaluru", "", "senior"),
     ("Staff Engineer", "Bengaluru", "", "senior"),
     ("Engineering Manager", "Pune", "", "senior"),
@@ -443,6 +444,8 @@ def test_config_is_strict_fresher():
     ("Software Engineer", "Open to recent graduates with strong DSA."),
     ("SDE-1", ""),
     ("Graduate Engineer Trainee", ""),
+    ("Associate Software Engineer", ""),
+    ("Associate SDE", ""),
     ("Software Engineer", "Experience: 1+ years of professional experience"),
 ])
 def test_strict_accepts_fresher_signals(title, desc):
@@ -460,6 +463,8 @@ def test_strict_accepts_fresher_signals(title, desc):
     ("Software Engineer", "8+ years of experience in database engineering, including 3+ years on AWS", "asks 8+"),
     ("Research Scientist - Nemotron India", "", "excluded title"),
     ("Data Scientist", "freshers welcome", "excluded title"),
+    ("AI Automation Engineer Associate", "Python, LLMs", "no fresher signal"),
+    ("Testing - Associate", "corporate action processing", "no fresher signal"),
     ("Applied Scientist I", "new grad", "excluded title"),
 ])
 def test_strict_rejects(title, desc, why):
@@ -592,3 +597,212 @@ def test_workflow_runs_four_times_a_day_and_survives_overlapping_runs():
     assert len(cron.split()[1].split(",")) == 4
     save = next(s for s in wf["jobs"]["scan"]["steps"] if s.get("name") == "Save results")["run"]
     assert "pull --rebase" in save
+
+
+# ── role relevance: software development only ───────────────────────────────
+@pytest.mark.parametrize("title", [
+    "Technical Support Engineer I", "Associate, ML Data Operations, GO-AI Operations",
+    "Data Centre Linux & HW Engineer", "Network Operation Engineering I", "Sales Engineer",
+    "Customer Engineer", "Implementation Engineer", "Software Engineering MTS - Production Support",
+    "Associate Engineer - Mechanical (Cost Out)", "Manufacturing Engineer", "PMIC Design Verification Engineer",
+    "NOC DV Assoc Engineer", "Hardware Engineer", "Associate Engineer - Safety & Reliability", "Technical Solution Engineer",
+])
+def test_non_dev_roles_excluded(title):
+    v = classify(J(title, desc="freshers welcome"), CFG)
+    assert not v.ok and ("excluded title" in v.reason or "not a tech role" in v.reason), v.reason
+
+
+@pytest.mark.parametrize("title", ["Software Engineer", "SDE-1", "DevOps Engineer", "Site Reliability Engineer",
+                                   "Data Engineer", "Frontend Developer", "CPU Software Engineer", "Advanced Software Engineer"])
+def test_dev_roles_not_excluded(title):
+    assert classify(J(title, desc="freshers welcome"), CFG).ok
+
+
+def test_entry_hint_skips_grade_but_not_senior_words():
+    g = RawJob("1", "Software Engineer II, Google Cloud", "u", ["Hyderabad, Telangana, India"],
+               description="1 year of experience with software development", level_hint="entry_level")
+    assert classify(g, CFG).ok
+    g.title = "Senior Software Engineer"
+    assert not classify(g, CFG).ok
+    plain = RawJob("1", "Software Engineer II", "u", ["Hyderabad, India"], description="1 year of experience")
+    assert "senior title" in classify(plain, CFG).reason
+
+
+# ── big-tech adapters ───────────────────────────────────────────────────────
+from radar.sources import google, microsoft, oracle_hcm
+
+MS = {"count": 2, "positions": [
+    {"id": 111, "name": "Software Engineer", "locations": ["India, Telangana, Hyderabad"], "postedTs": 1795591298,
+     "positionUrl": "/careers/job/111", "workLocationOption": "onsite", "department": "Software Engineering"},
+    {"id": 222, "name": "Principal Software Engineering Manager", "locations": ["India, Karnataka, Bangalore"],
+     "postedTs": 1795591298, "positionUrl": "/careers/job/222"}]}
+
+
+def test_microsoft_parse_and_describe():
+    jobs = microsoft.parse(MS, {})
+    assert jobs[0].url == "https://apply.careers.microsoft.com/careers/job/111"
+    assert jobs[0].locations == ["India, Telangana, Hyderabad"] and jobs[0].posted_at == "2026-11-25"
+
+    class H:
+        def get_json(self, url, **kw):
+            assert url.endswith("/api/pcsx/position_details") and kw["position_id"] == "111"
+            return {"data": {"jobDescription": "<p>New graduates welcome</p>"}}
+    microsoft.describe({}, jobs[0], H())
+    assert jobs[0].description == "New graduates welcome"
+
+
+def _google_job(jid, title, loc, ts, quals):
+    j = [None] * 21
+    j[0], j[1], j[9], j[12] = jid, title, [[loc, [], "", "", "", "IN"]], [ts, 0]
+    j[3], j[4], j[10], j[19] = [None, "<li>Write code</li>"], [None, quals], [None, "<p>About</p>"], [None, ""]
+    return j
+
+
+def test_google_parse_embedded_data():
+    data = [[_google_job("83624643516080838", "Software Engineer II, Google Cloud", "Hyderabad, Telangana, India",
+                         1795435695, "<li>1 year of experience with software development</li>")], None, 1, 20]
+    html = ("<script>AF_initDataCallback({key: 'ds:1', hash: '2', data:" + json.dumps(data) +
+            ", sideChannel: {}});</script>")
+    j = google.parse(html, {})[0]
+    assert j.url.endswith("/83624643516080838-software-engineer-ii-google-cloud")
+    assert j.locations == ["Hyderabad, Telangana, India"] and j.posted_at == "2026-11-23"
+    assert "1 year of experience" in j.description and j.level_hint == "entry_level"
+    v = classify(j, CFG, today=date(2026, 11, 25))
+    assert v.ok and v.level == "entry", v.reason
+
+
+def test_google_layout_change_is_an_error():
+    with pytest.raises(ValueError):
+        google.parse("<html>nothing here</html>", {})
+
+
+def test_oracle_hcm_parse():
+    item = {"TotalJobsCount": 1, "requisitionList": [{
+        "Id": "210794929", "Title": "Software Engineer I", "PostedDate": "2026-11-25",
+        "PrimaryLocation": "Bengaluru, Karnataka, India", "secondaryLocations": [{"Name": "Hyderabad, Telangana, India"}],
+        "ExternalQualificationsStr": "<li>0-1 years of experience</li>"}]}
+    c = {"host": "jpmc.fa.oraclecloud.com", "site": "CX_1001"}
+    j = oracle_hcm.parse(item, c)[0]
+    assert j.url == "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210794929"
+    assert j.locations == ["Bengaluru, Karnataka, India", "Hyderabad, Telangana, India"]
+    assert j.description == ""     # the list's summary is partial: the runner fetches the full posting
+
+    class H:
+        def get_json(self, url, **kw):
+            assert url.endswith("/recruitingCEJobRequisitionDetails") and '210794929' in kw["finder"]
+            return {"items": [{"ExternalQualificationsStr": "<li>0-1 years of experience</li>"}]}
+    oracle_hcm.describe(c, j, H())
+    assert "0-1 years" in j.description and classify(j, CFG, today=date(2026, 11, 25)).ok
+
+
+# ── duplicates ──────────────────────────────────────────────────────────────
+def test_same_title_and_location_kept_once(repo):
+    dup = {"jobs": [{"id": i, "title": "Software Engineer I", "absolute_url": f"https://x/{i}",
+                     "location": {"name": "Bengaluru, India"}, "first_published": ago(1), "content": ""}
+                    for i in (1, 2)]}
+    r = run(root=repo, http=FakeHttp({"boards/acme": dup}), do_notify=False, verbose=False)
+    assert len([j for j in r["new"] if j.company == "Acme"]) == 1
+
+
+def test_every_company_uses_a_known_adapter():
+    from radar.sources import ADAPTERS
+    comps = yaml.safe_load((ROOT / "companies.yaml").read_text())["companies"]
+    assert len(comps) > 100
+    assert all(c["ats"] in ADAPTERS for c in comps)
+
+
+# ── more careers platforms ──────────────────────────────────────────────────
+from radar.sources import atlassian, capgemini, keka, kula, successfactors, uber
+from radar.text import strip_html
+
+
+def test_strip_html_drops_scripts_and_styles():
+    assert strip_html("<p>Hi</p><script>var x = 'secret';</script><style>.a{}</style><p>there</p>") == "Hi there"
+
+
+def test_keka_parse_and_portal_discovery():
+    data = [{"id": 7, "title": "Software Engineer - Fresher", "description": "<p>Build APIs</p>", "experience": "0-1 Years",
+             "jobLocations": [], "publishedOn": "2026-11-24T11:41:25Z", "departmentName": "Engineering"}]
+    j = keka.parse(data, {"host": "acme.keka.com"})[0]
+    assert j.url == "https://acme.keka.com/careers/jobdetails/7" and j.locations == ["India"]
+    assert j.description.startswith("Experience: 0-1 Years.") and classify(j, CFG, today=date(2026, 11, 25)).level == "entry"
+
+    class H:
+        def get_text(self, url):
+            return '<script>fetch("/ats/documents/b5279857-cf81-4dde-a215-fc48957ee2b5/careerportal/x.html")</script>'
+
+        def get_json(self, url, **kw):
+            assert url.endswith("/careers/api/embedjobs/default/active/b5279857-cf81-4dde-a215-fc48957ee2b5")
+            return data
+    assert len(keka.fetch({"host": "acme.keka.com"}, H())) == 1
+
+
+def test_keka_experience_field_rejects_seniors():
+    j = keka.parse([{"id": 1, "title": "Backend Developer", "experience": "13-15 Years", "description": ""}], {"host": "a"})[0]
+    assert "asks 13+" in classify(j, CFG).reason
+
+
+def test_kula_parse_embedded_next_payload():
+    job = {"id": 5565, "account_id": 1291, "title": "Software Development Engineer 1", "listed": True, "on_career_page": True,
+           "launch_at": "2026-11-20T06:46:30.000Z",
+           "ats_job": {"workplace": "office", "ats_department": {"name": "Engineering"},
+                       "offices": [{"location": "Bengaluru, Karnataka, India", "remote": False}]}}
+    hidden = {**job, "id": 9, "title": "Hidden", "on_career_page": False}
+    payload = json.dumps([job, hidden])
+    html = '<script>self.__next_f.push([1,' + json.dumps(payload) + '])</script>'
+    jobs = kula.parse(html, {"slug": "cashfree"})
+    assert [j.title for j in jobs] == ["Software Development Engineer 1"]
+    assert jobs[0].url == "https://careers.kula.ai/cashfree/5565" and jobs[0].posted_at == "2026-11-20"
+    assert jobs[0].locations == ["Bengaluru, Karnataka, India"]
+
+
+def test_uber_parse():
+    data = {"jobs": [{"Id": "305180", "Title": "Software Engineer I", "DisplayDate": "2026-11-25T07:00:56Z",
+                      "Description": "<p>0-1 years</p>", "Remote": "False", "Teams": ["Engineering"],
+                      "Locations": [{"City": "Hyderabad", "Region": "Telangana", "Country": "India"}],
+                      "Urls": [{"Url": "/en/jobs/305180/", "IsDefault": True}]}], "totalPages": 1}
+    j = uber.parse(data, {})[0]
+    assert j.url == "https://jobs.uber.com/en/jobs/305180/" and j.locations == ["Hyderabad, Telangana, India"]
+    assert classify(j, CFG, today=date(2026, 11, 25)).ok
+
+
+def test_atlassian_parse():
+    data = [{"id": 27339, "title": "Graduate Software Engineer", "category": "Engineering",
+             "locations": ["Bengaluru - India -   Bengaluru,  560071 India"], "qualifications": "<p>new grads</p>",
+             "portalJobPost": {"portalUrl": "https://careers-apac-atlassian.icims.com/jobs/27339/x/job", "updatedDate": "2026-11-23 03:02 PM"}}]
+    j = atlassian.parse(data, {})[0]
+    assert j.locations == ["Bengaluru - India - Bengaluru, 560071 India"] and j.posted_at == "2026-11-23"
+    assert classify(j, CFG, today=date(2026, 11, 25)).level == "entry"
+
+
+def test_successfactors_parse():
+    data = {"totalJobs": 1, "jobSearchResult": [{"response": {
+        "id": "206685", "unifiedStandardTitle": "Software Engineer - Fresher", "urlTitle": "Software-Engineer-Fresher",
+        "unifiedStandardStart": "11/25/26", "supportedLocales": ["en_US"], "jobLocationCountry": ["India"],
+        "jobLocationShort": ["Pune, IND-27, IND, 411005<br/>"]}}]}
+    j = successfactors.parse(data, {"host": "careers.wipro.com"})[0]
+    assert j.url == "https://careers.wipro.com/job/Software-Engineer-Fresher/206685-en_US/"
+    assert j.posted_at == "2026-11-25" and j.locations == ["Pune, IND-27, IND, 411005, India"]
+    assert classify(j, CFG, today=date(2026, 11, 25)).ok
+
+
+def test_capgemini_parse_and_level_labels():
+    data = {"count": 2, "data": [
+        {"id": "1", "ref": "1-en", "title": "Software Engineer", "location": "Pune", "experience_level": "Experienced Professionals",
+         "updated_at": "2026-11-25T08:32:41Z", "description": "<p>Java</p>", "apply_job_url": "https://careers.capgemini.com/job/1"},
+        {"id": "2", "ref": "2-en", "title": "Software Engineer", "location": "Bangalore", "experience_level": "Freshers",
+         "updated_at": "2026-11-25T08:32:41Z", "description": "<p>Java</p>", "apply_job_url": "https://careers.capgemini.com/job/2"}]}
+    exp, fresh = capgemini.parse(data, {})
+    assert exp.locations == ["Pune, India"]
+    assert "senior level per job board" in classify(exp, CFG, today=date(2026, 11, 25)).reason
+    assert classify(fresh, CFG, today=date(2026, 11, 25)).level == "entry"
+
+
+def test_eightfold_generic_host_and_domain():
+    class H:
+        def get_json(self, url, **kw):
+            assert url == "https://careers.qualcomm.com/api/pcsx/search" and kw["domain"] == "qualcomm.com"
+            return {"data": {"count": 1, "positions": [{"id": 5, "name": "Engineer I", "locations": ["Bangalore, India"],
+                                                        "postedTs": 1795591298, "positionUrl": "/careers/job/5"}]}}
+    j = microsoft.fetch({"host": "careers.qualcomm.com", "domain": "qualcomm.com"}, H())[0]
+    assert j.url == "https://careers.qualcomm.com/careers/job/5"
