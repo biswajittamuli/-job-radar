@@ -111,7 +111,8 @@ Network → Fetch/XHR, and you'll usually find a JSON endpoint to copy.
   `open` also lets in tech roles that state no level at all. That's more noise.
 - `level.max_years: 1` drops a job if its description asks for more than 1 year.
 - `exclude_titles: [scientist, …]` skips titles containing those words.
-- `freshness.max_posted_age_days: 14` drops jobs posted more than 14 days ago. Jobs whose
+- `freshness.max_posted_age_days: 90` drops jobs posted more than 90 days ago (startups keep
+  fresher openings up for weeks; alerts still fire only once per job). Jobs whose
   board gives no posting date are kept. Workday's "Posted 30+ Days Ago" counts as 30.
 - `notify.skills: [backend, ai_ml]` limits alerts to those buckets. The dashboard
   still shows everything.

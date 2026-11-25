@@ -7,7 +7,7 @@ from ..models import RawJob
 from ..text import strip_html
 
 MAX_PAGES = 60     # 10 jobs per page
-STOP_AFTER_DAYS = 45   # results are newest first: stop paging once postings are older than this
+STOP_AFTER_DAYS = 100  # results are newest first: stop paging once postings are older than this
 
 
 def _base(c):

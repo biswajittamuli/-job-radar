@@ -224,16 +224,25 @@ def Jd(posted_at, title="Software Engineer I"):
 
 
 def test_freshness_config_present():
-    assert CFG["freshness"]["max_posted_age_days"] == 14
+    assert CFG["freshness"]["max_posted_age_days"] == 90
 
 
-@pytest.mark.parametrize("age,ok", [(0, True), (13, True), (14, True), (15, False), (60, False)])
+CFG14 = {**CFG, "freshness": {"max_posted_age_days": 14}}
+
+
+@pytest.mark.parametrize("age,ok", [(0, True), (89, True), (90, True), (91, False), (200, False)])
 def test_freshness_cutoff(age, ok):
     today = date(2026, 11, 25)
     v = classify(Jd((today - timedelta(days=age)).isoformat()), CFG, today=today)
     assert v.ok is ok, v.reason
     if not ok:
-        assert "posted" in v.reason and "older than 14" in v.reason
+        assert "posted" in v.reason and "older than 90" in v.reason
+
+
+@pytest.mark.parametrize("age,ok", [(14, True), (15, False)])
+def test_freshness_cutoff_is_configurable(age, ok):
+    today = date(2026, 11, 25)
+    assert classify(Jd((today - timedelta(days=age)).isoformat()), CFG14, today=today).ok is ok
 
 
 def test_freshness_keeps_undated_and_unparseable():
@@ -266,7 +275,8 @@ def test_workday_30_plus_is_filtered_out():
         {"title": "Software Engineer", "externalPath": "/a", "locationsText": "India, Bengaluru", "postedOn": "Posted 30+ Days Ago"},
         {"title": "Software Engineer", "externalPath": "/b", "locationsText": "India, Bengaluru", "postedOn": "Posted 2 Days Ago"}]}
     jobs = workday.parse(data, {"host": "h", "site": "s"}, today=today)
-    assert [classify(j, OPEN, today=today).ok for j in jobs] == [False, True]
+    open14 = {**OPEN, "freshness": {"max_posted_age_days": 14}}
+    assert [classify(j, open14, today=today).ok for j in jobs] == [False, True]
 
 
 def test_workday_fetch_paginates(monkeypatch):
@@ -422,7 +432,7 @@ def test_cli_test_notify_exit_codes(tg, monkeypatch, capsys):
 
 def test_end_to_end_drops_stale_jobs(repo):
     stale = {"jobs": [{"id": 99, "title": "Software Engineer I", "absolute_url": "https://x/99",
-                       "location": {"name": "Bengaluru, India"}, "first_published": ago(40), "content": ""}]}
+                       "location": {"name": "Bengaluru, India"}, "first_published": ago(120), "content": ""}]}
     r = run(root=repo, http=FakeHttp({"boards/acme": stale}), do_notify=False, verbose=False)
     assert r["new"] == []
 
@@ -806,3 +816,27 @@ def test_eightfold_generic_host_and_domain():
                                                         "postedTs": 1795591298, "positionUrl": "/careers/job/5"}]}}
     j = microsoft.fetch({"host": "careers.qualcomm.com", "domain": "qualcomm.com"}, H())[0]
     assert j.url == "https://careers.qualcomm.com/careers/job/5"
+
+
+# ── experience in the title, and wrong job-board level tags ──────────────────
+from radar.classify import title_years
+
+
+@pytest.mark.parametrize("title,n", [("Product Solution Engineer  (1 to 3)", 1), ("Software Engineer (3-5 years), Symphony", 3),
+                                     ("Software Engineer (5-7 years,Firmware)", 5), ("SRE - On-Prem (1 to 4 Years)", 1),
+                                     ("Backend Engineer 2+ yrs", 2), ("Platform Engineer 2", None), ("SDE-1", None)])
+def test_title_years(title, n):
+    assert title_years(title) == n
+
+
+def test_title_years_decide_level():
+    assert classify(J("Site Reliability Engineer - On-Prem (1 to 4 Years)", desc="5+ years preferred"), CFG).level == "entry"
+    assert "title asks 3+" in classify(J("Software Engineer, Backend (3-5 years)"), CFG).reason
+
+
+def test_entry_title_beats_wrong_job_board_tag():
+    j = RawJob("1", "Platform Engineer 1", "u", ["Bengaluru, India"], level_hint="executive")
+    assert classify(j, CFG).level == "entry"
+    j.title = "Software Engineer - React Native"
+    j.level_hint = "mid_senior_level"
+    assert "senior level per job board" in classify(j, CFG).reason
