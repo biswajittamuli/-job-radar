@@ -115,6 +115,18 @@ class Verdict:
     location: str = ""
     remote: bool = False
     score: int = 0
+    fit: int = 0                 # "Best for you" score, 0-100
+    why: list[str] = field(default_factory=list)
+
+
+# "2025 batch", "2026 graduates", "class of 2026", "graduating in 2026", "2026 pass-outs"
+BATCH = re.compile(r"\b(20[2-3]\d)\s*(?:batch|graduat\w*|pass[- ]?outs?|passing|campus|new[- ]?grad)|"
+                   r"campus\s*(?:hire|hiring|drive|recruit\w*)?\s*(?:for\s*)?(20[2-3]\d)\b|"
+                   r"\b(?:batch|class)\s*(?:of\s*)?(20[2-3]\d)\b|graduating\s*(?:in\s*|by\s*)?(20[2-3]\d)", re.I)
+
+
+def batch_years(text: str) -> set[int]:
+    return {int(y) for m in BATCH.finditer(text or "") for y in m.groups() if y}
 
 
 def min_years(text: str) -> int | None:
@@ -257,8 +269,60 @@ def classify(job: RawJob, cfg: dict, today: date | None = None, check_level: boo
         return Verdict(False, f"no fresher signal (mode=entry; {why})")
 
     skills = tag_skills(title, job.description, cfg)
+    prof = cfg.get("profile") or {}
+    batches = batch_years(f"{title} {job.description or ''}")
+    if prof.get("grad_year") and batches and int(prof["grad_year"]) not in batches:
+        return Verdict(False, f"for the {'/'.join(map(str, sorted(batches)))} batch, not {prof['grad_year']}")
+
     score = _score(level, skills, title, years, remote, job.posted_at, cfg, today)
-    return Verdict(True, "match", level, skills, years, loc, remote, score)
+    fit, why = personal_fit(job, level, skills, loc, remote, batches, cfg, today)
+    return Verdict(True, "match", level, skills, years, loc, remote, score, fit, why)
+
+
+# Role names in a title, strongest first ("Backend Developer (SDE 1)" counts as backend)
+ROLE_TITLES = [
+    (re.compile(r"full[- ]?stack", re.I), "full stack role"),
+    (re.compile(r"back[- ]?end", re.I), "backend role"),
+    (re.compile(r"front[- ]?end|\breact\b|\bweb\b|\bui\b", re.I), "frontend role"),
+    (re.compile(r"software (development )?engineer|software developer|\bsde\b|\bdeveloper\b|\bprogrammer\b|"
+                r"\bmts\b|member of technical staff|engineer\s*[-–]?\s*(i|1)\b|apprentice", re.I), "software engineering role"),
+]
+
+
+def personal_fit(job: RawJob, level, skills, loc, remote, batches, cfg, today) -> tuple[int, list[str]]:
+    """How well a matching job fits *you* (config.yaml `profile`), 0-100, with reasons."""
+    prof = cfg.get("profile") or {}
+    title = job.title.lower()
+    text = f" {title} {(job.description or '').lower()[:8000]} "
+    s, why = 0, []
+    s += {"entry": 25, "intern": 10}.get(level, 5)
+    if prof.get("grad_year") and int(prof["grad_year"]) in batches:
+        s += 15
+        why.append(f"{prof['grad_year']} batch")
+    role = next((label for rx, label in ROLE_TITLES if rx.search(title)), None)
+    if role:                      # the title itself names the kind of role you want
+        s += 20
+        why.append(role)
+    elif set(prof.get("roles") or []) & set(skills):
+        s += 5                    # only the description suggests it
+    hits = []
+    for k in prof.get("skills") or []:
+        kk = k.strip().lower()
+        base = re.sub(r"[.\s-]?js$", "", kk)          # react / react.js / reactjs count once
+        if re.search(rf"(?<![a-z0-9]){re.escape(kk)}(?![a-z0-9])", text) and \
+                not any(re.sub(r"[.\s-]?js$", "", h.lower()) == base for h in hits):
+            hits.append(k.strip())
+    s += min(len(hits), 5) * 5
+    why += [h for h in hits if h.lower() not in ("full stack", "full-stack", "fullstack")][:3]
+    if any(re.search(rf"\b{re.escape(w)}", title) for w in prof.get("less_interested") or []):
+        s -= 15
+    cities = [c.lower() for c in prof.get("cities") or []]
+    if cities and (remote or any(c in (loc or "").lower() for c in cities)):
+        s += 5
+    age = posted_age_days(job.posted_at, today)
+    if age is not None:
+        s += 10 if age <= 7 else 5 if age <= 30 else 0
+    return max(0, min(100, s)), why
 
 
 def _score(level, skills, title, years, remote, posted_at, cfg, today) -> int:

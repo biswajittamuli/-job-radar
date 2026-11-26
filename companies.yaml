@@ -296,6 +296,63 @@ companies:
   - { name: Fractal, ats: workday, host: fractal.wd1.myworkdayjobs.com, tenant: fractal, site: Careers, search: India }
   - { name: Quantiphi, ats: workday, host: quantiphi.wd1.myworkdayjobs.com, tenant: quantiphi, site: Careers_at_Quantiphi, search: India }
 
+  # ── GCCs found from their careers pages (Nov 2026) ──
+  # Workday ones marked rate-limited couldn't be checked live; site names come from their careers pages.
+  - { name: Intel, ats: workday, host: intel.wd1.myworkdayjobs.com, tenant: intel, site: External, search: India, verified: 2026-11-25 }
+  - { name: Dell, ats: oracle_hcm, host: iawmqy.fa.ocs.oraclecloud.com, site: CX_1001, location_id: 300000000471053, verified: 2026-11-25 }
+  - { name: Nokia, ats: oracle_hcm, host: fa-evmr-saasfaprod1.fa.ocs.oraclecloud.com, site: CX_1, location_id: 300000000471745, verified: 2026-11-25 }
+  - { name: "S&P Global", ats: workday, host: spgi.wd5.myworkdayjobs.com, tenant: spgi, site: SPGI_Careers, search: India, verified: 2026-11-25 }
+  - { name: Zebra Technologies, ats: workday, host: zebra.wd501.myworkdayjobs.com, tenant: zebra, site: Zebra_careers, search: India, verified: 2026-11-25 }
+  - { name: Unilever, ats: workday, host: unilever.wd3.myworkdayjobs.com, tenant: unilever, site: Unilever_Experienced_Professionals, search: India, verified: 2026-11-25 }
+  - { name: Cadence, ats: workday, host: cadence.wd1.myworkdayjobs.com, tenant: cadence, site: External_Careers, search: India }
+  - { name: Broadcom (VMware), ats: workday, host: broadcom.wd1.myworkdayjobs.com, tenant: broadcom, site: External_Career, search: India }
+  - { name: GE HealthCare, ats: workday, host: gehc.wd5.myworkdayjobs.com, tenant: gehc, site: GEHC_ExternalSite, search: India }
+  - { name: Shell, ats: workday, host: shell.wd3.myworkdayjobs.com, tenant: shell, site: shellcareers, search: India }
+  - { name: Nike, ats: workday, host: nike.wd1.myworkdayjobs.com, tenant: nike, site: nke, search: India }
+  - { name: LSEG, ats: workday, host: lseg.wd3.myworkdayjobs.com, tenant: lseg, site: Careers, search: India }
+  - { name: Motorola Solutions, ats: workday, host: motorolasolutions.wd5.myworkdayjobs.com, tenant: motorolasolutions, site: Careers, search: India }
+  - { name: Bristol Myers Squibb, ats: eightfold, host: bms.eightfold.ai, domain: bms.com, verified: 2026-11-25 }
+  - { name: SLB, ats: eightfold, host: slb.eightfold.ai, domain: slb.com, verified: 2026-11-25 }
+  - { name: Haleon, ats: eightfold, host: haleon.eightfold.ai, domain: haleon.com, verified: 2026-11-25 }
+  # ── More Indian startups (Nov 2026 probe) ──
+  - { name: Onsitego, ats: keka, host: onsitego.keka.com, verified: 2026-11-25 }
+  - { name: Zolve, ats: freshteam, slug: zolve, verified: 2026-11-25 }
+  - { name: Falcon, ats: keka, host: falcon.keka.com, verified: 2026-11-25 }
+  - { name: Aspora, ats: ashby, slug: aspora, verified: 2026-11-25 }
+  - { name: Vegrow, ats: smartrecruiters, slug: Vegrow, verified: 2026-11-25 }
+  - { name: AbhiBus, ats: smartrecruiters, slug: AbhiBus, verified: 2026-11-25 }
+  - { name: Interview Kickstart, ats: ashby, slug: interview-kickstart, verified: 2026-11-25 }
+  - { name: Truemeds, ats: keka, host: truemeds.keka.com, verified: 2026-11-25 }
+  - { name: UrbanPiper, ats: keka, host: urbanpiper.keka.com, verified: 2026-11-25 }
+
+  # ── Careers pages read with a headless browser (no job feed; checked Nov 2026) ──
+  - { name: "AMD", ats: webpage, url: "https://careers.amd.com/careers-home/jobs?location=India", location: India, verified: 2026-11-25 }
+  - { name: "BYJU'S", ats: webpage, url: "https://byjus.com/careers-at-byjus/", location: India, verified: 2026-11-25 }
+  - { name: "Cisco", ats: webpage, url: "https://careers.cisco.com/global/en/search-results?keywords=india", location: India, verified: 2026-11-25 }
+  - { name: "Cutshort", ats: webpage, url: "https://cutshort.io/jobs", location: India, verified: 2026-11-25 }
+  - { name: "Delta Exchange", ats: webpage, url: "https://careers.delta.exchange/", location: India, verified: 2026-11-25 }
+  - { name: "Dezerv", ats: webpage, url: "https://www.dezerv.in/careers/", location: India, verified: 2026-11-25 }
+  - { name: "Ditto Insurance", ats: webpage, url: "https://careers.joinditto.in/", location: India, verified: 2026-11-25 }
+  - { name: "Fyers", ats: webpage, url: "https://recruit.fyers.in/jobs/Careers", location: India, verified: 2026-11-25 }
+  - { name: "GeeksforGeeks", ats: webpage, url: "https://geeksforgeeks.zohorecruit.in/careers", location: India, verified: 2026-11-25 }
+  - { name: "HackerEarth", ats: webpage, url: "https://www.hackerearth.com:443/careers", location: India, verified: 2026-11-25 }
+  - { name: "Increff", ats: webpage, url: "https://www.increff.com/careers", location: India, verified: 2026-11-25 }
+  - { name: "Inshorts", ats: webpage, url: "https://inshorts.zohorecruit.com/careers", location: India, verified: 2026-11-25 }
+  - { name: "Instamojo", ats: webpage, url: "https://recruiterflow.com/instamojo/jobs", location: India, verified: 2026-11-25 }
+  - { name: "Lowe's India", ats: webpage, url: "https://talent.lowes.com/in/en/search-results", location: India, verified: 2026-11-25 }
+  - { name: "Ozonetel", ats: webpage, url: "https://ozonetel.com/careers/", location: India, verified: 2026-11-25 }
+  - { name: "PayU", ats: webpage, url: "https://careers.payu.in/PayU/go/_/514880/", location: India, verified: 2026-11-25 }
+  - { name: "PepsiCo", ats: webpage, url: "https://www.pepsicojobs.com/main/jobs?location=India", location: India, verified: 2026-11-25 }
+  - { name: "Philips", ats: webpage, url: "https://www.careers.philips.com/global/en/search-results?keywords=India", location: India, verified: 2026-11-25 }
+  - { name: "Recur Club", ats: webpage, url: "https://www.recurclub.com/careers", location: India, verified: 2026-11-25 }
+  - { name: "Setu", ats: webpage, url: "https://setu.co/careers", location: India, verified: 2026-11-25 }
+  - { name: "Société Générale", ats: webpage, url: "https://careers.societegenerale.com/en/search?refinementList%5BjobLocation%5D%5B0%5D=India", location: India, verified: 2026-11-25 }
+  - { name: "Spyne", ats: webpage, url: "https://careers.spyne.ai:443/jobs", location: India, verified: 2026-11-25 }
+  - { name: "ToolJet", ats: webpage, url: "https://wellfound.com/company/tooljet/jobs", location: India, verified: 2026-11-25 }
+  - { name: "Visa", ats: webpage, url: "https://corporate.visa.com/en/jobs/?cities=Bangalore", location: India, verified: 2026-11-25 }
+  - { name: "Wells Fargo", ats: webpage, url: "https://www.wellsfargojobs.com/en/jobs/?country=India", location: India, verified: 2026-11-25 }
+  - { name: "Zoho", ats: webpage, url: "https://www.zoho.com/careers/", location: India, verified: 2026-11-25 }
+
   # ── Job-search aggregator: jobs from any company (needs the JOOBLE_KEY secret) ──
   # Runs after every company board above; a job already found on a company's own board
   # is skipped. Skipped entirely when the secret isn't set.

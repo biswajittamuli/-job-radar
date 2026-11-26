@@ -3,17 +3,21 @@
 # tracked: companies in companies.yaml that are Indian startups. Their jobs are read
 #          automatically; the directory shows their open fresher roles and every fresher /
 #          intern role the radar has ever seen them list (data/companies.json).
-# manual:  startups whose careers site Job Radar can't read (Darwinbox, Zoho Recruit,
-#          TurboHire, their own page…). The dashboard links to them so you can check by hand.
+# manual:  startups whose careers site Job Radar can't read yet: bot checks, robots.txt,
+#          or pages that don't list jobs as links. The dashboard links to them so you can check by hand.
+#          Careers pages that can be read are in companies.yaml as `ats: webpage`.
 #          If one moves to a supported system, `python -m radar add <url> --name X` tracks it.
 tracked:
 - 100ms
+- AbhiBus
 - Acko
+- Aspora
 - Ati Motors
 - Atlan
 - BharatPe
 - BrowserStack
 - Bureau
+- BYJU'S
 - Cars24
 - Cashfree
 - CityMall
@@ -21,20 +25,28 @@ tracked:
 - ClickPost
 - Composio
 - CRED
+- Cutshort
 - CynLr
+- Delta Exchange
 - DevRev
+- Dezerv
 - Digantara
+- Ditto Insurance
 - Druva
 - Eka Care
 - Eloelo
 - Everstage
+- Falcon
 - FamPay
 - Fi Money
 - Fractal
 - Freshworks
+- Fyers
+- GeeksforGeeks
 - Glance
 - GoKwik
 - Groww
+- HackerEarth
 - HackerRank
 - Haptik
 - Hevo Data
@@ -42,7 +54,11 @@ tracked:
 - Housing.com
 - Icertis
 - Inc42
+- Increff
 - InMobi
+- Inshorts
+- Instamojo
+- Interview Kickstart
 - ixigo
 - Jupiter
 - Kuku FM
@@ -64,9 +80,12 @@ tracked:
 - Niyo
 - Nobroker
 - Observe.AI
+- Onsitego
 - Open Financial
+- Ozonetel
 - Paxcom
 - Paytm
+- PayU
 - PhonePe
 - Plum
 - Pocket FM
@@ -74,12 +93,14 @@ tracked:
 - Quantiphi
 - Quizizz (Wayground)
 - Razorpay
+- Recur Club
 - Rocketlane
 - Rubrik
 - SaaS Labs
 - Sarvam AI
 - Scaler
 - Scrut
+- Setu
 - Shipsy
 - Sigmoid
 - SigNoz
@@ -90,15 +111,20 @@ tracked:
 - Snitch
 - SpotDraft
 - Sprinklr
+- Spyne
 - STAGE
 - Swiggy
 - Teachmint
 - Tekion
+- ToolJet
+- Truemeds
 - Turtlemint
 - Unacademy
 - Unicommerce
 - Uniphore
 - Upstox
+- UrbanPiper
+- Vegrow
 - Velocity
 - Vernacular.ai
 - Vyapar
@@ -109,6 +135,8 @@ tracked:
 - Zetwerk
 - Zinnov
 - Zluri
+- Zoho
+- Zolve
 manual:
 - name: Adda247
   careers: https://adda247.com
@@ -146,9 +174,6 @@ manual:
 - name: Briskpe
   careers: https://briskpe.com
   system: careers page not found
-- name: BYJU'S
-  careers: https://byjus.com/careers-at-byjus/
-  system: own careers page
 - name: Capillary
   careers: https://capillarytech.com
   system: careers page not found
@@ -188,9 +213,6 @@ manual:
 - name: Cult.fit
   careers: https://careers.cult.fit/cult/
   system: own careers page
-- name: Cutshort
-  careers: https://cutshort.io/jobs
-  system: own careers page
 - name: Dailyhunt
   careers: https://dailyhunt.in
   system: careers page not found
@@ -209,21 +231,12 @@ manual:
 - name: Delhivery
   careers: https://www.delhivery.com:443/careers
   system: Darwinbox
-- name: Delta Exchange
-  careers: https://careers.delta.exchange/
-  system: own careers page
-- name: Dezerv
-  careers: https://www.dezerv.in/careers/
-  system: own careers page
 - name: Dhan
   careers: https://dhan.co
   system: careers page not found
 - name: Digit Insurance
   careers: https://godigit.com
   system: careers page not found
-- name: Ditto Insurance
-  careers: https://careers.joinditto.in/
-  system: own careers page
 - name: Dream11
   careers: https://www.dreamsports.group/lifeatdreamsports
   system: own careers page
@@ -269,9 +282,6 @@ manual:
 - name: Flipkart
   careers: https://www.flipkartcareers.com/index
   system: TurboHire
-- name: Fyers
-  careers: https://recruit.fyers.in/jobs/Careers
-  system: Zoho Recruit
 - name: Fyle
   careers: https://www.fylehq.com:443/company/team/join
   system: own careers page
@@ -281,9 +291,6 @@ manual:
 - name: Gameskraft
   careers: https://gameskraft.com
   system: careers page not found
-- name: GeeksforGeeks
-  careers: https://geeksforgeeks.zohorecruit.in/careers
-  system: Zoho Recruit
 - name: GetVantage
   careers: https://getvantage.co/jobs
   system: own careers page
@@ -308,9 +315,6 @@ manual:
 - name: Gupshup
   careers: https://www.gupshup.ai:443/careers
   system: own careers page
-- name: HackerEarth
-  careers: https://www.hackerearth.com:443/careers
-  system: own careers page
 - name: Happay
   careers: https://happay.com/careers/
   system: own careers page
@@ -332,9 +336,6 @@ manual:
 - name: InCred
   careers: https://incred.com/careers
   system: own careers page
-- name: Increff
-  careers: https://www.increff.com/careers
-  system: Zoho Recruit
 - name: INDmoney
   careers: https://www.indmoney.com:443/careers
   system: own careers page
@@ -347,14 +348,8 @@ manual:
 - name: Innovaccer
   careers: https://innovaccer.com/careers
   system: own careers page
-- name: Inshorts
-  careers: https://inshorts.zohorecruit.com/careers
-  system: Zoho Recruit
 - name: Instahyre
   careers: https://www.instahyre.com/search-jobs/
-  system: own careers page
-- name: Instamojo
-  careers: https://recruiterflow.com/instamojo/jobs
   system: own careers page
 - name: InsuranceDekho
   careers: https://insurancedekho.com
@@ -512,17 +507,11 @@ manual:
 - name: OYO
   careers: https://oyorooms.com
   system: careers page not found
-- name: Ozonetel
-  careers: https://ozonetel.com/careers/
-  system: own careers page
 - name: Park+
   careers: https://parkplus.io/careers
   system: own careers page
 - name: PayGlocal
   careers: https://payglocal.in/careers
-  system: own careers page
-- name: PayU
-  careers: https://careers.payu.in/PayU/go/_/514880/
   system: own careers page
 - name: Pepperfry
   careers: https://pepperfry.com
@@ -569,9 +558,6 @@ manual:
 - name: Rapido
   careers: https://rapido.bike
   system: careers page not found
-- name: Recur Club
-  careers: https://www.recurclub.com/careers
-  system: own careers page
 - name: Reverie
   careers: https://reverieinc.com
   system: careers page not found
@@ -587,9 +573,6 @@ manual:
 - name: Sensibull
   careers: https://sensibull.com
   system: careers page not found
-- name: Setu
-  careers: https://setu.co/careers
-  system: TurboHire
 - name: Shaadi.com
   careers: https://shaadi.com
   system: careers page not found
@@ -617,9 +600,6 @@ manual:
 - name: Sprinto
   careers: https://sprinto.com
   system: careers page not found
-- name: Spyne
-  careers: https://careers.spyne.ai:443/jobs
-  system: own careers page
 - name: Stable Money
   careers: https://stablemoney.in
   system: careers page not found
@@ -635,9 +615,6 @@ manual:
 - name: Tiger Analytics
   careers: https://www.tigeranalytics.com/about-us/current-openings/
   system: Workable
-- name: ToolJet
-  careers: https://wellfound.com/company/tooljet/jobs
-  system: own careers page
 - name: Toplyne
   careers: https://toplyne.io
   system: careers page not found
@@ -713,9 +690,6 @@ manual:
 - name: Zerodha
   careers: https://careers.zerodha.com
   system: own careers page
-- name: Zoho
-  careers: https://www.zoho.com/careers/
-  system: Zoho Recruit
 - name: Zolo
   careers: https://zolostays.com/careers
   system: own careers page

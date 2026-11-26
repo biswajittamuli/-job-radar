@@ -73,6 +73,7 @@ exclude_titles:
   - helpdesk
   - service desk
   - field engineer
+  - field service
   - implementation
   - sales
   - presales
@@ -102,6 +103,24 @@ exclude_titles:
   - layout
   - process engineer
 
+# ── You ─────────────────────────────────────────────────────────────────────
+# Used for the "Best for you" score (0-100) on every job: the dashboard sorts by it and
+# Telegram lists the best fits first, with the reasons. Edit freely.
+profile:
+  grad_year: 2026            # roles only for another batch ("2025 graduates") are skipped
+  # Your skills: each one a job mentions (title or description) raises its score
+  skills: [java, spring, python, django, flask, fastapi, node, node.js, nodejs, express, golang,
+           microservice, rest api, sql, postgres, mysql, mongodb, redis, kafka, react, react.js, reactjs,
+           javascript, typescript, next.js, nextjs, html, css, full stack, full-stack, fullstack]
+  # Role types you want: jobs tagged with these skill buckets rank higher
+  roles: [backend, fullstack, frontend, sde]
+  # Title words for work you're less interested in: ranked lower, not hidden
+  less_interested: [android, ios, mobile, embedded, firmware, security, vapt, soc, network, hardware,
+                    salesforce, sap, mainframe, test, qa, sdet, dsp, audio, acoustic, camera, video, codec,
+                    gpu, npu, graphics, modem, rf, timing, sta, silicon, chip, automotive, data engineer]
+  # Cities you'd move to (all of India + remote here); others rank a little lower
+  cities: [bengaluru, bangalore, hyderabad, chennai, pune, mumbai, gurugram, gurgaon, noida, delhi, remote]
+
 freshness:
   # Drop jobs posted more than this many days ago (they're usually filled already).
   # Jobs whose board gives no posting date are kept.
@@ -110,7 +129,7 @@ freshness:
 # Skill buckets. A job is tagged with every bucket whose keywords appear in
 # its title/description. `priority` buckets get ranked first.
 skills:
-  backend:      [backend, back-end, api, fastapi, django, flask, python, golang, " go ", java, spring, node, microservice, postgres, redis, kafka]
+  backend:      [backend, back-end, api, fastapi, django, flask, python, golang, java, spring, node, microservice, postgres, redis, kafka]
   ai_ml:        [machine learning, " ml ", ml engineer, deep learning, llm, genai, generative ai, nlp, computer vision, pytorch, tensorflow, rag, " ai ", ai engineer, applied scientist, data scientist]
   data:         [data engineer, etl, spark, airflow, snowflake, bigquery, data platform, analytics engineer, sql]
   devops_cloud: [devops, sre, site reliability, kubernetes, docker, terraform, aws, gcp, azure, cloud, infrastructure, platform engineer, ci/cd]

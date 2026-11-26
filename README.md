@@ -100,6 +100,20 @@ Filters: *Hiring freshers now*, *Has listed fresher roles*, *Tracked automatical
 *Check manually*. Startups are listed in `startups.yaml`; add a tracked one with
 `python -m radar add <careers-url> --name X`, then add its name under `tracked:`.
 
+## Careers pages without a job feed
+
+Some companies post jobs only on their own careers page, or on systems with no job feed.
+Those are listed in `companies.yaml` as `ats: webpage` with the page's `url`. Each run
+opens them in a headless browser (Chromium, installed by the workflow), waits for the
+page to render, follows "Open positions"-style links and embedded frames, and picks out
+links that point to job postings. For titles that already look like fresher software
+roles, it also opens the job's own page to read the description. It respects each
+site's robots.txt, reads one page at a time, and never logs in.
+
+`python -m radar add <url> --name X` falls back to this reader when a careers page has no
+job feed it recognises. Pages behind bot checks (Darwinbox, many Phenom/Taleo sites) or
+whose robots.txt disallows bots (Flipkart, Walmart, Goldman Sachs, Intuit) can't be read.
+
 ## Jobs from any company (Jooble)
 
 Besides the company boards, Job Radar can search **Jooble**, a job-search engine that

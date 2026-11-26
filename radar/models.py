@@ -37,9 +37,16 @@ class Job:
     years: int | None = None    # min years of experience asked, if stated
     remote: bool = False
     source: str = ""            # where it was found, when not the company's own board (e.g. Jooble)
+    fit: int = 0                # "Best for you" score, 0-100 (config.yaml profile)
+    why: list = field(default_factory=list)   # reasons for the fit score
 
     def to_dict(self) -> dict:
         return asdict(self)
+
+
+def best_first(fit: int, posted_at: str | None, score: int) -> tuple:
+    """Sort key: best personal fit first, then newest posting, then match score."""
+    return (-(fit or 0), *newest_first(posted_at, score))
 
 
 def newest_first(posted_at: str | None, score: int) -> tuple:

@@ -96,6 +96,7 @@
     <div class="row">
       <input type="search" id="q" placeholder="Search title, company, location…  (try: python, ml, pune)">
       <select id="sort">
+        <option value="fit">Best for you</option>
         <option value="posted">Newest posted</option>
         <option value="score">Best match</option>
         <option value="new">Recently seen</option>
@@ -166,7 +167,7 @@
   const saveMarks = () => { try { localStorage.setItem('radar-marks', JSON.stringify(marks)); } catch(e) {} };
 
   const S = { q:'', levels:new Set(), skills:new Set(), age:'all', remote:false, hideApplied:false,
-              showHidden:false, showClosed:false, company:'', sort:'posted', limit:60 };
+              showHidden:false, showClosed:false, company:'', sort:'fit', limit:60 };
 
   const jobs = D.jobs || [];
   const open = jobs.filter(j => j.status === 'open');
@@ -230,7 +231,8 @@
       return true;
     });
     const pk = j => j.posted_at ? j.posted_at.slice(0,10) : '';
-    const by = { posted:(a,b)=>(pk(a)?0:1)-(pk(b)?0:1) || pk(b).localeCompare(pk(a)) || b.score-a.score,
+    const by = { fit:(a,b)=>(b.fit||0)-(a.fit||0) || (pk(b)).localeCompare(pk(a)) || b.score-a.score,
+                 posted:(a,b)=>(pk(a)?0:1)-(pk(b)?0:1) || pk(b).localeCompare(pk(a)) || b.score-a.score,
                  score:(a,b)=>b.score-a.score, new:(a,b)=>Date.parse(b.first_seen)-Date.parse(a.first_seen),
                  company:(a,b)=>a.company.localeCompare(b.company)||b.score-a.score };
     return r.sort(by[S.sort]);
@@ -252,6 +254,7 @@
             ${j.years!=null?`<span>${j.years}+ yrs asked</span>`:''}
             ${j.source?`<span title="Found through ${esc(j.source)}, not the company's own careers site">via ${esc(j.source)}</span>`:''}
             <span class="tags">${j.skills.map(s=>`<span class="tag">${esc(SKILL_LABEL[s]||s)}</span>`).join('')}</span></div>
+          ${(j.why||[]).length?`<div class="meta" style="margin-top:3px"><span>✓ fits you: ${esc(j.why.join(' · '))}</span></div>`:''}
         </div>
         <div class="side">
           <span class="sub">${j.posted_at?`<span title="${esc(j.posted_at.slice(0,10))}">${postedLabel(j)}</span> · `:''}seen ${ago(j.first_seen)}</span>
@@ -259,7 +262,7 @@
             <button data-id="${esc(j.id)}" data-m="applied" class="${m==='applied'?'on':''}">${m==='applied'?'✓ Applied':'Applied'}</button>
             <button data-id="${esc(j.id)}" data-m="hidden">${m==='hidden'?'Unhide':'Hide'}</button>
           </div>
-          <span class="score mono">match ${j.score}</span>
+          <span class="score mono" title="Best-for-you score from your profile in config.yaml">${(j.fit||0)>=70?'⭐ ':''}fit ${j.fit||0}</span>
         </div></div>`; }).join('')
       : `<div class="empty">${jobs.length ? 'Nothing matches these filters.' : 'No data yet. The first scheduled run will fill this in.'}</div>`;
     $('more').hidden = r.length <= S.limit;

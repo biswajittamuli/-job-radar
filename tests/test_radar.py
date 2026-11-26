@@ -437,10 +437,10 @@ def test_end_to_end_drops_stale_jobs(repo):
     assert r["new"] == []
 
 
-def test_dashboard_defaults_to_newest_posted(repo):
+def test_dashboard_defaults_to_best_for_you(repo):
     run(root=repo, http=FakeHttp({"boards/acme": GH}), do_notify=False, verbose=False)
     html = (repo / "docs/index.html").read_text()
-    assert "sort:'posted'" in html and "posted ${d} days ago" in html
+    assert "sort:'fit'" in html and "posted ${d} days ago" in html and "fits you" in html
 
 
 # ── strict fresher mode (the real config) ───────────────────────────────────
@@ -618,6 +618,7 @@ def test_workflow_runs_four_times_a_day_and_survives_overlapping_runs():
     "Customer Engineer", "Implementation Engineer", "Software Engineering MTS - Production Support",
     "Associate Engineer - Mechanical (Cost Out)", "Manufacturing Engineer", "PMIC Design Verification Engineer",
     "NOC DV Assoc Engineer", "Hardware Engineer", "Associate Engineer - Safety & Reliability", "Technical Solution Engineer",
+    "Field Service Engineer -Pan India",
 ])
 def test_non_dev_roles_excluded(title):
     v = classify(J(title, desc="freshers welcome"), CFG)
@@ -1088,3 +1089,158 @@ def test_run_with_new_jobs_unchanged(tg):
     sent, _ = tg
     notify.send_all([_job("Fresh Role", None, 1)], [], "", CFG, "stats")
     assert "1 new" in sent[0][1]["text"] and "Fresh Role" in sent[0][1]["text"]
+
+
+# ── "Best for you" ──────────────────────────────────────────────────────────
+from radar.classify import batch_years
+
+
+def test_profile_in_config():
+    p = CFG["profile"]
+    assert p["grad_year"] == 2026 and "backend" in p["roles"] and "fullstack" in p["roles"] and "java" in p["skills"]
+
+
+@pytest.mark.parametrize("text,years", [("Open to 2026 graduates", {2026}), ("2025 batch only", {2025}), ("class of 2026", {2026}),
+                                        ("graduating in 2027", {2027}), ("2025/2026 pass-outs", {2026}), ("founded in 2015", set())])
+def test_batch_years(text, years):
+    assert batch_years(text) == years
+
+
+def test_other_batch_only_roles_are_skipped():
+    assert "for the 2025 batch" in classify(J("Graduate Engineer Trainee", desc="Only 2025 batch graduates"), CFG).reason
+    assert classify(J("Graduate Engineer Trainee", desc="2025 and 2026 batch graduates"), CFG).ok
+
+
+def test_fit_prefers_your_skills_and_batch():
+    today = date(2026, 11, 25)
+    backend = classify(RawJob("1", "Backend Developer (SDE 1)", "u", ["Bengaluru, India"], posted_at="2026-11-24",
+                              description="Freshers, 2026 batch. Java, Spring Boot, PostgreSQL, Kafka, REST APIs"), CFG, today=today)
+    android = classify(RawJob("2", "Android Developer - Fresher", "u", ["Bengaluru, India"], posted_at="2026-11-24",
+                              description="0-1 years. Kotlin, Android SDK"), CFG, today=today)
+    assert backend.ok and android.ok and backend.fit > android.fit and backend.fit >= 70
+    assert "2026 batch" in backend.why and "backend role" in backend.why and "java" in backend.why
+    assert android.why == [] or "java" not in android.why
+
+
+def test_alerts_list_best_fit_first_with_star():
+    hi = _job("Backend SDE 1", None, 1); hi.fit, hi.why = 85, ["backend", "java"]
+    lo = _job("Android Dev", None, 99); lo.fit = 30
+    text = notify.build_html([lo, hi], [], "", 40)
+    assert text.index("Backend SDE 1") < text.index("Android Dev")
+    assert "⭐" in text.split("Android Dev")[0] and "backend, java" in text
+
+
+def test_run_stores_fit_and_why(repo):
+    board = {"jobs": [{"id": 1, "title": "Software Engineer I - Backend", "absolute_url": "https://x/1",
+                       "location": {"name": "Bengaluru, India"}, "first_published": ago(1),
+                       "content": "0-1 years. Java, Spring, SQL. 2026 graduates welcome"}]}
+    r = run(root=repo, http=FakeHttp({"boards/acme": board}), do_notify=False, verbose=False)
+    assert r["new"][0].fit >= 70 and "2026 batch" in r["new"][0].why
+    stored = json.loads((repo / "data/jobs.json").read_text())
+    assert next(iter(stored.values()))["fit"] == r["new"][0].fit
+
+
+def test_fit_skill_words_match_whole_words_only():
+    j = RawJob("1", "Software Engineer I", "u", ["Bengaluru, India"], description="0-1 years of experience. Kubernetes nodes.")
+    v = classify(j, CFG)
+    assert v.ok and "express" not in v.why and "node" not in v.why
+
+
+def test_fit_title_role_beats_description_guess():
+    today = date(2026, 11, 25)
+    fe = classify(RawJob("1", "Frontend SDE 1", "u", ["India"], posted_at="2026-11-24", description="React, JavaScript, TypeScript"), CFG, today=today)
+    hw = classify(RawJob("2", "Engineer - Audio DSP", "u", ["Hyderabad, India"], posted_at="2026-11-24",
+                         description="0-1 years. Python, Java, backend tooling, REST API, microservice"), CFG, today=today)
+    assert fe.fit >= 70 and "frontend role" in fe.why
+    assert hw.fit <= fe.fit - 15
+
+
+def test_campus_hire_for_another_batch_is_skipped():
+    assert batch_years("2027 Campus Hire_Engineer_SW") == {2027}
+    assert "2027 batch" in classify(J("2027 Campus Hire_Engineer_SW"), CFG).reason
+
+
+# ── careers pages read with a headless browser ──────────────────────────────
+from radar.sources import webpage
+
+LINKS = [
+    {"text": "Careers", "href": "https://acme.in/careers", "ctx": ""},
+    {"text": "Apply now", "href": "https://acme.in/apply", "ctx": ""},
+    {"text": "Software Engineer - Fresher\nBengaluru · Full time", "href": "/careers/jobs/123", "ctx": "Software Engineer - Fresher Bengaluru Full time"},
+    {"text": "Backend Developer (SDE 1)", "href": "https://acme.in/careers/jobs/124", "ctx": "Backend Developer (SDE 1) Remote"},
+    {"text": "Head of Sales", "href": "https://acme.in/careers/jobs/125", "ctx": "Mumbai"},
+    {"text": "Follow us on LinkedIn - Engineer culture", "href": "https://linkedin.com/company/acme", "ctx": ""},
+    {"text": "Software Engineer - Fresher", "href": "/careers/jobs/123", "ctx": "dup"},
+    {"text": "Our blog", "href": "/blog", "ctx": ""},
+]
+
+
+def test_webpage_parse_picks_job_links_and_cities():
+    jobs = webpage.parse(LINKS, {"url": "https://acme.in/careers", "location": "India"}, ["bengaluru", "mumbai"])
+    assert [j.title for j in jobs] == ["Software Engineer - Fresher", "Backend Developer (SDE 1)"]   # "Head of Sales" isn't a role title
+    assert jobs[0].url == "https://acme.in/careers/jobs/123" and jobs[0].locations == ["Bengaluru, India"]
+    assert jobs[1].locations == ["Remote"] and jobs[1].remote
+    assert classify(jobs[0], CFG).ok
+
+
+def test_webpage_respects_robots_txt():
+    class H:
+        def __init__(self, robots): self.robots = robots
+        def get_text(self, url):
+            assert url == "https://acme.in/robots.txt"
+            if self.robots is None:
+                raise RuntimeError("404")
+            return self.robots
+    assert webpage.allowed("https://acme.in/careers", H("User-agent: *\nDisallow: /careers"))  is False
+    assert webpage.allowed("https://acme.in/careers", H("User-agent: *\nDisallow: /admin")) is True
+    assert webpage.allowed("https://acme.in/careers", H(None)) is True
+    with pytest.raises(SourceDisabled):
+        webpage.fetch({"url": "https://acme.in/careers"}, H("User-agent: *\nDisallow: /"))
+
+
+def test_runner_reads_pages_one_at_a_time_and_closes_browser(repo, monkeypatch):
+    import threading
+    calls, closed = [], []
+    monkeypatch.setattr(webpage, "fetch", lambda c, h: calls.append(threading.current_thread().name) or webpage.parse(LINKS, c, ["bengaluru"]))
+    monkeypatch.setattr(webpage, "describe", lambda c, j, h: j)
+    monkeypatch.setattr(webpage, "close", lambda: closed.append(1))
+    (repo / "companies.yaml").write_text(yaml.safe_dump({"companies": [
+        {"name": "Acme", "ats": "webpage", "url": "https://acme.in/careers", "location": "India"},
+        {"name": "Beta", "ats": "webpage", "url": "https://beta.in/careers", "location": "India"}]}))
+    r = run(root=repo, http=FakeHttp({}), do_notify=False, verbose=False)
+    assert calls == ["MainThread", "MainThread"] and closed == [1]
+    assert {j.title for j in r["new"]} == {"Software Engineer - Fresher", "Backend Developer (SDE 1)"}
+
+
+def test_workflow_installs_browser():
+    wf = (ROOT / ".github/workflows/radar.yml").read_text()
+    assert "playwright install --with-deps chromium" in wf
+    assert "playwright" in (ROOT / "requirements.txt").read_text()
+
+
+@pytest.mark.parametrize("text,href,ok", [
+    ("Developers", "https://acme.in/developers", False),
+    ("Engineering blog", "https://acme.in/blog/engineering", False),
+    ("Lead Management System", "https://acme.in/product/lead-management", False),
+    ("Junior Software Engineer Jobs", "https://board.in/jobs/junior-software-engineer", False),
+    ("SDE 1- DevOps", "https://acme.in/careers/sde-1-devops-4812", True),
+    ("Backend Developer (Python & Django)", "https://acme.darwinbox.in/ms/candidate/careers/a1b2", True),
+    ("Software Engineer", "https://acme.in/open-roles?jobId=77", True),
+])
+def test_webpage_only_job_posting_links(text, href, ok):
+    jobs = webpage.parse([{"text": text, "href": href, "ctx": "Bengaluru"}], {"url": "https://acme.in/careers", "location": "India"}, ["bengaluru"])
+    assert bool(jobs) is ok
+
+
+def test_add_falls_back_to_reading_the_page(tmp_path, monkeypatch):
+    f = tmp_path / "companies.yaml"
+    f.write_text("companies:\n")
+    monkeypatch.setattr(webpage, "fetch", lambda c, h: [RawJob("1", "SDE 1", "https://x.in/careers/jobs/1", ["India"])])
+    monkeypatch.setattr(webpage, "close", lambda: None)
+
+    class H:
+        def get_text(self, url):
+            return "<html>our own careers page</html>"
+    e, log = detect_mod.add_company("https://x.in/careers", "X", f, H(), "2026-11-25")
+    assert e["ats"] == "webpage" and "headless browser" in log[0]
+    assert yaml.safe_load(f.read_text())["companies"][0]["url"] == "https://x.in/careers"
