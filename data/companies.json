@@ -2,15 +2,15 @@
  "100ms": {
   "ats": "lever",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "lever:100ms:4c9f19c7-4432-4394-ba93-167319c68adc": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "AI Engineer – AI Agents (Healthcare)",
     "url": "https://jobs.lever.co/100ms/4c9f19c7-4432-4394-ba93-167319c68adc"
    }
@@ -18,14 +18,14 @@
  },
  "AMD": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "AbhiBus": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -39,7 +39,7 @@
  },
  "Acko": {
   "ats": "kula",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -53,21 +53,21 @@
  },
  "Adyen": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Agoda": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Airbnb": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -75,50 +75,50 @@
  "Amazon": {
   "ats": "amazon",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
-  "open_entry": 21,
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
+  "open_entry": 22,
   "open_intern": 0,
   "seen": {
    "amazon:amazon:10432823": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Development Engineer I, FinOps FP&A",
     "url": "https://www.amazon.jobs/en/jobs/10432823/software-development-engineer-i-finops-fp-a"
    },
    "amazon:amazon:10470829": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Dev Engineer I FTC",
     "url": "https://www.amazon.jobs/en/jobs/10470829/software-dev-engineer-i-ftc"
    },
    "amazon:amazon:10503821": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Optical Network Development Engineer , Capacity Restoration Team",
     "url": "https://www.amazon.jobs/en/jobs/10503821/optical-network-development-engineer-capacity-restoration-team"
    },
    "amazon:amazon:10522139": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "System Development Engineer I, Amazon",
     "url": "https://www.amazon.jobs/en/jobs/10522139/system-development-engineer-i-amazon"
    },
    "amazon:amazon:10536801": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Data Engineer, Flex Analytics",
     "url": "https://www.amazon.jobs/en/jobs/10536801/data-engineer-flex-analytics"
    },
    "amazon:amazon:10551515": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Dev Engineer I FTC",
     "url": "https://www.amazon.jobs/en/jobs/10551515/software-dev-engineer-i-ftc"
    },
@@ -132,105 +132,112 @@
    "amazon:amazon:10561005": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Development Engineer, Time & Pay Innovation",
     "url": "https://www.amazon.jobs/en/jobs/10561005/software-development-engineer-time-pay-innovation"
    },
    "amazon:amazon:10561007": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Development Engineer, Time & Pay Innovation",
     "url": "https://www.amazon.jobs/en/jobs/10561007/software-development-engineer-time-pay-innovation"
    },
    "amazon:amazon:10576573": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "System Development Engineer I, Amazon",
     "url": "https://www.amazon.jobs/en/jobs/10576573/system-development-engineer-i-amazon"
    },
    "amazon:amazon:10580008": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Development Engineer I",
     "url": "https://www.amazon.jobs/en/jobs/10580008/software-development-engineer-i"
    },
    "amazon:amazon:10580010": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Development Engineer I FTC",
     "url": "https://www.amazon.jobs/en/jobs/10580010/software-development-engineer-i-ftc"
    },
    "amazon:amazon:10580013": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Development Engineer I",
     "url": "https://www.amazon.jobs/en/jobs/10580013/software-development-engineer-i"
    },
    "amazon:amazon:10582732": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Data Engineer I",
     "url": "https://www.amazon.jobs/en/jobs/10582732/data-engineer-i"
    },
    "amazon:amazon:10594150": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Development Engineer, Amazon International Seller Services",
     "url": "https://www.amazon.jobs/en/jobs/10594150/software-development-engineer-amazon-international-seller-services"
    },
    "amazon:amazon:10597397": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Data Engineer I, SPIV Data Engineering",
     "url": "https://www.amazon.jobs/en/jobs/10597397/data-engineer-i-spiv-data-engineering"
    },
    "amazon:amazon:10602226": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Data Engineer, MIDAS, Digital Acceleration",
     "url": "https://www.amazon.jobs/en/jobs/10602226/data-engineer-midas-digital-acceleration"
    },
    "amazon:amazon:10602774": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Data Engineer I, Business Data Technologies",
     "url": "https://www.amazon.jobs/en/jobs/10602774/data-engineer-i-business-data-technologies"
    },
    "amazon:amazon:10605737": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Dev Engineer I, L4",
     "url": "https://www.amazon.jobs/en/jobs/10605737/software-dev-engineer-i-l4"
    },
    "amazon:amazon:10609447": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Data Engineer, FinOps FP&A",
     "url": "https://www.amazon.jobs/en/jobs/10609447/data-engineer-finops-fp-a"
+   },
+   "amazon:amazon:10614089": {
+    "first_seen": "2026-11-26T22:31:54+00:00",
+    "kind": "entry",
+    "last_seen": "2026-11-26T22:31:54+00:00",
+    "title": "Data Engineer I, CMT",
+    "url": "https://www.amazon.jobs/en/jobs/10614089/data-engineer-i-cmt"
    },
    "amazon:amazon:3203393": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Development Engineer - Test II, Alexa Endpoint Experiences",
     "url": "https://www.amazon.jobs/en/jobs/3203393/software-development-engineer-test-ii-alexa-endpoint-experiences"
    },
    "amazon:amazon:3205651": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Security Engineer, Stores Application Security",
     "url": "https://www.amazon.jobs/en/jobs/3205651/security-engineer-stores-application-security"
    }
@@ -238,7 +245,7 @@
  },
  "Amdocs": {
   "ats": "eightfold",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -246,22 +253,22 @@
  "American Express": {
   "ats": "oracle_hcm",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 2,
   "open_intern": 0,
   "seen": {
    "oracle_hcm:american-express:26016183": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Analyst - Data Science",
     "url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26016183"
    },
    "oracle_hcm:american-express:26016185": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Analyst - Data Science",
     "url": "https://egug.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/26016185"
    }
@@ -269,42 +276,42 @@
  },
  "Anthropic": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Applied Materials": {
   "ats": "eightfold",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Aspora": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "AstraZeneca": {
   "ats": "eightfold",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Ati Motors": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Atlan": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -312,36 +319,36 @@
  "Atlassian": {
   "ats": "atlassian",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 2,
   "open_intern": 2,
   "seen": {
    "atlassian:atlassian:25566": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Full Stack Software Engineer",
     "url": "https://careers-americas.icims.com/jobs/25566/full-stack-software-engineer/job"
    },
    "atlassian:atlassian:26272": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "intern",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Data Engineer Intern, 2027 Summer U.S.",
     "url": "https://campus-americas.icims.com/jobs/26272/data-engineer-intern%2c-2027-summer-u.s./job"
    },
    "atlassian:atlassian:26843": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "intern",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "AI Demand Intelligence Intern, 2027 Summer U.S.",
     "url": "https://careers-americas.icims.com/jobs/26843/ai-demand-intelligence-intern%2c-2027-summer-u.s./job"
    },
    "atlassian:atlassian:27794": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Backend Software Engineer",
     "url": "https://careers-americas.icims.com/jobs/27794/backend-software-engineer/job"
    }
@@ -349,42 +356,42 @@
  },
  "Autodesk": {
   "ats": "eightfold",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "BYJU'S": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Barclays": {
   "ats": "workday",
-  "last_checked": "2026-11-25T19:32:03+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "BharatPe": {
   "ats": "freshteam",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Binance": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Brex": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -392,15 +399,15 @@
  "Bristol Myers Squibb": {
   "ats": "eightfold",
   "first_fresher_seen": "2026-11-26T09:04:18+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "eightfold:bristol-myers-squibb:137484134219": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Data & AI Platform Engineer I, Commercialization",
     "url": "https://bms.eightfold.ai/careers/job/137484134219"
    }
@@ -422,7 +429,7 @@
  },
  "Bureau": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -430,15 +437,15 @@
  "CRED": {
   "ats": "lever",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "lever:cred:913a6616-78c9-4ca3-8c92-67ddea8a80df": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "fraud analytics engineer",
     "url": "https://jobs.lever.co/cred/913a6616-78c9-4ca3-8c92-67ddea8a80df"
    }
@@ -446,7 +453,7 @@
  },
  "Cadence": {
   "ats": "workday",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -454,22 +461,22 @@
  "Capgemini": {
   "ats": "capgemini",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 2,
   "open_intern": 0,
   "seen": {
    "capgemini:capgemini:546640-en_GB": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Jr. Restraints Engineer",
     "url": "https://careers.capgemini.com/job/Pune-Jr_-Restraints-Engineer/1460872233/?feedId=388633&utm_source=CareerSite&tcsource=apply"
    },
    "capgemini:capgemini:555246-en_GB": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Test Automation BDD , Robot Framework",
     "url": "https://careers.capgemini.com/job/Bangalore-Test-Automation-BDD-%2C-Robot-Framework/1458685033/?feedId=388633&utm_source=CareerSite&tcsource=apply"
    }
@@ -477,7 +484,7 @@
  },
  "Cars24": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -485,8 +492,8 @@
  "Cashfree": {
   "ats": "kula",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
@@ -500,7 +507,7 @@
    "kula:cashfree:5565": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Development Engineer 1",
     "url": "https://careers.kula.ai/cashfree/5565"
    }
@@ -508,14 +515,14 @@
  },
  "Celigo": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Cisco": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -523,36 +530,36 @@
  "Citi": {
   "ats": "eightfold",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 4,
   "open_intern": 0,
   "seen": {
    "eightfold:citi:859037280577": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Data Analyst",
     "url": "https://citi.eightfold.ai/careers/job/859037280577"
    },
    "eightfold:citi:859038610849": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Data Engineer",
     "url": "https://citi.eightfold.ai/careers/job/859038610849"
    },
    "eightfold:citi:859038902222": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Junior Full Stack Engineer with AI",
     "url": "https://citi.eightfold.ai/careers/job/859038902222"
    },
    "eightfold:citi:859038913814": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Application Developer Programmer Analyst",
     "url": "https://citi.eightfold.ai/careers/job/859038913814"
    }
@@ -560,63 +567,63 @@
  },
  "CityMall": {
   "ats": "freshteam",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "CleverTap": {
   "ats": "kula",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "ClickPost": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "ClickUp": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Cloudflare": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Cohere": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Coinbase": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Commvault": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Composio": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -624,22 +631,22 @@
  "Continental": {
   "ats": "smartrecruiters",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 2,
   "open_intern": 0,
   "seen": {
    "smartrecruiters:continental:744000047118282": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "L3 Network Engineer (m/f/d)",
     "url": "https://jobs.smartrecruiters.com/Continental/744000047118282"
    },
    "smartrecruiters:continental:744000048934665": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "L3 Network Engineer (Access Services) (m/f/d)",
     "url": "https://jobs.smartrecruiters.com/Continental/744000048934665"
    }
@@ -647,21 +654,21 @@
  },
  "Couchbase": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Coupa": {
   "ats": "lever",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Coursera": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -675,70 +682,70 @@
  },
  "Cutshort": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "CynLr": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Databricks": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Datadog": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Deel": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Deliveroo": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Dell": {
   "ats": "oracle_hcm",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Delta Exchange": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "DevRev": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Dezerv": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -746,7 +753,7 @@
  "Digantara": {
   "ats": "kula",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "last_fresher_seen": "2026-11-25T13:56:51+00:00",
   "open_entry": 0,
   "open_intern": 0,
@@ -762,21 +769,21 @@
  },
  "Ditto Insurance": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "DoorDash": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Druva": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -784,29 +791,29 @@
  "Eaton": {
   "ats": "eightfold",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
-  "open_entry": 14,
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
+  "open_entry": 13,
   "open_intern": 0,
   "seen": {
    "eightfold:eaton:687239390396": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer M&S ESA- Structural Dynamics",
     "url": "https://eaton.eightfold.ai/careers/job/687239390396"
    },
    "eightfold:eaton:687239452584": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer - Reliability",
     "url": "https://eaton.eightfold.ai/careers/job/687239452584"
    },
    "eightfold:eaton:687239950338": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer-Structural Dynamics",
     "url": "https://eaton.eightfold.ai/careers/job/687239950338"
    },
@@ -820,70 +827,70 @@
    "eightfold:eaton:687239980688": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer- Electromagnetics",
     "url": "https://eaton.eightfold.ai/careers/job/687239980688"
    },
    "eightfold:eaton:687239982562": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Associate Engineer- Product Stewardship and Sustainability",
     "url": "https://eaton.eightfold.ai/careers/job/687239982562"
    },
    "eightfold:eaton:687239986063": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Associate Engineer - Structures",
     "url": "https://eaton.eightfold.ai/careers/job/687239986063"
    },
    "eightfold:eaton:687239991945": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Associate Engineer - Structures",
     "url": "https://eaton.eightfold.ai/careers/job/687239991945"
    },
    "eightfold:eaton:687239995759": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer - Electromagnetics",
     "url": "https://eaton.eightfold.ai/careers/job/687239995759"
    },
    "eightfold:eaton:687240010318": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Associate Engineer - Reliability",
     "url": "https://eaton.eightfold.ai/careers/job/687240010318"
    },
    "eightfold:eaton:687240015065": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer - Electromagnetics",
     "url": "https://eaton.eightfold.ai/careers/job/687240015065"
    },
    "eightfold:eaton:687240025800": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer- Flow & Thermal",
     "url": "https://eaton.eightfold.ai/careers/job/687240025800"
    },
    "eightfold:eaton:687240038159": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Associate Engineer - Factory Simulation",
     "url": "https://eaton.eightfold.ai/careers/job/687240038159"
    },
    "eightfold:eaton:687240038164": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Associate Engineer- PLM",
     "url": "https://eaton.eightfold.ai/careers/job/687240038164"
    }
@@ -891,77 +898,77 @@
  },
  "Eka Care": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Elastic": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Eloelo": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Elsevier": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Ema": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Endava": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Equal Experts": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Ericsson": {
   "ats": "eightfold",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Everstage": {
   "ats": "freshteam",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Experian": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Extreme Networks": {
   "ats": "lever",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -969,15 +976,15 @@
  "Falcon": {
   "ats": "keka",
   "first_fresher_seen": "2026-11-26T09:04:18+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "keka:falcon:171032": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "SDET – I (Software Development Engineer in Test)",
     "url": "https://falcon.keka.com/careers/jobdetails/171032"
    }
@@ -986,22 +993,22 @@
  "FamPay": {
   "ats": "lever",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 2,
   "seen": {
    "lever:fampay:bbbbbfd2-1855-4991-82d5-84ef57607c24": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "intern",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Security Engineer Intern",
     "url": "https://jobs.lever.co/fampay/bbbbbfd2-1855-4991-82d5-84ef57607c24"
    },
    "lever:fampay:cf014ef0-218a-4041-a238-ff91c7b9a5bc": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "intern",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Backend Engineering Intern",
     "url": "https://jobs.lever.co/fampay/cf014ef0-218a-4041-a238-ff91c7b9a5bc"
    }
@@ -1009,42 +1016,42 @@
  },
  "Fi Money": {
   "ats": "lever",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Figma": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Fivetran": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Fractal": {
   "ats": "workday",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Freshworks": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Fyers": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -1052,15 +1059,15 @@
  "GE HealthCare": {
   "ats": "workday",
   "first_fresher_seen": "2026-11-26T09:04:18+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "workday:ge-healthcare:/job/Bengaluru/Sourcing-Analyst---Trainee-Engineer_R4049575-1": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Sourcing Analyst - Trainee Engineer",
     "url": "https://gehc.wd5.myworkdayjobs.com/en-US/GEHC_ExternalSite/job/Bengaluru/Sourcing-Analyst---Trainee-Engineer_R4049575-1"
    }
@@ -1069,15 +1076,15 @@
  "GeeksforGeeks": {
   "ats": "webpage",
   "first_fresher_seen": "2026-11-26T09:04:18+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "webpage:geeksforgeeks:https://geeksforgeeks.zohorecruit.in/jobs/Careers/61093000010849002/SDE--1?source=CareerSite": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "SDE -1",
     "url": "https://geeksforgeeks.zohorecruit.in/jobs/Careers/61093000010849002/SDE--1?source=CareerSite"
    }
@@ -1085,28 +1092,28 @@
  },
  "Genpact": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "GitLab": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Glance": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "GoKwik": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -1114,36 +1121,36 @@
  "Google": {
   "ats": "google",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 4,
   "open_intern": 0,
   "seen": {
    "google:google:111448128854336198": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Data Engineer",
     "url": "https://www.google.com/about/careers/applications/jobs/results/111448128854336198-data-engineer"
    },
    "google:google:123778327126123206": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Engineer II, AI Security",
     "url": "https://www.google.com/about/careers/applications/jobs/results/123778327126123206-software-engineer-ii-ai-security"
    },
    "google:google:83624643516080838": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Engineer II, Google Cloud",
     "url": "https://www.google.com/about/careers/applications/jobs/results/83624643516080838-software-engineer-ii-google-cloud"
    },
    "google:google:96475915810153158": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Data Engineer",
     "url": "https://www.google.com/about/careers/applications/jobs/results/96475915810153158-data-engineer"
    }
@@ -1151,28 +1158,28 @@
  },
  "Grab": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Groww": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "HP": {
   "ats": "eightfold",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "HackerEarth": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -1180,15 +1187,15 @@
  "HackerRank": {
   "ats": "greenhouse",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 1,
   "seen": {
    "greenhouse:hackerrank:8229735": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "intern",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Development Engineer Intern",
     "url": "https://job-boards.greenhouse.io/hackerrank/jobs/8229735"
    }
@@ -1196,21 +1203,21 @@
  },
  "Haleon": {
   "ats": "eightfold",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Haptik": {
   "ats": "freshteam",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Harness": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -1218,36 +1225,36 @@
  "Hevo Data": {
   "ats": "lever",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 3,
   "open_intern": 1,
   "seen": {
    "lever:hevo-data:21fbe701-e71b-4f45-b865-a497a62a6482": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Associate SDE- Pune",
     "url": "https://jobs.lever.co/hevodata/21fbe701-e71b-4f45-b865-a497a62a6482"
    },
    "lever:hevo-data:4eccaf98-ba19-42ea-b040-e0976d4dadfe": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Associate SDE",
     "url": "https://jobs.lever.co/hevodata/4eccaf98-ba19-42ea-b040-e0976d4dadfe"
    },
    "lever:hevo-data:6cbbe304-e065-4711-bf3e-756795d2bc2a": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "SDE I",
     "url": "https://jobs.lever.co/hevodata/6cbbe304-e065-4711-bf3e-756795d2bc2a"
    },
    "lever:hevo-data:993a3ed3-3014-432f-b0f4-28d300d58d9a": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "intern",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Associate Software Development Engineer (SDE) Intern",
     "url": "https://jobs.lever.co/hevodata/993a3ed3-3014-432f-b0f4-28d300d58d9a"
    }
@@ -1255,7 +1262,7 @@
  },
  "HighRadius": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -1263,22 +1270,22 @@
  "Honeywell": {
   "ats": "oracle_hcm",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 5,
   "seen": {
    "oracle_hcm:honeywell:161636": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "intern",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Intern Bachelors Software Eng",
     "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/161636"
    },
    "oracle_hcm:honeywell:161637": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "intern",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Intern Bachelors Software Eng",
     "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/161637"
    },
@@ -1292,28 +1299,28 @@
    "oracle_hcm:honeywell:161639": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "intern",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Intern Bachelors Software Eng",
     "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/161639"
    },
    "oracle_hcm:honeywell:161641": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "intern",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Intern Bachelors Software Eng",
     "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/161641"
    },
    "oracle_hcm:honeywell:162362": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "intern",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Intern Bachelors Software Eng",
     "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/162362"
    },
    "oracle_hcm:honeywell:162410": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Engr I - C++",
     "url": "https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1/job/162410"
    }
@@ -1321,35 +1328,35 @@
  },
  "Housing.com": {
   "ats": "freshteam",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Icertis": {
   "ats": "oracle_hcm",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "InMobi": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Inc42": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Increff": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -1357,29 +1364,29 @@
  "Infineon": {
   "ats": "eightfold",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 3,
   "open_intern": 0,
   "seen": {
    "eightfold:infineon:563808971932857": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Junior Software Developer (Contract)",
     "url": "https://infineon.eightfold.ai/careers/job/563808971932857"
    },
    "eightfold:infineon:563808971932858": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Junior Software Developer (Contract)",
     "url": "https://infineon.eightfold.ai/careers/job/563808971932858"
    },
    "eightfold:infineon:563808971970202": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Trainee Engineer",
     "url": "https://infineon.eightfold.ai/careers/job/563808971970202"
    }
@@ -1387,14 +1394,14 @@
  },
  "Inshorts": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Instamojo": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -1409,15 +1416,15 @@
  "Interview Kickstart": {
   "ats": "ashby",
   "first_fresher_seen": "2026-11-26T09:04:18+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 1,
   "seen": {
    "ashby:interview-kickstart:bf2a4802-4180-440b-b5bf-5f8058e69846": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "intern",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Intern - Software Development Engineer (Backend)",
     "url": "https://jobs.ashbyhq.com/interview-kickstart/bf2a4802-4180-440b-b5bf-5f8058e69846"
    }
@@ -1425,7 +1432,7 @@
  },
  "JFrog": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -1433,15 +1440,15 @@
  "JPMorgan Chase": {
   "ats": "oracle_hcm",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "oracle_hcm:jpmorgan-chase:210803316": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Applied AI and Data Science Specialist – Global Research Modernization",
     "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210803316"
    }
@@ -1449,91 +1456,91 @@
  },
  "Jupiter": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Kuku FM": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Lam Research": {
   "ats": "eightfold",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "LambdaTest": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Lendingkart": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "LetsTransport": {
   "ats": "freshteam",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "LogiNext": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Lokal": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Loop Health": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Lowe's India": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Lyzr": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Mastercard": {
   "ats": "workday",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Meesho": {
   "ats": "lever",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -1541,11 +1548,18 @@
  "Micron": {
   "ats": "eightfold",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
+   "eightfold:micron:43646428": {
+    "first_seen": "2026-11-26T22:31:54+00:00",
+    "kind": "entry",
+    "last_seen": "2026-11-26T22:31:54+00:00",
+    "title": "Associate Engineer",
+    "url": "https://micron.eightfold.ai/careers/job/43646428"
+   },
    "eightfold:micron:44409875": {
     "first_seen": "2026-11-25T19:32:03+00:00",
     "kind": "entry",
@@ -1565,22 +1579,22 @@
  "Microsoft": {
   "ats": "microsoft",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 2,
   "open_intern": 0,
   "seen": {
    "microsoft:microsoft:1970393557022190": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Engineer Apprenticeship",
     "url": "https://apply.careers.microsoft.com/careers/job/1970393557022190"
    },
    "microsoft:microsoft:1970393557050388": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Engineering",
     "url": "https://apply.careers.microsoft.com/careers/job/1970393557050388"
    }
@@ -1588,42 +1602,49 @@
  },
  "Mindtickle": {
   "ats": "lever",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Mintifi": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Mixpanel": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "MoEngage": {
   "ats": "kula",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "MongoDB": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Morgan Stanley": {
   "ats": "eightfold",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "open_entry": 0,
+  "open_intern": 0,
+  "seen": {}
+ },
+ "Motorola Solutions": {
+  "ats": "workday",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -1631,43 +1652,43 @@
  "NVIDIA": {
   "ats": "eightfold",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 5,
   "open_intern": 0,
   "seen": {
    "eightfold:nvidia:893391504263": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Power Architecture Engineer",
     "url": "https://nvidia.eightfold.ai/careers/job/893391504263"
    },
    "eightfold:nvidia:893392589950": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Power Architecture Engineer",
     "url": "https://nvidia.eightfold.ai/careers/job/893392589950"
    },
    "eightfold:nvidia:893397485077": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "GPU Core Pipeline IP Verification Engineer",
     "url": "https://nvidia.eightfold.ai/careers/job/893397485077"
    },
    "eightfold:nvidia:893398503916": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Power Architecture Engineer",
     "url": "https://nvidia.eightfold.ai/careers/job/893398503916"
    },
    "eightfold:nvidia:893398597110": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Verification Engineer, PCIE",
     "url": "https://nvidia.eightfold.ai/careers/job/893398597110"
    }
@@ -1675,112 +1696,112 @@
  },
  "Nanonets": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Nasdaq": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Netlify": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Netskope": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "New Relic": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Newton School": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Neysa": {
   "ats": "kula",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "NielsenIQ": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Nike": {
   "ats": "workday",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Ninjacart": {
   "ats": "freshteam",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Niyo": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Nobroker": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Nokia": {
   "ats": "oracle_hcm",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Notion": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Observe.AI": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Okta": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -1788,15 +1809,15 @@
  "Onsitego": {
   "ats": "keka",
   "first_fresher_seen": "2026-11-26T09:04:18+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "keka:onsitego:170527": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Qdigi- Refrigerator Engineers - Chennai & Cochin",
     "url": "https://onsitego.keka.com/careers/jobdetails/170527"
    }
@@ -1804,42 +1825,42 @@
  },
  "Open Financial": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "OpenAI": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Oracle": {
   "ats": "oracle_hcm",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Outreach": {
   "ats": "lever",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Ozonetel": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Palantir": {
   "ats": "lever",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -1847,15 +1868,15 @@
  "Paxcom": {
   "ats": "keka",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 1,
   "seen": {
    "keka:paxcom:138976": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "intern",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Machine Learning/ AI Intern",
     "url": "https://paxcom.keka.com/careers/jobdetails/138976"
    }
@@ -1864,36 +1885,36 @@
  "PayPal": {
   "ats": "eightfold",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 4,
   "open_intern": 0,
   "seen": {
    "eightfold:paypal:274922911270": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Engineer, Android",
     "url": "https://paypal.eightfold.ai/careers/job/274922911270"
    },
    "eightfold:paypal:274923374983": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Development Engineer in Test",
     "url": "https://paypal.eightfold.ai/careers/job/274923374983"
    },
    "eightfold:paypal:274923420765": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Engineer, Web",
     "url": "https://paypal.eightfold.ai/careers/job/274923420765"
    },
    "eightfold:paypal:274923516746": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Machine Learning Engineer, Fraud (Crypto & Debit Card)",
     "url": "https://paypal.eightfold.ai/careers/job/274923516746"
    },
@@ -1909,15 +1930,15 @@
  "PayU": {
   "ats": "webpage",
   "first_fresher_seen": "2026-11-26T09:04:18+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "webpage:payu:https://careers.payu.in/PayU/job/Gurgaon-Software-Engineer-1/54458980/": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Engineer 1",
     "url": "https://careers.payu.in/PayU/job/Gurgaon-Software-Engineer-1/54458980/"
    }
@@ -1925,21 +1946,21 @@
  },
  "Paytm": {
   "ats": "lever",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "PepsiCo": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Philips": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -1947,43 +1968,43 @@
  "PhonePe": {
   "ats": "smartrecruiters",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 5,
   "open_intern": 0,
   "seen": {
    "smartrecruiters:phonepe:1000000000003063": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Site Reliability Engineer - On-Prem (1 to 4 Years)",
     "url": "https://jobs.smartrecruiters.com/PHONEPELIMITED/1000000000003063"
    },
    "smartrecruiters:phonepe:1000000000004056": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Network Delivery Engineer 1",
     "url": "https://jobs.smartrecruiters.com/PHONEPELIMITED/1000000000004056"
    },
    "smartrecruiters:phonepe:1000000000004487": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Site Reliability Engineer - On-Prem (1 to 4 Years)",
     "url": "https://jobs.smartrecruiters.com/PHONEPELIMITED/1000000000004487"
    },
    "smartrecruiters:phonepe:1000000000004913": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Business Intelligence Engineer (1-3 Years)",
     "url": "https://jobs.smartrecruiters.com/PHONEPELIMITED/1000000000004913"
    },
    "smartrecruiters:phonepe:1000000000006623": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Platform Engineer 1",
     "url": "https://jobs.smartrecruiters.com/PHONEPELIMITED/1000000000006623"
    }
@@ -1991,42 +2012,42 @@
  },
  "Plum": {
   "ats": "kula",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Pocket FM": {
   "ats": "lever",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "PostHog": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Postman": {
   "ats": "workday",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Pure Storage": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Qlik": {
   "ats": "eightfold",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2034,148 +2055,148 @@
  "Qualcomm": {
   "ats": "eightfold",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
-  "open_entry": 40,
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
+  "open_entry": 39,
   "open_intern": 0,
   "seen": {
    "eightfold:qualcomm:446715899384": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "R&D Engineer, XR AI Software and Systems",
     "url": "https://careers.qualcomm.com/careers/job/446715899384"
    },
    "eightfold:qualcomm:446717343308": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer-PPAT",
     "url": "https://careers.qualcomm.com/careers/job/446717343308"
    },
    "eightfold:qualcomm:446718623077": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Automotive Audio Systems Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446718623077"
    },
    "eightfold:qualcomm:446719366353": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "AI Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446719366353"
    },
    "eightfold:qualcomm:446719783487": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "2027 Campus Hire_ Engineer_ HW",
     "url": "https://careers.qualcomm.com/careers/job/446719783487"
    },
    "eightfold:qualcomm:446719783557": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "2027 Campus Hire_ Associate Engineer_ HW",
     "url": "https://careers.qualcomm.com/careers/job/446719783557"
    },
    "eightfold:qualcomm:446719783573": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "2027 Campus Hire_Engineer_SW",
     "url": "https://careers.qualcomm.com/careers/job/446719783573"
    },
    "eightfold:qualcomm:446719784235": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "2027 Campus Hire_Associate Engineer_SW",
     "url": "https://careers.qualcomm.com/careers/job/446719784235"
    },
    "eightfold:qualcomm:446720156834": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Telematics Platform Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446720156834"
    },
    "eightfold:qualcomm:446720515867": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "NPU STA/Timing Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446720515867"
    },
    "eightfold:qualcomm:446720543961": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446720543961"
    },
    "eightfold:qualcomm:446720545289": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer - Audio DSP",
     "url": "https://careers.qualcomm.com/careers/job/446720545289"
    },
    "eightfold:qualcomm:446720710671": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer-PPAT",
     "url": "https://careers.qualcomm.com/careers/job/446720710671"
    },
    "eightfold:qualcomm:446720779608": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446720779608"
    },
    "eightfold:qualcomm:446720816242": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Modem/GNSS Systems Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446720816242"
    },
    "eightfold:qualcomm:446720848928": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer- Camera",
     "url": "https://careers.qualcomm.com/careers/job/446720848928"
    },
    "eightfold:qualcomm:446720933788": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "GPU Architecture & AI/ML Engineer | IIT or NIT Freshers | 0–3 Years",
     "url": "https://careers.qualcomm.com/careers/job/446720933788"
    },
    "eightfold:qualcomm:446720953653": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "NPU STA/Timing Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446720953653"
    },
    "eightfold:qualcomm:446721041865": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "System Performance Engineer (NSP/NPU, AI/ML)",
     "url": "https://careers.qualcomm.com/careers/job/446721041865"
    },
    "eightfold:qualcomm:446721050797": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Graphics Software Infrastructure Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446721050797"
    },
@@ -2189,133 +2210,133 @@
    "eightfold:qualcomm:446721052756": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "XR Software Engineer (All Levels - Multiple Positions)",
     "url": "https://careers.qualcomm.com/careers/job/446721052756"
    },
    "eightfold:qualcomm:446721164775": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Automotive Display Software Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446721164775"
    },
    "eightfold:qualcomm:446721212936": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "SystemC Modeling Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446721212936"
    },
    "eightfold:qualcomm:446721218767": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer - RF SW - M.Tech - Communication background - 2025/26",
     "url": "https://careers.qualcomm.com/careers/job/446721218767"
    },
    "eightfold:qualcomm:446721275984": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer- Modem Development",
     "url": "https://careers.qualcomm.com/careers/job/446721275984"
    },
    "eightfold:qualcomm:446721334036": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "WLAN- Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446721334036"
    },
    "eightfold:qualcomm:446721334066": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Audio Acoustics & Tuning Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446721334066"
    },
    "eightfold:qualcomm:446721334828": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "2027 Campus Hire_ System Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446721334828"
    },
    "eightfold:qualcomm:446721369977": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Memory Circuit Design Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446721369977"
    },
    "eightfold:qualcomm:446721466219": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "SoC Validation Engineer - Power Management",
     "url": "https://careers.qualcomm.com/careers/job/446721466219"
    },
    "eightfold:qualcomm:446721608879": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "QNX BSP Platform Engineer_Customer Engineering",
     "url": "https://careers.qualcomm.com/careers/job/446721608879"
    },
    "eightfold:qualcomm:446721778413": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Associate Engineer - WLAN Firmware",
     "url": "https://careers.qualcomm.com/careers/job/446721778413"
    },
    "eightfold:qualcomm:446721997186": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Associate Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446721997186"
    },
    "eightfold:qualcomm:446722024119": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "CPU - Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446722024119"
    },
    "eightfold:qualcomm:446722067227": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Video Codec Architecture and Modeling Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446722067227"
    },
    "eightfold:qualcomm:446722076274": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446722076274"
    },
    "eightfold:qualcomm:446722208738": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "SDET - Software Development Engineer in Test",
     "url": "https://careers.qualcomm.com/careers/job/446722208738"
    },
    "eightfold:qualcomm:446722234783": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "CPU Software Engineer",
     "url": "https://careers.qualcomm.com/careers/job/446722234783"
    },
    "eightfold:qualcomm:446722280220": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Multimedia System Performance Engineer for Automotive System Performance Team",
     "url": "https://careers.qualcomm.com/careers/job/446722280220"
    }
@@ -2330,7 +2351,7 @@
  },
  "Quizizz (Wayground)": {
   "ats": "lever",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2338,15 +2359,15 @@
  "Razorpay": {
   "ats": "greenhouse",
   "first_fresher_seen": "2026-11-26T09:04:18+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "greenhouse:razorpay:4731054005": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Frontend Engineer",
     "url": "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited/jobs/4731054005"
    }
@@ -2354,14 +2375,14 @@
  },
  "Recur Club": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Rocketlane": {
   "ats": "kula",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2369,15 +2390,15 @@
  "Rubrik": {
   "ats": "greenhouse",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 2,
   "seen": {
    "greenhouse:rubrik:8166537": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "intern",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Engineer (CPD) - Winter Intern",
     "url": "https://www.rubrik.com/company/careers/departments/job.8166537?gh_jid=8166537"
    },
@@ -2391,7 +2412,7 @@
    "greenhouse:rubrik:8413157": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "intern",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Engineer (UI) - Winter Intern",
     "url": "https://www.rubrik.com/company/careers/departments/job.8413157?gh_jid=8413157"
    }
@@ -2399,56 +2420,56 @@
  },
  "S&P Global": {
   "ats": "workday",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "SLB": {
   "ats": "eightfold",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "STAGE": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "SaaS Labs": {
   "ats": "kula",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Salesforce": {
   "ats": "workday",
-  "last_checked": "2026-11-26T09:04:18+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Salesloft": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Sarvam AI": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Scaler": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2456,15 +2477,15 @@
  "Scrut": {
   "ats": "keka",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "keka:scrut:142893": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "VAPT Engineer",
     "url": "https://scrut.keka.com/careers/jobdetails/142893"
    }
@@ -2472,14 +2493,14 @@
  },
  "ServiceNow": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Setu": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2494,15 +2515,15 @@
  "Shipsy": {
   "ats": "smartrecruiters",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "smartrecruiters:shipsy:744000002694405": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Engineer (Fullstack/NodeJs/ReactJs)",
     "url": "https://jobs.smartrecruiters.com/Shipsy/744000002694405"
    }
@@ -2510,14 +2531,14 @@
  },
  "SigNoz": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Sigmoid": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2525,15 +2546,15 @@
  "Signzy": {
   "ats": "keka",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "keka:signzy:135178": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "SRE-1",
     "url": "https://signzy.keka.com/careers/jobdetails/135178"
    }
@@ -2541,14 +2562,14 @@
  },
  "Skit.ai": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Skydo": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2556,22 +2577,22 @@
  "Slice": {
   "ats": "kula",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 2,
   "open_intern": 0,
   "seen": {
    "kula:slice:51860": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer 1 - Product Security",
     "url": "https://careers.kula.ai/slice/51860"
    },
    "kula:slice:69195": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Engineer 1 - Information Security",
     "url": "https://careers.kula.ai/slice/69195"
    }
@@ -2579,35 +2600,35 @@
  },
  "Smartsheet": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Snitch": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Snowflake": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Société Générale": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "SolarWinds": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2615,15 +2636,15 @@
  "Sophos": {
   "ats": "ashby",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "ashby:sophos:6b42a0ac-2500-4559-a813-2bfa43eb2ea6": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Engineer 1 (Java Developer)",
     "url": "https://jobs.ashbyhq.com/sophos/6b42a0ac-2500-4559-a813-2bfa43eb2ea6"
    }
@@ -2631,14 +2652,14 @@
  },
  "SpotDraft": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Spotify": {
   "ats": "lever",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2652,7 +2673,7 @@
  },
  "Spyne": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2660,7 +2681,7 @@
  "Stripe": {
   "ats": "greenhouse",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "last_fresher_seen": "2026-11-25T13:56:51+00:00",
   "open_entry": 0,
   "open_intern": 0,
@@ -2683,7 +2704,7 @@
  },
  "Supabase": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2691,15 +2712,15 @@
  "Sutherland": {
   "ats": "smartrecruiters",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "smartrecruiters:sutherland:744000159312049": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "OS Test engineer",
     "url": "https://jobs.smartrecruiters.com/Sutherland/744000159312049"
    }
@@ -2707,56 +2728,56 @@
  },
  "Swiggy": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Target": {
   "ats": "workday",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Teachmint": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Tekion": {
   "ats": "ashby",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Texas Instruments": {
   "ats": "oracle_hcm",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Tide": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Toast": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "ToolJet": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2764,15 +2785,15 @@
  "Truemeds": {
   "ats": "keka",
   "first_fresher_seen": "2026-11-26T09:04:18+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "keka:truemeds:86316": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Frontend SDE 1",
     "url": "https://truemeds.keka.com/careers/jobdetails/86316"
    }
@@ -2780,28 +2801,28 @@
  },
  "Turing": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Turtlemint": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Twilio": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Uber": {
   "ats": "uber",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2809,15 +2830,15 @@
  "Unacademy": {
   "ats": "smartrecruiters",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "smartrecruiters:unacademy:743999672726735": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Software Engineer, Backend",
     "url": "https://jobs.smartrecruiters.com/Unacademy/743999672726735"
    }
@@ -2825,7 +2846,7 @@
  },
  "Unicommerce": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2839,63 +2860,73 @@
  },
  "Uniphore": {
   "ats": "workday",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Upstox": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "UrbanPiper": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "ValueLabs": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Veeva": {
   "ats": "lever",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "open_entry": 0,
+  "first_fresher_seen": "2026-11-26T22:31:54+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
+  "open_entry": 1,
   "open_intern": 0,
-  "seen": {}
+  "seen": {
+   "lever:veeva:d0704c83-8c0f-4545-8a40-eb48bcfec299": {
+    "first_seen": "2026-11-26T22:31:54+00:00",
+    "kind": "entry",
+    "last_seen": "2026-11-26T22:31:54+00:00",
+    "title": "Associate Software Engineer - Test Automation",
+    "url": "https://jobs.lever.co/veeva/d0704c83-8c0f-4545-8a40-eb48bcfec299"
+   }
+  }
  },
  "Vegrow": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Velocity": {
   "ats": "freshteam",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Vernacular.ai": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Visa": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2903,29 +2934,29 @@
  "Vodafone": {
   "ats": "eightfold",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 3,
   "open_intern": 0,
   "seen": {
    "eightfold:vodafone:563018698115492": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Apprentice-Network Monitoring Engineer - BangaloreVOIS",
     "url": "https://vodafone.eightfold.ai/careers/job/563018698115492"
    },
    "eightfold:vodafone:563018698115581": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Apprentice-Network Monitoring Engineer - BangaloreVOIS",
     "url": "https://vodafone.eightfold.ai/careers/job/563018698115581"
    },
    "eightfold:vodafone:563018698115693": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Apprentice-Network Monitoring Engineer - BangaloreVOIS",
     "url": "https://vodafone.eightfold.ai/careers/job/563018698115693"
    }
@@ -2933,7 +2964,7 @@
  },
  "Vyapar": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2941,15 +2972,15 @@
  "WebEngage": {
   "ats": "keka",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "keka:webengage:84766": {
     "first_seen": "2026-11-25T13:56:51+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Data Engineer (SQL & ETL)",
     "url": "https://webklipper.keka.com/careers/jobdetails/84766"
    }
@@ -2957,28 +2988,28 @@
  },
  "Wells Fargo": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Western Digital": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Whatfix": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Wingify (VWO)": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -2986,9 +3017,9 @@
  "Wipro": {
   "ats": "successfactors",
   "first_fresher_seen": "2026-11-25T13:56:51+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "last_fresher_seen": "2026-11-26T09:57:37+00:00",
-  "open_entry": 5,
+  "open_entry": 0,
   "open_intern": 0,
   "seen": {
    "successfactors:wipro:202140": {
@@ -3065,28 +3096,28 @@
  },
  "Wise": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Wiz": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Workday": {
   "ats": "workday",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Yugabyte": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
@@ -3094,15 +3125,15 @@
  "Zebra Technologies": {
   "ats": "workday",
   "first_fresher_seen": "2026-11-26T09:04:18+00:00",
-  "last_checked": "2026-11-26T09:57:37+00:00",
-  "last_fresher_seen": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
+  "last_fresher_seen": "2026-11-26T22:31:54+00:00",
   "open_entry": 1,
   "open_intern": 0,
   "seen": {
    "workday:zebra-technologies:/job/Bengaluru-India/Computer-Vision-Developer-1_JR103371": {
     "first_seen": "2026-11-26T09:04:18+00:00",
     "kind": "entry",
-    "last_seen": "2026-11-26T09:57:37+00:00",
+    "last_seen": "2026-11-26T22:31:54+00:00",
     "title": "Computer Vision Developer-1",
     "url": "https://zebra.wd501.myworkdayjobs.com/en-US/Zebra_careers/job/Bengaluru-India/Computer-Vision-Developer-1_JR103371"
    }
@@ -3110,70 +3141,70 @@
  },
  "Zeta": {
   "ats": "lever",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Zetwerk": {
   "ats": "freshteam",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Zinnia": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Zinnov": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Zluri": {
   "ats": "keka",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Zoho": {
   "ats": "webpage",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Zolve": {
   "ats": "freshteam",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "Zscaler": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "dunnhumby": {
   "ats": "greenhouse",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
  },
  "ixigo": {
   "ats": "smartrecruiters",
-  "last_checked": "2026-11-26T09:57:37+00:00",
+  "last_checked": "2026-11-26T22:31:54+00:00",
   "open_entry": 0,
   "open_intern": 0,
   "seen": {}
